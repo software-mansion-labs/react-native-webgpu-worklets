@@ -67,13 +67,11 @@ export function requireUI<T extends 'threejs' | 'wgpu-matrix' | 'typegpu' | 'typ
 }
 
 export function enableGPUForWorklets(
-  config: { 
-    webGPU: boolean,
+  config: {
     threeJS: boolean,
     typeGPU: boolean,
     wgpuMatrix: boolean,
-  } = { 
-    webGPU: true,
+  } = {
     threeJS: true,
     typeGPU: true,
     wgpuMatrix: true,

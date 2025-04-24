@@ -14,7 +14,7 @@ export function initGPU() {
     GPUMapMode,
     GPUShaderStage,
     GPUTextureUsage,
-  } = globalThis;
+  } = globalThis as typeof globalThis & { RNWebGPU: any };
 
   runOnUI(() => {
     if (!globalThis.navigator) {
@@ -22,7 +22,7 @@ export function initGPU() {
     } else if (!globalThis.navigator.gpu) {
       globalThis.navigator = { ...globalThis.navigator, gpu };
     }
-    globalThis.RNWebGPU = RNWebGPU;
+    (globalThis as any).RNWebGPU = RNWebGPU;
     globalThis.GPUBufferUsage = GPUBufferUsage;
     globalThis.GPUColorWrite = GPUColorWrite;
     globalThis.GPUMapMode = GPUMapMode;
