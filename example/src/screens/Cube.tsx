@@ -4,6 +4,7 @@ import { runOnUI, useFrameCallback, useSharedValue } from 'react-native-reanimat
 import { Canvas, type RNCanvasContext, useCanvasEffect } from "react-native-wgpu";
 import { PerspectiveCamera, Scene, Mesh } from 'three';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
+import type { WebGPURenderer } from 'three/webgpu';
 
 
 type SharedContext = {
@@ -11,7 +12,7 @@ type SharedContext = {
   camera: PerspectiveCamera,
   scene: Scene,
   mesh: Mesh,
-  renderer: any,
+  renderer: WebGPURenderer,
 };
 
 export default function CubeExample() {

@@ -1,10 +1,12 @@
 // @ts-nocheck
 
+import type { WebGPURenderer } from "three/webgpu";
+
 export function makeWebGPURenderer(
   context: GPUCanvasContext, 
   device?: GPUDevice, 
   { antialias = true }: { antialias?: boolean } = {},
-) {
+): WebGPURenderer {
   'worklet';
   
   function _classCallCheck(a: any, n: any) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
