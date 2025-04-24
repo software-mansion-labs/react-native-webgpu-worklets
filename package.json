@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/piaskowyk/react-native-webgpu-worklets.git"
+    "url": "git+https://github.com/software-mansion-labs/react-native-webgpu-worklets.git"
   },
   "author": "Krzysztof Piaskowy <krzysztof.piaskowy@swmansion.com> (https://github.com/piaskowyk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/piaskowyk/react-native-webgpu-worklets/issues"
+    "url": "https://github.com/software-mansion-labs/react-native-webgpu-worklets/issues"
   },
-  "homepage": "https://github.com/piaskowyk/react-native-webgpu-worklets#readme",
+  "homepage": "https://github.com/software-mansion-labs/react-native-webgpu-worklets#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
