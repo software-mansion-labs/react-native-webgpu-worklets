@@ -5,7 +5,7 @@ WebGPU Worklets allow you to run [react-native-wgpu](https://github.com/wcandill
 ## Installation
 
 ```sh
-yarn add react-native-webgpu-worklets react-native-reanimated react-native-wgpu three typegpu wgpu-matrix
+yarn add react-native-webgpu-worklets
 ```
 
 Add peer dependencies
