@@ -10,16 +10,26 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",
+    "@react-navigation/native": "^7.1.6",
+    "@react-navigation/stack": "^7.2.10",
     "expo": "~52.0.46",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.9",
-    "react-native-web": "~0.19.13"
+    "react-native-gesture-handler": "^2.25.0",
+    "react-native-reanimated": "^3.17.4",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-web": "~0.19.13",
+    "react-native-wgpu": "^0.1.23",
+    "typegpu": "^0.5.6",
+    "wgpu-matrix": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "react-native-builder-bob": "^0.40.6"
+    "@webgpu/types": "^0.1.60",
+    "react-native-builder-bob": "^0.40.6",
+    "three": "^0.176.0"
   },
   "private": true
 }
