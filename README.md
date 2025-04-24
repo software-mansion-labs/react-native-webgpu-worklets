@@ -108,3 +108,7 @@ This library contains transformed code from the following libraries:
 - [wgpu-matrix](https://github.com/greggman/wgpu-matrix) - [website](https://wgpu-matrix.org/), [license](https://github.com/greggman/wgpu-matrix/blob/main/LICENSE.md)
 
 I'm not the author of these libraries. You should use them according to their licenses.
+
+## `react-native-webgpu-worklets` is created by Software Mansion
+
+Since 2012 [Software Mansion](https://swmansion.com) is a software agency with experience in building web and mobile apps. We are Core React Native Contributors and experts in dealing with all kinds of React Native issues. We can help you build your next dream product – [Hire us](https://swmansion.com/contact/projects?utm_source=reanimated&utm_medium=readme).
