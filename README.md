@@ -134,6 +134,10 @@ export default function CubeExample() {
 
 </details>
 
+
+https://github.com/user-attachments/assets/3f949aaf-36c0-4874-820b-cf53216591f4
+
+
 ## Overview
 
 ### `enableGPUForWorklets(config?: ModulesConfig)`
