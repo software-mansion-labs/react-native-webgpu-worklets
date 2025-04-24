@@ -44,7 +44,10 @@ You need to call it on the JS thread to initialize GPU access on the UI thread a
 
 ```ts
 type ModulesConfig = {
-  threeJS: boolean,
+  threeJSCore: boolean,
+  threeJSTSL: boolean,
+  threeJSAddonsMath: boolean,
+  threeJSAddonsUtils: boolean,
   typeGPU: boolean,
   wgpuMatrix: boolean,
 }
@@ -63,6 +66,9 @@ runOnUI(() => {
 
 Possible imports include:
 - `threejs`
+- `threejs/tsl`
+- `threejs/addson/math`
+- `threejs/addson/utils`
 - `wgpu-matrix`
 - `typegpu`
 - `typegpu/data`
