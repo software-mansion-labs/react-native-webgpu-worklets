@@ -69,7 +69,7 @@ export function makeWebGPURenderer(
     }]);
   }();
 
-  return new global.__UIModules.threeJS.WebGPURenderer({
+  return new global.__UIModules.threeJSCore.WebGPURenderer({
     antialias,
     canvas: new ReactNativeCanvas(context.canvas),
     context,

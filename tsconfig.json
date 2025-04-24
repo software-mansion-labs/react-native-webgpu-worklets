@@ -2,7 +2,10 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-webgpu-worklets": ["./src/index"]
+      "react-native-webgpu-worklets": ["./src/index"],
+      "three": ["./node_modules/@types/three/src/Three.WebGPU.d.ts"],
+      "three/tsl": ["./node_modules/@types/three/src/Three.TSL.d.ts"],
+      "three/addons/*": ["./node_modules/@types/three/examples/jsm/*"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

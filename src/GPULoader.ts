@@ -1,7 +1,6 @@
 import { runOnUI } from "react-native-reanimated";
 
 declare global {
-  var __UIModules: any;
   var navigator: NavigatorGPU;
 }
 

@@ -1,12 +1,32 @@
 // @ts-nocheck
 
-import { Dimensions } from 'react-native';
-import { runOnUI } from 'react-native-reanimated';
+import { runOnUI } from "react-native-reanimated";
 
-export function initThreeJS() {
+import * as i1 from "three/addons/utils/BufferGeometryUtils";
+import * as i2 from "three/addons/utils/CameraUtils";
+import * as i3 from "three/addons/utils/GeometryCompressionUtils";
+import * as i4 from "three/addons/utils/GeometryUtils";
+import * as i5 from "three/addons/utils/LDrawUtils";
+import * as i6 from "three/addons/utils/SceneUtils";
+import * as i7 from "three/addons/utils/ShadowMapViewer";
+import * as i8 from "three/addons/utils/SkeletonUtils";
+import * as i9 from "three/addons/utils/SortUtils";
+import * as i10 from "three/addons/utils/UVsDebug";
 
-// const { width: windowWidth, height: windowHeight } = Dimensions.window;
-  
+export type ThreeJSAddonsUtils = 
+  typeof i1 
+  & typeof i2 
+  & typeof i3 
+  & typeof i4 
+  & typeof i5 
+  & typeof i6 
+  & typeof i7 
+  & typeof i8 
+  & typeof i9
+  & typeof i10;
+
+export function initThreeJSAddonsUtils() {
+
 runOnUI(() => {
 
   const ImageBitmap = {};
@@ -1293,10 +1313,957 @@ runOnUI(() => {
   global.ErrorUtils = ErrorUtils;
 })(typeof globalThis !== 'undefined' ? globalThis : typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this);
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  var THREE = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "three"));
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var _exportNames = {
+    BufferGeometryUtils: true,
+    CameraUtils: true,
+    GeometryCompressionUtils: true,
+    GeometryUtils: true,
+    SceneUtils: true,
+    SkeletonUtils: true,
+    SortUtils: true
+  };
+  exports.SortUtils = exports.SkeletonUtils = exports.SceneUtils = exports.GeometryUtils = exports.GeometryCompressionUtils = exports.CameraUtils = exports.BufferGeometryUtils = void 0;
+  var _BufferGeometryUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "three/addons/utils/BufferGeometryUtils"));
+  exports.BufferGeometryUtils = _BufferGeometryUtils;
+  var _CameraUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[1], "three/addons/utils/CameraUtils"));
+  exports.CameraUtils = _CameraUtils;
+  var _GeometryCompressionUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[2], "three/addons/utils/GeometryCompressionUtils"));
+  exports.GeometryCompressionUtils = _GeometryCompressionUtils;
+  var _GeometryUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[3], "three/addons/utils/GeometryUtils"));
+  exports.GeometryUtils = _GeometryUtils;
+  Object.keys(_$$_REQUIRE(_dependencyMap[4], "three/addons/utils/LDrawUtils")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[4], "three/addons/utils/LDrawUtils")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[4], "three/addons/utils/LDrawUtils")[key];
+      }
+    });
+  });
+  var _SceneUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[5], "three/addons/utils/SceneUtils"));
+  exports.SceneUtils = _SceneUtils;
+  Object.keys(_$$_REQUIRE(_dependencyMap[6], "three/addons/utils/ShadowMapViewer")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[6], "three/addons/utils/ShadowMapViewer")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[6], "three/addons/utils/ShadowMapViewer")[key];
+      }
+    });
+  });
+  var _SkeletonUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "three/addons/utils/SkeletonUtils"));
+  exports.SkeletonUtils = _SkeletonUtils;
+  var _SortUtils = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[8], "three/addons/utils/SortUtils"));
+  exports.SortUtils = _SortUtils;
+  Object.keys(_$$_REQUIRE(_dependencyMap[9], "three/addons/utils/UVsDebug")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[9], "three/addons/utils/UVsDebug")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[9], "three/addons/utils/UVsDebug")[key];
+      }
+    });
+  });
+  Object.keys(_$$_REQUIRE(_dependencyMap[10], "three/addons/utils/WebGLTextureUtils")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[10], "three/addons/utils/WebGLTextureUtils")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[10], "three/addons/utils/WebGLTextureUtils")[key];
+      }
+    });
+  });
+  Object.keys(_$$_REQUIRE(_dependencyMap[11], "three/addons/utils/WorkerPool")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[11], "three/addons/utils/WorkerPool")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[11], "three/addons/utils/WorkerPool")[key];
+      }
+    });
+  });
   function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
   function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-},0,[1],"test.js");
+},0,[1,34,35,36,37,38,39,41,42,43,44,45],"test.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.computeMikkTSpaceTangents = computeMikkTSpaceTangents;
+  exports.computeMorphedAttributes = computeMorphedAttributes;
+  exports.deepCloneAttribute = deepCloneAttribute;
+  exports.deinterleaveAttribute = deinterleaveAttribute;
+  exports.deinterleaveGeometry = deinterleaveGeometry;
+  exports.estimateBytesUsed = estimateBytesUsed;
+  exports.interleaveAttributes = interleaveAttributes;
+  exports.mergeAttributes = mergeAttributes;
+  exports.mergeGeometries = mergeGeometries;
+  exports.mergeGroups = mergeGroups;
+  exports.mergeVertices = mergeVertices;
+  exports.toCreasedNormals = toCreasedNormals;
+  exports.toTrianglesDrawMode = toTrianglesDrawMode;
+  function computeMikkTSpaceTangents(geometry, MikkTSpace) {
+    var negateSign = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    if (!MikkTSpace || !MikkTSpace.isReady) {
+      throw new Error('BufferGeometryUtils: Initialized MikkTSpace library required.');
+    }
+    if (!geometry.hasAttribute('position') || !geometry.hasAttribute('normal') || !geometry.hasAttribute('uv')) {
+      throw new Error('BufferGeometryUtils: Tangents require "position", "normal", and "uv" attributes.');
+    }
+    function getAttributeArray(attribute) {
+      if (attribute.normalized || attribute.isInterleavedBufferAttribute) {
+        var dstArray = new Float32Array(attribute.count * attribute.itemSize);
+        for (var i = 0, j = 0; i < attribute.count; i++) {
+          dstArray[j++] = attribute.getX(i);
+          dstArray[j++] = attribute.getY(i);
+          if (attribute.itemSize > 2) {
+            dstArray[j++] = attribute.getZ(i);
+          }
+        }
+        return dstArray;
+      }
+      if (attribute.array instanceof Float32Array) {
+        return attribute.array;
+      }
+      return new Float32Array(attribute.array);
+    }
+
+    // MikkTSpace algorithm requires non-indexed input.
+
+    var _geometry = geometry.index ? geometry.toNonIndexed() : geometry;
+
+    // Compute vertex tangents.
+
+    var tangents = MikkTSpace.generateTangents(getAttributeArray(_geometry.attributes.position), getAttributeArray(_geometry.attributes.normal), getAttributeArray(_geometry.attributes.uv));
+
+    // Texture coordinate convention of glTF differs from the apparent
+    // default of the MikkTSpace library; .w component must be flipped.
+
+    if (negateSign) {
+      for (var i = 3; i < tangents.length; i += 4) {
+        tangents[i] *= -1;
+      }
+    }
+
+    //
+
+    _geometry.setAttribute('tangent', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(tangents, 4));
+    if (geometry !== _geometry) {
+      geometry.copy(_geometry);
+    }
+    return geometry;
+  }
+
+  /**
+   * @param  {Array<BufferGeometry>} geometries
+   * @param  {Boolean} useGroups
+   * @return {BufferGeometry}
+   */
+  function mergeGeometries(geometries) {
+    var useGroups = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var isIndexed = geometries[0].index !== null;
+    var attributesUsed = new Set(Object.keys(geometries[0].attributes));
+    var morphAttributesUsed = new Set(Object.keys(geometries[0].morphAttributes));
+    var attributes = {};
+    var morphAttributes = {};
+    var morphTargetsRelative = geometries[0].morphTargetsRelative;
+    var mergedGeometry = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferGeometry)();
+    var offset = 0;
+    for (var i = 0; i < geometries.length; ++i) {
+      var geometry = geometries[i];
+      var attributesCount = 0;
+
+      // ensure that all geometries are indexed, or none
+
+      if (isIndexed !== (geometry.index !== null)) {
+        console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '. All geometries must have compatible attributes; make sure index attribute exists among all geometries, or in none of them.');
+        return null;
+      }
+
+      // gather attributes, exit early if they're different
+
+      for (var name in geometry.attributes) {
+        if (!attributesUsed.has(name)) {
+          console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '. All geometries must have compatible attributes; make sure "' + name + '" attribute exists among all geometries, or in none of them.');
+          return null;
+        }
+        if (attributes[name] === undefined) attributes[name] = [];
+        attributes[name].push(geometry.attributes[name]);
+        attributesCount++;
+      }
+
+      // ensure geometries have the same number of attributes
+
+      if (attributesCount !== attributesUsed.size) {
+        console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '. Make sure all geometries have the same number of attributes.');
+        return null;
+      }
+
+      // gather morph attributes, exit early if they're different
+
+      if (morphTargetsRelative !== geometry.morphTargetsRelative) {
+        console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '. .morphTargetsRelative must be consistent throughout all geometries.');
+        return null;
+      }
+      for (var _name in geometry.morphAttributes) {
+        if (!morphAttributesUsed.has(_name)) {
+          console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '.  .morphAttributes must be consistent throughout all geometries.');
+          return null;
+        }
+        if (morphAttributes[_name] === undefined) morphAttributes[_name] = [];
+        morphAttributes[_name].push(geometry.morphAttributes[_name]);
+      }
+      if (useGroups) {
+        var count = void 0;
+        if (isIndexed) {
+          count = geometry.index.count;
+        } else if (geometry.attributes.position !== undefined) {
+          count = geometry.attributes.position.count;
+        } else {
+          console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed with geometry at index ' + i + '. The geometry must have either an index or a position attribute');
+          return null;
+        }
+        mergedGeometry.addGroup(offset, count, i);
+        offset += count;
+      }
+    }
+
+    // merge indices
+
+    if (isIndexed) {
+      var indexOffset = 0;
+      var mergedIndex = [];
+      for (var _i = 0; _i < geometries.length; ++_i) {
+        var index = geometries[_i].index;
+        for (var j = 0; j < index.count; ++j) {
+          mergedIndex.push(index.getX(j) + indexOffset);
+        }
+        indexOffset += geometries[_i].attributes.position.count;
+      }
+      mergedGeometry.setIndex(mergedIndex);
+    }
+
+    // merge attributes
+
+    for (var _name2 in attributes) {
+      var mergedAttribute = mergeAttributes(attributes[_name2]);
+      if (!mergedAttribute) {
+        console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed while trying to merge the ' + _name2 + ' attribute.');
+        return null;
+      }
+      mergedGeometry.setAttribute(_name2, mergedAttribute);
+    }
+
+    // merge morph attributes
+
+    for (var _name3 in morphAttributes) {
+      var numMorphTargets = morphAttributes[_name3][0].length;
+      if (numMorphTargets === 0) break;
+      mergedGeometry.morphAttributes = mergedGeometry.morphAttributes || {};
+      mergedGeometry.morphAttributes[_name3] = [];
+      for (var _i2 = 0; _i2 < numMorphTargets; ++_i2) {
+        var morphAttributesToMerge = [];
+        for (var _j = 0; _j < morphAttributes[_name3].length; ++_j) {
+          morphAttributesToMerge.push(morphAttributes[_name3][_j][_i2]);
+        }
+        var mergedMorphAttribute = mergeAttributes(morphAttributesToMerge);
+        if (!mergedMorphAttribute) {
+          console.error('THREE.BufferGeometryUtils: .mergeGeometries() failed while trying to merge the ' + _name3 + ' morphAttribute.');
+          return null;
+        }
+        mergedGeometry.morphAttributes[_name3].push(mergedMorphAttribute);
+      }
+    }
+    return mergedGeometry;
+  }
+
+  /**
+   * @param {Array<BufferAttribute>} attributes
+   * @return {BufferAttribute}
+   */
+  function mergeAttributes(attributes) {
+    var TypedArray;
+    var itemSize;
+    var normalized;
+    var gpuType = -1;
+    var arrayLength = 0;
+    for (var i = 0; i < attributes.length; ++i) {
+      var attribute = attributes[i];
+      if (TypedArray === undefined) TypedArray = attribute.array.constructor;
+      if (TypedArray !== attribute.array.constructor) {
+        console.error('THREE.BufferGeometryUtils: .mergeAttributes() failed. BufferAttribute.array must be of consistent array types across matching attributes.');
+        return null;
+      }
+      if (itemSize === undefined) itemSize = attribute.itemSize;
+      if (itemSize !== attribute.itemSize) {
+        console.error('THREE.BufferGeometryUtils: .mergeAttributes() failed. BufferAttribute.itemSize must be consistent across matching attributes.');
+        return null;
+      }
+      if (normalized === undefined) normalized = attribute.normalized;
+      if (normalized !== attribute.normalized) {
+        console.error('THREE.BufferGeometryUtils: .mergeAttributes() failed. BufferAttribute.normalized must be consistent across matching attributes.');
+        return null;
+      }
+      if (gpuType === -1) gpuType = attribute.gpuType;
+      if (gpuType !== attribute.gpuType) {
+        console.error('THREE.BufferGeometryUtils: .mergeAttributes() failed. BufferAttribute.gpuType must be consistent across matching attributes.');
+        return null;
+      }
+      arrayLength += attribute.count * itemSize;
+    }
+    var array = new TypedArray(arrayLength);
+    var result = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(array, itemSize, normalized);
+    var offset = 0;
+    for (var _i3 = 0; _i3 < attributes.length; ++_i3) {
+      var _attribute = attributes[_i3];
+      if (_attribute.isInterleavedBufferAttribute) {
+        var tupleOffset = offset / itemSize;
+        for (var j = 0, l = _attribute.count; j < l; j++) {
+          for (var c = 0; c < itemSize; c++) {
+            var value = _attribute.getComponent(j, c);
+            result.setComponent(j + tupleOffset, c, value);
+          }
+        }
+      } else {
+        array.set(_attribute.array, offset);
+      }
+      offset += _attribute.count * itemSize;
+    }
+    if (gpuType !== undefined) {
+      result.gpuType = gpuType;
+    }
+    return result;
+  }
+
+  /**
+   * @param {BufferAttribute} attribute
+   * @return {BufferAttribute}
+   */
+  function deepCloneAttribute(attribute) {
+    if (attribute.isInstancedInterleavedBufferAttribute || attribute.isInterleavedBufferAttribute) {
+      return deinterleaveAttribute(attribute);
+    }
+    if (attribute.isInstancedBufferAttribute) {
+      return new (_$$_REQUIRE(_dependencyMap[0], "three").InstancedBufferAttribute)().copy(attribute);
+    }
+    return new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)().copy(attribute);
+  }
+
+  /**
+   * @param {Array<BufferAttribute>} attributes
+   * @return {Array<InterleavedBufferAttribute>}
+   */
+  function interleaveAttributes(attributes) {
+    // Interleaves the provided attributes into an InterleavedBuffer and returns
+    // a set of InterleavedBufferAttributes for each attribute
+    var TypedArray;
+    var arrayLength = 0;
+    var stride = 0;
+
+    // calculate the length and type of the interleavedBuffer
+    for (var i = 0, l = attributes.length; i < l; ++i) {
+      var attribute = attributes[i];
+      if (TypedArray === undefined) TypedArray = attribute.array.constructor;
+      if (TypedArray !== attribute.array.constructor) {
+        console.error('AttributeBuffers of different types cannot be interleaved');
+        return null;
+      }
+      arrayLength += attribute.array.length;
+      stride += attribute.itemSize;
+    }
+
+    // Create the set of buffer attributes
+    var interleavedBuffer = new (_$$_REQUIRE(_dependencyMap[0], "three").InterleavedBuffer)(new TypedArray(arrayLength), stride);
+    var offset = 0;
+    var res = [];
+    var getters = ['getX', 'getY', 'getZ', 'getW'];
+    var setters = ['setX', 'setY', 'setZ', 'setW'];
+    for (var j = 0, _l = attributes.length; j < _l; j++) {
+      var _attribute2 = attributes[j];
+      var itemSize = _attribute2.itemSize;
+      var count = _attribute2.count;
+      var iba = new (_$$_REQUIRE(_dependencyMap[0], "three").InterleavedBufferAttribute)(interleavedBuffer, itemSize, offset, _attribute2.normalized);
+      res.push(iba);
+      offset += itemSize;
+
+      // Move the data for each attribute into the new interleavedBuffer
+      // at the appropriate offset
+      for (var c = 0; c < count; c++) {
+        for (var k = 0; k < itemSize; k++) {
+          iba[setters[k]](c, _attribute2[getters[k]](c));
+        }
+      }
+    }
+    return res;
+  }
+
+  // returns a new, non-interleaved version of the provided attribute
+  function deinterleaveAttribute(attribute) {
+    var cons = attribute.data.array.constructor;
+    var count = attribute.count;
+    var itemSize = attribute.itemSize;
+    var normalized = attribute.normalized;
+    var array = new cons(count * itemSize);
+    var newAttribute;
+    if (attribute.isInstancedInterleavedBufferAttribute) {
+      newAttribute = new (_$$_REQUIRE(_dependencyMap[0], "three").InstancedBufferAttribute)(array, itemSize, normalized, attribute.meshPerAttribute);
+    } else {
+      newAttribute = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(array, itemSize, normalized);
+    }
+    for (var i = 0; i < count; i++) {
+      newAttribute.setX(i, attribute.getX(i));
+      if (itemSize >= 2) {
+        newAttribute.setY(i, attribute.getY(i));
+      }
+      if (itemSize >= 3) {
+        newAttribute.setZ(i, attribute.getZ(i));
+      }
+      if (itemSize >= 4) {
+        newAttribute.setW(i, attribute.getW(i));
+      }
+    }
+    return newAttribute;
+  }
+
+  // deinterleaves all attributes on the geometry
+  function deinterleaveGeometry(geometry) {
+    var attributes = geometry.attributes;
+    var morphTargets = geometry.morphTargets;
+    var attrMap = new Map();
+    for (var key in attributes) {
+      var attr = attributes[key];
+      if (attr.isInterleavedBufferAttribute) {
+        if (!attrMap.has(attr)) {
+          attrMap.set(attr, deinterleaveAttribute(attr));
+        }
+        attributes[key] = attrMap.get(attr);
+      }
+    }
+    for (var _key in morphTargets) {
+      var _attr = morphTargets[_key];
+      if (_attr.isInterleavedBufferAttribute) {
+        if (!attrMap.has(_attr)) {
+          attrMap.set(_attr, deinterleaveAttribute(_attr));
+        }
+        morphTargets[_key] = attrMap.get(_attr);
+      }
+    }
+  }
+
+  /**
+   * @param {BufferGeometry} geometry
+   * @return {number}
+   */
+  function estimateBytesUsed(geometry) {
+    // Return the estimated memory used by this geometry in bytes
+    // Calculate using itemSize, count, and BYTES_PER_ELEMENT to account
+    // for InterleavedBufferAttributes.
+    var mem = 0;
+    for (var name in geometry.attributes) {
+      var attr = geometry.getAttribute(name);
+      mem += attr.count * attr.itemSize * attr.array.BYTES_PER_ELEMENT;
+    }
+    var indices = geometry.getIndex();
+    mem += indices ? indices.count * indices.itemSize * indices.array.BYTES_PER_ELEMENT : 0;
+    return mem;
+  }
+
+  /**
+   * @param {BufferGeometry} geometry
+   * @param {number} tolerance
+   * @return {BufferGeometry}
+   */
+  function mergeVertices(geometry) {
+    var tolerance = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1e-4;
+    tolerance = Math.max(tolerance, Number.EPSILON);
+
+    // Generate an index buffer if the geometry doesn't have one, or optimize it
+    // if it's already available.
+    var hashToIndex = {};
+    var indices = geometry.getIndex();
+    var positions = geometry.getAttribute('position');
+    var vertexCount = indices ? indices.count : positions.count;
+
+    // next value for triangle indices
+    var nextIndex = 0;
+
+    // attributes and new attribute arrays
+    var attributeNames = Object.keys(geometry.attributes);
+    var tmpAttributes = {};
+    var tmpMorphAttributes = {};
+    var newIndices = [];
+    var getters = ['getX', 'getY', 'getZ', 'getW'];
+    var setters = ['setX', 'setY', 'setZ', 'setW'];
+
+    // Initialize the arrays, allocating space conservatively. Extra
+    // space will be trimmed in the last step.
+    var _loop = function _loop() {
+      var name = attributeNames[i];
+      var attr = geometry.attributes[name];
+      tmpAttributes[name] = new attr.constructor(new attr.array.constructor(attr.count * attr.itemSize), attr.itemSize, attr.normalized);
+      var morphAttributes = geometry.morphAttributes[name];
+      if (morphAttributes) {
+        if (!tmpMorphAttributes[name]) tmpMorphAttributes[name] = [];
+        morphAttributes.forEach(function (morphAttr, i) {
+          var array = new morphAttr.array.constructor(morphAttr.count * morphAttr.itemSize);
+          tmpMorphAttributes[name][i] = new morphAttr.constructor(array, morphAttr.itemSize, morphAttr.normalized);
+        });
+      }
+    };
+    for (var i = 0, l = attributeNames.length; i < l; i++) {
+      _loop();
+    }
+
+    // convert the error tolerance to an amount of decimal places to truncate to
+    var halfTolerance = tolerance * 0.5;
+    var exponent = Math.log10(1 / tolerance);
+    var hashMultiplier = Math.pow(10, exponent);
+    var hashAdditive = halfTolerance * hashMultiplier;
+    for (var _i4 = 0; _i4 < vertexCount; _i4++) {
+      var index = indices ? indices.getX(_i4) : _i4;
+
+      // Generate a hash for the vertex attributes at the current index 'i'
+      var hash = '';
+      for (var j = 0, _l2 = attributeNames.length; j < _l2; j++) {
+        var name = attributeNames[j];
+        var attribute = geometry.getAttribute(name);
+        var itemSize = attribute.itemSize;
+        for (var k = 0; k < itemSize; k++) {
+          // double tilde truncates the decimal value
+          hash += `${~~(attribute[getters[k]](index) * hashMultiplier + hashAdditive)},`;
+        }
+      }
+
+      // Add another reference to the vertex if it's already
+      // used by another index
+      if (hash in hashToIndex) {
+        newIndices.push(hashToIndex[hash]);
+      } else {
+        // copy data to the new index in the temporary attributes
+        for (var _j2 = 0, _l3 = attributeNames.length; _j2 < _l3; _j2++) {
+          var _name4 = attributeNames[_j2];
+          var _attribute3 = geometry.getAttribute(_name4);
+          var morphAttributes = geometry.morphAttributes[_name4];
+          var _itemSize = _attribute3.itemSize;
+          var newArray = tmpAttributes[_name4];
+          var newMorphArrays = tmpMorphAttributes[_name4];
+          for (var _k = 0; _k < _itemSize; _k++) {
+            var getterFunc = getters[_k];
+            var setterFunc = setters[_k];
+            newArray[setterFunc](nextIndex, _attribute3[getterFunc](index));
+            if (morphAttributes) {
+              for (var m = 0, ml = morphAttributes.length; m < ml; m++) {
+                newMorphArrays[m][setterFunc](nextIndex, morphAttributes[m][getterFunc](index));
+              }
+            }
+          }
+        }
+        hashToIndex[hash] = nextIndex;
+        newIndices.push(nextIndex);
+        nextIndex++;
+      }
+    }
+
+    // generate result BufferGeometry
+    var result = geometry.clone();
+    for (var _name5 in geometry.attributes) {
+      var tmpAttribute = tmpAttributes[_name5];
+      result.setAttribute(_name5, new tmpAttribute.constructor(tmpAttribute.array.slice(0, nextIndex * tmpAttribute.itemSize), tmpAttribute.itemSize, tmpAttribute.normalized));
+      if (!(_name5 in tmpMorphAttributes)) continue;
+      for (var _j3 = 0; _j3 < tmpMorphAttributes[_name5].length; _j3++) {
+        var tmpMorphAttribute = tmpMorphAttributes[_name5][_j3];
+        result.morphAttributes[_name5][_j3] = new tmpMorphAttribute.constructor(tmpMorphAttribute.array.slice(0, nextIndex * tmpMorphAttribute.itemSize), tmpMorphAttribute.itemSize, tmpMorphAttribute.normalized);
+      }
+    }
+
+    // indices
+
+    result.setIndex(newIndices);
+    return result;
+  }
+
+  /**
+   * @param {BufferGeometry} geometry
+   * @param {number} drawMode
+   * @return {BufferGeometry}
+   */
+  function toTrianglesDrawMode(geometry, drawMode) {
+    if (drawMode === _$$_REQUIRE(_dependencyMap[0], "three").TrianglesDrawMode) {
+      console.warn('THREE.BufferGeometryUtils.toTrianglesDrawMode(): Geometry already defined as triangles.');
+      return geometry;
+    }
+    if (drawMode === _$$_REQUIRE(_dependencyMap[0], "three").TriangleFanDrawMode || drawMode === _$$_REQUIRE(_dependencyMap[0], "three").TriangleStripDrawMode) {
+      var index = geometry.getIndex();
+
+      // generate index if not present
+
+      if (index === null) {
+        var indices = [];
+        var position = geometry.getAttribute('position');
+        if (position !== undefined) {
+          for (var i = 0; i < position.count; i++) {
+            indices.push(i);
+          }
+          geometry.setIndex(indices);
+          index = geometry.getIndex();
+        } else {
+          console.error('THREE.BufferGeometryUtils.toTrianglesDrawMode(): Undefined position attribute. Processing not possible.');
+          return geometry;
+        }
+      }
+
+      //
+
+      var numberOfTriangles = index.count - 2;
+      var newIndices = [];
+      if (drawMode === _$$_REQUIRE(_dependencyMap[0], "three").TriangleFanDrawMode) {
+        // gl.TRIANGLE_FAN
+
+        for (var _i5 = 1; _i5 <= numberOfTriangles; _i5++) {
+          newIndices.push(index.getX(0));
+          newIndices.push(index.getX(_i5));
+          newIndices.push(index.getX(_i5 + 1));
+        }
+      } else {
+        // gl.TRIANGLE_STRIP
+
+        for (var _i6 = 0; _i6 < numberOfTriangles; _i6++) {
+          if (_i6 % 2 === 0) {
+            newIndices.push(index.getX(_i6));
+            newIndices.push(index.getX(_i6 + 1));
+            newIndices.push(index.getX(_i6 + 2));
+          } else {
+            newIndices.push(index.getX(_i6 + 2));
+            newIndices.push(index.getX(_i6 + 1));
+            newIndices.push(index.getX(_i6));
+          }
+        }
+      }
+      if (newIndices.length / 3 !== numberOfTriangles) {
+        console.error('THREE.BufferGeometryUtils.toTrianglesDrawMode(): Unable to generate correct amount of triangles.');
+      }
+
+      // build final geometry
+
+      var newGeometry = geometry.clone();
+      newGeometry.setIndex(newIndices);
+      newGeometry.clearGroups();
+      return newGeometry;
+    } else {
+      console.error('THREE.BufferGeometryUtils.toTrianglesDrawMode(): Unknown draw mode:', drawMode);
+      return geometry;
+    }
+  }
+
+  /**
+   * Calculates the morphed attributes of a morphed/skinned BufferGeometry.
+   * Helpful for Raytracing or Decals.
+   * @param {Mesh | Line | Points} object An instance of Mesh, Line or Points.
+   * @return {Object} An Object with original position/normal attributes and morphed ones.
+   */
+  function computeMorphedAttributes(object) {
+    var _vA = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _vB = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _vC = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _tempA = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _tempB = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _tempC = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _morphA = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _morphB = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var _morphC = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    function _calculateMorphedAttributeData(object, attribute, morphAttribute, morphTargetsRelative, a, b, c, modifiedAttributeArray) {
+      _vA.fromBufferAttribute(attribute, a);
+      _vB.fromBufferAttribute(attribute, b);
+      _vC.fromBufferAttribute(attribute, c);
+      var morphInfluences = object.morphTargetInfluences;
+      if (morphAttribute && morphInfluences) {
+        _morphA.set(0, 0, 0);
+        _morphB.set(0, 0, 0);
+        _morphC.set(0, 0, 0);
+        for (var _i7 = 0, _il = morphAttribute.length; _i7 < _il; _i7++) {
+          var influence = morphInfluences[_i7];
+          var morph = morphAttribute[_i7];
+          if (influence === 0) continue;
+          _tempA.fromBufferAttribute(morph, a);
+          _tempB.fromBufferAttribute(morph, b);
+          _tempC.fromBufferAttribute(morph, c);
+          if (morphTargetsRelative) {
+            _morphA.addScaledVector(_tempA, influence);
+            _morphB.addScaledVector(_tempB, influence);
+            _morphC.addScaledVector(_tempC, influence);
+          } else {
+            _morphA.addScaledVector(_tempA.sub(_vA), influence);
+            _morphB.addScaledVector(_tempB.sub(_vB), influence);
+            _morphC.addScaledVector(_tempC.sub(_vC), influence);
+          }
+        }
+        _vA.add(_morphA);
+        _vB.add(_morphB);
+        _vC.add(_morphC);
+      }
+      if (object.isSkinnedMesh) {
+        object.applyBoneTransform(a, _vA);
+        object.applyBoneTransform(b, _vB);
+        object.applyBoneTransform(c, _vC);
+      }
+      modifiedAttributeArray[a * 3 + 0] = _vA.x;
+      modifiedAttributeArray[a * 3 + 1] = _vA.y;
+      modifiedAttributeArray[a * 3 + 2] = _vA.z;
+      modifiedAttributeArray[b * 3 + 0] = _vB.x;
+      modifiedAttributeArray[b * 3 + 1] = _vB.y;
+      modifiedAttributeArray[b * 3 + 2] = _vB.z;
+      modifiedAttributeArray[c * 3 + 0] = _vC.x;
+      modifiedAttributeArray[c * 3 + 1] = _vC.y;
+      modifiedAttributeArray[c * 3 + 2] = _vC.z;
+    }
+    var geometry = object.geometry;
+    var material = object.material;
+    var a, b, c;
+    var index = geometry.index;
+    var positionAttribute = geometry.attributes.position;
+    var morphPosition = geometry.morphAttributes.position;
+    var morphTargetsRelative = geometry.morphTargetsRelative;
+    var normalAttribute = geometry.attributes.normal;
+    var morphNormal = geometry.morphAttributes.position;
+    var groups = geometry.groups;
+    var drawRange = geometry.drawRange;
+    var i, j, il, jl;
+    var group;
+    var start, end;
+    var modifiedPosition = new Float32Array(positionAttribute.count * positionAttribute.itemSize);
+    var modifiedNormal = new Float32Array(normalAttribute.count * normalAttribute.itemSize);
+    if (index !== null) {
+      // indexed buffer geometry
+
+      if (Array.isArray(material)) {
+        for (i = 0, il = groups.length; i < il; i++) {
+          group = groups[i];
+          start = Math.max(group.start, drawRange.start);
+          end = Math.min(group.start + group.count, drawRange.start + drawRange.count);
+          for (j = start, jl = end; j < jl; j += 3) {
+            a = index.getX(j);
+            b = index.getX(j + 1);
+            c = index.getX(j + 2);
+            _calculateMorphedAttributeData(object, positionAttribute, morphPosition, morphTargetsRelative, a, b, c, modifiedPosition);
+            _calculateMorphedAttributeData(object, normalAttribute, morphNormal, morphTargetsRelative, a, b, c, modifiedNormal);
+          }
+        }
+      } else {
+        start = Math.max(0, drawRange.start);
+        end = Math.min(index.count, drawRange.start + drawRange.count);
+        for (i = start, il = end; i < il; i += 3) {
+          a = index.getX(i);
+          b = index.getX(i + 1);
+          c = index.getX(i + 2);
+          _calculateMorphedAttributeData(object, positionAttribute, morphPosition, morphTargetsRelative, a, b, c, modifiedPosition);
+          _calculateMorphedAttributeData(object, normalAttribute, morphNormal, morphTargetsRelative, a, b, c, modifiedNormal);
+        }
+      }
+    } else {
+      // non-indexed buffer geometry
+
+      if (Array.isArray(material)) {
+        for (i = 0, il = groups.length; i < il; i++) {
+          group = groups[i];
+          start = Math.max(group.start, drawRange.start);
+          end = Math.min(group.start + group.count, drawRange.start + drawRange.count);
+          for (j = start, jl = end; j < jl; j += 3) {
+            a = j;
+            b = j + 1;
+            c = j + 2;
+            _calculateMorphedAttributeData(object, positionAttribute, morphPosition, morphTargetsRelative, a, b, c, modifiedPosition);
+            _calculateMorphedAttributeData(object, normalAttribute, morphNormal, morphTargetsRelative, a, b, c, modifiedNormal);
+          }
+        }
+      } else {
+        start = Math.max(0, drawRange.start);
+        end = Math.min(positionAttribute.count, drawRange.start + drawRange.count);
+        for (i = start, il = end; i < il; i += 3) {
+          a = i;
+          b = i + 1;
+          c = i + 2;
+          _calculateMorphedAttributeData(object, positionAttribute, morphPosition, morphTargetsRelative, a, b, c, modifiedPosition);
+          _calculateMorphedAttributeData(object, normalAttribute, morphNormal, morphTargetsRelative, a, b, c, modifiedNormal);
+        }
+      }
+    }
+    var morphedPositionAttribute = new (_$$_REQUIRE(_dependencyMap[0], "three").Float32BufferAttribute)(modifiedPosition, 3);
+    var morphedNormalAttribute = new (_$$_REQUIRE(_dependencyMap[0], "three").Float32BufferAttribute)(modifiedNormal, 3);
+    return {
+      positionAttribute: positionAttribute,
+      normalAttribute: normalAttribute,
+      morphedPositionAttribute: morphedPositionAttribute,
+      morphedNormalAttribute: morphedNormalAttribute
+    };
+  }
+  function mergeGroups(geometry) {
+    if (geometry.groups.length === 0) {
+      console.warn('THREE.BufferGeometryUtils.mergeGroups(): No groups are defined. Nothing to merge.');
+      return geometry;
+    }
+    var groups = geometry.groups;
+
+    // sort groups by material index
+
+    groups = groups.sort(function (a, b) {
+      if (a.materialIndex !== b.materialIndex) return a.materialIndex - b.materialIndex;
+      return a.start - b.start;
+    });
+
+    // create index for non-indexed geometries
+
+    if (geometry.getIndex() === null) {
+      var positionAttribute = geometry.getAttribute('position');
+      var indices = [];
+      for (var i = 0; i < positionAttribute.count; i += 3) {
+        indices.push(i, i + 1, i + 2);
+      }
+      geometry.setIndex(indices);
+    }
+
+    // sort index
+
+    var index = geometry.getIndex();
+    var newIndices = [];
+    for (var _i8 = 0; _i8 < groups.length; _i8++) {
+      var group = groups[_i8];
+      var groupStart = group.start;
+      var groupLength = groupStart + group.count;
+      for (var j = groupStart; j < groupLength; j++) {
+        newIndices.push(index.getX(j));
+      }
+    }
+    geometry.dispose(); // Required to force buffer recreation
+    geometry.setIndex(newIndices);
+
+    // update groups indices
+
+    var start = 0;
+    for (var _i9 = 0; _i9 < groups.length; _i9++) {
+      var _group = groups[_i9];
+      _group.start = start;
+      start += _group.count;
+    }
+
+    // merge groups
+
+    var currentGroup = groups[0];
+    geometry.groups = [currentGroup];
+    for (var _i10 = 1; _i10 < groups.length; _i10++) {
+      var _group2 = groups[_i10];
+      if (currentGroup.materialIndex === _group2.materialIndex) {
+        currentGroup.count += _group2.count;
+      } else {
+        currentGroup = _group2;
+        geometry.groups.push(currentGroup);
+      }
+    }
+    return geometry;
+  }
+
+  /**
+   * Modifies the supplied geometry if it is non-indexed, otherwise creates a new,
+   * non-indexed geometry. Returns the geometry with smooth normals everywhere except
+   * faces that meet at an angle greater than the crease angle.
+   *
+   * @param {BufferGeometry} geometry
+   * @param {number} [creaseAngle]
+   * @return {BufferGeometry}
+   */
+  function toCreasedNormals(geometry) {
+    var creaseAngle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Math.PI / 3;
+    var creaseDot = Math.cos(creaseAngle);
+    var hashMultiplier = (1 + 1e-10) * 1e2;
+
+    // reusable vectors
+    var verts = [new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(), new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(), new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)()];
+    var tempVec1 = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var tempVec2 = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var tempNorm = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    var tempNorm2 = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+
+    // hashes a vector
+    function hashVertex(v) {
+      var x = ~~(v.x * hashMultiplier);
+      var y = ~~(v.y * hashMultiplier);
+      var z = ~~(v.z * hashMultiplier);
+      return `${x},${y},${z}`;
+    }
+
+    // BufferGeometry.toNonIndexed() warns if the geometry is non-indexed
+    // and returns the original geometry
+    var resultGeometry = geometry.index ? geometry.toNonIndexed() : geometry;
+    var posAttr = resultGeometry.attributes.position;
+    var vertexMap = {};
+
+    // find all the normals shared by commonly located vertices
+    for (var i = 0, l = posAttr.count / 3; i < l; i++) {
+      var i3 = 3 * i;
+      var a = verts[0].fromBufferAttribute(posAttr, i3 + 0);
+      var b = verts[1].fromBufferAttribute(posAttr, i3 + 1);
+      var c = verts[2].fromBufferAttribute(posAttr, i3 + 2);
+      tempVec1.subVectors(c, b);
+      tempVec2.subVectors(a, b);
+
+      // add the normal to the map for all vertices
+      var normal = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)().crossVectors(tempVec1, tempVec2).normalize();
+      for (var n = 0; n < 3; n++) {
+        var vert = verts[n];
+        var hash = hashVertex(vert);
+        if (!(hash in vertexMap)) {
+          vertexMap[hash] = [];
+        }
+        vertexMap[hash].push(normal);
+      }
+    }
+
+    // average normals from all vertices that share a common location if they are within the
+    // provided crease threshold
+    var normalArray = new Float32Array(posAttr.count * 3);
+    var normAttr = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(normalArray, 3, false);
+    for (var _i11 = 0, _l4 = posAttr.count / 3; _i11 < _l4; _i11++) {
+      // get the face normal for this vertex
+      var _i12 = 3 * _i11;
+      var _a = verts[0].fromBufferAttribute(posAttr, _i12 + 0);
+      var _b = verts[1].fromBufferAttribute(posAttr, _i12 + 1);
+      var _c = verts[2].fromBufferAttribute(posAttr, _i12 + 2);
+      tempVec1.subVectors(_c, _b);
+      tempVec2.subVectors(_a, _b);
+      tempNorm.crossVectors(tempVec1, tempVec2).normalize();
+
+      // average all normals that meet the threshold and set the normal value
+      for (var _n = 0; _n < 3; _n++) {
+        var _vert = verts[_n];
+        var _hash = hashVertex(_vert);
+        var otherNormals = vertexMap[_hash];
+        tempNorm2.set(0, 0, 0);
+        for (var k = 0, lk = otherNormals.length; k < lk; k++) {
+          var otherNorm = otherNormals[k];
+          if (tempNorm.dot(otherNorm) > creaseDot) {
+            tempNorm2.add(otherNorm);
+          }
+        }
+        tempNorm2.normalize();
+        normAttr.setXYZ(_i12 + _n, tempNorm2.x, tempNorm2.y, tempNorm2.z);
+      }
+    }
+    resultGeometry.setAttribute('normal', normAttr);
+    return resultGeometry;
+  }
+},1,[2],"../../node_modules/three/examples/jsm/utils/BufferGeometryUtils.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
@@ -4735,7 +5702,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
        * The type of the class. The value is usually the constructor name.
        *
        * @type {String}
-         * @readonly
+      	 * @readonly
        */
     }, {
       key: "type",
@@ -5165,9 +6132,9 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
         builder.addChain(this);
 
         /* Build stages expected results:
-          - "setup"		-> Node
-          - "analyze"		-> null
-          - "generate"	-> String
+        	- "setup"		-> Node
+        	- "analyze"		-> null
+        	- "generate"	-> String
         */
         var result = null;
         var buildStage = builder.getBuildStage();
@@ -5182,9 +6149,9 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
             var isNodeOutput = outputNode && outputNode.isNode === true;
 
             /*if ( isNodeOutput && builder.stack.nodes.length !== stackNodesBeforeSetup ) {
-                // !! no outputNode !!
-              //outputNode = builder.stack;
-              }*/
+            		// !! no outputNode !!
+            	//outputNode = builder.stack;
+            	}*/
 
             for (var childNode of Object.values(properties)) {
               if (childNode && childNode.isNode === true) {
@@ -35419,7 +36386,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
        * Represents the light's shadow.
        *
        * @type {ShadowNode?}
-           * @default null
+       		 * @default null
        */
       _this165.shadowNode = null;
 
@@ -35427,7 +36394,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
        * Represents the light's shadow color.
        *
        * @type {Node?}
-           * @default null
+       		 * @default null
        */
       _this165.shadowColorNode = null;
 
@@ -41053,8 +42020,8 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
       value: function addChain(node) {
         /*
         if ( this.chaining.indexOf( node ) !== - 1 ) {
-            console.warn( 'Recursive node: ', node );
-          }
+        		console.warn( 'Recursive node: ', node );
+        	}
         */
 
         this.chaining.push(node);
@@ -41870,7 +42837,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
       /**
        * Adds a code flow based on the code-block hierarchy.
-         * This is used so that code-blocks like If,Else create their variables locally if the Node
+      	 * This is used so that code-blocks like If,Else create their variables locally if the Node
        * is only used inside one of these conditionals in the current shader stage.
        *
        * @param {Node} node - The node to add.
@@ -48232,10 +49199,10 @@ precision lowp sampler2DShadow;
 
         var code = `${this.getType(layout.type)} ${layout.name}( ${parameters.join(', ')} ) {
 
-  ${flowData.vars}
+	${flowData.vars}
 
 ${flowData.code}
-  return ${flowData.result};
+	return ${flowData.result};
 
 }`;
 
@@ -48725,16 +49692,16 @@ ${shaderData.codes}
 
 void main() {
 
-  // vars
-  ${shaderData.vars}
+	// vars
+	${shaderData.vars}
 
-  // transforms
-  ${shaderData.transforms}
+	// transforms
+	${shaderData.transforms}
 
-  // flow
-  ${shaderData.flow}
+	// flow
+	${shaderData.flow}
 
-  gl_PointSize = 1.0;
+	gl_PointSize = 1.0;
 
 }
 `;
@@ -48762,11 +49729,11 @@ ${shaderData.structs}
 
 void main() {
 
-  // vars
-  ${shaderData.vars}
+	// vars
+	${shaderData.vars}
 
-  // flow
-  ${shaderData.flow}
+	// flow
+	${shaderData.flow}
 
 }
 `;
@@ -53425,33 +54392,33 @@ void main() {
       _this210.device = device;
       var mipmapVertexSource = `
 struct VarysStruct {
-  @builtin( position ) Position: vec4<f32>,
-  @location( 0 ) vTex : vec2<f32>
+	@builtin( position ) Position: vec4<f32>,
+	@location( 0 ) vTex : vec2<f32>
 };
 
 @vertex
 fn main( @builtin( vertex_index ) vertexIndex : u32 ) -> VarysStruct {
 
-  var Varys : VarysStruct;
+	var Varys : VarysStruct;
 
-  var pos = array< vec2<f32>, 4 >(
-    vec2<f32>( -1.0,  1.0 ),
-    vec2<f32>(  1.0,  1.0 ),
-    vec2<f32>( -1.0, -1.0 ),
-    vec2<f32>(  1.0, -1.0 )
-  );
+	var pos = array< vec2<f32>, 4 >(
+		vec2<f32>( -1.0,  1.0 ),
+		vec2<f32>(  1.0,  1.0 ),
+		vec2<f32>( -1.0, -1.0 ),
+		vec2<f32>(  1.0, -1.0 )
+	);
 
-  var tex = array< vec2<f32>, 4 >(
-    vec2<f32>( 0.0, 0.0 ),
-    vec2<f32>( 1.0, 0.0 ),
-    vec2<f32>( 0.0, 1.0 ),
-    vec2<f32>( 1.0, 1.0 )
-  );
+	var tex = array< vec2<f32>, 4 >(
+		vec2<f32>( 0.0, 0.0 ),
+		vec2<f32>( 1.0, 0.0 ),
+		vec2<f32>( 0.0, 1.0 ),
+		vec2<f32>( 1.0, 1.0 )
+	);
 
-  Varys.vTex = tex[ vertexIndex ];
-  Varys.Position = vec4<f32>( pos[ vertexIndex ], 0.0, 1.0 );
+	Varys.vTex = tex[ vertexIndex ];
+	Varys.Position = vec4<f32>( pos[ vertexIndex ], 0.0, 1.0 );
 
-  return Varys;
+	return Varys;
 
 }
 `;
@@ -53465,7 +54432,7 @@ var img : texture_2d<f32>;
 @fragment
 fn main( @location( 0 ) vTex : vec2<f32> ) -> @location( 0 ) vec4<f32> {
 
-  return textureSample( img, imgSampler, vTex );
+	return textureSample( img, imgSampler, vTex );
 
 }
 `;
@@ -53479,7 +54446,7 @@ var img : texture_2d<f32>;
 @fragment
 fn main( @location( 0 ) vTex : vec2<f32> ) -> @location( 0 ) vec4<f32> {
 
-  return textureSample( img, imgSampler, vec2( vTex.x, 1.0 - vTex.y ) );
+	return textureSample( img, imgSampler, vec2( vTex.x, 1.0 - vTex.y ) );
 
 }
 `;
@@ -54894,23 +55861,23 @@ fn main( @location( 0 ) vTex : vec2<f32> ) -> @location( 0 ) vec4<f32> {
     biquadraticTexture: new CodeNode(/* wgsl */`
 fn tsl_biquadraticTexture( map : texture_2d<f32>, coord : vec2f, iRes : vec2u, level : u32 ) -> vec4f {
 
-  let res = vec2f( iRes );
+	let res = vec2f( iRes );
 
-  let uvScaled = coord * res;
-  let uvWrapping = ( ( uvScaled % res ) + res ) % res;
+	let uvScaled = coord * res;
+	let uvWrapping = ( ( uvScaled % res ) + res ) % res;
 
-  // https://www.shadertoy.com/view/WtyXRy
+	// https://www.shadertoy.com/view/WtyXRy
 
-  let uv = uvWrapping - 0.5;
-  let iuv = floor( uv );
-  let f = fract( uv );
+	let uv = uvWrapping - 0.5;
+	let iuv = floor( uv );
+	let f = fract( uv );
 
-  let rg1 = textureLoad( map, vec2u( iuv + vec2( 0.5, 0.5 ) ) % iRes, level );
-  let rg2 = textureLoad( map, vec2u( iuv + vec2( 1.5, 0.5 ) ) % iRes, level );
-  let rg3 = textureLoad( map, vec2u( iuv + vec2( 0.5, 1.5 ) ) % iRes, level );
-  let rg4 = textureLoad( map, vec2u( iuv + vec2( 1.5, 1.5 ) ) % iRes, level );
+	let rg1 = textureLoad( map, vec2u( iuv + vec2( 0.5, 0.5 ) ) % iRes, level );
+	let rg2 = textureLoad( map, vec2u( iuv + vec2( 1.5, 0.5 ) ) % iRes, level );
+	let rg3 = textureLoad( map, vec2u( iuv + vec2( 0.5, 1.5 ) ) % iRes, level );
+	let rg4 = textureLoad( map, vec2u( iuv + vec2( 1.5, 1.5 ) ) % iRes, level );
 
-  return mix( mix( rg1, rg2, f.x ), mix( rg3, rg4, f.x ), f.y );
+	return mix( mix( rg1, rg2, f.x ), mix( rg3, rg4, f.x ), f.y );
 
 }
 `)
@@ -55813,13 +56780,13 @@ ${shaderData.codes}
 @vertex
 fn main( ${shaderData.attributes} ) -> VaryingsStruct {
 
-  // vars
-  ${shaderData.vars}
+	// vars
+	${shaderData.vars}
 
-  // flow
-  ${shaderData.flow}
+	// flow
+	${shaderData.flow}
 
-  return varyings;
+	return varyings;
 
 }
 `;
@@ -55843,11 +56810,11 @@ ${shaderData.codes}
 @fragment
 fn main( ${shaderData.varyings} ) -> ${shaderData.returnType} {
 
-  // vars
-  ${shaderData.vars}
+	// vars
+	${shaderData.vars}
 
-  // flow
-  ${shaderData.flow}
+	// flow
+	${shaderData.flow}
 
 }
 `;
@@ -55874,14 +56841,14 @@ ${shaderData.codes}
 @compute @workgroup_size( ${workgroupSize} )
 fn main( ${shaderData.attributes} ) {
 
-  // system
-  instanceIndex = id.x + id.y * numWorkgroups.x * u32(${workgroupSize}) + id.z * numWorkgroups.x * numWorkgroups.y * u32(${workgroupSize});
+	// system
+	instanceIndex = id.x + id.y * numWorkgroups.x * u32(${workgroupSize}) + id.z * numWorkgroups.x * numWorkgroups.y * u32(${workgroupSize});
 
-  // vars
-  ${shaderData.vars}
+	// vars
+	${shaderData.vars}
 
-  // flow
-  ${shaderData.flow}
+	// flow
+	${shaderData.flow}
 
 }
 `;
@@ -58647,14 +59614,14 @@ var<${access}> ${name} : ${structName};`;
   /*
   const debugHandler = {
   
-    get: function ( target, name ) {
+  	get: function ( target, name ) {
   
-      // Add |update
-      if ( /^(create|destroy)/.test( name ) ) console.log( 'WebGPUBackend.' + name );
+  		// Add |update
+  		if ( /^(create|destroy)/.test( name ) ) console.log( 'WebGPUBackend.' + name );
   
-      return target[ name ];
+  		return target[ name ];
   
-    }
+  	}
   
   };
   */
@@ -59495,7 +60462,7 @@ var<${access}> ${name} : ${structName};`;
     (0, _inherits2.default)(ClippingGroup, _Group2);
     return (0, _createClass2.default)(ClippingGroup);
   }(_$$_REQUIRE(_dependencyMap[1], "./three.core.js").Group);
-},1,[2,3,27,30,5,4,11,17,23,10,26,7,19,31,32],"../../node_modules/three/build/three.webgpu.js");
+},2,[3,4,28,31,6,5,12,18,24,11,27,8,20,32,33],"../../node_modules/three/build/three.webgpu.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(e) {
     return e && e.__esModule ? e : {
@@ -59503,7 +60470,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     };
   }
   module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},2,[],"../../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+},3,[],"../../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
@@ -69600,41 +70567,41 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
           },
           vertexShader: /* glsl */`
 
-        varying vec3 vWorldDirection;
+				varying vec3 vWorldDirection;
 
-        vec3 transformDirection( in vec3 dir, in mat4 matrix ) {
+				vec3 transformDirection( in vec3 dir, in mat4 matrix ) {
 
-          return normalize( ( matrix * vec4( dir, 0.0 ) ).xyz );
+					return normalize( ( matrix * vec4( dir, 0.0 ) ).xyz );
 
-        }
+				}
 
-        void main() {
+				void main() {
 
-          vWorldDirection = transformDirection( position, modelMatrix );
+					vWorldDirection = transformDirection( position, modelMatrix );
 
-          #include <begin_vertex>
-          #include <project_vertex>
+					#include <begin_vertex>
+					#include <project_vertex>
 
-        }
-      `,
+				}
+			`,
           fragmentShader: /* glsl */`
 
-        uniform sampler2D tEquirect;
+				uniform sampler2D tEquirect;
 
-        varying vec3 vWorldDirection;
+				varying vec3 vWorldDirection;
 
-        #include <common>
+				#include <common>
 
-        void main() {
+				void main() {
 
-          vec3 direction = normalize( vWorldDirection );
+					vec3 direction = normalize( vWorldDirection );
 
-          vec2 sampleUV = equirectUv( direction );
+					vec2 sampleUV = equirectUv( direction );
 
-          gl_FragColor = texture2D( tEquirect, sampleUV );
+					gl_FragColor = texture2D( tEquirect, sampleUV );
 
-        }
-      `
+				}
+			`
         };
         var geometry = new BoxGeometry(5, 5, 5);
         var material = new ShaderMaterial({
@@ -85760,9 +86727,9 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
       this.lightDistance = new THREE.Mesh( distanceGeometry, distanceMaterial );
       const d = light.distance;
       if ( d === 0.0 ) {
-        this.lightDistance.visible = false;
+      	this.lightDistance.visible = false;
       } else {
-        this.lightDistance.scale.set( d, d, d );
+      	this.lightDistance.scale.set( d, d, d );
       }
       this.add( this.lightDistance );
       */
@@ -85787,12 +86754,12 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
         /*
         const d = this.light.distance;
-          if ( d === 0.0 ) {
-            this.lightDistance.visible = false;
-          } else {
-            this.lightDistance.visible = true;
-          this.lightDistance.scale.set( d, d, d );
-          }
+        	if ( d === 0.0 ) {
+        		this.lightDistance.visible = false;
+        	} else {
+        		this.lightDistance.visible = true;
+        	this.lightDistance.scale.set( d, d, d );
+        	}
         */
       }
     }]);
@@ -86321,11 +87288,11 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
         var max = _box.max;
 
         /*
-          5____4
+        	5____4
         1/___0/|
         | 6__|_7
         2/___3/
-          0: max.x, max.y, max.z
+        	0: max.x, max.y, max.z
         1: min.x, max.y, max.z
         2: min.x, min.y, max.z
         3: max.x, min.y, max.z
@@ -87037,7 +88004,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
       window.__THREE__ = REVISION;
     }
   }
-},3,[2,4,5,11,17,19,23,10,26,27,30,31,32],"../../node_modules/three/build/three.core.js");
+},4,[3,5,6,12,18,20,24,11,27,28,31,32,33],"../../node_modules/three/build/three.core.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function asyncGeneratorStep(n, t, e, r, o, a, c) {
     try {
@@ -87065,7 +88032,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     };
   }
   module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},4,[],"../../node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+},5,[],"../../node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _wrapNativeSuper(t) {
     var r = "function" == typeof Map ? new Map() : void 0;
@@ -87090,7 +88057,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports, _wrapNativeSuper(t);
   }
   module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},5,[6,7,10,9],"../../node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
+},6,[7,8,11,10],"../../node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _isNativeFunction(t) {
     try {
@@ -87100,7 +88067,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }
   }
   module.exports = _isNativeFunction, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},6,[],"../../node_modules/@babel/runtime/helpers/isNativeFunction.js");
+},7,[],"../../node_modules/@babel/runtime/helpers/isNativeFunction.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _construct(t, e, r) {
     if (_$$_REQUIRE(_dependencyMap[0], "./isNativeReflectConstruct.js")()) return Reflect.construct.apply(null, arguments);
@@ -87110,7 +88077,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     return r && _$$_REQUIRE(_dependencyMap[1], "./setPrototypeOf.js")(p, r.prototype), p;
   }
   module.exports = _construct, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},7,[8,9],"../../node_modules/@babel/runtime/helpers/construct.js");
+},8,[9,10],"../../node_modules/@babel/runtime/helpers/construct.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _isNativeReflectConstruct() {
     try {
@@ -87121,7 +88088,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports)();
   }
   module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},8,[],"../../node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
+},9,[],"../../node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _setPrototypeOf(t, e) {
     return module.exports = _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) {
@@ -87129,7 +88096,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports, _setPrototypeOf(t, e);
   }
   module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},9,[],"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js");
+},10,[],"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _getPrototypeOf(t) {
     return module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
@@ -87137,19 +88104,19 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports, _getPrototypeOf(t);
   }
   module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},10,[],"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+},11,[],"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _slicedToArray(r, e) {
     return _$$_REQUIRE(_dependencyMap[0], "./arrayWithHoles.js")(r) || _$$_REQUIRE(_dependencyMap[1], "./iterableToArrayLimit.js")(r, e) || _$$_REQUIRE(_dependencyMap[2], "./unsupportedIterableToArray.js")(r, e) || _$$_REQUIRE(_dependencyMap[3], "./nonIterableRest.js")();
   }
   module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},11,[12,13,14,16],"../../node_modules/@babel/runtime/helpers/slicedToArray.js");
+},12,[13,14,15,17],"../../node_modules/@babel/runtime/helpers/slicedToArray.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _arrayWithHoles(r) {
     if (Array.isArray(r)) return r;
   }
   module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},12,[],"../../node_modules/@babel/runtime/helpers/arrayWithHoles.js");
+},13,[],"../../node_modules/@babel/runtime/helpers/arrayWithHoles.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _iterableToArrayLimit(r, l) {
     var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
@@ -87179,7 +88146,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }
   }
   module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},13,[],"../../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
+},14,[],"../../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _unsupportedIterableToArray(r, a) {
     if (r) {
@@ -87189,7 +88156,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }
   }
   module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},14,[15],"../../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
+},15,[16],"../../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _arrayLikeToArray(r, a) {
     (null == a || a > r.length) && (a = r.length);
@@ -87197,13 +88164,13 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     return n;
   }
   module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},15,[],"../../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+},16,[],"../../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _nonIterableRest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
   module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},16,[],"../../node_modules/@babel/runtime/helpers/nonIterableRest.js");
+},17,[],"../../node_modules/@babel/runtime/helpers/nonIterableRest.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _get() {
     return module.exports = _get = "undefined" != typeof Reflect && Reflect.get ? Reflect.get.bind() : function (e, t, r) {
@@ -87215,38 +88182,38 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports, _get.apply(null, arguments);
   }
   module.exports = _get, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},17,[18],"../../node_modules/@babel/runtime/helpers/get.js");
+},18,[19],"../../node_modules/@babel/runtime/helpers/get.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _superPropBase(t, o) {
     for (; !{}.hasOwnProperty.call(t, o) && null !== (t = _$$_REQUIRE(_dependencyMap[0], "./getPrototypeOf.js")(t)););
     return t;
   }
   module.exports = _superPropBase, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},18,[10],"../../node_modules/@babel/runtime/helpers/superPropBase.js");
+},19,[11],"../../node_modules/@babel/runtime/helpers/superPropBase.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _toConsumableArray(r) {
     return _$$_REQUIRE(_dependencyMap[0], "./arrayWithoutHoles.js")(r) || _$$_REQUIRE(_dependencyMap[1], "./iterableToArray.js")(r) || _$$_REQUIRE(_dependencyMap[2], "./unsupportedIterableToArray.js")(r) || _$$_REQUIRE(_dependencyMap[3], "./nonIterableSpread.js")();
   }
   module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},19,[20,21,14,22],"../../node_modules/@babel/runtime/helpers/toConsumableArray.js");
+},20,[21,22,15,23],"../../node_modules/@babel/runtime/helpers/toConsumableArray.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _arrayWithoutHoles(r) {
     if (Array.isArray(r)) return _$$_REQUIRE(_dependencyMap[0], "./arrayLikeToArray.js")(r);
   }
   module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},20,[15],"../../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+},21,[16],"../../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _iterableToArray(r) {
     if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
   }
   module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},21,[],"../../node_modules/@babel/runtime/helpers/iterableToArray.js");
+},22,[],"../../node_modules/@babel/runtime/helpers/iterableToArray.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _nonIterableSpread() {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
   module.exports = _nonIterableSpread, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},22,[],"../../node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+},23,[],"../../node_modules/@babel/runtime/helpers/nonIterableSpread.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _possibleConstructorReturn(t, e) {
     if (e && ("object" == _$$_REQUIRE(_dependencyMap[0], "./typeof.js")["default"](e) || "function" == typeof e)) return e;
@@ -87254,7 +88221,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     return _$$_REQUIRE(_dependencyMap[1], "./assertThisInitialized.js")(t);
   }
   module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},23,[24,25],"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+},24,[25,26],"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _typeof(o) {
     "@babel/helpers - typeof";
@@ -87266,14 +88233,14 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
   }
   module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},24,[],"../../node_modules/@babel/runtime/helpers/typeof.js");
+},25,[],"../../node_modules/@babel/runtime/helpers/typeof.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _assertThisInitialized(e) {
     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
   }
   module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},25,[],"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+},26,[],"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _inherits(t, e) {
     if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function");
@@ -87288,7 +88255,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }), e && _$$_REQUIRE(_dependencyMap[0], "./setPrototypeOf.js")(t, e);
   }
   module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},26,[9],"../../node_modules/@babel/runtime/helpers/inherits.js");
+},27,[10],"../../node_modules/@babel/runtime/helpers/inherits.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _defineProperty(e, r, t) {
     return (r = _$$_REQUIRE(_dependencyMap[0], "./toPropertyKey.js")(r)) in e ? Object.defineProperty(e, r, {
@@ -87299,14 +88266,14 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }) : e[r] = t, e;
   }
   module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},27,[28],"../../node_modules/@babel/runtime/helpers/defineProperty.js");
+},28,[29],"../../node_modules/@babel/runtime/helpers/defineProperty.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function toPropertyKey(t) {
     var i = _$$_REQUIRE(_dependencyMap[0], "./toPrimitive.js")(t, "string");
     return "symbol" == _$$_REQUIRE(_dependencyMap[1], "./typeof.js")["default"](i) ? i : i + "";
   }
   module.exports = toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},28,[29,24],"../../node_modules/@babel/runtime/helpers/toPropertyKey.js");
+},29,[30,25],"../../node_modules/@babel/runtime/helpers/toPropertyKey.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function toPrimitive(t, r) {
     if ("object" != _$$_REQUIRE(_dependencyMap[0], "./typeof.js")["default"](t) || !t) return t;
@@ -87319,19 +88286,19 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     return ("string" === r ? String : Number)(t);
   }
   module.exports = toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},29,[24],"../../node_modules/@babel/runtime/helpers/toPrimitive.js");
+},30,[25],"../../node_modules/@babel/runtime/helpers/toPrimitive.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _readOnlyError(r) {
     throw new TypeError('"' + r + '" is read-only');
   }
   module.exports = _readOnlyError, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},30,[],"../../node_modules/@babel/runtime/helpers/readOnlyError.js");
+},31,[],"../../node_modules/@babel/runtime/helpers/readOnlyError.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _classCallCheck(a, n) {
     if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
   }
   module.exports = _classCallCheck, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},31,[],"../../node_modules/@babel/runtime/helpers/classCallCheck.js");
+},32,[],"../../node_modules/@babel/runtime/helpers/classCallCheck.js");
 global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _defineProperties(e, r) {
     for (var t = 0; t < r.length; t++) {
@@ -87345,13 +88312,1610 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
     }), e;
   }
   module.exports = _createClass, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},32,[28],"../../node_modules/@babel/runtime/helpers/createClass.js");
+},33,[29],"../../node_modules/@babel/runtime/helpers/createClass.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.frameCorners = frameCorners;
+  var _va = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // from pe to pa
+    _vb = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // from pe to pb
+    _vc = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // from pe to pc
+    _vr = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // right axis of screen
+    _vu = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // up axis of screen
+    _vn = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // normal vector of screen
+    _vec = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)(),
+    // temporary vector
+    _quat = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Quaternion)(); // temporary quaternion
+
+  /** Set a PerspectiveCamera's projectionMatrix and quaternion
+   * to exactly frame the corners of an arbitrary rectangle.
+   * NOTE: This function ignores the standard parameters;
+   * do not call updateProjectionMatrix() after this!
+   *
+   * @param {PerspectiveCamera} camera
+   * @param {Vector3} bottomLeftCorner
+   * @param {Vector3} bottomRightCorner
+   * @param {Vector3} topLeftCorner
+   * @param {boolean} [estimateViewFrustum=false]
+   */
+  function frameCorners(camera, bottomLeftCorner, bottomRightCorner, topLeftCorner) {
+    var estimateViewFrustum = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+    var pa = bottomLeftCorner,
+      pb = bottomRightCorner,
+      pc = topLeftCorner;
+    var pe = camera.position; // eye position
+    var n = camera.near; // distance of near clipping plane
+    var f = camera.far; //distance of far clipping plane
+
+    _vr.copy(pb).sub(pa).normalize();
+    _vu.copy(pc).sub(pa).normalize();
+    _vn.crossVectors(_vr, _vu).normalize();
+    _va.copy(pa).sub(pe); // from pe to pa
+    _vb.copy(pb).sub(pe); // from pe to pb
+    _vc.copy(pc).sub(pe); // from pe to pc
+
+    var d = -_va.dot(_vn); // distance from eye to screen
+    var l = _vr.dot(_va) * n / d; // distance to left screen edge
+    var r = _vr.dot(_vb) * n / d; // distance to right screen edge
+    var b = _vu.dot(_va) * n / d; // distance to bottom screen edge
+    var t = _vu.dot(_vc) * n / d; // distance to top screen edge
+
+    // Set the camera rotation to match the focal plane to the corners' plane
+    _quat.setFromUnitVectors(_vec.set(0, 1, 0), _vu);
+    camera.quaternion.setFromUnitVectors(_vec.set(0, 0, 1).applyQuaternion(_quat), _vn).multiply(_quat);
+
+    // Set the off-axis projection matrix to match the corners
+    camera.projectionMatrix.set(2.0 * n / (r - l), 0.0, (r + l) / (r - l), 0.0, 0.0, 2.0 * n / (t - b), (t + b) / (t - b), 0.0, 0.0, 0.0, (f + n) / (n - f), 2.0 * f * n / (n - f), 0.0, 0.0, -1.0, 0.0);
+    camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
+
+    // FoV estimation to fix frustum culling
+    if (estimateViewFrustum) {
+      // Set fieldOfView to a conservative estimate
+      // to make frustum tall/wide enough to encompass it
+      camera.fov = _$$_REQUIRE(_dependencyMap[0], "three").MathUtils.RAD2DEG / Math.min(1.0, camera.aspect) * Math.atan((_vec.copy(pb).sub(pa).length() + _vec.copy(pc).sub(pa).length()) / _va.length());
+    }
+  }
+},34,[2],"../../node_modules/three/examples/jsm/utils/CameraUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.compressNormals = compressNormals;
+  exports.compressPositions = compressPositions;
+  exports.compressUvs = compressUvs;
+  /**
+   * Octahedron and Quantization encodings based on work by:
+   *
+   * @link https://github.com/tsherif/mesh-quantization-example
+   *
+   */
+
+  /**
+   * Make the input geometry's normal attribute encoded and compressed by 3 different methods.
+   *
+   * @param {THREE.BufferGeometry} geometry
+   * @param {String} encodeMethod		"DEFAULT" || "OCT1Byte" || "OCT2Byte" || "ANGLES"
+   *
+   */
+  function compressNormals(geometry, encodeMethod) {
+    var normal = geometry.attributes.normal;
+    if (!normal) {
+      console.error('Geometry must contain normal attribute. ');
+    }
+    if (normal.isPacked) return;
+    if (normal.itemSize != 3) {
+      console.error('normal.itemSize is not 3, which cannot be encoded. ');
+    }
+    var array = normal.array;
+    var count = normal.count;
+    var result;
+    if (encodeMethod == 'DEFAULT') {
+      // TODO: Add 1 byte to the result, making the encoded length to be 4 bytes.
+      result = new Uint8Array(count * 3);
+      for (var idx = 0; idx < array.length; idx += 3) {
+        var encoded = defaultEncode(array[idx], array[idx + 1], array[idx + 2], 1);
+        result[idx + 0] = encoded[0];
+        result[idx + 1] = encoded[1];
+        result[idx + 2] = encoded[2];
+      }
+      geometry.setAttribute('normal', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result, 3, true));
+      geometry.attributes.normal.bytes = result.length * 1;
+    } else if (encodeMethod == 'OCT1Byte') {
+      /**
+      * It is not recommended to use 1-byte octahedron normals encoding unless you want to extremely reduce the memory usage
+      * As it makes vertex data not aligned to a 4 byte boundary which may harm some WebGL implementations and sometimes the normal distortion is visible
+      * Please refer to @zeux 's comments in https://github.com/mrdoob/three.js/pull/18208
+      */
+
+      result = new Int8Array(count * 2);
+      for (var _idx = 0; _idx < array.length; _idx += 3) {
+        var _encoded = octEncodeBest(array[_idx], array[_idx + 1], array[_idx + 2], 1);
+        result[_idx / 3 * 2 + 0] = _encoded[0];
+        result[_idx / 3 * 2 + 1] = _encoded[1];
+      }
+      geometry.setAttribute('normal', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result, 2, true));
+      geometry.attributes.normal.bytes = result.length * 1;
+    } else if (encodeMethod == 'OCT2Byte') {
+      result = new Int16Array(count * 2);
+      for (var _idx2 = 0; _idx2 < array.length; _idx2 += 3) {
+        var _encoded2 = octEncodeBest(array[_idx2], array[_idx2 + 1], array[_idx2 + 2], 2);
+        result[_idx2 / 3 * 2 + 0] = _encoded2[0];
+        result[_idx2 / 3 * 2 + 1] = _encoded2[1];
+      }
+      geometry.setAttribute('normal', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result, 2, true));
+      geometry.attributes.normal.bytes = result.length * 2;
+    } else if (encodeMethod == 'ANGLES') {
+      result = new Uint16Array(count * 2);
+      for (var _idx3 = 0; _idx3 < array.length; _idx3 += 3) {
+        var _encoded3 = anglesEncode(array[_idx3], array[_idx3 + 1], array[_idx3 + 2]);
+        result[_idx3 / 3 * 2 + 0] = _encoded3[0];
+        result[_idx3 / 3 * 2 + 1] = _encoded3[1];
+      }
+      geometry.setAttribute('normal', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result, 2, true));
+      geometry.attributes.normal.bytes = result.length * 2;
+    } else {
+      console.error('Unrecognized encoding method, should be `DEFAULT` or `ANGLES` or `OCT`. ');
+    }
+    geometry.attributes.normal.needsUpdate = true;
+    geometry.attributes.normal.isPacked = true;
+    geometry.attributes.normal.packingMethod = encodeMethod;
+  }
+
+  /**
+  	 * Make the input geometry's position attribute encoded and compressed.
+  	 *
+  	 * @param {THREE.BufferGeometry} geometry
+  	 *
+  	 */
+  function compressPositions(geometry) {
+    var position = geometry.attributes.position;
+    if (!position) {
+      console.error('Geometry must contain position attribute. ');
+    }
+    if (position.isPacked) return;
+    if (position.itemSize != 3) {
+      console.error('position.itemSize is not 3, which cannot be packed. ');
+    }
+    var array = position.array;
+    var encodingBytes = 2;
+    var result = quantizedEncode(array, encodingBytes);
+    var quantized = result.quantized;
+
+    // IMPORTANT: calculate original geometry bounding info first, before updating packed positions
+    if (geometry.boundingBox == null) geometry.computeBoundingBox();
+    if (geometry.boundingSphere == null) geometry.computeBoundingSphere();
+    geometry.setAttribute('position', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(quantized, 3));
+    geometry.attributes.position.isPacked = true;
+    geometry.attributes.position.needsUpdate = true;
+    geometry.attributes.position.bytes = quantized.length * encodingBytes;
+  }
+
+  /**
+   * Make the input geometry's uv attribute encoded and compressed.
+   *
+   * @param {THREE.BufferGeometry} geometry
+   *
+   */
+  function compressUvs(geometry) {
+    var uvs = geometry.attributes.uv;
+    if (!uvs) {
+      console.error('Geometry must contain uv attribute. ');
+    }
+    if (uvs.isPacked) return;
+    var range = {
+      min: Infinity,
+      max: -Infinity
+    };
+    var array = uvs.array;
+    for (var i = 0; i < array.length; i++) {
+      range.min = Math.min(range.min, array[i]);
+      range.max = Math.max(range.max, array[i]);
+    }
+    var result;
+    if (range.min >= -1.0 && range.max <= 1.0) {
+      // use default encoding method
+      result = new Uint16Array(array.length);
+      for (var _i = 0; _i < array.length; _i += 2) {
+        var encoded = defaultEncode(array[_i], array[_i + 1], 0, 2);
+        result[_i] = encoded[0];
+        result[_i + 1] = encoded[1];
+      }
+      geometry.setAttribute('uv', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result, 2, true));
+      geometry.attributes.uv.isPacked = true;
+      geometry.attributes.uv.needsUpdate = true;
+      geometry.attributes.uv.bytes = result.length * 2;
+    } else {
+      // use quantized encoding method
+      result = quantizedEncodeUV(array, 2);
+      geometry.setAttribute('uv', new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(result.quantized, 2));
+      geometry.attributes.uv.isPacked = true;
+      geometry.attributes.uv.needsUpdate = true;
+      geometry.attributes.uv.bytes = result.quantized.length * 2;
+    }
+  }
+
+  // Encoding functions
+
+  function defaultEncode(x, y, z, bytes) {
+    if (bytes == 1) {
+      var tmpx = Math.round((x + 1) * 0.5 * 255);
+      var tmpy = Math.round((y + 1) * 0.5 * 255);
+      var tmpz = Math.round((z + 1) * 0.5 * 255);
+      return new Uint8Array([tmpx, tmpy, tmpz]);
+    } else if (bytes == 2) {
+      var _tmpx = Math.round((x + 1) * 0.5 * 65535);
+      var _tmpy = Math.round((y + 1) * 0.5 * 65535);
+      var _tmpz = Math.round((z + 1) * 0.5 * 65535);
+      return new Uint16Array([_tmpx, _tmpy, _tmpz]);
+    } else {
+      console.error('number of bytes must be 1 or 2');
+    }
+  }
+
+  // for `Angles` encoding
+  function anglesEncode(x, y, z) {
+    var normal0 = parseInt(0.5 * (1.0 + Math.atan2(y, x) / Math.PI) * 65535);
+    var normal1 = parseInt(0.5 * (1.0 + z) * 65535);
+    return new Uint16Array([normal0, normal1]);
+  }
+
+  // for `Octahedron` encoding
+  function octEncodeBest(x, y, z, bytes) {
+    var oct, dec, best, currentCos, bestCos;
+
+    // Test various combinations of ceil and floor
+    // to minimize rounding errors
+    best = oct = octEncodeVec3(x, y, z, 'floor', 'floor');
+    dec = octDecodeVec2(oct);
+    bestCos = dot(x, y, z, dec);
+    oct = octEncodeVec3(x, y, z, 'ceil', 'floor');
+    dec = octDecodeVec2(oct);
+    currentCos = dot(x, y, z, dec);
+    if (currentCos > bestCos) {
+      best = oct;
+      bestCos = currentCos;
+    }
+    oct = octEncodeVec3(x, y, z, 'floor', 'ceil');
+    dec = octDecodeVec2(oct);
+    currentCos = dot(x, y, z, dec);
+    if (currentCos > bestCos) {
+      best = oct;
+      bestCos = currentCos;
+    }
+    oct = octEncodeVec3(x, y, z, 'ceil', 'ceil');
+    dec = octDecodeVec2(oct);
+    currentCos = dot(x, y, z, dec);
+    if (currentCos > bestCos) {
+      best = oct;
+    }
+    return best;
+    function octEncodeVec3(x0, y0, z0, xfunc, yfunc) {
+      var x = x0 / (Math.abs(x0) + Math.abs(y0) + Math.abs(z0));
+      var y = y0 / (Math.abs(x0) + Math.abs(y0) + Math.abs(z0));
+      if (z < 0) {
+        var tempx = (1 - Math.abs(y)) * (x >= 0 ? 1 : -1);
+        var tempy = (1 - Math.abs(x)) * (y >= 0 ? 1 : -1);
+        x = tempx;
+        y = tempy;
+        var diff = 1 - Math.abs(x) - Math.abs(y);
+        if (diff > 0) {
+          diff += 0.001;
+          x += x > 0 ? diff / 2 : -diff / 2;
+          y += y > 0 ? diff / 2 : -diff / 2;
+        }
+      }
+      if (bytes == 1) {
+        return new Int8Array([Math[xfunc](x * 127.5 + (x < 0 ? 1 : 0)), Math[yfunc](y * 127.5 + (y < 0 ? 1 : 0))]);
+      }
+      if (bytes == 2) {
+        return new Int16Array([Math[xfunc](x * 32767.5 + (x < 0 ? 1 : 0)), Math[yfunc](y * 32767.5 + (y < 0 ? 1 : 0))]);
+      }
+    }
+    function octDecodeVec2(oct) {
+      var x = oct[0];
+      var y = oct[1];
+      if (bytes == 1) {
+        x /= x < 0 ? 127 : 128;
+        y /= y < 0 ? 127 : 128;
+      } else if (bytes == 2) {
+        x /= x < 0 ? 32767 : 32768;
+        y /= y < 0 ? 32767 : 32768;
+      }
+      var z = 1 - Math.abs(x) - Math.abs(y);
+      if (z < 0) {
+        var tmpx = x;
+        x = (1 - Math.abs(y)) * (x >= 0 ? 1 : -1);
+        y = (1 - Math.abs(tmpx)) * (y >= 0 ? 1 : -1);
+      }
+      var length = Math.sqrt(x * x + y * y + z * z);
+      return [x / length, y / length, z / length];
+    }
+    function dot(x, y, z, vec3) {
+      return x * vec3[0] + y * vec3[1] + z * vec3[2];
+    }
+  }
+  function quantizedEncode(array, bytes) {
+    var quantized, segments;
+    if (bytes == 1) {
+      quantized = new Uint8Array(array.length);
+      segments = 255;
+    } else if (bytes == 2) {
+      quantized = new Uint16Array(array.length);
+      segments = 65535;
+    } else {
+      console.error('number of bytes error! ');
+    }
+    var decodeMat = new (_$$_REQUIRE(_dependencyMap[0], "three").Matrix4)();
+    var min = new Float32Array(3);
+    var max = new Float32Array(3);
+    min[0] = min[1] = min[2] = Number.MAX_VALUE;
+    max[0] = max[1] = max[2] = -Number.MAX_VALUE;
+    for (var i = 0; i < array.length; i += 3) {
+      min[0] = Math.min(min[0], array[i + 0]);
+      min[1] = Math.min(min[1], array[i + 1]);
+      min[2] = Math.min(min[2], array[i + 2]);
+      max[0] = Math.max(max[0], array[i + 0]);
+      max[1] = Math.max(max[1], array[i + 1]);
+      max[2] = Math.max(max[2], array[i + 2]);
+    }
+    decodeMat.scale(new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)((max[0] - min[0]) / segments, (max[1] - min[1]) / segments, (max[2] - min[2]) / segments));
+    decodeMat.elements[12] = min[0];
+    decodeMat.elements[13] = min[1];
+    decodeMat.elements[14] = min[2];
+    decodeMat.transpose();
+    var multiplier = new Float32Array([max[0] !== min[0] ? segments / (max[0] - min[0]) : 0, max[1] !== min[1] ? segments / (max[1] - min[1]) : 0, max[2] !== min[2] ? segments / (max[2] - min[2]) : 0]);
+    for (var _i2 = 0; _i2 < array.length; _i2 += 3) {
+      quantized[_i2 + 0] = Math.floor((array[_i2 + 0] - min[0]) * multiplier[0]);
+      quantized[_i2 + 1] = Math.floor((array[_i2 + 1] - min[1]) * multiplier[1]);
+      quantized[_i2 + 2] = Math.floor((array[_i2 + 2] - min[2]) * multiplier[2]);
+    }
+    return {
+      quantized: quantized,
+      decodeMat: decodeMat
+    };
+  }
+  function quantizedEncodeUV(array, bytes) {
+    var quantized, segments;
+    if (bytes == 1) {
+      quantized = new Uint8Array(array.length);
+      segments = 255;
+    } else if (bytes == 2) {
+      quantized = new Uint16Array(array.length);
+      segments = 65535;
+    } else {
+      console.error('number of bytes error! ');
+    }
+    var decodeMat = new (_$$_REQUIRE(_dependencyMap[0], "three").Matrix3)();
+    var min = new Float32Array(2);
+    var max = new Float32Array(2);
+    min[0] = min[1] = Number.MAX_VALUE;
+    max[0] = max[1] = -Number.MAX_VALUE;
+    for (var i = 0; i < array.length; i += 2) {
+      min[0] = Math.min(min[0], array[i + 0]);
+      min[1] = Math.min(min[1], array[i + 1]);
+      max[0] = Math.max(max[0], array[i + 0]);
+      max[1] = Math.max(max[1], array[i + 1]);
+    }
+    decodeMat.scale((max[0] - min[0]) / segments, (max[1] - min[1]) / segments);
+    decodeMat.elements[6] = min[0];
+    decodeMat.elements[7] = min[1];
+    decodeMat.transpose();
+    var multiplier = new Float32Array([max[0] !== min[0] ? segments / (max[0] - min[0]) : 0, max[1] !== min[1] ? segments / (max[1] - min[1]) : 0]);
+    for (var _i3 = 0; _i3 < array.length; _i3 += 2) {
+      quantized[_i3 + 0] = Math.floor((array[_i3 + 0] - min[0]) * multiplier[0]);
+      quantized[_i3 + 1] = Math.floor((array[_i3 + 1] - min[1]) * multiplier[1]);
+    }
+    return {
+      quantized: quantized,
+      decodeMat: decodeMat
+    };
+  }
+},35,[2],"../../node_modules/three/examples/jsm/utils/GeometryCompressionUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.gosper = gosper;
+  exports.hilbert2D = hilbert2D;
+  exports.hilbert3D = hilbert3D;
+  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/toConsumableArray"));
+  /**
+   * Generates 2D-Coordinates in a very fast way.
+   *
+   * Based on work by:
+   * @link http://www.openprocessing.org/sketch/15493
+   *
+   * @param {Vector3} center - Center of Hilbert curve.
+   * @param {number} [size=10] - Total width of Hilbert curve.
+   * @param {number} [iterations=10] - Number of subdivisions.
+   * @param {number} [v0=0] - Corner index -X, -Z.
+   * @param {number} [v1=1] - Corner index -X, +Z.
+   * @param {number} [v2=2] - Corner index +X, +Z.
+   * @param {number} [v3=3] - Corner index +X, -Z.
+   * @returns {Array<Array<number>>} The Hilbert curve points.
+   */
+  function hilbert2D() {
+    var center = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(0, 0, 0);
+    var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+    var iterations = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var v0 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+    var v1 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+    var v2 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 2;
+    var v3 = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : 3;
+    var half = size / 2;
+    var vec_s = [new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y, center.z - half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y, center.z - half)];
+    var vec = [vec_s[v0], vec_s[v1], vec_s[v2], vec_s[v3]];
+
+    // Recurse iterations
+    if (0 <= --iterations) {
+      return [].concat((0, _toConsumableArray2.default)(hilbert2D(vec[0], half, iterations, v0, v3, v2, v1)), (0, _toConsumableArray2.default)(hilbert2D(vec[1], half, iterations, v0, v1, v2, v3)), (0, _toConsumableArray2.default)(hilbert2D(vec[2], half, iterations, v0, v1, v2, v3)), (0, _toConsumableArray2.default)(hilbert2D(vec[3], half, iterations, v2, v1, v0, v3)));
+    }
+
+    // Return complete Hilbert Curve.
+    return vec;
+  }
+
+  /**
+   * Generates 3D-Coordinates in a very fast way.
+   *
+   * Based on work by:
+   * @link https://openprocessing.org/user/5654
+   *
+   * @param {Vector3} [center=new Vector3( 0, 0, 0 )] - Center of Hilbert curve.
+   * @param {number} [size=10] - Total width of Hilbert curve.
+   * @param {number} [iterations=1] - Number of subdivisions.
+   * @param {number} [v0=0] - Corner index -X, +Y, -Z.
+   * @param {number} [v1=1] - Corner index -X, +Y, +Z.
+   * @param {number} [v2=2] - Corner index -X, -Y, +Z.
+   * @param {number} [v3=3] - Corner index -X, -Y, -Z.
+   * @param {number} [v4=4] - Corner index +X, -Y, -Z.
+   * @param {number} [v5=5] - Corner index +X, -Y, +Z.
+   * @param {number} [v6=6] - Corner index +X, +Y, +Z.
+   * @param {number} [v7=7] - Corner index +X, +Y, -Z.
+   * @returns {Array<Array<number>>}  - The Hilbert curve points.
+   */
+  function hilbert3D() {
+    var center = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(0, 0, 0);
+    var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+    var iterations = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    var v0 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+    var v1 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+    var v2 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 2;
+    var v3 = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : 3;
+    var v4 = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 4;
+    var v5 = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : 5;
+    var v6 = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : 6;
+    var v7 = arguments.length > 10 && arguments[10] !== undefined ? arguments[10] : 7;
+    // Default Vars
+    var half = size / 2;
+    var vec_s = [new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y + half, center.z - half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y + half, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y - half, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x - half, center.y - half, center.z - half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y - half, center.z - half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y - half, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y + half, center.z + half), new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(center.x + half, center.y + half, center.z - half)];
+    var vec = [vec_s[v0], vec_s[v1], vec_s[v2], vec_s[v3], vec_s[v4], vec_s[v5], vec_s[v6], vec_s[v7]];
+
+    // Recurse iterations
+    if (--iterations >= 0) {
+      return [].concat((0, _toConsumableArray2.default)(hilbert3D(vec[0], half, iterations, v0, v3, v4, v7, v6, v5, v2, v1)), (0, _toConsumableArray2.default)(hilbert3D(vec[1], half, iterations, v0, v7, v6, v1, v2, v5, v4, v3)), (0, _toConsumableArray2.default)(hilbert3D(vec[2], half, iterations, v0, v7, v6, v1, v2, v5, v4, v3)), (0, _toConsumableArray2.default)(hilbert3D(vec[3], half, iterations, v2, v3, v0, v1, v6, v7, v4, v5)), (0, _toConsumableArray2.default)(hilbert3D(vec[4], half, iterations, v2, v3, v0, v1, v6, v7, v4, v5)), (0, _toConsumableArray2.default)(hilbert3D(vec[5], half, iterations, v4, v3, v2, v5, v6, v1, v0, v7)), (0, _toConsumableArray2.default)(hilbert3D(vec[6], half, iterations, v4, v3, v2, v5, v6, v1, v0, v7)), (0, _toConsumableArray2.default)(hilbert3D(vec[7], half, iterations, v6, v5, v2, v1, v0, v3, v4, v7)));
+    }
+
+    // Return complete Hilbert Curve.
+    return vec;
+  }
+
+  /**
+   * Generates a Gosper curve (lying in the XY plane)
+   *
+   * https://gist.github.com/nitaku/6521802
+   *
+   * @param {number} [size=1] - The size of a single gosper island.
+   * @return {Array<[number, number, number]>} The gosper island points.
+   */
+  function gosper() {
+    var size = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    function fractalize(config) {
+      var output;
+      var input = config.axiom;
+      for (var i = 0, il = config.steps; 0 <= il ? i < il : i > il; 0 <= il ? i++ : i--) {
+        output = '';
+        for (var j = 0, jl = input.length; j < jl; j++) {
+          var char = input[j];
+          if (char in config.rules) {
+            output += config.rules[char];
+          } else {
+            output += char;
+          }
+        }
+        input = output;
+      }
+      return output;
+    }
+    function toPoints(config) {
+      var currX = 0,
+        currY = 0;
+      var angle = 0;
+      var path = [0, 0, 0];
+      var fractal = config.fractal;
+      for (var i = 0, l = fractal.length; i < l; i++) {
+        var char = fractal[i];
+        if (char === '+') {
+          angle += config.angle;
+        } else if (char === '-') {
+          angle -= config.angle;
+        } else if (char === 'F') {
+          currX += config.size * Math.cos(angle);
+          currY += -config.size * Math.sin(angle);
+          path.push(currX, currY, 0);
+        }
+      }
+      return path;
+    }
+
+    //
+
+    var gosper = fractalize({
+      axiom: 'A',
+      steps: 4,
+      rules: {
+        A: 'A+BF++BF-FA--FAFA-BF+',
+        B: '-FA+BFBF++BF+FA--FA-B'
+      }
+    });
+    var points = toPoints({
+      fractal: gosper,
+      size: size,
+      angle: Math.PI / 3 // 60 degrees
+    });
+    return points;
+  }
+},36,[3,20,2],"../../node_modules/three/examples/jsm/utils/GeometryUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.LDrawUtils = void 0;
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/classCallCheck"));
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/createClass"));
+  var LDrawUtils = exports.LDrawUtils = /*#__PURE__*/function () {
+    function LDrawUtils() {
+      (0, _classCallCheck2.default)(this, LDrawUtils);
+    }
+    return (0, _createClass2.default)(LDrawUtils, null, [{
+      key: "mergeObject",
+      value: function mergeObject(object) {
+        // Merges geometries in object by materials and returns new object. Use on not indexed geometries.
+        // The object buffers reference the old object ones.
+        // Special treatment is done to the conditional lines generated by LDrawLoader.
+
+        function extractGroup(geometry, group, elementSize, isConditionalLine) {
+          // Extracts a group from a geometry as a new geometry (with attribute buffers referencing original buffers)
+
+          var newGeometry = new (_$$_REQUIRE(_dependencyMap[3], "three").BufferGeometry)();
+          var originalPositions = geometry.getAttribute('position').array;
+          var originalNormals = elementSize === 3 ? geometry.getAttribute('normal').array : null;
+          var numVertsGroup = Math.min(group.count, Math.floor(originalPositions.length / 3) - group.start);
+          var vertStart = group.start * 3;
+          var vertEnd = (group.start + numVertsGroup) * 3;
+          var positions = originalPositions.subarray(vertStart, vertEnd);
+          var normals = originalNormals !== null ? originalNormals.subarray(vertStart, vertEnd) : null;
+          newGeometry.setAttribute('position', new (_$$_REQUIRE(_dependencyMap[3], "three").BufferAttribute)(positions, 3));
+          if (normals !== null) newGeometry.setAttribute('normal', new (_$$_REQUIRE(_dependencyMap[3], "three").BufferAttribute)(normals, 3));
+          if (isConditionalLine) {
+            var controlArray0 = geometry.getAttribute('control0').array.subarray(vertStart, vertEnd);
+            var controlArray1 = geometry.getAttribute('control1').array.subarray(vertStart, vertEnd);
+            var directionArray = geometry.getAttribute('direction').array.subarray(vertStart, vertEnd);
+            newGeometry.setAttribute('control0', new (_$$_REQUIRE(_dependencyMap[3], "three").BufferAttribute)(controlArray0, 3, false));
+            newGeometry.setAttribute('control1', new (_$$_REQUIRE(_dependencyMap[3], "three").BufferAttribute)(controlArray1, 3, false));
+            newGeometry.setAttribute('direction', new (_$$_REQUIRE(_dependencyMap[3], "three").BufferAttribute)(directionArray, 3, false));
+          }
+          return newGeometry;
+        }
+        function addGeometry(mat, geometry, geometries) {
+          var geoms = geometries[mat.uuid];
+          if (!geoms) {
+            geometries[mat.uuid] = {
+              mat: mat,
+              arr: [geometry]
+            };
+          } else {
+            geoms.arr.push(geometry);
+          }
+        }
+        function permuteAttribute(attribute, elemSize) {
+          // Permutes first two vertices of each attribute element
+
+          if (!attribute) return;
+          var verts = attribute.array;
+          var numVerts = Math.floor(verts.length / 3);
+          var offset = 0;
+          for (var i = 0; i < numVerts; i++) {
+            var x = verts[offset];
+            var y = verts[offset + 1];
+            var z = verts[offset + 2];
+            verts[offset] = verts[offset + 3];
+            verts[offset + 1] = verts[offset + 4];
+            verts[offset + 2] = verts[offset + 5];
+            verts[offset + 3] = x;
+            verts[offset + 4] = y;
+            verts[offset + 5] = z;
+            offset += elemSize * 3;
+          }
+        }
+
+        // Traverse the object hierarchy collecting geometries and transforming them to world space
+
+        var meshGeometries = {};
+        var linesGeometries = {};
+        var condLinesGeometries = {};
+        object.updateMatrixWorld(true);
+        var normalMatrix = new (_$$_REQUIRE(_dependencyMap[3], "three").Matrix3)();
+        object.traverse(function (c) {
+          if (c.isMesh | c.isLineSegments) {
+            var elemSize = c.isMesh ? 3 : 2;
+            var geometry = c.geometry.clone();
+            var matrixIsInverted = c.matrixWorld.determinant() < 0;
+            if (matrixIsInverted) {
+              permuteAttribute(geometry.attributes.position, elemSize);
+              permuteAttribute(geometry.attributes.normal, elemSize);
+            }
+            geometry.applyMatrix4(c.matrixWorld);
+            if (c.isConditionalLine) {
+              geometry.attributes.control0.applyMatrix4(c.matrixWorld);
+              geometry.attributes.control1.applyMatrix4(c.matrixWorld);
+              normalMatrix.getNormalMatrix(c.matrixWorld);
+              geometry.attributes.direction.applyNormalMatrix(normalMatrix);
+            }
+            var geometries = c.isMesh ? meshGeometries : c.isConditionalLine ? condLinesGeometries : linesGeometries;
+            if (Array.isArray(c.material)) {
+              for (var groupIndex in geometry.groups) {
+                var group = geometry.groups[groupIndex];
+                var mat = c.material[group.materialIndex];
+                var newGeometry = extractGroup(geometry, group, elemSize, c.isConditionalLine);
+                addGeometry(mat, newGeometry, geometries);
+              }
+            } else {
+              addGeometry(c.material, geometry, geometries);
+            }
+          }
+        });
+
+        // Create object with merged geometries
+
+        var mergedObject = new (_$$_REQUIRE(_dependencyMap[3], "three").Group)();
+        var meshMaterialsIds = Object.keys(meshGeometries);
+        for (var meshMaterialsId of meshMaterialsIds) {
+          var meshGeometry = meshGeometries[meshMaterialsId];
+          var mergedGeometry = (0, _$$_REQUIRE(_dependencyMap[4], "./BufferGeometryUtils.js").mergeGeometries)(meshGeometry.arr);
+          mergedObject.add(new (_$$_REQUIRE(_dependencyMap[3], "three").Mesh)(mergedGeometry, meshGeometry.mat));
+        }
+        var linesMaterialsIds = Object.keys(linesGeometries);
+        for (var linesMaterialsId of linesMaterialsIds) {
+          var lineGeometry = linesGeometries[linesMaterialsId];
+          var _mergedGeometry = (0, _$$_REQUIRE(_dependencyMap[4], "./BufferGeometryUtils.js").mergeGeometries)(lineGeometry.arr);
+          mergedObject.add(new (_$$_REQUIRE(_dependencyMap[3], "three").LineSegments)(_mergedGeometry, lineGeometry.mat));
+        }
+        var condLinesMaterialsIds = Object.keys(condLinesGeometries);
+        for (var condLinesMaterialsId of condLinesMaterialsIds) {
+          var condLineGeometry = condLinesGeometries[condLinesMaterialsId];
+          var _mergedGeometry2 = (0, _$$_REQUIRE(_dependencyMap[4], "./BufferGeometryUtils.js").mergeGeometries)(condLineGeometry.arr);
+          var condLines = new (_$$_REQUIRE(_dependencyMap[3], "three").LineSegments)(_mergedGeometry2, condLineGeometry.mat);
+          condLines.isConditionalLine = true;
+          mergedObject.add(condLines);
+        }
+        mergedObject.userData.constructionStep = 0;
+        mergedObject.userData.numConstructionSteps = 1;
+        return mergedObject;
+      }
+    }]);
+  }();
+},37,[3,32,33,2,1],"../../node_modules/three/examples/jsm/utils/LDrawUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.createMeshesFromInstancedMesh = createMeshesFromInstancedMesh;
+  exports.createMeshesFromMultiMaterialMesh = createMeshesFromMultiMaterialMesh;
+  exports.createMultiMaterialObject = createMultiMaterialObject;
+  exports.reduceVertices = reduceVertices;
+  exports.sortInstancedMesh = sortInstancedMesh;
+  exports.traverseAncestorsGenerator = traverseAncestorsGenerator;
+  exports.traverseGenerator = traverseGenerator;
+  exports.traverseVisibleGenerator = traverseVisibleGenerator;
+  var _color = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Color)();
+  var _matrix = /*@__PURE__*/new (_$$_REQUIRE(_dependencyMap[0], "three").Matrix4)();
+  function createMeshesFromInstancedMesh(instancedMesh) {
+    var group = new (_$$_REQUIRE(_dependencyMap[0], "three").Group)();
+    var count = instancedMesh.count;
+    var geometry = instancedMesh.geometry;
+    var material = instancedMesh.material;
+    for (var i = 0; i < count; i++) {
+      var mesh = new (_$$_REQUIRE(_dependencyMap[0], "three").Mesh)(geometry, material);
+      instancedMesh.getMatrixAt(i, mesh.matrix);
+      mesh.matrix.decompose(mesh.position, mesh.quaternion, mesh.scale);
+      group.add(mesh);
+    }
+    group.copy(instancedMesh);
+    group.updateMatrixWorld(); // ensure correct world matrices of meshes
+
+    return group;
+  }
+  function createMeshesFromMultiMaterialMesh(mesh) {
+    if (Array.isArray(mesh.material) === false) {
+      console.warn('THREE.SceneUtils.createMeshesFromMultiMaterialMesh(): The given mesh has no multiple materials.');
+      return mesh;
+    }
+    var object = new (_$$_REQUIRE(_dependencyMap[0], "three").Group)();
+    object.copy(mesh);
+
+    // merge groups (which automatically sorts them)
+
+    var geometry = (0, _$$_REQUIRE(_dependencyMap[1], "./BufferGeometryUtils.js").mergeGroups)(mesh.geometry);
+    var index = geometry.index;
+    var groups = geometry.groups;
+    var attributeNames = Object.keys(geometry.attributes);
+
+    // create a mesh for each group by extracting the buffer data into a new geometry
+
+    for (var i = 0; i < groups.length; i++) {
+      var group = groups[i];
+      var start = group.start;
+      var end = start + group.count;
+      var newGeometry = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferGeometry)();
+      var newMaterial = mesh.material[group.materialIndex];
+
+      // process all buffer attributes
+
+      for (var j = 0; j < attributeNames.length; j++) {
+        var name = attributeNames[j];
+        var attribute = geometry.attributes[name];
+        var itemSize = attribute.itemSize;
+        var newLength = group.count * itemSize;
+        var type = attribute.array.constructor;
+        var newArray = new type(newLength);
+        var newAttribute = new (_$$_REQUIRE(_dependencyMap[0], "three").BufferAttribute)(newArray, itemSize);
+        for (var k = start, n = 0; k < end; k++, n++) {
+          var ind = index.getX(k);
+          if (itemSize >= 1) newAttribute.setX(n, attribute.getX(ind));
+          if (itemSize >= 2) newAttribute.setY(n, attribute.getY(ind));
+          if (itemSize >= 3) newAttribute.setZ(n, attribute.getZ(ind));
+          if (itemSize >= 4) newAttribute.setW(n, attribute.getW(ind));
+        }
+        newGeometry.setAttribute(name, newAttribute);
+      }
+      var newMesh = new (_$$_REQUIRE(_dependencyMap[0], "three").Mesh)(newGeometry, newMaterial);
+      object.add(newMesh);
+    }
+    return object;
+  }
+  function createMultiMaterialObject(geometry, materials) {
+    var group = new (_$$_REQUIRE(_dependencyMap[0], "three").Group)();
+    for (var i = 0, l = materials.length; i < l; i++) {
+      group.add(new (_$$_REQUIRE(_dependencyMap[0], "three").Mesh)(geometry, materials[i]));
+    }
+    return group;
+  }
+  function reduceVertices(object, func, initialValue) {
+    var value = initialValue;
+    var vertex = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector3)();
+    object.updateWorldMatrix(true, true);
+    object.traverseVisible(function (child) {
+      var geometry = child.geometry;
+      if (geometry !== undefined) {
+        var position = geometry.attributes.position;
+        if (position !== undefined) {
+          for (var i = 0, l = position.count; i < l; i++) {
+            if (child.isMesh) {
+              child.getVertexPosition(i, vertex);
+            } else {
+              vertex.fromBufferAttribute(position, i);
+            }
+            if (!child.isSkinnedMesh) {
+              vertex.applyMatrix4(child.matrixWorld);
+            }
+            value = func(value, vertex);
+          }
+        }
+      }
+    });
+    return value;
+  }
+
+  /**
+   * @param {InstancedMesh} mesh
+   * @param {function(int, int):int} compareFn
+   */
+  function sortInstancedMesh(mesh, compareFn) {
+    // store copy of instanced attributes for lookups
+
+    var instanceMatrixRef = (0, _$$_REQUIRE(_dependencyMap[1], "./BufferGeometryUtils.js").deepCloneAttribute)(mesh.instanceMatrix);
+    var instanceColorRef = mesh.instanceColor ? (0, _$$_REQUIRE(_dependencyMap[1], "./BufferGeometryUtils.js").deepCloneAttribute)(mesh.instanceColor) : null;
+    var attributeRefs = new Map();
+    for (var name in mesh.geometry.attributes) {
+      var attribute = mesh.geometry.attributes[name];
+      if (attribute.isInstancedBufferAttribute) {
+        attributeRefs.set(attribute, (0, _$$_REQUIRE(_dependencyMap[1], "./BufferGeometryUtils.js").deepCloneAttribute)(attribute));
+      }
+    }
+
+    // compute sort order
+
+    var tokens = [];
+    for (var i = 0; i < mesh.count; i++) tokens.push(i);
+    tokens.sort(compareFn);
+
+    // apply sort order
+
+    for (var _i = 0; _i < tokens.length; _i++) {
+      var refIndex = tokens[_i];
+      _matrix.fromArray(instanceMatrixRef.array, refIndex * mesh.instanceMatrix.itemSize);
+      _matrix.toArray(mesh.instanceMatrix.array, _i * mesh.instanceMatrix.itemSize);
+      if (mesh.instanceColor) {
+        _color.fromArray(instanceColorRef.array, refIndex * mesh.instanceColor.itemSize);
+        _color.toArray(mesh.instanceColor.array, _i * mesh.instanceColor.itemSize);
+      }
+      for (var _name in mesh.geometry.attributes) {
+        var _attribute = mesh.geometry.attributes[_name];
+        if (_attribute.isInstancedBufferAttribute) {
+          var attributeRef = attributeRefs.get(_attribute);
+          _attribute.setX(_i, attributeRef.getX(refIndex));
+          if (_attribute.itemSize > 1) _attribute.setY(_i, attributeRef.getY(refIndex));
+          if (_attribute.itemSize > 2) _attribute.setZ(_i, attributeRef.getZ(refIndex));
+          if (_attribute.itemSize > 3) _attribute.setW(_i, attributeRef.getW(refIndex));
+        }
+      }
+    }
+  }
+
+  /**
+   * @param {Object3D} object Object to traverse.
+   * @yields {Object3D} Objects that passed the filter condition.
+   */
+  function* traverseGenerator(object) {
+    yield object;
+    var children = object.children;
+    for (var i = 0, l = children.length; i < l; i++) {
+      yield* traverseGenerator(children[i]);
+    }
+  }
+
+  /**
+   * @param {Object3D} object Object to traverse.
+   * @yields {Object3D} Objects that passed the filter condition.
+   */
+  function* traverseVisibleGenerator(object) {
+    if (object.visible === false) return;
+    yield object;
+    var children = object.children;
+    for (var i = 0, l = children.length; i < l; i++) {
+      yield* traverseVisibleGenerator(children[i]);
+    }
+  }
+
+  /**
+   * @param {Object3D} object Object to traverse.
+   * @yields {Object3D} Objects that passed the filter condition.
+   */
+  function* traverseAncestorsGenerator(object) {
+    var parent = object.parent;
+    if (parent !== null) {
+      yield parent;
+      yield* traverseAncestorsGenerator(parent);
+    }
+  }
+},38,[2,1],"../../node_modules/three/examples/jsm/utils/SceneUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ShadowMapViewer = void 0;
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/createClass"));
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+  /**
+   * This is a helper for visualising a given light's shadow map.
+   * It works for shadow casting lights: DirectionalLight and SpotLight.
+   * It renders out the shadow map and displays it on a HUD.
+   *
+   * Example usage:
+   *	1) Import ShadowMapViewer into your app.
+   *
+   *	2) Create a shadow casting light and name it optionally:
+   *		let light = new DirectionalLight( 0xffffff, 1 );
+   *		light.castShadow = true;
+   *		light.name = 'Sun';
+   *
+   *	3) Create a shadow map viewer for that light and set its size and position optionally:
+   *		let shadowMapViewer = new ShadowMapViewer( light );
+   *		shadowMapViewer.size.set( 128, 128 );	//width, height  default: 256, 256
+   *		shadowMapViewer.position.set( 10, 10 );	//x, y in pixel	 default: 0, 0 (top left corner)
+   *
+   *	4) Render the shadow map viewer in your render loop:
+   *		shadowMapViewer.render( renderer );
+   *
+   *	5) Optionally: Update the shadow map viewer on window resize:
+   *		shadowMapViewer.updateForWindowResize();
+   *
+   *	6) If you set the position or size members directly, you need to call shadowMapViewer.update();
+   */
+  var ShadowMapViewer = exports.ShadowMapViewer = /*#__PURE__*/(0, _createClass2.default)(function ShadowMapViewer(light) {
+    (0, _classCallCheck2.default)(this, ShadowMapViewer);
+    //- Internals
+    var scope = this;
+    var doRenderLabel = light.name !== undefined && light.name !== '';
+    var userAutoClearSetting;
+
+    //Holds the initial position and dimension of the HUD
+    var frame = {
+      x: 10,
+      y: 10,
+      width: 256,
+      height: 256
+    };
+    var camera = new (_$$_REQUIRE(_dependencyMap[3], "three").OrthographicCamera)(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 1, 10);
+    camera.position.set(0, 0, 2);
+    var scene = new (_$$_REQUIRE(_dependencyMap[3], "three").Scene)();
+
+    //HUD for shadow map
+    var shader = _$$_REQUIRE(_dependencyMap[4], "../shaders/UnpackDepthRGBAShader.js").UnpackDepthRGBAShader;
+    var uniforms = _$$_REQUIRE(_dependencyMap[3], "three").UniformsUtils.clone(shader.uniforms);
+    var material = new (_$$_REQUIRE(_dependencyMap[3], "three").ShaderMaterial)({
+      uniforms: uniforms,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader
+    });
+    var plane = new (_$$_REQUIRE(_dependencyMap[3], "three").PlaneGeometry)(frame.width, frame.height);
+    var mesh = new (_$$_REQUIRE(_dependencyMap[3], "three").Mesh)(plane, material);
+    scene.add(mesh);
+
+    //Label for light's name
+    var labelCanvas, labelMesh;
+    if (doRenderLabel) {
+      labelCanvas = document.createElement('canvas');
+      var context = labelCanvas.getContext('2d');
+      context.font = 'Bold 20px Arial';
+      var labelWidth = context.measureText(light.name).width;
+      labelCanvas.width = labelWidth;
+      labelCanvas.height = 25; //25 to account for g, p, etc.
+
+      context.font = 'Bold 20px Arial';
+      context.fillStyle = 'rgba( 255, 0, 0, 1 )';
+      context.fillText(light.name, 0, 20);
+      var labelTexture = new (_$$_REQUIRE(_dependencyMap[3], "three").CanvasTexture)(labelCanvas);
+      var labelMaterial = new (_$$_REQUIRE(_dependencyMap[3], "three").MeshBasicMaterial)({
+        map: labelTexture,
+        side: _$$_REQUIRE(_dependencyMap[3], "three").DoubleSide,
+        transparent: true
+      });
+      var labelPlane = new (_$$_REQUIRE(_dependencyMap[3], "three").PlaneGeometry)(labelCanvas.width, labelCanvas.height);
+      labelMesh = new (_$$_REQUIRE(_dependencyMap[3], "three").Mesh)(labelPlane, labelMaterial);
+      scene.add(labelMesh);
+    }
+    function resetPosition() {
+      scope.position.set(scope.position.x, scope.position.y);
+    }
+
+    //- API
+    // Set to false to disable displaying this shadow map
+    this.enabled = true;
+
+    // Set the size of the displayed shadow map on the HUD
+    this.size = {
+      width: frame.width,
+      height: frame.height,
+      set: function set(width, height) {
+        this.width = width;
+        this.height = height;
+        mesh.scale.set(this.width / frame.width, this.height / frame.height, 1);
+
+        //Reset the position as it is off when we scale stuff
+        resetPosition();
+      }
+    };
+
+    // Set the position of the displayed shadow map on the HUD
+    this.position = {
+      x: frame.x,
+      y: frame.y,
+      set: function set(x, y) {
+        this.x = x;
+        this.y = y;
+        var width = scope.size.width;
+        var height = scope.size.height;
+        mesh.position.set(-window.innerWidth / 2 + width / 2 + this.x, window.innerHeight / 2 - height / 2 - this.y, 0);
+        if (doRenderLabel) labelMesh.position.set(mesh.position.x, mesh.position.y - scope.size.height / 2 + labelCanvas.height / 2, 0);
+      }
+    };
+    this.render = function (renderer) {
+      if (this.enabled) {
+        //Because a light's .shadowMap is only initialised after the first render pass
+        //we have to make sure the correct map is sent into the shader, otherwise we
+        //always end up with the scene's first added shadow casting light's shadowMap
+        //in the shader
+        //See: https://github.com/mrdoob/three.js/issues/5932
+        uniforms.tDiffuse.value = light.shadow.map.texture;
+        userAutoClearSetting = renderer.autoClear;
+        renderer.autoClear = false; // To allow render overlay
+        renderer.clearDepth();
+        renderer.render(scene, camera);
+        renderer.autoClear = userAutoClearSetting; //Restore user's setting
+      }
+    };
+    this.updateForWindowResize = function () {
+      if (this.enabled) {
+        camera.left = window.innerWidth / -2;
+        camera.right = window.innerWidth / 2;
+        camera.top = window.innerHeight / 2;
+        camera.bottom = window.innerHeight / -2;
+        camera.updateProjectionMatrix();
+        this.update();
+      }
+    };
+    this.update = function () {
+      this.position.set(this.position.x, this.position.y);
+      this.size.set(this.size.width, this.size.height);
+    };
+
+    //Force an update to set position/size
+    this.update();
+  });
+},39,[3,33,32,2,40],"../../node_modules/three/examples/jsm/utils/ShadowMapViewer.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.UnpackDepthRGBAShader = void 0;
+  /**
+   * Unpack RGBA depth shader
+   * - show RGBA encoded depth as monochrome color
+   */
+
+  var UnpackDepthRGBAShader = exports.UnpackDepthRGBAShader = {
+    name: 'UnpackDepthRGBAShader',
+    uniforms: {
+      'tDiffuse': {
+        value: null
+      },
+      'opacity': {
+        value: 1.0
+      }
+    },
+    vertexShader: /* glsl */`
+
+		varying vec2 vUv;
+
+		void main() {
+
+			vUv = uv;
+			gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+		}`,
+    fragmentShader: /* glsl */`
+
+		uniform float opacity;
+
+		uniform sampler2D tDiffuse;
+
+		varying vec2 vUv;
+
+		#include <packing>
+
+		void main() {
+
+			float depth = 1.0 - unpackRGBAToDepth( texture2D( tDiffuse, vUv ) );
+			gl_FragColor = vec4( vec3( depth ), opacity );
+
+		}`
+  };
+},40,[],"../../node_modules/three/examples/jsm/shaders/UnpackDepthRGBAShader.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.clone = clone;
+  exports.retarget = retarget;
+  exports.retargetClip = retargetClip;
+  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/toConsumableArray"));
+  function getBoneName(bone, options) {
+    if (options.getBoneName !== undefined) {
+      return options.getBoneName(bone);
+    }
+    return options.names[bone.name];
+  }
+  function retarget(target, source) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var quat = new (_$$_REQUIRE(_dependencyMap[2], "three").Quaternion)(),
+      scale = new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(),
+      relativeMatrix = new (_$$_REQUIRE(_dependencyMap[2], "three").Matrix4)(),
+      globalMatrix = new (_$$_REQUIRE(_dependencyMap[2], "three").Matrix4)();
+    options.preserveBoneMatrix = options.preserveBoneMatrix !== undefined ? options.preserveBoneMatrix : true;
+    options.preserveBonePositions = options.preserveBonePositions !== undefined ? options.preserveBonePositions : true;
+    options.useTargetMatrix = options.useTargetMatrix !== undefined ? options.useTargetMatrix : false;
+    options.hip = options.hip !== undefined ? options.hip : 'hip';
+    options.hipInfluence = options.hipInfluence !== undefined ? options.hipInfluence : new (_$$_REQUIRE(_dependencyMap[2], "three").Vector3)(1, 1, 1);
+    options.scale = options.scale !== undefined ? options.scale : 1;
+    options.names = options.names || {};
+    var sourceBones = source.isObject3D ? source.skeleton.bones : getBones(source),
+      bones = target.isObject3D ? target.skeleton.bones : getBones(target);
+    var bone, name, boneTo, bonesPosition;
+
+    // reset bones
+
+    if (target.isObject3D) {
+      target.skeleton.pose();
+    } else {
+      options.useTargetMatrix = true;
+      options.preserveBoneMatrix = false;
+    }
+    if (options.preserveBonePositions) {
+      bonesPosition = [];
+      for (var i = 0; i < bones.length; i++) {
+        bonesPosition.push(bones[i].position.clone());
+      }
+    }
+    if (options.preserveBoneMatrix) {
+      // reset matrix
+
+      target.updateMatrixWorld();
+      target.matrixWorld.identity();
+
+      // reset children matrix
+
+      for (var _i = 0; _i < target.children.length; ++_i) {
+        target.children[_i].updateMatrixWorld(true);
+      }
+    }
+    for (var _i2 = 0; _i2 < bones.length; ++_i2) {
+      bone = bones[_i2];
+      name = getBoneName(bone, options);
+      boneTo = getBoneByName(name, sourceBones);
+      globalMatrix.copy(bone.matrixWorld);
+      if (boneTo) {
+        boneTo.updateMatrixWorld();
+        if (options.useTargetMatrix) {
+          relativeMatrix.copy(boneTo.matrixWorld);
+        } else {
+          relativeMatrix.copy(target.matrixWorld).invert();
+          relativeMatrix.multiply(boneTo.matrixWorld);
+        }
+
+        // ignore scale to extract rotation
+
+        scale.setFromMatrixScale(relativeMatrix);
+        relativeMatrix.scale(scale.set(1 / scale.x, 1 / scale.y, 1 / scale.z));
+
+        // apply to global matrix
+
+        globalMatrix.makeRotationFromQuaternion(quat.setFromRotationMatrix(relativeMatrix));
+        if (target.isObject3D) {
+          if (options.localOffsets) {
+            if (options.localOffsets[bone.name]) {
+              globalMatrix.multiply(options.localOffsets[bone.name]);
+            }
+          }
+        }
+        globalMatrix.copyPosition(relativeMatrix);
+      }
+      if (name === options.hip) {
+        globalMatrix.elements[12] *= options.scale * options.hipInfluence.x;
+        globalMatrix.elements[13] *= options.scale * options.hipInfluence.y;
+        globalMatrix.elements[14] *= options.scale * options.hipInfluence.z;
+        if (options.hipPosition !== undefined) {
+          globalMatrix.elements[12] += options.hipPosition.x * options.scale;
+          globalMatrix.elements[13] += options.hipPosition.y * options.scale;
+          globalMatrix.elements[14] += options.hipPosition.z * options.scale;
+        }
+      }
+      if (bone.parent) {
+        bone.matrix.copy(bone.parent.matrixWorld).invert();
+        bone.matrix.multiply(globalMatrix);
+      } else {
+        bone.matrix.copy(globalMatrix);
+      }
+      bone.matrix.decompose(bone.position, bone.quaternion, bone.scale);
+      bone.updateMatrixWorld();
+    }
+    if (options.preserveBonePositions) {
+      for (var _i3 = 0; _i3 < bones.length; ++_i3) {
+        bone = bones[_i3];
+        name = getBoneName(bone, options) || bone.name;
+        if (name !== options.hip) {
+          bone.position.copy(bonesPosition[_i3]);
+        }
+      }
+    }
+    if (options.preserveBoneMatrix) {
+      // restore matrix
+
+      target.updateMatrixWorld(true);
+    }
+  }
+  function retargetClip(target, source, clip) {
+    var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    options.useFirstFramePosition = options.useFirstFramePosition !== undefined ? options.useFirstFramePosition : false;
+
+    // Calculate the fps from the source clip based on the track with the most frames, unless fps is already provided.
+    options.fps = options.fps !== undefined ? options.fps : Math.max.apply(Math, (0, _toConsumableArray2.default)(clip.tracks.map(function (track) {
+      return track.times.length;
+    }))) / clip.duration;
+    options.names = options.names || [];
+    if (!source.isObject3D) {
+      source = getHelperFromSkeleton(source);
+    }
+    var numFrames = Math.round(clip.duration * (options.fps / 1000) * 1000),
+      delta = clip.duration / (numFrames - 1),
+      convertedTracks = [],
+      mixer = new (_$$_REQUIRE(_dependencyMap[2], "three").AnimationMixer)(source),
+      bones = getBones(target.skeleton),
+      boneDatas = [];
+    var positionOffset, bone, boneTo, boneData, name;
+    mixer.clipAction(clip).play();
+
+    // trim
+
+    var start = 0,
+      end = numFrames;
+    if (options.trim !== undefined) {
+      start = Math.round(options.trim[0] * options.fps);
+      end = Math.min(Math.round(options.trim[1] * options.fps), numFrames) - start;
+      mixer.update(options.trim[0]);
+    } else {
+      mixer.update(0);
+    }
+    source.updateMatrixWorld();
+
+    //
+
+    for (var frame = 0; frame < end; ++frame) {
+      var time = frame * delta;
+      retarget(target, source, options);
+      for (var j = 0; j < bones.length; ++j) {
+        bone = bones[j];
+        name = getBoneName(bone, options) || bone.name;
+        boneTo = getBoneByName(name, source.skeleton);
+        if (boneTo) {
+          boneData = boneDatas[j] = boneDatas[j] || {
+            bone: bone
+          };
+          if (options.hip === name) {
+            if (!boneData.pos) {
+              boneData.pos = {
+                times: new Float32Array(end),
+                values: new Float32Array(end * 3)
+              };
+            }
+            if (options.useFirstFramePosition) {
+              if (frame === 0) {
+                positionOffset = bone.position.clone();
+              }
+              bone.position.sub(positionOffset);
+            }
+            boneData.pos.times[frame] = time;
+            bone.position.toArray(boneData.pos.values, frame * 3);
+          }
+          if (!boneData.quat) {
+            boneData.quat = {
+              times: new Float32Array(end),
+              values: new Float32Array(end * 4)
+            };
+          }
+          boneData.quat.times[frame] = time;
+          bone.quaternion.toArray(boneData.quat.values, frame * 4);
+        }
+      }
+      if (frame === end - 2) {
+        // last mixer update before final loop iteration
+        // make sure we do not go over or equal to clip duration
+        mixer.update(delta - 0.0000001);
+      } else {
+        mixer.update(delta);
+      }
+      source.updateMatrixWorld();
+    }
+    for (var i = 0; i < boneDatas.length; ++i) {
+      boneData = boneDatas[i];
+      if (boneData) {
+        if (boneData.pos) {
+          convertedTracks.push(new (_$$_REQUIRE(_dependencyMap[2], "three").VectorKeyframeTrack)('.bones[' + boneData.bone.name + '].position', boneData.pos.times, boneData.pos.values));
+        }
+        convertedTracks.push(new (_$$_REQUIRE(_dependencyMap[2], "three").QuaternionKeyframeTrack)('.bones[' + boneData.bone.name + '].quaternion', boneData.quat.times, boneData.quat.values));
+      }
+    }
+    mixer.uncacheAction(clip);
+    return new (_$$_REQUIRE(_dependencyMap[2], "three").AnimationClip)(clip.name, -1, convertedTracks);
+  }
+  function clone(source) {
+    var sourceLookup = new Map();
+    var cloneLookup = new Map();
+    var clone = source.clone();
+    parallelTraverse(source, clone, function (sourceNode, clonedNode) {
+      sourceLookup.set(clonedNode, sourceNode);
+      cloneLookup.set(sourceNode, clonedNode);
+    });
+    clone.traverse(function (node) {
+      if (!node.isSkinnedMesh) return;
+      var clonedMesh = node;
+      var sourceMesh = sourceLookup.get(node);
+      var sourceBones = sourceMesh.skeleton.bones;
+      clonedMesh.skeleton = sourceMesh.skeleton.clone();
+      clonedMesh.bindMatrix.copy(sourceMesh.bindMatrix);
+      clonedMesh.skeleton.bones = sourceBones.map(function (bone) {
+        return cloneLookup.get(bone);
+      });
+      clonedMesh.bind(clonedMesh.skeleton, clonedMesh.bindMatrix);
+    });
+    return clone;
+  }
+
+  // internal helper
+
+  function getBoneByName(name, skeleton) {
+    for (var i = 0, bones = getBones(skeleton); i < bones.length; i++) {
+      if (name === bones[i].name) return bones[i];
+    }
+  }
+  function getBones(skeleton) {
+    return Array.isArray(skeleton) ? skeleton : skeleton.bones;
+  }
+  function getHelperFromSkeleton(skeleton) {
+    var source = new (_$$_REQUIRE(_dependencyMap[2], "three").SkeletonHelper)(skeleton.bones[0]);
+    source.skeleton = skeleton;
+    return source;
+  }
+  function parallelTraverse(a, b, callback) {
+    callback(a, b);
+    for (var i = 0; i < a.children.length; i++) {
+      parallelTraverse(a.children[i], b.children[i], callback);
+    }
+  }
+},41,[3,20,2],"../../node_modules/three/examples/jsm/utils/SkeletonUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.radixSort = void 0;
+  // Hybrid radix sort from
+  // - https://gist.github.com/sciecode/93ed864dd77c5c8803c6a86698d68dab
+  // - https://github.com/mrdoob/three.js/pull/27202#issuecomment-1817640271
+  //
+  // expects unsigned 32b integer values
+
+  var POWER = 3;
+  var BIT_MAX = 32;
+  var BIN_BITS = 1 << POWER;
+  var BIN_SIZE = 1 << BIN_BITS;
+  var BIN_MAX = BIN_SIZE - 1;
+  var ITERATIONS = BIT_MAX / BIN_BITS;
+  var bins = new Array(ITERATIONS);
+  var bins_buffer = new ArrayBuffer((ITERATIONS + 1) * BIN_SIZE * 4);
+  var c = 0;
+  for (var i = 0; i < ITERATIONS + 1; i++) {
+    bins[i] = new Uint32Array(bins_buffer, c, BIN_SIZE);
+    c += BIN_SIZE * 4;
+  }
+  var defaultGet = function defaultGet(el) {
+    return el;
+  };
+  var radixSort = exports.radixSort = function radixSort(arr, opt) {
+    var len = arr.length;
+    var options = opt || {};
+    var aux = options.aux || new arr.constructor(len);
+    var get = options.get || defaultGet;
+    var data = [arr, aux];
+    var compare, accumulate, recurse;
+    if (options.reversed) {
+      compare = function compare(a, b) {
+        return a < b;
+      };
+      accumulate = function accumulate(bin) {
+        for (var j = BIN_SIZE - 2; j >= 0; j--) bin[j] += bin[j + 1];
+      };
+      recurse = function recurse(cache, depth, start) {
+        var prev = 0;
+        for (var j = BIN_MAX; j >= 0; j--) {
+          var cur = cache[j],
+            diff = cur - prev;
+          if (diff != 0) {
+            if (diff > 32) radixSortBlock(depth + 1, start + prev, diff);else insertionSortBlock(depth + 1, start + prev, diff);
+            prev = cur;
+          }
+        }
+      };
+    } else {
+      compare = function compare(a, b) {
+        return a > b;
+      };
+      accumulate = function accumulate(bin) {
+        for (var j = 1; j < BIN_SIZE; j++) bin[j] += bin[j - 1];
+      };
+      recurse = function recurse(cache, depth, start) {
+        var prev = 0;
+        for (var j = 0; j < BIN_SIZE; j++) {
+          var cur = cache[j],
+            diff = cur - prev;
+          if (diff != 0) {
+            if (diff > 32) radixSortBlock(depth + 1, start + prev, diff);else insertionSortBlock(depth + 1, start + prev, diff);
+            prev = cur;
+          }
+        }
+      };
+    }
+    var insertionSortBlock = function insertionSortBlock(depth, start, len) {
+      var a = data[depth & 1];
+      var b = data[depth + 1 & 1];
+      for (var j = start + 1; j < start + len; j++) {
+        var p = a[j],
+          t = get(p) >>> 0;
+        var _i = j;
+        while (_i > start) {
+          if (compare(get(a[_i - 1]) >>> 0, t)) a[_i] = a[--_i];else break;
+        }
+        a[_i] = p;
+      }
+      if ((depth & 1) == 1) {
+        for (var _i2 = start; _i2 < start + len; _i2++) b[_i2] = a[_i2];
+      }
+    };
+    var radixSortBlock = function radixSortBlock(depth, start, len) {
+      var a = data[depth & 1];
+      var b = data[depth + 1 & 1];
+      var shift = 3 - depth << POWER;
+      var end = start + len;
+      var cache = bins[depth];
+      var bin = bins[depth + 1];
+      bin.fill(0);
+      for (var j = start; j < end; j++) bin[get(a[j]) >>> shift & BIN_MAX]++;
+      accumulate(bin);
+      cache.set(bin);
+      for (var _j = end - 1; _j >= start; _j--) b[start + --bin[get(a[_j]) >>> shift & BIN_MAX]] = a[_j];
+      if (depth == ITERATIONS - 1) return;
+      recurse(cache, depth, start);
+    };
+    radixSortBlock(0, 0, len);
+  };
+},42,[],"../../node_modules/three/examples/jsm/utils/SortUtils.js");
+global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.UVsDebug = UVsDebug;
+  /**
+   * tool for "unwrapping" and debugging three.js geometries UV mapping
+   *
+   * Sample usage:
+   *	document.body.appendChild( UVsDebug( new THREE.SphereGeometry( 10, 10, 10, 10 ) ) );
+   *
+   */
+
+  function UVsDebug(geometry) {
+    var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1024;
+    // handles wrapping of uv.x > 1 only
+
+    var abc = 'abc';
+    var a = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector2)();
+    var b = new (_$$_REQUIRE(_dependencyMap[0], "three").Vector2)();
+    var uvs = [new (_$$_REQUIRE(_dependencyMap[0], "three").Vector2)(), new (_$$_REQUIRE(_dependencyMap[0], "three").Vector2)(), new (_$$_REQUIRE(_dependencyMap[0], "three").Vector2)()];
+    var face = [];
+    var canvas = document.createElement('canvas');
+    var width = size; // power of 2 required for wrapping
+    var height = size;
+    canvas.width = width;
+    canvas.height = height;
+    var ctx = canvas.getContext('2d');
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgb( 63, 63, 63 )';
+    ctx.textAlign = 'center';
+
+    // paint background white
+
+    ctx.fillStyle = 'rgb( 255, 255, 255 )';
+    ctx.fillRect(0, 0, width, height);
+    var index = geometry.index;
+    var uvAttribute = geometry.attributes.uv;
+    if (index) {
+      // indexed geometry
+
+      for (var i = 0, il = index.count; i < il; i += 3) {
+        face[0] = index.getX(i);
+        face[1] = index.getX(i + 1);
+        face[2] = index.getX(i + 2);
+        uvs[0].fromBufferAttribute(uvAttribute, face[0]);
+        uvs[1].fromBufferAttribute(uvAttribute, face[1]);
+        uvs[2].fromBufferAttribute(uvAttribute, face[2]);
+        processFace(face, uvs, i / 3);
+      }
+    } else {
+      // non-indexed geometry
+
+      for (var _i = 0, _il = uvAttribute.count; _i < _il; _i += 3) {
+        face[0] = _i;
+        face[1] = _i + 1;
+        face[2] = _i + 2;
+        uvs[0].fromBufferAttribute(uvAttribute, face[0]);
+        uvs[1].fromBufferAttribute(uvAttribute, face[1]);
+        uvs[2].fromBufferAttribute(uvAttribute, face[2]);
+        processFace(face, uvs, _i / 3);
+      }
+    }
+    return canvas;
+    function processFace(face, uvs, index) {
+      // draw contour of face
+
+      ctx.beginPath();
+      a.set(0, 0);
+      for (var j = 0, jl = uvs.length; j < jl; j++) {
+        var uv = uvs[j];
+        a.x += uv.x;
+        a.y += uv.y;
+        if (j === 0) {
+          ctx.moveTo(uv.x * (width - 2) + 0.5, (1 - uv.y) * (height - 2) + 0.5);
+        } else {
+          ctx.lineTo(uv.x * (width - 2) + 0.5, (1 - uv.y) * (height - 2) + 0.5);
+        }
+      }
+      ctx.closePath();
+      ctx.stroke();
+
+      // calculate center of face
+
+      a.divideScalar(uvs.length);
+
+      // label the face number
+
+      ctx.font = '18px Arial';
+      ctx.fillStyle = 'rgb( 63, 63, 63 )';
+      ctx.fillText(index, a.x * width, (1 - a.y) * height);
+      if (a.x > 0.95) {
+        // wrap x // 0.95 is arbitrary
+
+        ctx.fillText(index, a.x % 1 * width, (1 - a.y) * height);
+      }
+
+      //
+
+      ctx.font = '12px Arial';
+      ctx.fillStyle = 'rgb( 191, 191, 191 )';
+
+      // label uv edge orders
+
+      for (var _j = 0, _jl = uvs.length; _j < _jl; _j++) {
+        var _uv = uvs[_j];
+        b.addVectors(a, _uv).divideScalar(2);
+        var vnum = face[_j];
+        ctx.fillText(abc[_j] + vnum, b.x * width, (1 - b.y) * height);
+        if (b.x > 0.95) {
+          // wrap x
+
+          ctx.fillText(abc[_j] + vnum, b.x % 1 * width, (1 - b.y) * height);
+        }
+      }
+    }
+  }
+},43,[2],"../../node_modules/three/examples/jsm/utils/UVsDebug.js");
 
 // ---------------------------------------------------------------------------
 
-global.__UIModules.threeJS = {
+if (global.__UIModules.threeJSCoreAddons === undefined) {
+  global.__UIModules.threeJSCoreAddons = {};
+}
+global.__UIModules.threeJSCoreAddons.utils = {
   ...global.__r(1),
-  ...global.__r(3),
+  ...global.__r(34),
+  ...global.__r(35),
+  ...global.__r(36),
+  ...global.__r(37),
+  ...global.__r(38),
+  ...global.__r(39),
+  ...global.__r(40),
+  ...global.__r(41),
+  ...global.__r(42),
+  ...global.__r(43),
 };
 
 })();
