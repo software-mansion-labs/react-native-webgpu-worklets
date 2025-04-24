@@ -1,0 +1,33 @@
+diff --git a/node_modules/react-native-wgpu/cpp/threading/Dispatcher.cpp b/node_modules/react-native-wgpu/cpp/threading/Dispatcher.cpp
+index a780f45..720c21e 100644
+--- a/node_modules/react-native-wgpu/cpp/threading/Dispatcher.cpp
++++ b/node_modules/react-native-wgpu/cpp/threading/Dispatcher.cpp
+@@ -43,6 +43,9 @@ Dispatcher::getRuntimeGlobalDispatcher(jsi::Runtime &runtime) {
+   }
+ 
+   jsi::Value dispatcherHolderValue = getRuntimeGlobalDispatcherHolder(runtime);
++  if (dispatcherHolderValue.isUndefined()) {
++      return std::make_shared<MockDispatcher>();
++  }
+   jsi::Object dispatcherHolder = dispatcherHolderValue.getObject(runtime);
+   return dispatcherHolder.getNativeState<Dispatcher>(runtime);
+ }
+diff --git a/node_modules/react-native-wgpu/cpp/threading/Dispatcher.h b/node_modules/react-native-wgpu/cpp/threading/Dispatcher.h
+index ebcf481..0ff5f60 100644
+--- a/node_modules/react-native-wgpu/cpp/threading/Dispatcher.h
++++ b/node_modules/react-native-wgpu/cpp/threading/Dispatcher.h
+@@ -90,4 +90,14 @@ private:
+   static constexpr auto TAG = "Dispatcher";
+ };
+ 
++class MockDispatcher final : public Dispatcher {
++public:
++  void runAsync(std::function<void()> &&function) override {
++    function();
++  }
++  void runSync(std::function<void()> &&function) override {
++    function();
++  }
++};
++
+ } // namespace margelo
