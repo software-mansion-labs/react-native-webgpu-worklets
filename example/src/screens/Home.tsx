@@ -7,7 +7,9 @@ import type { Routes } from '../Routes';
 const screens = [
   { name: 'EmptyExample', title: 'Empty Example' },
   { name: 'CubeExample', title: 'Cube' },
+  { name: 'CubeWithGestureExample', title: 'Cube with gesture' },
   { name: 'TriangleExample', title: 'Triangle' },
+  { name: 'PaintExample', title: 'Paint' },
 ] as const;
 
 export default function Home() {
