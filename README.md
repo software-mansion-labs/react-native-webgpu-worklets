@@ -178,7 +178,7 @@ Possible imports include:
 - `typegpu/data`
 - `typegpu/std`
 
-### `runOnBackground(jon: () => {})`
+### `runOnBackground(job: () => {})`
 
 Spawn a new thread with its own JavaScript runtime and schedule a job on it. This job doesn't block your JS or UI thread. You can render on a WebGPU canvas from the background thread.
 
