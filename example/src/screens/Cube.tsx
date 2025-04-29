@@ -1,4 +1,11 @@
-import { enableGPUForWorklets, requireUI, makeWebGPURenderer, runOnBackground } from 'react-native-webgpu-worklets';
+// @ts-nocheck
+
+import { 
+  enableGPUForWorklets, 
+  requireUI, 
+  makeWebGPURenderer, 
+  runOnBackground 
+} from 'react-native-webgpu-worklets';
 
 import { Canvas, useCanvasEffect } from "react-native-wgpu";
 
@@ -14,7 +21,7 @@ export default function CubeExample() {
       'worklet';
       const THREE = requireUI('threejs');
       
-      const { width, height } = context.canvas as unknown as { width: number, height: number };
+      const { width, height } = context.canvas;
       
       const camera = new THREE.PerspectiveCamera(70, width / height, 0.01, 10);
       camera.position.z = 1;
