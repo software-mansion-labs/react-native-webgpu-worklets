@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from '../Runtime';
 
 import * as i1 from "three/addons/utils/BufferGeometryUtils";
 import * as i2 from "three/addons/utils/CameraUtils";
@@ -27,7 +28,8 @@ export type ThreeJSAddonsUtils =
 
 export function initThreeJSAddonsUtils() {
 
-runOnUI(() => {
+function init() {
+  'worklet';
 
   const ImageBitmap = {};
   const HTMLImageElement = {};
@@ -89918,6 +89920,9 @@ global.__UIModules.threeJSCoreAddons.utils = {
   ...global.__r(43),
 };
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }

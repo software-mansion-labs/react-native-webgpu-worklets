@@ -148,3 +148,4 @@ export function enableGPUForWorklets(
 
 export { makeWebGPURenderer } from "./makeWebGPURenderer";
 export { useSharedContext } from "./useSharedContext";
+export { runOnBackground } from "./Runtime";

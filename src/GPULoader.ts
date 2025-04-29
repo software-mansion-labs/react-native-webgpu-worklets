@@ -1,7 +1,13 @@
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from "./Runtime";
 
 declare global {
   var navigator: NavigatorGPU;
+}
+
+declare global {
+  var lastFrame: number;
+  var isRequestAnimationFrameMocks: boolean;
 }
 
 export function initGPU() {
@@ -15,7 +21,8 @@ export function initGPU() {
     GPUTextureUsage,
   } = globalThis as typeof globalThis & { RNWebGPU: any };
 
-  runOnUI(() => {
+  function init() {
+    'worklet';
     if (!globalThis.navigator) {
       globalThis.navigator = { gpu } as typeof navigator;
     } else if (!globalThis.navigator.gpu) {
@@ -27,7 +34,26 @@ export function initGPU() {
     globalThis.GPUMapMode = GPUMapMode;
     globalThis.GPUShaderStage = GPUShaderStage;
     globalThis.GPUTextureUsage = GPUTextureUsage;
-    globalThis.setImmediate = requestAnimationFrame as any;
+
+    if (!globalThis.requestAnimationFrame) {
+      globalThis.isRequestAnimationFrameMocks = true;
+    }
+    globalThis.lastFrame = Date.now();
+    globalThis.requestAnimationFrame = 
+      globalThis.requestAnimationFrame 
+      ? globalThis.requestAnimationFrame 
+      : (callback: (time: number) => void): number => {
+        while (Date.now() - globalThis.lastFrame < 16) {}
+        globalThis.lastFrame = Date.now();
+        callback(globalThis.lastFrame); 
+        return 0; 
+      };
+
+    globalThis.setImmediate = globalThis.requestAnimationFrame as any;
     globalThis.__UIModules = {};
-  })();
+    
+  };
+
+  runOnUI(init)();
+  runOnBackground(init)();
 }

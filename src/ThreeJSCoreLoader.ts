@@ -1,13 +1,15 @@
 // @ts-nocheck
 
 import { Dimensions } from 'react-native';
-import { runOnUI } from 'react-native-reanimated';
+import { runOnUI, runOnRuntime } from 'react-native-reanimated';
+import { runOnBackground } from './Runtime';
 
 export function initThreeJSCore() {
 
 // const { width: windowWidth, height: windowHeight } = Dimensions.window;
   
-runOnUI(() => {
+function init() {
+  'worklet';
 
   const ImageBitmap = {};
   const HTMLImageElement = {};
@@ -45346,9 +45348,10 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
               _this192._bundles = new RenderBundles();
               _this192._renderContexts = new RenderContexts();
 
-              //
-
-              _this192._animation.start();
+              if (!globalThis.isRequestAnimationFrameMocks) {
+                // worklets-change
+                _this192._animation.start();
+              }
               _this192._initialized = true;
               resolve();
             });
@@ -87354,6 +87357,9 @@ global.__UIModules.threeJSCore = {
   ...global.__r(3),
 };
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }

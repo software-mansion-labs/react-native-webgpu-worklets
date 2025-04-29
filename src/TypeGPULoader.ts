@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from './Runtime';
 
 export function initTypeGPU() {
 
-runOnUI(() => {
+function init() {
+  'worklet';
 
 class TextDecoder {}
 class TextEncoder {}
@@ -13413,6 +13415,9 @@ global.__UIModules.typegpu = {
   std: global.__r(34),
 };
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }

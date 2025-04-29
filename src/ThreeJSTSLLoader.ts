@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from './Runtime';
 
 export function initThreeJSTSL() {
 
-runOnUI(() => {
+function init() {
+  'worklet';
 
   const ImageBitmap = {};
   const HTMLImageElement = {};
@@ -87894,6 +87896,9 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
 global.__UIModules.threeJSTLS = global.__r(1);
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }

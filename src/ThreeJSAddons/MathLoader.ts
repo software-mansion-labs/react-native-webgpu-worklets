@@ -1,6 +1,8 @@
 // @ts-nocheck
 
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from '../Runtime';
+
 import * as i1 from "three/addons/math/Capsule";
 import * as i2 from "three/addons/math/ColorConverter";
 import * as i3 from "three/addons/math/ConvexHull";
@@ -24,7 +26,8 @@ export type ThreeJSAddonsMath =
 
 export function initThreeJSAddonsMath() {
 
-runOnUI(() => {
+function init() {
+  'worklet';
 
   const ImageBitmap = {};
   const HTMLImageElement = {};
@@ -89910,6 +89913,9 @@ global.__UIModules.threeJSCoreAddons.math = {
   ...global.__r(41),
 };
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }

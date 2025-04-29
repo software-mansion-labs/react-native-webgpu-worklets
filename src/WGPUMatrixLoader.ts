@@ -1,10 +1,12 @@
 // @ts-nocheck
 
 import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from './Runtime';
 
 export function initWGPUMartix() {
 
-runOnUI(() => {
+function init() {
+  'worklet';
 
 var __BUNDLE_START_TIME__ = Date.now();
 var __DEV__ = true;
@@ -7152,6 +7154,9 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
 global.__UIModules.wgpuMatrix = global.__r(1);
 
-})();
+}
+
+runOnUI(init)();
+runOnBackground(init)();
 
 }
