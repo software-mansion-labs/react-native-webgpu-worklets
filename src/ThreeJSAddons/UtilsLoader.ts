@@ -89903,10 +89903,10 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
 // ---------------------------------------------------------------------------
 
-if (global.__UIModules.threeJSCoreAddons === undefined) {
-  global.__UIModules.threeJSCoreAddons = {};
+if (global.__UIModules.threeJSAddons === undefined) {
+  global.__UIModules.threeJSAddons = {};
 }
-global.__UIModules.threeJSCoreAddons.utils = {
+global.__UIModules.threeJSAddons.utils = {
   ...global.__r(1),
   ...global.__r(34),
   ...global.__r(35),

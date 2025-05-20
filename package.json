@@ -84,7 +84,7 @@
     "react-native-wgpu": "^0.1.23",
     "release-it": "^17.10.0",
     "three": "^0.176.0",
-    "typegpu": "^0.5.6",
+    "typegpu": "^0.5.7",
     "typescript": "^5.2.2",
     "wgpu-matrix": "^3.4.0"
   },
