@@ -1227,7 +1227,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development";
   };
   global.ErrorUtils = ErrorUtils;
 })(typeof globalThis !== 'undefined' ? globalThis : typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this);
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -1265,7 +1265,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
     });
   });
 },0,[1,33,34],"libEntry.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6029,7 +6029,7 @@ ${_l10}`;
     __removedJsImpl: yn
   });
 },1,[2,3,4,5,7,8,10,14,20,21,24,25,29,30,31,32],"node_modules/typegpu/index.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(e) {
     return e && e.__esModule ? e : {
       "default": e
@@ -6037,7 +6037,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },2,[],"node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function asyncGeneratorStep(n, t, e, r, o, a, c) {
     try {
       var i = n[a](c),
@@ -6065,14 +6065,14 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },3,[],"node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _assertThisInitialized(e) {
     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
   }
   module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },4,[],"node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _typeof = require(_dependencyMap[0], "./typeof.js")["default"];
   var assertThisInitialized = require(_dependencyMap[1], "./assertThisInitialized.js");
   function _possibleConstructorReturn(t, e) {
@@ -6082,7 +6082,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },5,[6,4],"node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _typeof(o) {
     "@babel/helpers - typeof";
 
@@ -6094,7 +6094,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },6,[],"node_modules/@babel/runtime/helpers/typeof.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _getPrototypeOf(t) {
     return module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
       return t.__proto__ || Object.getPrototypeOf(t);
@@ -6102,7 +6102,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },7,[],"node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var setPrototypeOf = require(_dependencyMap[0], "./setPrototypeOf.js");
   function _inherits(t, e) {
     if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function");
@@ -6118,7 +6118,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },8,[9],"node_modules/@babel/runtime/helpers/inherits.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _setPrototypeOf(t, e) {
     return module.exports = _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) {
       return t.__proto__ = e, t;
@@ -6126,7 +6126,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },9,[],"node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var getPrototypeOf = require(_dependencyMap[0], "./getPrototypeOf.js");
   var setPrototypeOf = require(_dependencyMap[1], "./setPrototypeOf.js");
   var isNativeFunction = require(_dependencyMap[2], "./isNativeFunction.js");
@@ -6155,7 +6155,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },10,[7,9,11,12],"node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _isNativeFunction(t) {
     try {
       return -1 !== Function.toString.call(t).indexOf("[native code]");
@@ -6165,7 +6165,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _isNativeFunction, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },11,[],"node_modules/@babel/runtime/helpers/isNativeFunction.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var isNativeReflectConstruct = require(_dependencyMap[0], "./isNativeReflectConstruct.js");
   var setPrototypeOf = require(_dependencyMap[1], "./setPrototypeOf.js");
   function _construct(t, e, r) {
@@ -6177,7 +6177,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _construct, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },12,[13,9],"node_modules/@babel/runtime/helpers/construct.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _isNativeReflectConstruct() {
     try {
       var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
@@ -6188,7 +6188,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _isNativeReflectConstruct, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },13,[],"node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var arrayWithHoles = require(_dependencyMap[0], "./arrayWithHoles.js");
   var iterableToArrayLimit = require(_dependencyMap[1], "./iterableToArrayLimit.js");
   var unsupportedIterableToArray = require(_dependencyMap[2], "./unsupportedIterableToArray.js");
@@ -6198,13 +6198,13 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },14,[15,16,17,19],"node_modules/@babel/runtime/helpers/slicedToArray.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _arrayWithHoles(r) {
     if (Array.isArray(r)) return r;
   }
   module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },15,[],"node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _iterableToArrayLimit(r, l) {
     var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
     if (null != t) {
@@ -6234,7 +6234,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },16,[],"node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var arrayLikeToArray = require(_dependencyMap[0], "./arrayLikeToArray.js");
   function _unsupportedIterableToArray(r, a) {
     if (r) {
@@ -6245,7 +6245,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },17,[18],"node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _arrayLikeToArray(r, a) {
     (null == a || a > r.length) && (a = r.length);
     for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
@@ -6253,19 +6253,19 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },18,[],"node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _nonIterableRest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
   module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },19,[],"node_modules/@babel/runtime/helpers/nonIterableRest.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _classCallCheck(a, n) {
     if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
   }
   module.exports = _classCallCheck, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },20,[],"node_modules/@babel/runtime/helpers/classCallCheck.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toPropertyKey = require(_dependencyMap[0], "./toPropertyKey.js");
   function _defineProperties(e, r) {
     for (var t = 0; t < r.length; t++) {
@@ -6280,7 +6280,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _createClass, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },21,[22],"node_modules/@babel/runtime/helpers/createClass.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _typeof = require(_dependencyMap[0], "./typeof.js")["default"];
   var toPrimitive = require(_dependencyMap[1], "./toPrimitive.js");
   function toPropertyKey(t) {
@@ -6289,7 +6289,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },22,[6,23],"node_modules/@babel/runtime/helpers/toPropertyKey.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _typeof = require(_dependencyMap[0], "./typeof.js")["default"];
   function toPrimitive(t, r) {
     if ("object" != _typeof(t) || !t) return t;
@@ -6303,7 +6303,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },23,[6],"node_modules/@babel/runtime/helpers/toPrimitive.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toPropertyKey = require(_dependencyMap[0], "./toPropertyKey.js");
   function _defineProperty(e, r, t) {
     return (r = toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
@@ -6315,7 +6315,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },24,[22],"node_modules/@babel/runtime/helpers/defineProperty.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var arrayWithoutHoles = require(_dependencyMap[0], "./arrayWithoutHoles.js");
   var iterableToArray = require(_dependencyMap[1], "./iterableToArray.js");
   var unsupportedIterableToArray = require(_dependencyMap[2], "./unsupportedIterableToArray.js");
@@ -6325,26 +6325,26 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   }
   module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },25,[26,27,17,28],"node_modules/@babel/runtime/helpers/toConsumableArray.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var arrayLikeToArray = require(_dependencyMap[0], "./arrayLikeToArray.js");
   function _arrayWithoutHoles(r) {
     if (Array.isArray(r)) return arrayLikeToArray(r);
   }
   module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },26,[18],"node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _iterableToArray(r) {
     if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
   }
   module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },27,[],"node_modules/@babel/runtime/helpers/iterableToArray.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _nonIterableSpread() {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
   module.exports = _nonIterableSpread, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },28,[],"node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6855,7 +6855,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
     subgroupSize: a(_chunk5RYM4COI.R, "subgroup_size")
   };
 },29,[2,5,7,8,25,21,20,24,30],"node_modules/typegpu/chunk-SMTSXYNG.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -10032,7 +10032,7 @@ ${s.join(`
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "handle"), "access", "read");
   }
 },30,[2,12,24,4,25,20,21,5,7,8,10,31],"node_modules/typegpu/chunk-5RYM4COI.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -11682,7 +11682,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
   // src/index.ts
   var src_default = exports.default = main_api_exports;
 },31,[2,14,21,20,5,7,8,10],"node_modules/typed-binary/dist/index.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -11712,7 +11712,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
     objectExpr: 104
   };
 },32,[],"node_modules/tinyest/index.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -13248,7 +13248,7 @@ __d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, expor
       };
     });
 },33,[30,31],"node_modules/typegpu/std/index.js");
-__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
