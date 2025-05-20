@@ -13872,8 +13872,8 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
 
 global.__UIModules.typegpu = {
   core: global.__r(1),
-  data: global.__r(33),
-  std: global.__r(34),
+  std: global.__r(33),
+  data: global.__r(34),
 };
 
 }

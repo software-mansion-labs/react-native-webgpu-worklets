@@ -1,6 +1,6 @@
 {
   "name": "react-native-webgpu-worklets",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "ThreeJS + wgpu-matrix + TypeGPU for WebGPU on Reanimated Worklets",
   "source": "./src/index.ts",
   "main": "./lib/module/index.js",
