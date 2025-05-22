@@ -43,10 +43,14 @@ export function initGPU() {
       globalThis.requestAnimationFrame 
       ? globalThis.requestAnimationFrame 
       : (callback: (time: number) => void): number => {
-        while (Date.now() - globalThis.lastFrame < 16) {}
-        globalThis.lastFrame = Date.now();
-        callback(globalThis.lastFrame); 
-        return 0; 
+        globalThis.requestAnimationFrame = (_: any) => { return 0; };
+        while (true) {
+          if (globalThis.lastFrame + 16 < Date.now()) {
+            continue;
+          }
+          globalThis.lastFrame = Date.now();
+          callback(globalThis.lastFrame); 
+        }
       };
 
     globalThis.setImmediate = globalThis.requestAnimationFrame as any;
