@@ -45,7 +45,7 @@ export function initGPU() {
       : (callback: (time: number) => void): number => {
         globalThis.requestAnimationFrame = (_: any) => { return 0; };
         while (true) {
-          if (globalThis.lastFrame + 16 < Date.now()) {
+          if (globalThis.lastFrame + 16 > Date.now()) {
             continue;
           }
           globalThis.lastFrame = Date.now();
