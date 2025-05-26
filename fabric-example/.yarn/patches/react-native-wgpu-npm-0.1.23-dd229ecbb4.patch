@@ -1,0 +1,52 @@
+diff --git a/cpp/threading/Dispatcher.cpp b/cpp/threading/Dispatcher.cpp
+index a780f4594e44e71b8593e54b2633ab85122e7d3c..f426cc3c6462c239c38b063214283cd98abb8150 100644
+--- a/cpp/threading/Dispatcher.cpp
++++ b/cpp/threading/Dispatcher.cpp
+@@ -4,8 +4,8 @@
+ 
+ #include "Dispatcher.h"
+ 
+-#include <memory>
+ #include "RNFJSIHelper.h"
++#include <memory>
+ 
+ namespace margelo {
+ 
+@@ -43,6 +43,10 @@ Dispatcher::getRuntimeGlobalDispatcher(jsi::Runtime &runtime) {
+   }
+ 
+   jsi::Value dispatcherHolderValue = getRuntimeGlobalDispatcherHolder(runtime);
++  if (dispatcherHolderValue.isUndefined()) {
++    return std::make_shared<MockDispatcher>();
++  }
++
+   jsi::Object dispatcherHolder = dispatcherHolderValue.getObject(runtime);
+   return dispatcherHolder.getNativeState<Dispatcher>(runtime);
+ }
+diff --git a/cpp/threading/Dispatcher.h b/cpp/threading/Dispatcher.h
+index ebcf4813498af2b94001b48321a76959f24576b2..2cca4b4c6f608e9460db1730d2b6cacdf5b68dbc 100644
+--- a/cpp/threading/Dispatcher.h
++++ b/cpp/threading/Dispatcher.h
+@@ -7,10 +7,10 @@
+ #include <functional>
+ #include <future>
+ #include <jsi/jsi.h>
++#include <memory>
+ #include <queue>
+ #include <unordered_map>
+ #include <utility>
+-#include <memory>
+ 
+ namespace margelo {
+ 
+@@ -90,4 +90,10 @@ private:
+   static constexpr auto TAG = "Dispatcher";
+ };
+ 
++class MockDispatcher final : public Dispatcher {
++public:
++  void runAsync(std::function<void()> &&function) override { function(); }
++  void runSync(std::function<void()> &&function) override { function(); }
++};
++
+ } // namespace margelo

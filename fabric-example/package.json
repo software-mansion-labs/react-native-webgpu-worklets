@@ -1,0 +1,67 @@
+{
+  "name": "fabric-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "cd ios && bundle install && bundle exec pod update",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "format": "prettier --write --list-different ."
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-native": "0.80.0-rc.2",
+    "react-native-reanimated": "nightly",
+    "react-native-wgpu": "^0.1.23",
+    "react-native-worklets": "file:../react-native-worklets-0.4.0-20250526140703.tgz",
+    "three": "^0.176.0",
+    "typegpu": "^0.5.7",
+    "wgpu-matrix": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.26.10",
+    "@react-native-community/cli": "19.0.0",
+    "@react-native-community/cli-platform-android": "19.0.0",
+    "@react-native-community/cli-platform-ios": "19.0.0",
+    "@react-native/babel-preset": "0.80.0-rc.2",
+    "@react-native/eslint-config": "0.80.0-rc.2",
+    "@react-native/metro-config": "0.80.0-rc.2",
+    "@react-native/typescript-config": "0.80.0-rc.2",
+    "@tsconfig/react-native": "^3.0.0",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^19.1.0",
+    "@types/react-test-renderer": "^19.1.0",
+    "@types/three": "^0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-no-relative-import-paths": "^1.6.1",
+    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "jest": "^29.6.3",
+    "madge": "^5.0.1",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.3.3",
+    "react-test-renderer": "19.1.0",
+    "typescript": "~5.3.0",
+    "typescript-eslint": "^8.12.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "installConfig": {
+    "selfReferences": false
+  },
+  "resolutions": {
+    "react-native@0.80.0-rc.2": "patch:react-native@npm%3A0.80.0-rc.2#./.yarn/patches/react-native-npm-0.80.0-rc.2-0ac6fe4f9f.patch",
+    "react-native-wgpu@^0.1.23": "patch:react-native-wgpu@npm%3A0.1.23#./.yarn/patches/react-native-wgpu-npm-0.1.23-dd229ecbb4.patch",
+    "@react-native/community-cli-plugin@0.80.0-rc.2": "patch:@react-native/community-cli-plugin@npm%3A0.80.0-rc.2#./.yarn/patches/@react-native-community-cli-plugin-npm-0.80.0-rc.2-323d7bb4d9.patch"
+  }
+}
