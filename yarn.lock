@@ -3601,6 +3601,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typegpu/noise@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "@typegpu/noise@npm:0.0.8"
+  peerDependencies:
+    typegpu: ^0.5.8
+  checksum: 0947d1795e2eed5dfea6fb2a80f0f68746729edaba995fe462af03025dc29ce83e07198bc72d2b2ffffb593d1eb868e11de2110a752a427f2da29ef7b43e3da1
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.1.14":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -12670,6 +12679,7 @@ __metadata:
     "@react-native-community/cli": latest
     "@react-navigation/native": ^7.1.6
     "@react-navigation/stack": ^7.2.10
+    "@typegpu/noise": ^0.0.8
     "@webgpu/types": ^0.1.60
     expo: ~52.0.46
     expo-status-bar: ~2.0.1
@@ -12684,7 +12694,7 @@ __metadata:
     react-native-web: ~0.19.13
     react-native-wgpu: ^0.1.23
     three: ^0.176.0
-    typegpu: ^0.5.7
+    typegpu: ^0.5.8
     wgpu-matrix: ^3.4.0
   languageName: unknown
   linkType: soft
@@ -14472,6 +14482,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tinyest@npm:~0.1.1":
+  version: 0.1.1
+  resolution: "tinyest@npm:0.1.1"
+  checksum: 8f3352dc071cd146fdbd6e498af68588d20d283b26c2453f0f71dcbe609538cf296f1b189a94ead2cca8e2385c7ae4f2041eacfc5eab0e048fa8987ebbdf7bbf
+  languageName: node
+  linkType: hard
+
 "tinyexec@npm:^0.3.0":
   version: 0.3.2
   resolution: "tinyexec@npm:0.3.2"
@@ -14718,6 +14735,16 @@ __metadata:
     tinyest: ~0.1.0
     typed-binary: ^4.3.1
   checksum: cc4eefef298ca4d223784012f7bb83e33d6eaa13733079ec47f11c6f533e4c59ccccc3867f429023b1d849179ddde7e5226e672594eb9273b3d0df08da6057a1
+  languageName: node
+  linkType: hard
+
+"typegpu@npm:^0.5.8":
+  version: 0.5.8
+  resolution: "typegpu@npm:0.5.8"
+  dependencies:
+    tinyest: ~0.1.1
+    typed-binary: ^4.3.1
+  checksum: 0f80b83120b00673cacf556380ef39cb3c58831724d806715ec32c0cf48fc1bf13c4333aae2a8217593800ba997506caca40ef5419d8d4acfaa1bcc1ef6ea0c8
   languageName: node
   linkType: hard
 

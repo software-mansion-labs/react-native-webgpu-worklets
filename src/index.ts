@@ -13,6 +13,7 @@ import { initTypeGPU } from "./TypeGPULoader";
 import * as TypeGPU from 'typegpu';
 import * as TypeGPUData from 'typegpu/data';
 import * as TypeGPUStd from 'typegpu/std';
+import * as TypeGPUNoise from '@typegpu/noise';
 
 import * as WGPUMatrix from 'wgpu-matrix';
 import { initWGPUMartix } from "./WGPUMatrixLoader";
@@ -29,7 +30,8 @@ declare global {
     typegpu?: {
       core: typeof TypeGPU,
       data: typeof TypeGPUData,
-      std: typeof TypeGPUStd
+      std: typeof TypeGPUStd,
+      noise: typeof TypeGPUNoise,
     }
   };
 }
@@ -44,6 +46,7 @@ type Module<T> =
   : T extends 'typegpu' ? typeof TypeGPU
   : T extends 'typegpu/data' ? typeof TypeGPUData 
   : T extends 'typegpu/std' ? typeof TypeGPUStd
+  : T extends 'typegpu/noise' ? typeof TypeGPUNoise
   : never;
 
 export function requireUI<
@@ -56,6 +59,7 @@ export function requireUI<
     | 'typegpu'
     | 'typegpu/data'
     | 'typegpu/std'
+    | 'typegpu/noise'
 >(moduleName: T): Module<T> {
   'worklet';
   if (!_WORKLET) {
@@ -103,6 +107,8 @@ export function requireUI<
       return UIModules.typegpu?.data as Module<T>;
     case 'typegpu/std':
       return UIModules.typegpu?.std as Module<T>;
+    case 'typegpu/noise':
+      return UIModules.typegpu?.noise as Module<T>;
     default:
       throw new Error(`Module ${moduleName} is not supported.`);
   }

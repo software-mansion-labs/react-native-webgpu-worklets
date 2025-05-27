@@ -1264,7 +1264,18 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
       }
     });
   });
-},0,[1,33,34],"libEntry.js");
+  var _noise = require(_dependencyMap[3], "@typegpu/noise");
+  Object.keys(_noise).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (key in exports && exports[key] === _noise[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _noise[key];
+      }
+    });
+  });
+},0,[1,34,35,36],"libEntry.js");
 global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
@@ -1273,57 +1284,57 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   Object.defineProperty(exports, "MissingBindGroupsError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.k;
+      return _chunkL7HIBZAX.m;
     }
   });
   Object.defineProperty(exports, "MissingLinksError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.j;
+      return _chunkL7HIBZAX.l;
     }
   });
   Object.defineProperty(exports, "MissingSlotValueError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.h;
+      return _chunkL7HIBZAX.j;
     }
   });
   Object.defineProperty(exports, "MissingVertexBuffersError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.l;
+      return _chunkL7HIBZAX.n;
     }
   });
   Object.defineProperty(exports, "NotUniformError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.i;
+      return _chunkL7HIBZAX.k;
     }
   });
   exports.RandomNameRegistry = void 0;
   Object.defineProperty(exports, "ResolutionError", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.g;
+      return _chunkL7HIBZAX.i;
     }
   });
   exports.default = exports.StrictNameRegistry = void 0;
-  exports.isBuffer = ae;
-  exports.isComparisonSampler = Qe;
-  exports.isDerived = q;
-  exports.isSampledTextureView = et;
-  exports.isSampler = Ye;
-  exports.isSlot = H;
-  exports.isStorageTextureView = Ze;
-  exports.isTexture = X;
-  exports.isTgpuFn = Pr;
-  exports.isUsableAsRender = Fa;
+  exports.isBuffer = ue;
+  exports.isComparisonSampler = Ze;
+  exports.isDerived = Re;
+  exports.isSampledTextureView = rt;
+  exports.isSampler = Xe;
+  exports.isSlot = Be;
+  exports.isStorageTextureView = tt;
+  exports.isTexture = Q;
+  exports.isTgpuFn = ir;
+  exports.isUsableAsRender = _a;
   exports.isUsableAsSampled = Sr;
-  exports.isUsableAsStorage = xe;
-  exports.isUsableAsUniform = xt;
-  exports.isUsableAsVertex = Da;
+  exports.isUsableAsStorage = Te;
+  exports.isUsableAsUniform = wt;
+  exports.isUsableAsVertex = ka;
   exports.tgpu = void 0;
-  exports.unstable_asMutable = mr;
+  exports.unstable_asMutable = dr;
   exports.unstable_asReadonly = fr;
   exports.unstable_asUniform = gr;
   var _asyncToGenerator2 = _interopRequireDefault(require(_dependencyMap[1], "@babel/runtime/helpers/asyncToGenerator"));
@@ -1337,200 +1348,130 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   var _createClass2 = _interopRequireDefault(require(_dependencyMap[9], "@babel/runtime/helpers/createClass"));
   var _defineProperty2 = _interopRequireDefault(require(_dependencyMap[10], "@babel/runtime/helpers/defineProperty"));
   var _toConsumableArray2 = _interopRequireDefault(require(_dependencyMap[11], "@babel/runtime/helpers/toConsumableArray"));
-  var _chunkSMTSXYNG = require(_dependencyMap[12], "./chunk-SMTSXYNG.js");
-  var _chunk5RYM4COI = require(_dependencyMap[13], "./chunk-5RYM4COI.js");
-  var _typedBinary = require(_dependencyMap[14], "typed-binary");
-  var Aa = _interopRequireWildcard(require(_dependencyMap[15], "tinyest"));
+  var _chunkSFECI7OX = require(_dependencyMap[12], "./chunk-SFECI7OX.js");
+  var _chunkSLWTVY6K = require(_dependencyMap[13], "./chunk-SLWTVY6K.js");
+  var _chunkL7HIBZAX = require(_dependencyMap[14], "./chunk-L7HIBZAX.js");
+  var _tinyest = _interopRequireWildcard(require(_dependencyMap[15], "tinyest"));
+  var Ea = _tinyest;
+  var _typedBinary = require(_dependencyMap[16], "typed-binary");
   function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
   function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
   function _defineAccessor(e, r, n, t) { var c = { configurable: !0, enumerable: !0 }; return c[e] = t, Object.defineProperty(r, n, c); }
   function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2.default)(o), (0, _possibleConstructorReturn2.default)(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], (0, _getPrototypeOf2.default)(t).constructor) : o.apply(t, e)); }
   function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-  function H(e) {
-    return (e == null ? void 0 : e.resourceType) === "slot";
+  function sn(e) {
+    if (typeof (e == null ? void 0 : e[_chunkL7HIBZAX.c]) == "function") return e[_chunkL7HIBZAX.c].bind(e);
   }
-  function q(e) {
-    return (e == null ? void 0 : e.resourceType) === "derived";
-  }
-  function Ne(e) {
-    return (e == null ? void 0 : e["~providing"]) !== void 0;
-  }
-  function ge(e) {
-    return (e == null ? void 0 : e.resourceType) === "accessor";
-  }
-  function pt(e, t) {
+  function dt(e, t) {
     throw new Error(`Failed to handle ${e} at ${t}`);
   }
-  var U = {
-    type: "unknown"
-  };
-  function je(e) {
-    return typeof (e == null ? void 0 : e["~resolve"]) == "function";
-  }
-  function J(e) {
-    return typeof e == "number" || typeof e == "boolean" || typeof e == "string" || je(e) || (0, _chunk5RYM4COI.A)(e) || H(e) || q(e) || Ne(e);
-  }
-  function nn(e) {
-    return !!e && typeof e == "object" && "getMappedRange" in e && "mapAsync" in e;
-  }
-  function lt(e) {
-    return (e == null ? void 0 : e.resourceType) === "buffer-usage";
-  }
-  function Xt(e) {
-    var _e$m;
-    return !!e && typeof e == "object" && !!(e != null && (_e$m = e[_chunk5RYM4COI.a]) != null && _e$m.dataType);
-  }
-  function Zt(e) {
-    return !!(e != null && e[_chunk5RYM4COI.a]);
-  }
-  var sa = ["vec2f", "vec2h", "vec2i", "vec2u", "vec2<bool>", "vec3f", "vec3h", "vec3i", "vec3u", "vec3<bool>", "vec4f", "vec4h", "vec4i", "vec4u", "vec4<bool>", "struct"],
-    ia = {
+  var pa = {
       f: {
-        1: _chunk5RYM4COI.T,
-        2: _chunk5RYM4COI.V,
-        3: _chunk5RYM4COI._,
-        4: _chunk5RYM4COI.da
+        1: _chunkL7HIBZAX.ka,
+        2: _chunkL7HIBZAX.ma,
+        3: _chunkL7HIBZAX.ra,
+        4: _chunkL7HIBZAX.wa
       },
       h: {
-        1: _chunk5RYM4COI.U,
-        2: _chunk5RYM4COI.W,
-        3: _chunk5RYM4COI.$,
-        4: _chunk5RYM4COI.ea
+        1: _chunkL7HIBZAX.la,
+        2: _chunkL7HIBZAX.na,
+        3: _chunkL7HIBZAX.sa,
+        4: _chunkL7HIBZAX.xa
       },
       i: {
-        1: _chunk5RYM4COI.S,
-        2: _chunk5RYM4COI.X,
-        3: _chunk5RYM4COI.aa,
-        4: _chunk5RYM4COI.fa
+        1: _chunkL7HIBZAX.ja,
+        2: _chunkL7HIBZAX.oa,
+        3: _chunkL7HIBZAX.ta,
+        4: _chunkL7HIBZAX.ya
       },
       u: {
-        1: _chunk5RYM4COI.R,
-        2: _chunk5RYM4COI.Y,
-        3: _chunk5RYM4COI.ba,
-        4: _chunk5RYM4COI.ga
+        1: _chunkL7HIBZAX.ia,
+        2: _chunkL7HIBZAX.pa,
+        3: _chunkL7HIBZAX.ua,
+        4: _chunkL7HIBZAX.za
       },
       b: {
-        1: _chunk5RYM4COI.Q,
-        2: _chunk5RYM4COI.Z,
-        3: _chunk5RYM4COI.ca,
-        4: _chunk5RYM4COI.ha
+        1: _chunkL7HIBZAX.ha,
+        2: _chunkL7HIBZAX.qa,
+        3: _chunkL7HIBZAX.va,
+        4: _chunkL7HIBZAX.Aa
       }
     },
-    an = {
-      vec2f: _chunk5RYM4COI.V,
-      vec2h: _chunk5RYM4COI.W,
-      vec2i: _chunk5RYM4COI.X,
-      vec2u: _chunk5RYM4COI.Y,
-      "vec2<bool>": _chunk5RYM4COI.Z,
-      vec3f: _chunk5RYM4COI._,
-      vec3h: _chunk5RYM4COI.$,
-      vec3i: _chunk5RYM4COI.aa,
-      vec3u: _chunk5RYM4COI.ba,
-      "vec3<bool>": _chunk5RYM4COI.ca,
-      vec4f: _chunk5RYM4COI.da,
-      vec4h: _chunk5RYM4COI.ea,
-      vec4i: _chunk5RYM4COI.fa,
-      vec4u: _chunk5RYM4COI.ga,
-      "vec4<bool>": _chunk5RYM4COI.ha,
-      mat2x2f: _chunk5RYM4COI.ja,
-      mat3x3f: _chunk5RYM4COI.ka,
-      mat4x4f: _chunk5RYM4COI.la
+    la = {
+      vec2f: _chunkL7HIBZAX.ma,
+      vec2h: _chunkL7HIBZAX.na,
+      vec2i: _chunkL7HIBZAX.oa,
+      vec2u: _chunkL7HIBZAX.pa,
+      "vec2<bool>": _chunkL7HIBZAX.qa,
+      vec3f: _chunkL7HIBZAX.ra,
+      vec3h: _chunkL7HIBZAX.sa,
+      vec3i: _chunkL7HIBZAX.ta,
+      vec3u: _chunkL7HIBZAX.ua,
+      "vec3<bool>": _chunkL7HIBZAX.va,
+      vec4f: _chunkL7HIBZAX.wa,
+      vec4h: _chunkL7HIBZAX.xa,
+      vec4i: _chunkL7HIBZAX.ya,
+      vec4u: _chunkL7HIBZAX.za,
+      "vec4<bool>": _chunkL7HIBZAX.Aa,
+      mat2x2f: _chunkL7HIBZAX.Ca,
+      mat3x3f: _chunkL7HIBZAX.Da,
+      mat4x4f: _chunkL7HIBZAX.Ea
     },
-    on = {
-      vec2f: _chunk5RYM4COI.T,
-      vec2h: _chunk5RYM4COI.U,
-      vec2i: _chunk5RYM4COI.S,
-      vec2u: _chunk5RYM4COI.R,
-      "vec2<bool>": _chunk5RYM4COI.Q,
-      vec3f: _chunk5RYM4COI.T,
-      vec3h: _chunk5RYM4COI.U,
-      vec3i: _chunk5RYM4COI.S,
-      vec3u: _chunk5RYM4COI.R,
-      "vec3<bool>": _chunk5RYM4COI.Q,
-      vec4f: _chunk5RYM4COI.T,
-      vec4h: _chunk5RYM4COI.U,
-      vec4i: _chunk5RYM4COI.S,
-      vec4u: _chunk5RYM4COI.R,
-      "vec4<bool>": _chunk5RYM4COI.Q,
-      mat2x2f: _chunk5RYM4COI.V,
-      mat3x3f: _chunk5RYM4COI._,
-      mat4x4f: _chunk5RYM4COI.da
+    un = {
+      vec2f: _chunkL7HIBZAX.ka,
+      vec2h: _chunkL7HIBZAX.la,
+      vec2i: _chunkL7HIBZAX.ja,
+      vec2u: _chunkL7HIBZAX.ia,
+      "vec2<bool>": _chunkL7HIBZAX.ha,
+      vec3f: _chunkL7HIBZAX.ka,
+      vec3h: _chunkL7HIBZAX.la,
+      vec3i: _chunkL7HIBZAX.ja,
+      vec3u: _chunkL7HIBZAX.ia,
+      "vec3<bool>": _chunkL7HIBZAX.ha,
+      vec4f: _chunkL7HIBZAX.ka,
+      vec4h: _chunkL7HIBZAX.la,
+      vec4i: _chunkL7HIBZAX.ja,
+      vec4u: _chunkL7HIBZAX.ia,
+      "vec4<bool>": _chunkL7HIBZAX.ha,
+      mat2x2f: _chunkL7HIBZAX.ma,
+      mat3x3f: _chunkL7HIBZAX.ra,
+      mat4x4f: _chunkL7HIBZAX.wa
     };
-  function ce(e, t) {
-    var _r$propTypes$t;
-    if (typeof e == "string" || typeof e == "number" || typeof e == "boolean") return U;
-    if (q(e) || H(e)) {
-      var o = (0, _chunk5RYM4COI.o)();
-      if (!o) throw new Error("Resolution context not found when unwrapping slot or derived");
-      var s = o.unwrap(e);
-      return mt(s);
+  function je(e, t) {
+    var _e$propTypes$t;
+    if ((0, _chunkL7HIBZAX.K)(e) || (0, _chunkL7HIBZAX.W)(e)) return (_e$propTypes$t = e.propTypes[t]) != null ? _e$propTypes$t : _chunkL7HIBZAX.aa;
+    if (e === _chunkL7HIBZAX.ha || (0, _chunkSLWTVY6K.c)(e)) return _chunkL7HIBZAX.aa;
+    var r = t.length;
+    if ((0, _chunkL7HIBZAX.C)(e) && r >= 1 && r <= 4) {
+      var n = e.type.includes("bool") ? "b" : e.type[4],
+        a = pa[n][r];
+      if (a) return a;
     }
-    var r = e;
-    for (Xt(r) && (r = r[_chunk5RYM4COI.a].dataType); (0, _chunk5RYM4COI.K)(r);) r = r.inner;
-    var n = "kind" in r ? r.kind : r.type;
-    if (n === "struct") return (_r$propTypes$t = r.propTypes[t]) != null ? _r$propTypes$t : U;
-    var a = t.length;
-    if (sa.includes(n) && a >= 1 && a <= 4) {
-      var _o = n.includes("bool") ? "b" : n[4],
-        _s = ia[_o][a];
-      if (_s) return _s;
-    }
-    return (0, _chunk5RYM4COI.A)(r) ? r : U;
+    return _chunkL7HIBZAX.aa;
   }
-  function er(e) {
-    if ((0, _chunk5RYM4COI.A)(e)) {
-      if ((0, _chunk5RYM4COI.B)(e)) return e.elementType;
-      if (e.type in on) return on[e.type];
-    }
-    return U;
+  function Qt(e) {
+    return (0, _chunkL7HIBZAX.J)(e) || (0, _chunkL7HIBZAX.V)(e) ? e.elementType : e.type in un ? un[e.type] : _chunkL7HIBZAX.aa;
   }
-  function mt(e) {
-    var _ft$dataType, _ft;
-    if (Xt(e)) return e[_chunk5RYM4COI.a].dataType;
-    if (typeof e == "string") return U;
-    if (typeof e == "number") return (_ft$dataType = (_ft = ft(String(e))) == null ? void 0 : _ft.dataType) != null ? _ft$dataType : U;
-    if (typeof e == "boolean") return _chunk5RYM4COI.Q;
-    if ("kind" in e) {
-      var t = e.kind;
-      if (t in an) return an[t];
-    }
-    return (0, _chunk5RYM4COI.A)(e) || je(e) ? e : U;
+  function Xt(e) {
+    if (/^0x[0-9a-f]+$/i.test(e)) return (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.fa);
+    if (/^0b[01]+$/i.test(e)) return (0, _chunkL7HIBZAX.ba)(`${Number.parseInt(e.slice(2), 2)}`, _chunkL7HIBZAX.fa);
+    if (/^-?(?:\d+\.\d*|\d*\.\d+)$/i.test(e)) return (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.ga);
+    if (/^-?\d+(?:\.\d+)?e-?\d+$/i.test(e)) return (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.ga);
+    if (/^-?\d+$/i.test(e)) return (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.fa);
   }
-  function ft(e) {
-    if (/^0x[0-9a-f]+$/i.test(e)) return {
-      value: e,
-      dataType: _chunk5RYM4COI.O
-    };
-    if (/^0b[01]+$/i.test(e)) return {
-      value: `${Number.parseInt(e.slice(2), 2)}`,
-      dataType: _chunk5RYM4COI.O
-    };
-    if (/^-?(?:\d+\.\d*|\d*\.\d+)$/i.test(e)) return {
-      value: e,
-      dataType: _chunk5RYM4COI.P
-    };
-    if (/^-?\d+(?:\.\d+)?e-?\d+$/i.test(e)) return {
-      value: e,
-      dataType: _chunk5RYM4COI.P
-    };
-    if (/^-?\d+$/i.test(e)) return {
-      value: e,
-      dataType: _chunk5RYM4COI.O
-    };
-  }
-  var tr = {
+  var Zt = {
     rank: Number.POSITIVE_INFINITY,
     action: "none"
   };
-  function Ue(e) {
+  function Ae(e) {
     return e.type === "decorated" ? e.inner : e;
   }
-  function sn(e) {
-    return (0, _chunk5RYM4COI.w)(e) ? _chunk5RYM4COI.ia[e.type] : void 0;
+  function pn(e) {
+    return (0, _chunkL7HIBZAX.C)(e) ? _chunkL7HIBZAX.Ba[e.type] : void 0;
   }
-  function dt(e, t) {
-    var r = Ue(e),
-      n = Ue(t);
+  function ft(e, t) {
+    var r = Ae(e),
+      n = Ae(t);
     if (r.type === n.type) return {
       rank: 0,
       action: "none"
@@ -1567,24 +1508,24 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
         action: "none"
       };
     }
-    if ((0, _chunk5RYM4COI.w)(r) && (0, _chunk5RYM4COI.w)(n)) {
-      var a = sn(r),
-        o = sn(n);
-      if (a && o) return dt(a, o);
+    if ((0, _chunkL7HIBZAX.C)(r) && (0, _chunkL7HIBZAX.C)(n)) {
+      var a = pn(r),
+        o = pn(n);
+      if (a && o) return ft(a, o);
     }
-    return (0, _chunk5RYM4COI.z)(r) && (0, _chunk5RYM4COI.z)(n) ? {
+    return (0, _chunkL7HIBZAX.G)(r) && (0, _chunkL7HIBZAX.G)(n) ? {
       rank: 0,
       action: "none"
-    } : tr;
+    } : Zt;
   }
-  function ua(e, t) {
-    var r = Ue(e),
-      n = Ue(t);
-    if (r.type === "ptr" && dt(r.inner, n).rank < Number.POSITIVE_INFINITY) return {
+  function ma(e, t) {
+    var r = Ae(e),
+      n = Ae(t);
+    if (r.type === "ptr" && ft(r.inner, n).rank < Number.POSITIVE_INFINITY) return {
       rank: 0,
       action: "deref"
     };
-    if (n.type === "ptr" && dt(r, n.inner).rank < Number.POSITIVE_INFINITY) return {
+    if (n.type === "ptr" && ft(r, n.inner).rank < Number.POSITIVE_INFINITY) return {
       rank: 1,
       action: "ref"
     };
@@ -1597,23 +1538,23 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
     };
     if (r.type in a && n.type in a) {
       var o = r.type,
-        s = n.type;
-      if (o !== s) {
-        var i = a[o];
+        i = n.type;
+      if (o !== i) {
+        var s = a[o];
         return {
-          rank: a[s] < i ? 10 : 20,
+          rank: a[i] < s ? 10 : 20,
           action: "cast",
           targetType: n
         };
       }
     }
-    return tr;
+    return Zt;
   }
-  function pa(e, t, r) {
-    var n = dt(e, t);
-    return n.rank < Number.POSITIVE_INFINITY ? n : r ? ua(e, t) : tr;
+  function da(e, t, r) {
+    var n = ft(e, t);
+    return n.rank < Number.POSITIVE_INFINITY ? n : r ? ma(e, t) : Zt;
   }
-  function un(e, t, r) {
+  function ln(e, t, r) {
     var n,
       a = Number.POSITIVE_INFINITY,
       o = new Map();
@@ -1622,7 +1563,7 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
         g = [],
         c = !0;
       for (var y of e) {
-        var x = pa(y, u, r);
+        var x = da(y, u, r);
         if (x.rank === Number.POSITIVE_INFINITY) {
           c = !1;
           break;
@@ -1632,7 +1573,7 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
       c && d < a && (a = d, n = u, o.set(n, g));
     }
     if (!n) return;
-    var i = o.get(n).map(function (u, d) {
+    var s = o.get(n).map(function (u, d) {
         return Object.assign({
           sourceIndex: d,
           action: u.action
@@ -1640,56 +1581,41 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
           targetType: u.targetType
         });
       }),
-      l = i.some(function (u) {
+      l = s.some(function (u) {
         return u.action === "cast";
       });
     return {
       targetType: n,
-      actions: i,
+      actions: s,
       hasImplicitConversions: l
     };
   }
-  function rr(e) {
-    return e.type === "abstractFloat" ? _chunk5RYM4COI.T : e.type === "abstractInt" ? _chunk5RYM4COI.S : e;
+  function er(e) {
+    return e.type === "abstractFloat" ? _chunkL7HIBZAX.ka : e.type === "abstractInt" ? _chunkL7HIBZAX.ja : e;
   }
-  function pn(e, t) {
+  function mn(e, t) {
     if (e.length === 0) return;
-    var r = (0, _toConsumableArray2.default)(new Set(e.map(Ue))),
-      n = t ? (0, _toConsumableArray2.default)(new Set(t.map(Ue))) : r,
-      a = un(e, n, !1);
+    var r = (0, _toConsumableArray2.default)(new Set(e.map(Ae))),
+      n = t ? (0, _toConsumableArray2.default)(new Set(t.map(Ae))) : r,
+      a = ln(e, n, !1);
     if (a) return a;
-    var o = un(e, n, !0);
-    if (o) return o.hasImplicitConversions = o.actions.some(function (s) {
-      return s.action === "cast";
+    var o = ln(e, n, !0);
+    if (o) return o.hasImplicitConversions = o.actions.some(function (i) {
+      return i.action === "cast";
     }), o;
   }
-  function A(e, t) {
-    return J(t.value) ? e.resolve(t.value) : String(t.value);
-  }
-  function la(e, t, r, n) {
-    if (r.action === "none") return {
-      value: t.value,
-      dataType: n
-    };
-    var a = A(e, t);
+  function fa(e, t, r, n) {
+    if (r.action === "none") return (0, _chunkL7HIBZAX.ba)(t.value, n);
+    var a = e.resolve(t.value);
     switch (r.action) {
       case "ref":
-        return {
-          value: `&${a}`,
-          dataType: n
-        };
+        return (0, _chunkL7HIBZAX.ba)(`&${a}`, n);
       case "deref":
-        return {
-          value: `*${a}`,
-          dataType: n
-        };
+        return (0, _chunkL7HIBZAX.ba)(`*${a}`, n);
       case "cast":
-        return {
-          value: `${e.resolve(n)}(${a})`,
-          dataType: n
-        };
+        return (0, _chunkL7HIBZAX.ba)(`${e.resolve(n)}(${a})`, n);
       default:
-        pt(r.action, "applyActionToSnippet");
+        dt(r.action, "applyActionToSnippet");
     }
   }
   function W(e, t, r) {
@@ -1697,63 +1623,50 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
       return o.dataType;
     });
     if (n.some(function (o) {
-      return o === U;
+      return o === _chunkL7HIBZAX.aa;
     })) return;
-    var a = pn(n, r);
+    var a = mn(n, r);
     if (a) return a.hasImplicitConversions && console.warn(`Implicit conversions from [
 ${t.map(function (o) {
       return `  ${o.value}: ${o.dataType.type}`;
     }).join(`,
 `)}
 ] to ${a.targetType.type} are supported, but not recommended.
-Consider using explicit conversions instead.`), t.map(function (o, s) {
-      var i = a.actions[s];
-      return (0, _chunk5RYM4COI.f)(i, "Action should not be undefined"), la(e, o, i, a.targetType);
+Consider using explicit conversions instead.`), t.map(function (o, i) {
+      var s = a.actions[i];
+      return (0, _chunkL7HIBZAX.h)(s, "Action should not be undefined"), fa(e, o, s, a.targetType);
     });
   }
-  function nr(e, t, r) {
+  function tr(e, t, r) {
     return Object.keys(t.propTypes).map(function (a) {
       var _W$, _W;
       var o = r[a];
       if (!o) throw new Error(`Missing property ${a}`);
-      var s = t.propTypes[a];
-      return (_W$ = (_W = W(e, [o], [s])) == null ? void 0 : _W[0]) != null ? _W$ : o;
+      var i = t.propTypes[a];
+      return (_W$ = (_W = W(e, [o], [i])) == null ? void 0 : _W[0]) != null ? _W$ : o;
     });
   }
-  function ar(e) {
-    if (J(e)) return {
-      value: e,
-      dataType: mt(e)
-    };
+  function fe(e) {
+    var _Xt$dataType, _Xt;
+    if ((0, _chunkL7HIBZAX.ca)(e)) return e;
+    if ((0, _chunkL7HIBZAX.x)(e)) return (0, _chunkL7HIBZAX.ba)(e, e[_chunkL7HIBZAX.b]);
+    if ((0, _chunkL7HIBZAX.z)(e) || (0, _chunkL7HIBZAX.D)(e)) return (0, _chunkL7HIBZAX.ba)(e, la[e.kind]);
     if (Array.isArray(e)) {
-      var _pn;
-      var t = e.map(ar).filter(Boolean),
-        r = (0, _chunk5RYM4COI.o)();
+      var _mn;
+      var t = e.map(fe).filter(Boolean),
+        r = (0, _chunkL7HIBZAX.q)();
       if (!r) throw new Error("Tried to coerce array without a context");
       var n = W(r, t),
-        a = (_pn = pn(t.map(function (o) {
+        a = (_mn = mn(t.map(function (o) {
           return o.dataType;
-        }))) == null ? void 0 : _pn.targetType;
-      return !n || !a ? {
-        value: e,
-        dataType: U
-      } : {
-        value: n.map(function (o) {
-          return o.value;
-        }).join(", "),
-        dataType: (0, _chunkSMTSXYNG.da)(rr(a), e.length)
-      };
+        }))) == null ? void 0 : _mn.targetType;
+      return !n || !a ? (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.aa) : (0, _chunkL7HIBZAX.ba)(n.map(function (o) {
+        return o.value;
+      }).join(", "), (0, _chunkSFECI7OX.X)(er(a), e.length));
     }
-    if (typeof e != "object") {
-      var _t2 = ft(String(e));
-      if (_t2) return _t2;
-    }
-    return {
-      value: e,
-      dataType: U
-    };
+    return typeof e == "string" || typeof e == "function" || typeof e == "object" || typeof e == "symbol" || typeof e > "u" || e === null ? (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.aa) : typeof e == "number" || typeof e == "bigint" ? (0, _chunkL7HIBZAX.ba)(e, (_Xt$dataType = (_Xt = Xt(String(e))) == null ? void 0 : _Xt.dataType) != null ? _Xt$dataType : _chunkL7HIBZAX.aa) : typeof e == "boolean" ? (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.ha) : (0, _chunkL7HIBZAX.ba)(e, _chunkL7HIBZAX.aa);
   }
-  var Y = {
+  var q = {
     get: function get(e, t) {
       if (t in e) return Reflect.get(e, t);
       if (t !== "~providing") return t === "toString" || t === Symbol.toStringTag || t === Symbol.toPrimitive ? function () {
@@ -1764,39 +1677,38 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
         },
         toString: function toString() {
           var _p;
-          return `.value(...).${String(t)}:${(_p = (0, _chunk5RYM4COI.c)(e)) != null ? _p : "<unnamed>"}`;
+          return `.value(...).${String(t)}:${(_p = (0, _chunkL7HIBZAX.e)(e)) != null ? _p : "<unnamed>"}`;
         }
-      }, _chunk5RYM4COI.a, {
-        dataType: ce(e[_chunk5RYM4COI.a].dataType, String(t))
-      }), Y);
+      }, _chunkL7HIBZAX.b, je(e[_chunkL7HIBZAX.b], String(t))), q);
     }
   };
-  function ze(e) {
-    var t = e;
-    for (; H(t) || q(t) || ge(t) || lt(t);) t = t.value;
-    return t;
+  function ze(e, t) {
+    var r = t,
+      n;
+    for (; n = sn(r);) r = n(e);
+    return r;
   }
-  function ln(e, t) {
-    return new or(e, t);
+  function dn(e, t) {
+    return new rr(e, t);
   }
-  var or = /*#__PURE__*/function () {
-    function or(t, r) {
-      (0, _classCallCheck2.default)(this, or);
+  var rr = /*#__PURE__*/function () {
+    function rr(t, r) {
+      (0, _classCallCheck2.default)(this, rr);
       this.dataType = t;
       this._value = r;
-      this[_chunk5RYM4COI.a] = {
+      this[_chunkL7HIBZAX.a] = {
         dataType: t
       };
     }
-    return (0, _createClass2.default)(or, [{
+    return (0, _createClass2.default)(rr, [{
       key: "$name",
       value: function $name(t) {
-        return (0, _chunk5RYM4COI.d)(this, t), this;
+        return (0, _chunkL7HIBZAX.f)(this, t), this;
       }
     }, {
       key: "~resolve",
       value: function resolve(t) {
-        var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+        var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
           n = t.resolveValue(this._value, this.dataType);
         return t.addDeclaration(`const ${r} = ${n};`), r;
       }
@@ -1804,75 +1716,105 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
       key: "toString",
       value: function toString() {
         var _p2;
-        return `const:${(_p2 = (0, _chunk5RYM4COI.c)(this)) != null ? _p2 : "<unnamed>"}`;
+        return `const:${(_p2 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p2 : "<unnamed>"}`;
       }
     }, {
-      key: "value",
-      get: function get() {
+      key: _chunkL7HIBZAX.c,
+      value: function value() {
         var _this = this;
-        return (0, _chunk5RYM4COI.r)() ? new Proxy((0, _defineProperty2.default)({
+        return new Proxy((0, _defineProperty2.default)({
           "~resolve": function resolve(t) {
             return t.resolve(_this);
           },
           toString: function toString() {
             var _p3;
-            return `.value:${(_p3 = (0, _chunk5RYM4COI.c)(_this)) != null ? _p3 : "<unnamed>"}`;
+            return `.value:${(_p3 = (0, _chunkL7HIBZAX.e)(_this)) != null ? _p3 : "<unnamed>"}`;
           }
-        }, _chunk5RYM4COI.a, {
-          dataType: this.dataType
-        }), Y) : this._value;
+        }, _chunkL7HIBZAX.b, this.dataType), q);
+      }
+    }, {
+      key: "value",
+      get: function get() {
+        return (0, _chunkL7HIBZAX.t)() ? this[_chunkL7HIBZAX.c]() : this._value;
       }
     }]);
   }();
-  function Q(e, t) {
+  function Be(e) {
+    return (e == null ? void 0 : e.resourceType) === "slot";
+  }
+  function Re(e) {
+    return (e == null ? void 0 : e.resourceType) === "derived";
+  }
+  function Ke(e) {
+    return (e == null ? void 0 : e["~providing"]) !== void 0;
+  }
+  function He(e) {
+    return (e == null ? void 0 : e.resourceType) === "accessor";
+  }
+  function nr(e) {
+    return typeof (e == null ? void 0 : e["~resolve"]) == "function";
+  }
+  function gt(e) {
+    return typeof e == "number" || typeof e == "boolean" || typeof e == "string" || nr(e) || (0, _chunkL7HIBZAX.I)(e) || Be(e) || Re(e) || Ke(e);
+  }
+  function fn(e) {
+    return !!e && typeof e == "object" && "getMappedRange" in e && "mapAsync" in e;
+  }
+  function gn(e) {
+    return (e == null ? void 0 : e.resourceType) === "buffer-usage";
+  }
+  function ar(e) {
+    return !!(e != null && e[_chunkL7HIBZAX.a]);
+  }
+  function ge(e, t) {
     for (var _ref of Object.entries(t)) {
       var _ref2 = (0, _slicedToArray2.default)(_ref, 2);
       var r = _ref2[0];
       var n = _ref2[1];
-      e[r] = n, (0, _chunk5RYM4COI.e)(n) && (0, _chunk5RYM4COI.c)(n) === void 0 && n.$name(r);
+      e[r] = n, (0, _chunkL7HIBZAX.g)(n) && (0, _chunkL7HIBZAX.e)(n) === void 0 && n.$name(r);
     }
   }
-  function dn(e, t, r) {
+  function cn(e, t, r) {
     var n = (0, _toConsumableArray2.default)(e.matchAll(/:\s*(?<arg>.*?)\s*[,)]/g)).map(function (a) {
       return a ? a[1] : void 0;
     });
     r(Object.fromEntries(t.flatMap(function (a, o) {
-      var s = n ? n[o] : void 0;
-      return (0, _chunk5RYM4COI.C)(a) && s !== void 0 ? [[s, a]] : [];
+      var i = n ? n[o] : void 0;
+      return (0, _chunkL7HIBZAX.K)(a) && i !== void 0 ? [[i, a]] : [];
     })));
   }
-  function Be(e, t, r) {
+  function Pe(e, t, r) {
     var _n$;
     var n = e.match(/->\s(?<output>[\w\d_]+)\s{/),
       a = n ? (_n$ = n[1]) == null ? void 0 : _n$.trim() : void 0;
-    (0, _chunk5RYM4COI.C)(t) && a && !/\s/g.test(a) && r((0, _defineProperty2.default)({}, a, t));
+    (0, _chunkL7HIBZAX.K)(t) && a && !/\s/g.test(a) && r((0, _defineProperty2.default)({}, a, t));
   }
-  function da(e) {
+  function ga(e) {
     return new RegExp(`(?<![\\w\\$_.])${e.replaceAll(".", "\\.").replaceAll("$", "\\$")}(?![\\w\\$_])`, "g");
   }
-  function ye(e, t, r) {
+  function ce(e, t, r) {
     return Object.entries(t).reduce(function (n, _ref3) {
       var _map;
       var _ref4 = (0, _slicedToArray2.default)(_ref3, 2),
         a = _ref4[0],
         o = _ref4[1];
-      return J(o) || (0, _chunkSMTSXYNG.d)(o) ? n.replaceAll(da(a), e.resolve(o)) : o !== null && typeof o == "object" ? ((_map = (0, _toConsumableArray2.default)(r.matchAll(new RegExp(`${a.replaceAll(".", "\\.").replaceAll("$", "\\$")}\\.(?<prop>.*?)(?![\\w\\$_])`, "g"))).map(function (i) {
-        return i[1];
-      })) != null ? _map : []).reduce(function (i, l) {
-        return l && l in o ? ye(e, (0, _defineProperty2.default)({}, `${a}.${l}`, o[l]), i) : i;
+      return gt(o) || (0, _chunkL7HIBZAX.U)(o) ? n.replaceAll(ga(a), e.resolve(o)) : o !== null && typeof o == "object" ? ((_map = (0, _toConsumableArray2.default)(r.matchAll(new RegExp(`${a.replaceAll(".", "\\.").replaceAll("$", "\\$")}\\.(?<prop>.*?)(?![\\w\\$_])`, "g"))).map(function (s) {
+        return s[1];
+      })) != null ? _map : []).reduce(function (s, l) {
+        return l && l in o ? ce(e, (0, _defineProperty2.default)({}, `${a}.${l}`, o[l]), s) : s;
       }, n) : n;
     }, r);
   }
-  function mn(e) {
-    return new sr(e);
+  function yn(e) {
+    return new or(e);
   }
-  var sr = /*#__PURE__*/function () {
-    function sr(t) {
-      (0, _classCallCheck2.default)(this, sr);
+  var or = /*#__PURE__*/function () {
+    function or(t) {
+      (0, _classCallCheck2.default)(this, or);
       this.externalsToApply = [];
       this.declaration = t;
     }
-    return (0, _createClass2.default)(sr, [{
+    return (0, _createClass2.default)(or, [{
       key: "$uses",
       value: function $uses(t) {
         return this.externalsToApply.push(t), this;
@@ -1881,8 +1823,8 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
       key: "~resolve",
       value: function resolve(t) {
         var r = {};
-        for (var a of this.externalsToApply) Q(r, a);
-        var n = ye(t, r, this.declaration);
+        for (var a of this.externalsToApply) ge(r, a);
+        var n = ce(t, r, this.declaration);
         return t.addDeclaration(n), "";
       }
     }, {
@@ -1892,29 +1834,409 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
       }
     }]);
   }();
-  var fn = new WeakMap();
-  function gn(e) {
-    return fn.get(e);
+  var Tn = new WeakMap();
+  function xn(e) {
+    return Tn.get(e);
   }
-  function cn(e, t, r) {
-    return fn.set(e, {
+  function hn(e, t, r) {
+    return Tn.set(e, {
       ast: t,
       externals: r
     }), e;
   }
-  function yn(e) {
+  function wn(e) {
     return function () {
       throw new Error(`The function "${e != null ? e : "<unnamed>"}" is invokable only on the GPU. If you want to use it on the CPU, mark it with the "kernel & js" directive.`);
     };
   }
-  function Ke(e) {
+  function re(e, t) {
+    var r = [];
+    typeof t == "string" && (e.isEntry ? ((0, _chunkL7HIBZAX.K)(e.argTypes[0]) && r.push({
+      In: e.argTypes[0]
+    }), (0, _chunkL7HIBZAX.K)(e.returnType) && r.push({
+      Out: e.returnType
+    })) : (cn(t, e.argTypes, function (o) {
+      return r.push(o);
+    }), Pe(t, e.returnType, function (o) {
+      return r.push(o);
+    })));
+    var n = {
+        applyExternals: function applyExternals(o) {
+          r.push(o);
+        },
+        resolve: function resolve(o) {
+          var i = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+          var s = {};
+          for (var u of r) ge(s, u);
+          var l = o.names.makeUnique((0, _chunkL7HIBZAX.e)(this));
+          if (typeof t == "string") {
+            var _u = "";
+            if (e.isEntry) {
+              var g = (0, _chunkL7HIBZAX.K)(e.argTypes[0]) ? "(in: In)" : "()",
+                c = (0, _chunkL7HIBZAX.I)(e.returnType) ? (0, _chunkSFECI7OX.ba)(e.returnType) : "",
+                y = e.returnType !== _chunkL7HIBZAX.y ? (0, _chunkL7HIBZAX.K)(e.returnType) ? "-> Out" : `-> ${c !== "" ? c : "@location(0)"} ${o.resolve(e.returnType)}` : "";
+              _u = `${g} ${y} `;
+            }
+            var d = ce(o, s, `${_u}${t.trim()}`);
+            o.addDeclaration(`${i}fn ${l}${d}`);
+          } else {
+            var _u2$ast;
+            var _u2 = xn(t);
+            if (_u2 != null && _u2.externals) {
+              var x = Object.fromEntries(Object.entries(_u2.externals).filter(function (_ref5) {
+                var _ref6 = (0, _slicedToArray2.default)(_ref5, 1),
+                  w = _ref6[0];
+                return !(w in s);
+              }));
+              ge(s, x);
+            }
+            var _d = (_u2$ast = _u2 == null ? void 0 : _u2.ast) != null ? _u2$ast : o.transpileFn(String(t)),
+              _g = _d.externalNames.filter(function (x) {
+                return !(x in s);
+              });
+            if (_g.length > 0) throw new _chunkL7HIBZAX.l((0, _chunkL7HIBZAX.e)(this), _g);
+            var _o$fnToWgsl = o.fnToWgsl({
+                args: e.argTypes.map(function (x, w) {
+                  var _d$params$w;
+                  return (0, _chunkL7HIBZAX.ba)(((_d$params$w = _d.params[w]) == null ? void 0 : _d$params$w.type) === _tinyest.FuncParameterType.identifier ? _d.params[w].name : `_arg_${w}`, x);
+                }),
+                argAliases: Object.fromEntries(_d.params.flatMap(function (x, w) {
+                  return x.type === _tinyest.FuncParameterType.destructuredObject ? x.props.map(function (_ref7) {
+                    var b = _ref7.name,
+                      U = _ref7.alias;
+                    return [U, (0, _chunkL7HIBZAX.ba)(`_arg_${w}.${b}`, e.argTypes[w].propTypes[b])];
+                  }) : [];
+                })),
+                returnType: e.returnType,
+                body: _d.body,
+                externalMap: s
+              }),
+              _c = _o$fnToWgsl.head,
+              _y = _o$fnToWgsl.body;
+            o.addDeclaration(`${i}fn ${l}${o.resolve(_c)}${o.resolve(_y)}`);
+          }
+          return l;
+        }
+      },
+      a = (0, _chunkL7HIBZAX.e)(t);
+    return a !== void 0 && (0, _chunkL7HIBZAX.f)(n, a), n;
+  }
+  function ca(e) {
+    var t = 0;
+    return Object.fromEntries(Object.entries(e).map(function (_ref8) {
+      var _ref9 = (0, _slicedToArray2.default)(_ref8, 2),
+        r = _ref9[0],
+        n = _ref9[1];
+      if ((0, _chunkSFECI7OX.aa)(n)) return [r, n];
+      var a = (0, _chunkL7HIBZAX._)(n);
+      return a !== void 0 ? (t = a + 1, [r, n]) : [r, (0, _chunkSFECI7OX._)(t++, n)];
+    }));
+  }
+  function ne(e) {
+    return (0, _chunkL7HIBZAX.$)(e) ? (0, _chunkL7HIBZAX.T)(e) || (0, _chunkL7HIBZAX._)(e) !== void 0 ? e : (0, _chunkSFECI7OX._)(0, e) : (0, _chunkSFECI7OX.ca)(ca(e));
+  }
+  function ae(e) {
+    for (var _len = arguments.length, t = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      t[_key - 1] = arguments[_key];
+    }
+    return ya(e) ? Ta.apply(void 0, [e].concat(t)) : e;
+  }
+  function ya(e) {
+    return Array.isArray(e) && "raw" in e && Array.isArray(e.raw) && e.raw.every(function (t) {
+      return typeof t == "string";
+    });
+  }
+  function Ta(e) {
+    for (var _len2 = arguments.length, t = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      t[_key2 - 1] = arguments[_key2];
+    }
+    return e.slice(1).reduce(function (r, n, a) {
+      return `${r}${t[a]}${n}`;
+    }, e[0]);
+  }
+  function Sn(e) {
+    var _e$workgroupSize$, _e$workgroupSize$2, _e$workgroupSize$3;
+    var t = {
+        argTypes: e.in && Object.keys(e.in).length !== 0 ? [ne(e.in)] : [],
+        returnType: _chunkL7HIBZAX.y,
+        workgroupSize: [(_e$workgroupSize$ = e.workgroupSize[0]) != null ? _e$workgroupSize$ : 1, (_e$workgroupSize$2 = e.workgroupSize[1]) != null ? _e$workgroupSize$2 : 1, (_e$workgroupSize$3 = e.workgroupSize[2]) != null ? _e$workgroupSize$3 : 1],
+        isEntry: !0
+      },
+      r = function r(n) {
+        for (var _len3 = arguments.length, a = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+          a[_key3 - 1] = arguments[_key3];
+        }
+        return xa(t, e.workgroupSize, ae.apply(void 0, [n].concat(a)));
+      };
+    return Object.assign(Object.assign(r, t), {
+      does: r
+    });
+  }
+  function xa(e, t, r) {
+    var n = re(e, r),
+      a = e.argTypes[0];
+    return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
+      shell: e,
+      $uses: function $uses(o) {
+        return n.applyExternals(o), this;
+      }
+    }, _chunkL7HIBZAX.d, n), "$name", function $name(o) {
+      return (0, _chunkL7HIBZAX.f)(n, o), (0, _chunkL7HIBZAX.g)(a) && a.$name(`${o}_Input`), this;
+    }), "~resolve", function resolve(o) {
+      return n.resolve(o, `@compute @workgroup_size(${t.join(", ")}) `);
+    }), "toString", function toString() {
+      var _p4;
+      return `computeFn:${(_p4 = (0, _chunkL7HIBZAX.e)(n)) != null ? _p4 : "<unnamed>"}`;
+    });
+  }
+  function vn(e, t) {
+    var r = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "argTypes", e), "returnType", t != null ? t : _chunkL7HIBZAX.y), "isEntry", !1),
+      n = function n(a) {
+        for (var _len4 = arguments.length, o = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+          o[_key4 - 1] = arguments[_key4];
+        }
+        return wa(r, ae.apply(void 0, [a].concat(o)));
+      };
+    return Object.assign(Object.assign(n, r), {
+      does: n
+    });
+  }
+  function ir(e) {
+    return !!(e != null && e[_chunkL7HIBZAX.a]) && (e == null ? void 0 : e.resourceType) === "function";
+  }
+  function ha(_ref11) {
+    var _p5;
+    var _ref12 = (0, _slicedToArray2.default)(_ref11, 2),
+      e = _ref12[0],
+      t = _ref12[1];
+    return `${(_p5 = (0, _chunkL7HIBZAX.e)(e)) != null ? _p5 : "<unnamed>"}=${t}`;
+  }
+  function wa(e, t) {
+    var r = re(e, t),
+      n = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, {
+        implementation: t,
+        argTypes: e.argTypes
+      }), "shell", e), "resourceType", "function"), "$uses", function $uses(i) {
+        return r.applyExternals(i), this;
+      }), _chunkL7HIBZAX.d, r), "$name", function $name(i) {
+        return (0, _chunkL7HIBZAX.f)(r, i), this;
+      }), "with", function _with(i, s) {
+        return Dn(o, [[He(i) ? i.slot : i, s]]);
+      }), "~resolve", function resolve(i) {
+        if (typeof t == "string") return r.resolve(i);
+        var s = i;
+        if (s.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
+        try {
+          return s.callStack.push(e.returnType), r.resolve(i);
+        } finally {
+          s.callStack.pop();
+        }
+      }),
+      a = (0, _chunkL7HIBZAX.ea)(function () {
+        if (typeof t == "string") throw new Error("Cannot execute on the CPU functions constructed with raw WGSL");
+        return t.apply(void 0, arguments);
+      }, function () {
+        var _e$returnType;
+        for (var _len5 = arguments.length, i = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+          i[_key5] = arguments[_key5];
+        }
+        return (0, _chunkL7HIBZAX.ba)(new ct(o, i.map(function (s) {
+          return s.value;
+        })), (_e$returnType = e.returnType) != null ? _e$returnType : _chunkL7HIBZAX.aa);
+      }, e.argTypes);
+    a[_chunkL7HIBZAX.a].implementation = t;
+    var o = Object.assign(a, n);
+    return Object.defineProperty(o, "toString", {
+      value: function value() {
+        var _p6;
+        return `fn:${(_p6 = (0, _chunkL7HIBZAX.e)(r)) != null ? _p6 : "<unnamed>"}`;
+      }
+    }), o;
+  }
+  function Dn(e, t) {
+    var r = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, {
+        implementation: e[_chunkL7HIBZAX.a].implementation,
+        argTypes: e[_chunkL7HIBZAX.a].argTypes
+      }), "resourceType", "function"), "shell", e.shell), "~providing", {
+        inner: e,
+        pairs: t
+      }), "$uses", function $uses(o) {
+        return e.$uses(o), this;
+      }), _chunkL7HIBZAX.d, e), "$name", function $name(o) {
+        return e.$name(o), this;
+      }), "with", function _with(o, i) {
+        return Dn(a, [].concat((0, _toConsumableArray2.default)(t), [[He(o) ? o.slot : o, i]]));
+      }),
+      n = (0, _chunkL7HIBZAX.ea)(function () {
+        return e.apply(void 0, arguments);
+      }, function () {
+        var _e$shell$returnType;
+        for (var _len6 = arguments.length, o = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+          o[_key6] = arguments[_key6];
+        }
+        return (0, _chunkL7HIBZAX.ba)(new ct(a, o.map(function (i) {
+          return i.value;
+        })), (_e$shell$returnType = e.shell.returnType) != null ? _e$shell$returnType : _chunkL7HIBZAX.aa);
+      }, e.shell.argTypes),
+      a = Object.assign(n, r);
+    return Object.defineProperty(a, "toString", {
+      value: function value() {
+        var _p7;
+        return `fn:${(_p7 = (0, _chunkL7HIBZAX.e)(e)) != null ? _p7 : "<unnamed>"}[${t.map(ha).join(", ")}]`;
+      }
+    }), a[_chunkL7HIBZAX.a].implementation = e[_chunkL7HIBZAX.a].implementation, a;
+  }
+  var ct = /*#__PURE__*/function () {
+    function ct(t, r) {
+      (0, _classCallCheck2.default)(this, ct);
+      this._fn = t;
+      this._params = r;
+      this[_chunkL7HIBZAX.d] = t;
+    }
+    return (0, _createClass2.default)(ct, [{
+      key: "~resolve",
+      value: function resolve(t) {
+        return t.resolve(`${t.resolve(this._fn)}(${this._params.map(function (r) {
+          return t.resolve(r);
+        }).join(", ")})`);
+      }
+    }, {
+      key: "toString",
+      value: function toString() {
+        var _p8;
+        return `call:${(_p8 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p8 : "<unnamed>"}`;
+      }
+    }]);
+  }();
+  function Fn(e) {
+    var t = {
+        argTypes: e.in && Object.keys(e.in).length !== 0 ? [ne(e.in)] : [],
+        targets: e.out,
+        returnType: ne(e.out),
+        isEntry: !0
+      },
+      r = function r(n) {
+        for (var _len7 = arguments.length, a = new Array(_len7 > 1 ? _len7 - 1 : 0), _key7 = 1; _key7 < _len7; _key7++) {
+          a[_key7 - 1] = arguments[_key7];
+        }
+        return ba(t, ae.apply(void 0, [n].concat(a)));
+      };
+    return Object.assign(Object.assign(r, t), {
+      does: r
+    });
+  }
+  function ba(e, t) {
+    var r = re(e, t),
+      n = e.returnType,
+      a = e.argTypes[0];
+    return typeof t == "string" && Pe(t, n, function (i) {
+      return r.applyExternals(i);
+    }), (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
+      shell: e,
+      outputType: n,
+      $uses: function $uses(i) {
+        return r.applyExternals(i), this;
+      }
+    }, _chunkL7HIBZAX.d, r), "$name", function $name(i) {
+      return (0, _chunkL7HIBZAX.f)(r, i), (0, _chunkL7HIBZAX.g)(n) && n.$name(`${i}_Output`), (0, _chunkL7HIBZAX.g)(a) && a.$name(`${i}_Input`), this;
+    }), "~resolve", function resolve(i) {
+      if (typeof t == "string") return r.resolve(i, "@fragment ");
+      var s = i;
+      if (s.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
+      try {
+        return s.callStack.push(n), r.resolve(i, "@fragment ");
+      } finally {
+        s.callStack.pop();
+      }
+    }), "toString", function toString() {
+      var _p9;
+      return `fragmentFn:${(_p9 = (0, _chunkL7HIBZAX.e)(r)) != null ? _p9 : "<unnamed>"}`;
+    });
+  }
+  function In(e) {
+    var _e$in;
+    var t = {
+        attributes: [(_e$in = e.in) != null ? _e$in : {}],
+        returnType: Object.keys(e.out).length !== 0 ? ne(e.out) : void 0,
+        argTypes: e.in && Object.keys(e.in).length !== 0 ? [ne(e.in)] : [],
+        isEntry: !0
+      },
+      r = function r(n) {
+        for (var _len8 = arguments.length, a = new Array(_len8 > 1 ? _len8 - 1 : 0), _key8 = 1; _key8 < _len8; _key8++) {
+          a[_key8 - 1] = arguments[_key8];
+        }
+        return Sa(t, ae.apply(void 0, [n].concat(a)));
+      };
+    return Object.assign(Object.assign(r, t), {
+      does: r
+    });
+  }
+  function Sa(e, t) {
+    var r = re(e, t),
+      n = e.returnType,
+      a = e.argTypes[0];
+    return typeof t == "string" && Pe(t, n, function (o) {
+      return r.applyExternals(o);
+    }), (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
+      shell: e,
+      outputType: n,
+      inputType: a,
+      $uses: function $uses(o) {
+        return r.applyExternals(o), this;
+      }
+    }, _chunkL7HIBZAX.d, r), "$name", function $name(o) {
+      return (0, _chunkL7HIBZAX.f)(r, o), (0, _chunkL7HIBZAX.g)(n) && n.$name(`${o}_Output`), (0, _chunkL7HIBZAX.g)(a) && a.$name(`${o}_Input`), this;
+    }), "~resolve", function resolve(o) {
+      if (typeof t == "string") return r.resolve(o, "@vertex ");
+      var i = o;
+      if (i.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
+      try {
+        return i.callStack.push(n), r.resolve(o, "@vertex ");
+      } finally {
+        i.callStack.pop();
+      }
+    }), "toString", function toString() {
+      var _p10;
+      return `vertexFn:${(_p10 = (0, _chunkL7HIBZAX.e)(r)) != null ? _p10 : "<unnamed>"}`;
+    });
+  }
+  var oe = exports.RandomNameRegistry = /*#__PURE__*/function () {
+      function oe() {
+        (0, _classCallCheck2.default)(this, oe);
+        this.lastUniqueId = 0;
+      }
+      return (0, _createClass2.default)(oe, [{
+        key: "makeUnique",
+        value: function makeUnique(t) {
+          var r;
+          return t ? (r = t.replaceAll(/\s/g, "_"), r = r.replaceAll(/[^\w\d]/g, "")) : r = "item", `${r}_${this.lastUniqueId++}`;
+        }
+      }]);
+    }(),
+    ie = exports.StrictNameRegistry = /*#__PURE__*/function () {
+      function ie() {
+        (0, _classCallCheck2.default)(this, ie);
+        this._usedNames = new Set();
+      }
+      return (0, _createClass2.default)(ie, [{
+        key: "makeUnique",
+        value: function makeUnique(t) {
+          if (t === void 0) throw new Error("Unnamed item found when using a strict name registry");
+          var r = 0,
+            n = t;
+          for (; this._usedNames.has(n);) r++, n = `${t}_${r}`;
+          return this._usedNames.add(n), n;
+        }
+      }]);
+    }();
+  function qe(e) {
     return typeof (e == null ? void 0 : e.format) == "string";
   }
-  function Tn(e, t) {
+  function Un(e, t) {
     var r = [];
-    if ((0, _chunkSMTSXYNG.i)(e)) {
-      var _ee;
-      if (!Ke(t)) throw new Error("Shader expected a single attribute, not a record of attributes to be passed in.");
+    if ((0, _chunkL7HIBZAX.$)(e)) {
+      var _Z;
+      if (!qe(t)) throw new Error("Shader expected a single attribute, not a record of attributes to be passed in.");
       return r.push(t._layout), {
         usedVertexLayouts: r,
         bufferDefinitions: [{
@@ -1923,7 +2245,7 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
           attributes: [{
             format: t.format,
             offset: t.offset,
-            shaderLocation: (_ee = (0, _chunkSMTSXYNG.h)(e)) != null ? _ee : 0
+            shaderLocation: (_Z = (0, _chunkL7HIBZAX._)(e)) != null ? _Z : 0
           }]
         }]
       };
@@ -1931,21 +2253,21 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
     var n = [],
       a = new WeakMap(),
       o = 0;
-    for (var _ref5 of Object.entries(e)) {
-      var _ee2;
-      var _ref6 = (0, _slicedToArray2.default)(_ref5, 2);
-      var s = _ref6[0];
-      var i = _ref6[1];
-      if ((0, _chunkSMTSXYNG.ia)(i)) continue;
-      var l = t[s];
-      if (!l) throw new Error(`An attribute by the name of '${s}' was not provided to the shader.`);
+    for (var _ref15 of Object.entries(e)) {
+      var _Z2;
+      var _ref16 = (0, _slicedToArray2.default)(_ref15, 2);
+      var i = _ref16[0];
+      var s = _ref16[1];
+      if ((0, _chunkSFECI7OX.aa)(s)) continue;
+      var l = t[i];
+      if (!l) throw new Error(`An attribute by the name of '${i}' was not provided to the shader.`);
       var u = l._layout,
         d = a.get(u);
       d || (r.push(u), d = [], n.push({
         arrayStride: u.stride,
         stepMode: u.stepMode,
         attributes: d
-      }), a.set(u, d)), o = (_ee2 = (0, _chunkSMTSXYNG.h)(i)) != null ? _ee2 : o, d.push({
+      }), a.set(u, d)), o = (_Z2 = (0, _chunkL7HIBZAX._)(s)) != null ? _Z2 : o, d.push({
         format: l.format,
         offset: l.offset,
         shaderLocation: o++
@@ -1956,84 +2278,84 @@ Consider using explicit conversions instead.`), t.map(function (o, s) {
       bufferDefinitions: n
     };
   }
-  var ma = ["bool", "f32", "f16", "i32", "u32", "vec2f", "vec3f", "vec4f", "vec2h", "vec3h", "vec4h", "vec2i", "vec3i", "vec4i", "vec2u", "vec3u", "vec4u", "vec2<bool>", "vec3<bool>", "vec4<bool>", "mat2x2f", "mat3x3f", "mat4x4f"];
-  function fa(e) {
-    return ma.includes(e.type);
+  var va = ["bool", "f32", "f16", "i32", "u32", "vec2f", "vec3f", "vec4f", "vec2h", "vec3h", "vec4h", "vec2i", "vec3i", "vec4i", "vec2u", "vec3u", "vec4u", "vec2<bool>", "vec3<bool>", "vec4<bool>", "mat2x2f", "mat3x3f", "mat4x4f"];
+  function Da(e) {
+    return va.includes(e.type);
   }
-  function ir(e, _ref7) {
-    var _ref8 = (0, _slicedToArray2.default)(_ref7, 2),
-      t = _ref8[0],
-      r = _ref8[1];
-    return `  ${(0, _chunkSMTSXYNG.ja)(r)}${t}: ${e.resolve(r)},
+  function sr(e, _ref17) {
+    var _ref18 = (0, _slicedToArray2.default)(_ref17, 2),
+      t = _ref18[0],
+      r = _ref18[1];
+    return `  ${(0, _chunkSFECI7OX.ba)(r)}${t}: ${e.resolve(r)},
 `;
   }
-  function ga(e, t) {
-    var r = e.names.makeUnique((0, _chunk5RYM4COI.c)(t));
+  function Fa(e, t) {
+    var r = e.names.makeUnique((0, _chunkL7HIBZAX.e)(t));
     return e.addDeclaration(`
 struct ${r} {
 ${Object.entries(t.propTypes).map(function (n) {
-      return ir(e, n);
+      return sr(e, n);
     }).join("")}}
 `), r;
   }
-  function ca(e, t) {
-    var r = e.names.makeUnique((0, _chunk5RYM4COI.c)(t));
+  function Ia(e, t) {
+    var r = e.names.makeUnique((0, _chunkL7HIBZAX.e)(t));
     return e.addDeclaration(`
 struct ${r} {
 ${Object.entries(t.propTypes).map(function (n) {
-      return Ke(n[1]) ? ir(e, [n[0], _chunkSMTSXYNG.j[n[1].format]]) : ir(e, n);
+      return qe(n[1]) ? sr(e, [n[0], _chunkSFECI7OX.b[n[1].format]]) : sr(e, n);
     }).join("")}
 }
 `), r;
   }
-  function ya(e, t) {
+  function Ua(e, t) {
     var r = e.resolve(t.elementType);
     return t.elementCount === 0 ? `array<${r}>` : `array<${r}, ${t.elementCount}>`;
   }
-  function Ta(e, t) {
-    var r = e.resolve(Ke(t.elementType) ? _chunkSMTSXYNG.j[t.elementType.format] : t.elementType);
+  function Aa(e, t) {
+    var r = e.resolve(qe(t.elementType) ? _chunkSFECI7OX.b[t.elementType.format] : t.elementType);
     return t.elementCount === 0 ? `array<${r}>` : `array<${r}, ${t.elementCount}>`;
   }
   function ur(e, t) {
-    if ((0, _chunkSMTSXYNG.d)(t)) return t.type === "unstruct" ? ca(e, t) : t.type === "disarray" ? Ta(e, t) : t.type === "loose-decorated" ? e.resolve(Ke(t.inner) ? _chunkSMTSXYNG.j[t.inner.format] : t.inner) : e.resolve(_chunkSMTSXYNG.j[t.type]);
-    if (fa(t)) return t.type;
-    if (t.type === "struct") return ga(e, t);
-    if (t.type === "array") return ya(e, t);
+    if ((0, _chunkL7HIBZAX.U)(t)) return t.type === "unstruct" ? Ia(e, t) : t.type === "disarray" ? Aa(e, t) : t.type === "loose-decorated" ? e.resolve(qe(t.inner) ? _chunkSFECI7OX.b[t.inner.format] : t.inner) : e.resolve(_chunkSFECI7OX.b[t.type]);
+    if (Da(t)) return t.type;
+    if (t.type === "struct") return Fa(e, t);
+    if (t.type === "array") return Ua(e, t);
     if (t.type === "atomic") return `atomic<${ur(e, t.inner)}>`;
     if (t.type === "decorated") return e.resolve(t.inner);
     if (t.type === "ptr") return t.addressSpace === "storage" ? `ptr<storage, ${e.resolve(t.inner)}, ${t.access === "read-write" ? "read_write" : t.access}>` : `ptr<${t.addressSpace}, ${e.resolve(t.inner)}>`;
     if (t.type === "abstractInt" || t.type === "abstractFloat") throw new Error("Abstract types have no concrete representation in WGSL");
     if (t.type === "void") throw new Error("Void has no representation in WGSL");
-    pt(t, "resolveData");
+    dt(t, "resolveData");
   }
-  function xa(e, t) {
+  function Ba(e, t) {
     var r = "size" in e ? e.size : e.currentByteOffset,
       n = t - 1,
       a = r & n;
     "skipBytes" in e ? e.skipBytes(t - a & n) : e.add(t - a & n);
   }
-  var B = xa;
-  var xn = new WeakMap();
-  function gt(e) {
-    var t = xn.get(e);
+  var R = Ba;
+  var An = new WeakMap();
+  function yt(e) {
+    var t = An.get(e);
     if (t) return t;
     var r = new _typedBinary.Measurer(),
       n = {},
       a;
     for (var o in e.propTypes) {
-      var s = e.propTypes[o];
-      if (s === void 0) throw new Error(`Property ${o} is undefined in struct`);
-      var i = r.size;
-      B(r, (0, _chunkSMTSXYNG.f)(e) ? (0, _chunkSMTSXYNG.$)(s) : (0, _chunkSMTSXYNG._)(s)), a && (a.padding = r.size - i);
-      var l = (0, _chunkSMTSXYNG.ba)(s);
+      var i = e.propTypes[o];
+      if (i === void 0) throw new Error(`Property ${o} is undefined in struct`);
+      var s = r.size;
+      R(r, (0, _chunkL7HIBZAX.W)(e) ? (0, _chunkSFECI7OX.T)(i) : (0, _chunkSFECI7OX.S)(i)), a && (a.padding = r.size - s);
+      var l = (0, _chunkSFECI7OX.V)(i);
       n[o] = {
         offset: r.size,
         size: l
       }, a = n[o], r.add(l);
     }
-    return a && (a.padding = (0, _chunkSMTSXYNG.a)((0, _chunkSMTSXYNG.ba)(e), (0, _chunkSMTSXYNG._)(e)) - r.size), xn.set(e, n), n;
+    return a && (a.padding = (0, _chunkSFECI7OX.a)((0, _chunkSFECI7OX.V)(e), (0, _chunkSFECI7OX.S)(e)) - r.size), An.set(e, n), n;
   }
-  var yt = function () {
+  var xt = function () {
       try {
         return new Function("return true"), !0;
       } catch (_unused) {
@@ -2061,73 +2383,73 @@ ${Object.entries(t.propTypes).map(function (n) {
       mat3x3f: "f32",
       mat4x4f: "f32"
     },
-    dr = {
+    mr = {
       u32: "setUint32",
       i32: "setInt32",
       f32: "setFloat32"
     };
-  function ct(e, t, r) {
-    if ((0, _chunk5RYM4COI.E)(e) || (0, _chunk5RYM4COI.K)(e)) return ct(e.inner, t, r);
-    if ((0, _chunk5RYM4COI.C)(e) || (0, _chunkSMTSXYNG.f)(e)) {
-      var a = gt(e),
-        o = Object.entries(a).sort(function (i, l) {
-          return i[1].offset - l[1].offset;
+  function Tt(e, t, r) {
+    if ((0, _chunkL7HIBZAX.M)(e) || (0, _chunkL7HIBZAX.S)(e)) return Tt(e.inner, t, r);
+    if ((0, _chunkL7HIBZAX.K)(e) || (0, _chunkL7HIBZAX.W)(e)) {
+      var a = yt(e),
+        o = Object.entries(a).sort(function (s, l) {
+          return s[1].offset - l[1].offset;
         }),
-        s = "";
-      for (var _ref9 of o) {
-        var _ref10 = (0, _slicedToArray2.default)(_ref9, 2);
-        var i = _ref10[0];
-        var l = _ref10[1];
-        var u = e.propTypes[i];
-        u && (s += ct(u, `(${t} + ${l.offset})`, `${r}.${i}`));
+        i = "";
+      for (var _ref19 of o) {
+        var _ref20 = (0, _slicedToArray2.default)(_ref19, 2);
+        var s = _ref20[0];
+        var l = _ref20[1];
+        var u = e.propTypes[s];
+        u && (i += Tt(u, `(${t} + ${l.offset})`, `${r}.${s}`));
       }
-      return s;
+      return i;
     }
-    if ((0, _chunk5RYM4COI.B)(e) || (0, _chunkSMTSXYNG.e)(e)) {
+    if ((0, _chunkL7HIBZAX.J)(e) || (0, _chunkL7HIBZAX.V)(e)) {
       var _a2 = e,
-        _o2 = (0, _chunkSMTSXYNG.a)((0, _chunkSMTSXYNG.ba)(_a2.elementType), (0, _chunkSMTSXYNG._)(_a2.elementType)),
-        _s2 = "";
-      return _s2 += `for (let i = 0; i < ${_a2.elementCount}; i++) {
-`, _s2 += ct(_a2.elementType, `(${t} + i * ${_o2})`, `${r}[i]`), _s2 += `}
-`, _s2;
+        _o = (0, _chunkSFECI7OX.a)((0, _chunkSFECI7OX.V)(_a2.elementType), (0, _chunkSFECI7OX.S)(_a2.elementType)),
+        _i = "";
+      return _i += `for (let i = 0; i < ${_a2.elementCount}; i++) {
+`, _i += Tt(_a2.elementType, `(${t} + i * ${_o})`, `${r}[i]`), _i += `}
+`, _i;
     }
-    if ((0, _chunk5RYM4COI.w)(e)) {
+    if ((0, _chunkL7HIBZAX.C)(e)) {
       var _a3 = lr[e.type],
-        _o3 = "",
-        _s3 = dr[_a3],
-        _i = ["x", "y", "z", "w"],
-        _l = (0, _chunk5RYM4COI.u)(e) ? 2 : (0, _chunk5RYM4COI.v)(e) ? 3 : 4;
-      for (var _u = 0; _u < _l; _u++) _o3 += `output.${_s3}((${t} + ${_u * 4}), ${r}.${_i[_u]}, littleEndian);
+        _o2 = "",
+        _i2 = mr[_a3],
+        _s = ["x", "y", "z", "w"],
+        _l = (0, _chunkL7HIBZAX.A)(e) ? 2 : (0, _chunkL7HIBZAX.B)(e) ? 3 : 4;
+      for (var _u3 = 0; _u3 < _l; _u3++) _o2 += `output.${_i2}((${t} + ${_u3 * 4}), ${r}.${_s[_u3]}, littleEndian);
 `;
-      return _o3;
+      return _o2;
     }
-    if ((0, _chunk5RYM4COI.z)(e)) {
+    if ((0, _chunkL7HIBZAX.G)(e)) {
       var _a4 = lr[e.type],
-        _o4 = dr[_a4],
-        _s4 = (0, _chunk5RYM4COI.x)(e) ? 2 : (0, _chunk5RYM4COI.y)(e) ? 3 : 4,
-        _i2 = _s4 * _s4,
-        _l2 = (0, _chunkSMTSXYNG.a)(_s4 * 4, 8),
-        _u2 = "";
-      for (var d = 0; d < _i2; d++) {
-        var g = Math.floor(d / _s4),
-          c = d % _s4,
+        _o3 = mr[_a4],
+        _i3 = (0, _chunkL7HIBZAX.E)(e) ? 2 : (0, _chunkL7HIBZAX.F)(e) ? 3 : 4,
+        _s2 = _i3 * _i3,
+        _l2 = (0, _chunkSFECI7OX.a)(_i3 * 4, 8),
+        _u4 = "";
+      for (var d = 0; d < _s2; d++) {
+        var g = Math.floor(d / _i3),
+          c = d % _i3,
           y = g * _l2 + c * 4;
-        _u2 += `output.${_o4}((${t} + ${y}), ${r}.columns[${g}].${["x", "y", "z", "w"][c]}, littleEndian);
+        _u4 += `output.${_o3}((${t} + ${y}), ${r}.columns[${g}].${["x", "y", "z", "w"][c]}, littleEndian);
 `;
       }
-      return _u2;
+      return _u4;
     }
     var n = lr[e.type];
-    return `output.${dr[n]}(${t}, ${r}, littleEndian);
+    return `output.${mr[n]}(${t}, ${r}, littleEndian);
 `;
   }
-  function Tt(e) {
+  function ht(e) {
     if (pr.has(e)) return pr.get(e);
-    var t = ct(e, "offset", "value"),
+    var t = Tt(e, "offset", "value"),
       r = new Function("output", "offset", "value", "littleEndian=true", t);
     return pr.set(e, r), r;
   }
-  var Re = {
+  var Ce = {
     bool: function bool() {
       throw new Error("Booleans are not host-shareable");
     },
@@ -2198,37 +2520,37 @@ ${Object.entries(t.propTypes).map(function (n) {
       for (var n = 0; n < r.length; ++n) e.writeFloat32(r[n]);
     },
     struct: function struct(e, t, r) {
-      var n = (0, _chunkSMTSXYNG._)(t);
-      B(e, n);
-      for (var _ref11 of Object.entries(t.propTypes)) {
-        var _ref12 = (0, _slicedToArray2.default)(_ref11, 2);
-        var a = _ref12[0];
-        var o = _ref12[1];
-        B(e, (0, _chunkSMTSXYNG._)(o)), ne(e, o, r[a]);
+      var n = (0, _chunkSFECI7OX.S)(t);
+      R(e, n);
+      for (var _ref21 of Object.entries(t.propTypes)) {
+        var _ref22 = (0, _slicedToArray2.default)(_ref21, 2);
+        var a = _ref22[0];
+        var o = _ref22[1];
+        R(e, (0, _chunkSFECI7OX.S)(o)), se(e, o, r[a]);
       }
-      B(e, n);
+      R(e, n);
     },
     array: function array(e, t, r) {
       if (t.elementCount === 0) throw new Error("Cannot write using a runtime-sized schema.");
-      var n = (0, _chunkSMTSXYNG._)(t);
-      B(e, n);
+      var n = (0, _chunkSFECI7OX.S)(t);
+      R(e, n);
       var a = e.currentByteOffset;
-      for (var o = 0; o < Math.min(t.elementCount, r.length); o++) B(e, n), ne(e, t.elementType, r[o]);
-      e.seekTo(a + (0, _chunkSMTSXYNG.ba)(t));
+      for (var o = 0; o < Math.min(t.elementCount, r.length); o++) R(e, n), se(e, t.elementType, r[o]);
+      e.seekTo(a + (0, _chunkSFECI7OX.V)(t));
     },
     ptr: function ptr() {
       throw new Error("Pointers are not host-shareable");
     },
     atomic: function atomic(e, t, r) {
-      var _Re$t$inner$type;
-      (_Re$t$inner$type = Re[t.inner.type]) == null || _Re$t$inner$type.call(Re, e, t, r);
+      var _Ce$t$inner$type;
+      (_Ce$t$inner$type = Ce[t.inner.type]) == null || _Ce$t$inner$type.call(Ce, e, t, r);
     },
     decorated: function decorated(e, t, r) {
-      var _Re$t$inner$type2, _t$inner;
-      var n = (0, _chunkSMTSXYNG.$)(t);
-      B(e, n);
+      var _Ce$t$inner$type2, _t$inner;
+      var n = (0, _chunkSFECI7OX.T)(t);
+      R(e, n);
       var a = e.currentByteOffset;
-      (_Re$t$inner$type2 = Re[(_t$inner = t.inner) == null ? void 0 : _t$inner.type]) != null && _Re$t$inner$type2.call(Re, e, t.inner, r), e.seekTo(a + (0, _chunkSMTSXYNG.ba)(t));
+      (_Ce$t$inner$type2 = Ce[(_t$inner = t.inner) == null ? void 0 : _t$inner.type]) != null && _Ce$t$inner$type2.call(Ce, e, t.inner, r), e.seekTo(a + (0, _chunkSFECI7OX.V)(t));
     },
     uint8: function uint8(e, t, r) {
       e.writeUint8(r);
@@ -2355,39 +2677,39 @@ ${Object.entries(t.propTypes).map(function (n) {
       e.writeUint8(r.z * 255), e.writeUint8(r.y * 255), e.writeUint8(r.x * 255), e.writeUint8(r.w * 255);
     },
     disarray: function disarray(e, t, r) {
-      var n = (0, _chunkSMTSXYNG._)(t);
-      B(e, n);
+      var n = (0, _chunkSFECI7OX.S)(t);
+      R(e, n);
       var a = e.currentByteOffset;
       for (var o = 0; o < Math.min(t.elementCount, r.length); o++) {
-        var _Re$t$elementType$typ, _t$elementType;
-        B(e, n), (_Re$t$elementType$typ = Re[(_t$elementType = t.elementType) == null ? void 0 : _t$elementType.type]) == null ? void 0 : _Re$t$elementType$typ.call(Re, e, t.elementType, r[o]);
+        var _Ce$t$elementType$typ, _t$elementType;
+        R(e, n), (_Ce$t$elementType$typ = Ce[(_t$elementType = t.elementType) == null ? void 0 : _t$elementType.type]) == null ? void 0 : _Ce$t$elementType$typ.call(Ce, e, t.elementType, r[o]);
       }
-      e.seekTo(a + (0, _chunkSMTSXYNG.ba)(t));
+      e.seekTo(a + (0, _chunkSFECI7OX.V)(t));
     },
     unstruct: function unstruct(e, t, r) {
-      for (var _ref13 of Object.entries(t.propTypes)) {
-        var _Re$a$type;
-        var _ref14 = (0, _slicedToArray2.default)(_ref13, 2);
-        var n = _ref14[0];
-        var a = _ref14[1];
-        (_Re$a$type = Re[a.type]) == null || _Re$a$type.call(Re, e, a, r[n]);
+      for (var _ref23 of Object.entries(t.propTypes)) {
+        var _Ce$a$type;
+        var _ref24 = (0, _slicedToArray2.default)(_ref23, 2);
+        var n = _ref24[0];
+        var a = _ref24[1];
+        (_Ce$a$type = Ce[a.type]) == null || _Ce$a$type.call(Ce, e, a, r[n]);
       }
     },
     "loose-decorated": function looseDecorated(e, t, r) {
       var _t$inner2;
-      var n = (0, _chunkSMTSXYNG.$)(t);
-      B(e, n);
+      var n = (0, _chunkSFECI7OX.T)(t);
+      R(e, n);
       var a = e.currentByteOffset,
-        o = Re[(_t$inner2 = t.inner) == null ? void 0 : _t$inner2.type];
-      return o != null && o(e, t.inner, r), e.seekTo(a + (0, _chunkSMTSXYNG.ba)(t)), r;
+        o = Ce[(_t$inner2 = t.inner) == null ? void 0 : _t$inner2.type];
+      return o != null && o(e, t.inner, r), e.seekTo(a + (0, _chunkSFECI7OX.V)(t)), r;
     }
   };
-  function ne(e, t, r) {
-    var n = Re[t.type];
+  function se(e, t, r) {
+    var n = Ce[t.type];
     if (!n) throw new Error(`Cannot write data of type '${t.type}'.`);
     n(e, t, r);
   }
-  var Te = {
+  var ye = {
     bool: function bool() {
       throw new Error("Booleans are not host-shareable");
     },
@@ -2404,40 +2726,40 @@ ${Object.entries(t.propTypes).map(function (n) {
       return e.readUint32();
     },
     vec2f: function vec2f(e) {
-      return (0, _chunk5RYM4COI.V)(e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.ma)(e.readFloat32(), e.readFloat32());
     },
     vec3f: function vec3f(e) {
-      return (0, _chunk5RYM4COI._)(e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.ra)(e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     vec4f: function vec4f(e) {
-      return (0, _chunk5RYM4COI.da)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.wa)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     vec2h: function vec2h(e) {
-      return (0, _chunk5RYM4COI.W)(e.readFloat16(), e.readFloat16());
+      return (0, _chunkL7HIBZAX.na)(e.readFloat16(), e.readFloat16());
     },
     vec3h: function vec3h(e) {
-      return (0, _chunk5RYM4COI.$)(e.readFloat16(), e.readFloat16(), e.readFloat16());
+      return (0, _chunkL7HIBZAX.sa)(e.readFloat16(), e.readFloat16(), e.readFloat16());
     },
     vec4h: function vec4h(e) {
-      return (0, _chunk5RYM4COI.ea)(e.readFloat16(), e.readFloat16(), e.readFloat16(), e.readFloat16());
+      return (0, _chunkL7HIBZAX.xa)(e.readFloat16(), e.readFloat16(), e.readFloat16(), e.readFloat16());
     },
     vec2i: function vec2i(e) {
-      return (0, _chunk5RYM4COI.X)(e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.oa)(e.readInt32(), e.readInt32());
     },
     vec3i: function vec3i(e) {
-      return (0, _chunk5RYM4COI.aa)(e.readInt32(), e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.ta)(e.readInt32(), e.readInt32(), e.readInt32());
     },
     vec4i: function vec4i(e) {
-      return (0, _chunk5RYM4COI.fa)(e.readInt32(), e.readInt32(), e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.ya)(e.readInt32(), e.readInt32(), e.readInt32(), e.readInt32());
     },
     vec2u: function vec2u(e) {
-      return (0, _chunk5RYM4COI.Y)(e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.pa)(e.readUint32(), e.readUint32());
     },
     vec3u: function vec3u(e) {
-      return (0, _chunk5RYM4COI.ba)(e.readUint32(), e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.ua)(e.readUint32(), e.readUint32(), e.readUint32());
     },
     vec4u: function vec4u(e) {
-      return (0, _chunk5RYM4COI.ga)(e.readUint32(), e.readUint32(), e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.za)(e.readUint32(), e.readUint32(), e.readUint32(), e.readUint32());
     },
     "vec2<bool>": function vec2Bool() {
       throw new Error("Booleans are not host-shareable");
@@ -2449,171 +2771,171 @@ ${Object.entries(t.propTypes).map(function (n) {
       throw new Error("Booleans are not host-shareable");
     },
     mat2x2f: function mat2x2f(e) {
-      return (0, _chunk5RYM4COI.ja)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.Ca)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     mat3x3f: function mat3x3f(e) {
       var t = function t() {
         var r = e.readFloat32();
         return e.readFloat32(), r;
       };
-      return (0, _chunk5RYM4COI.ka)(e.readFloat32(), e.readFloat32(), t(), e.readFloat32(), e.readFloat32(), t(), e.readFloat32(), e.readFloat32(), t());
+      return (0, _chunkL7HIBZAX.Da)(e.readFloat32(), e.readFloat32(), t(), e.readFloat32(), e.readFloat32(), t(), e.readFloat32(), e.readFloat32(), t());
     },
     mat4x4f: function mat4x4f(e) {
-      return (0, _chunk5RYM4COI.la)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.Ea)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     struct: function struct(e, t) {
-      var r = (0, _chunkSMTSXYNG._)(t);
-      B(e, r);
+      var r = (0, _chunkSFECI7OX.S)(t);
+      R(e, r);
       var n = {};
-      for (var _ref15 of Object.entries(t.propTypes)) {
-        var _ref16 = (0, _slicedToArray2.default)(_ref15, 2);
-        var a = _ref16[0];
-        var o = _ref16[1];
-        B(e, (0, _chunkSMTSXYNG._)(o)), n[a] = M(e, o);
+      for (var _ref25 of Object.entries(t.propTypes)) {
+        var _ref26 = (0, _slicedToArray2.default)(_ref25, 2);
+        var a = _ref26[0];
+        var o = _ref26[1];
+        R(e, (0, _chunkSFECI7OX.S)(o)), n[a] = N(e, o);
       }
-      return B(e, r), n;
+      return R(e, r), n;
     },
     array: function array(e, t) {
       if (t.elementCount === 0) throw new Error("Cannot read using a runtime-sized schema.");
-      var r = (0, _chunkSMTSXYNG._)(t),
+      var r = (0, _chunkSFECI7OX.S)(t),
         n = [];
       for (var a = 0; a < t.elementCount; a++) {
-        B(e, r);
+        R(e, r);
         var o = t.elementType,
-          s = M(e, o);
-        n.push(s);
+          i = N(e, o);
+        n.push(i);
       }
-      return B(e, r), n;
+      return R(e, r), n;
     },
     ptr: function ptr() {
       throw new Error("Pointers are not host-shareable");
     },
     atomic: function atomic(e, t) {
-      return M(e, t.inner);
+      return N(e, t.inner);
     },
     decorated: function decorated(e, t) {
-      var r = (0, _chunkSMTSXYNG.$)(t);
-      B(e, r);
+      var r = (0, _chunkSFECI7OX.T)(t);
+      R(e, r);
       var n = e.currentByteOffset,
-        a = M(e, t.inner);
-      return e.seekTo(n + (0, _chunkSMTSXYNG.ba)(t)), a;
+        a = N(e, t.inner);
+      return e.seekTo(n + (0, _chunkSFECI7OX.V)(t)), a;
     },
     uint8: function uint8(e) {
       return e.readUint8();
     },
     uint8x2: function uint8x2(e) {
-      return (0, _chunk5RYM4COI.Y)(e.readUint8(), e.readUint8());
+      return (0, _chunkL7HIBZAX.pa)(e.readUint8(), e.readUint8());
     },
     uint8x4: function uint8x4(e) {
-      return (0, _chunk5RYM4COI.ga)(e.readUint8(), e.readUint8(), e.readUint8(), e.readUint8());
+      return (0, _chunkL7HIBZAX.za)(e.readUint8(), e.readUint8(), e.readUint8(), e.readUint8());
     },
     sint8: function sint8(e) {
       return e.readInt8();
     },
     sint8x2: function sint8x2(e) {
-      return (0, _chunk5RYM4COI.X)(e.readInt8(), e.readInt8());
+      return (0, _chunkL7HIBZAX.oa)(e.readInt8(), e.readInt8());
     },
     sint8x4: function sint8x4(e) {
-      return (0, _chunk5RYM4COI.fa)(e.readInt8(), e.readInt8(), e.readInt8(), e.readInt8());
+      return (0, _chunkL7HIBZAX.ya)(e.readInt8(), e.readInt8(), e.readInt8(), e.readInt8());
     },
     unorm8: function unorm8(e) {
       return e.readUint8() / 255;
     },
     unorm8x2: function unorm8x2(e) {
-      return (0, _chunk5RYM4COI.V)(e.readUint8() / 255, e.readUint8() / 255);
+      return (0, _chunkL7HIBZAX.ma)(e.readUint8() / 255, e.readUint8() / 255);
     },
     unorm8x4: function unorm8x4(e) {
-      return (0, _chunk5RYM4COI.da)(e.readUint8() / 255, e.readUint8() / 255, e.readUint8() / 255, e.readUint8() / 255);
+      return (0, _chunkL7HIBZAX.wa)(e.readUint8() / 255, e.readUint8() / 255, e.readUint8() / 255, e.readUint8() / 255);
     },
     snorm8: function snorm8(e) {
       return (e.readUint8() - 128) / 127;
     },
     snorm8x2: function snorm8x2(e) {
-      return (0, _chunk5RYM4COI.V)((e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127);
+      return (0, _chunkL7HIBZAX.ma)((e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127);
     },
     snorm8x4: function snorm8x4(e) {
-      return (0, _chunk5RYM4COI.da)((e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127);
+      return (0, _chunkL7HIBZAX.wa)((e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127, (e.readUint8() - 128) / 127);
     },
     uint16: function uint16(e) {
       return e.readUint16();
     },
     uint16x2: function uint16x2(e) {
-      return (0, _chunk5RYM4COI.Y)(e.readUint16(), e.readUint16());
+      return (0, _chunkL7HIBZAX.pa)(e.readUint16(), e.readUint16());
     },
     uint16x4: function uint16x4(e) {
-      return (0, _chunk5RYM4COI.ga)(e.readUint16(), e.readUint16(), e.readUint16(), e.readUint16());
+      return (0, _chunkL7HIBZAX.za)(e.readUint16(), e.readUint16(), e.readUint16(), e.readUint16());
     },
     sint16: function sint16(e) {
       return e.readInt16();
     },
     sint16x2: function sint16x2(e) {
-      return (0, _chunk5RYM4COI.X)(e.readInt16(), e.readInt16());
+      return (0, _chunkL7HIBZAX.oa)(e.readInt16(), e.readInt16());
     },
     sint16x4: function sint16x4(e) {
-      return (0, _chunk5RYM4COI.fa)(e.readInt16(), e.readInt16(), e.readInt16(), e.readInt16());
+      return (0, _chunkL7HIBZAX.ya)(e.readInt16(), e.readInt16(), e.readInt16(), e.readInt16());
     },
     unorm16: function unorm16(e) {
       return e.readUint16() / 65535;
     },
     unorm16x2: function unorm16x2(e) {
-      return (0, _chunk5RYM4COI.V)(e.readUint16() / 65535, e.readUint16() / 65535);
+      return (0, _chunkL7HIBZAX.ma)(e.readUint16() / 65535, e.readUint16() / 65535);
     },
     unorm16x4: function unorm16x4(e) {
-      return (0, _chunk5RYM4COI.da)(e.readUint16() / 65535, e.readUint16() / 65535, e.readUint16() / 65535, e.readUint16() / 65535);
+      return (0, _chunkL7HIBZAX.wa)(e.readUint16() / 65535, e.readUint16() / 65535, e.readUint16() / 65535, e.readUint16() / 65535);
     },
     snorm16: function snorm16(e) {
       return (e.readUint16() - 32768) / 32767;
     },
     snorm16x2: function snorm16x2(e) {
-      return (0, _chunk5RYM4COI.V)(Te.snorm16(e), Te.snorm16(e));
+      return (0, _chunkL7HIBZAX.ma)(ye.snorm16(e), ye.snorm16(e));
     },
     snorm16x4: function snorm16x4(e) {
-      return (0, _chunk5RYM4COI.da)(Te.snorm16(e), Te.snorm16(e), Te.snorm16(e), Te.snorm16(e));
+      return (0, _chunkL7HIBZAX.wa)(ye.snorm16(e), ye.snorm16(e), ye.snorm16(e), ye.snorm16(e));
     },
     float16: function float16(e) {
       return e.readFloat16();
     },
     float16x2: function float16x2(e) {
-      return (0, _chunk5RYM4COI.V)(e.readFloat16(), e.readFloat16());
+      return (0, _chunkL7HIBZAX.ma)(e.readFloat16(), e.readFloat16());
     },
     float16x4: function float16x4(e) {
-      return (0, _chunk5RYM4COI.da)(e.readFloat16(), e.readFloat16(), e.readFloat16(), e.readFloat16());
+      return (0, _chunkL7HIBZAX.wa)(e.readFloat16(), e.readFloat16(), e.readFloat16(), e.readFloat16());
     },
     float32: function float32(e) {
       return e.readFloat32();
     },
     float32x2: function float32x2(e) {
-      return (0, _chunk5RYM4COI.V)(e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.ma)(e.readFloat32(), e.readFloat32());
     },
     float32x3: function float32x3(e) {
-      return (0, _chunk5RYM4COI._)(e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.ra)(e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     float32x4: function float32x4(e) {
-      return (0, _chunk5RYM4COI.da)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
+      return (0, _chunkL7HIBZAX.wa)(e.readFloat32(), e.readFloat32(), e.readFloat32(), e.readFloat32());
     },
     uint32: function uint32(e) {
       return e.readUint32();
     },
     uint32x2: function uint32x2(e) {
-      return (0, _chunk5RYM4COI.Y)(e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.pa)(e.readUint32(), e.readUint32());
     },
     uint32x3: function uint32x3(e) {
-      return (0, _chunk5RYM4COI.ba)(e.readUint32(), e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.ua)(e.readUint32(), e.readUint32(), e.readUint32());
     },
     uint32x4: function uint32x4(e) {
-      return (0, _chunk5RYM4COI.ga)(e.readUint32(), e.readUint32(), e.readUint32(), e.readUint32());
+      return (0, _chunkL7HIBZAX.za)(e.readUint32(), e.readUint32(), e.readUint32(), e.readUint32());
     },
     sint32: function sint32(e) {
       return e.readInt32();
     },
     sint32x2: function sint32x2(e) {
-      return (0, _chunk5RYM4COI.X)(e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.oa)(e.readInt32(), e.readInt32());
     },
     sint32x3: function sint32x3(e) {
-      return (0, _chunk5RYM4COI.aa)(e.readInt32(), e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.ta)(e.readInt32(), e.readInt32(), e.readInt32());
     },
     sint32x4: function sint32x4(e) {
-      return (0, _chunk5RYM4COI.fa)(e.readInt32(), e.readInt32(), e.readInt32(), e.readInt32());
+      return (0, _chunkL7HIBZAX.ya)(e.readInt32(), e.readInt32(), e.readInt32(), e.readInt32());
     },
     "unorm10-10-10-2": function unorm1010102(e) {
       var t = e.readUint32(),
@@ -2621,137 +2943,137 @@ ${Object.entries(t.propTypes).map(function (n) {
         n = (t >> 12 & 1023) / 1023,
         a = (t >> 2 & 1023) / 1023,
         o = (t & 3) / 3;
-      return (0, _chunk5RYM4COI.da)(r, n, a, o);
+      return (0, _chunkL7HIBZAX.wa)(r, n, a, o);
     },
     "unorm8x4-bgra": function unorm8x4Bgra(e) {
       var t = e.readByte() / 255,
         r = e.readByte() / 255,
         n = e.readByte() / 255,
         a = e.readByte() / 255;
-      return (0, _chunk5RYM4COI.da)(n, r, t, a);
+      return (0, _chunkL7HIBZAX.wa)(n, r, t, a);
     },
     unstruct: function unstruct(e, t) {
       var r = {};
-      for (var _ref17 of Object.entries(t.propTypes)) {
-        var _ref18 = (0, _slicedToArray2.default)(_ref17, 2);
-        var n = _ref18[0];
-        var a = _ref18[1];
-        r[n] = M(e, a);
+      for (var _ref27 of Object.entries(t.propTypes)) {
+        var _ref28 = (0, _slicedToArray2.default)(_ref27, 2);
+        var n = _ref28[0];
+        var a = _ref28[1];
+        r[n] = N(e, a);
       }
       return r;
     },
     disarray: function disarray(e, t) {
-      var r = (0, _chunkSMTSXYNG._)(t),
+      var r = (0, _chunkSFECI7OX.S)(t),
         n = [];
-      for (var a = 0; a < t.elementCount; a++) B(e, r), n.push(M(e, t.elementType));
-      return B(e, r), n;
+      for (var a = 0; a < t.elementCount; a++) R(e, r), n.push(N(e, t.elementType));
+      return R(e, r), n;
     },
     "loose-decorated": function looseDecorated(e, t) {
-      B(e, (0, _chunkSMTSXYNG.$)(t));
+      R(e, (0, _chunkSFECI7OX.T)(t));
       var r = e.currentByteOffset,
-        n = M(e, t.inner);
-      return e.seekTo(r + (0, _chunkSMTSXYNG.ba)(t)), n;
+        n = N(e, t.inner);
+      return e.seekTo(r + (0, _chunkSFECI7OX.V)(t)), n;
     }
   };
-  function M(e, t) {
-    var r = Te[t.type];
+  function N(e, t) {
+    var r = ye[t.type];
     if (!r) throw new Error(`Cannot read data of type '${t.type}'.`);
     return r(e, t);
   }
-  function hn(e, t) {
-    var r = (0, _chunkSMTSXYNG.ba)(e);
+  function Bn(e, t) {
+    var r = (0, _chunkSFECI7OX.V)(e);
     if (r === 0 || t === void 0 || t === null) return [];
     var n = new ArrayBuffer(r),
       a = new _typedBinary.BufferWriter(n),
       o = [];
-    function s(u, d, g, c) {
+    function i(u, d, g, c) {
       if (d != null) {
-        if ((0, _chunk5RYM4COI.C)(u) || (0, _chunkSMTSXYNG.f)(u)) {
-          var y = gt(u);
-          for (var _ref19 of Object.entries(y)) {
-            var _h$padding;
-            var _ref20 = (0, _slicedToArray2.default)(_ref19, 2);
-            var x = _ref20[0];
-            var h = _ref20[1];
-            var T = u.propTypes[x];
-            if (!T) continue;
-            var D = d[x];
-            D !== void 0 && s(T, D, g + h.offset, (_h$padding = h.padding) != null ? _h$padding : c);
+        if ((0, _chunkL7HIBZAX.K)(u) || (0, _chunkL7HIBZAX.W)(u)) {
+          var y = yt(u);
+          for (var _ref29 of Object.entries(y)) {
+            var _w$padding;
+            var _ref30 = (0, _slicedToArray2.default)(_ref29, 2);
+            var x = _ref30[0];
+            var w = _ref30[1];
+            var b = u.propTypes[x];
+            if (!b) continue;
+            var U = d[x];
+            U !== void 0 && i(b, U, g + w.offset, (_w$padding = w.padding) != null ? _w$padding : c);
           }
           return;
         }
-        if ((0, _chunk5RYM4COI.B)(u) || (0, _chunkSMTSXYNG.e)(u)) {
-          var _y = u,
-            _x = (0, _chunkSMTSXYNG.a)((0, _chunkSMTSXYNG.ba)(_y.elementType), (0, _chunkSMTSXYNG._)(_y.elementType));
+        if ((0, _chunkL7HIBZAX.J)(u) || (0, _chunkL7HIBZAX.V)(u)) {
+          var _y2 = u,
+            _x = (0, _chunkSFECI7OX.a)((0, _chunkSFECI7OX.V)(_y2.elementType), (0, _chunkSFECI7OX.S)(_y2.elementType));
           if (!Array.isArray(d)) throw new Error("Partial value for array must be an array");
-          var _h = d != null ? d : [];
-          _h.sort(function (T, D) {
-            return T.idx - D.idx;
+          var _w = d != null ? d : [];
+          _w.sort(function (b, U) {
+            return b.idx - U.idx;
           });
-          for (var _ref21 of _h) {
-            var _T = _ref21.idx;
-            var _D = _ref21.value;
-            s(_y.elementType, _D, g + _T * _x, _x - (0, _chunkSMTSXYNG.ba)(_y.elementType));
+          for (var _ref31 of _w) {
+            var _b = _ref31.idx;
+            var _U = _ref31.value;
+            i(_y2.elementType, _U, g + _b * _x, _x - (0, _chunkSFECI7OX.V)(_y2.elementType));
           }
         } else {
-          var _y2 = (0, _chunkSMTSXYNG.ba)(u);
-          a.seekTo(g), ne(a, u, d), o.push({
+          var _y3 = (0, _chunkSFECI7OX.V)(u);
+          a.seekTo(g), se(a, u, d), o.push({
             start: g,
-            end: g + _y2,
+            end: g + _y3,
             padding: c
           });
         }
       }
     }
-    if (s(e, t, 0), o.length === 0) return [];
-    var i = [],
+    if (i(e, t, 0), o.length === 0) return [];
+    var s = [],
       l = o[0];
     for (var u = 1; u < o.length; u++) {
       var _l$padding;
       var d = o[u];
       if (!d || !l) throw new Error("Internal error: missing segment");
-      d.start === l.end + ((_l$padding = l.padding) != null ? _l$padding : 0) ? (l.end = d.end, l.padding = d.padding) : (i.push({
+      d.start === l.end + ((_l$padding = l.padding) != null ? _l$padding : 0) ? (l.end = d.end, l.padding = d.padding) : (s.push({
         data: new Uint8Array(n, l.start, l.end - l.start)
       }), l = d);
     }
     if (!l) throw new Error("Internal error: missing segment");
-    return i.push({
+    return s.push({
       data: new Uint8Array(n, l.start, l.end - l.start)
-    }), i;
+    }), s;
   }
-  function xe(e) {
+  function Te(e) {
     return !!(e != null && e.usableAsStorage);
   }
-  var He = /*#__PURE__*/function (_Error) {
+  var Je = /*#__PURE__*/function (_Error) {
     function e(t) {
-      var _p4;
+      var _p11;
       var _this2;
       (0, _classCallCheck2.default)(this, e);
-      _this2 = _callSuper(this, e, [`Resource '${(_p4 = (0, _chunk5RYM4COI.c)(t)) != null ? _p4 : "<unnamed>"}' cannot be bound as 'storage'. Use .$usage('storage') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this2), e.prototype);
+      _this2 = _callSuper(this, e, [`Resource '${(_p11 = (0, _chunkL7HIBZAX.e)(t)) != null ? _p11 : "<unnamed>"}' cannot be bound as 'storage'. Use .$usage('storage') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this2), e.prototype);
       return _this2;
     }
     (0, _inherits2.default)(e, _Error);
     return (0, _createClass2.default)(e);
   }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error));
-  function xt(e) {
+  function wt(e) {
     return !!e.usableAsUniform;
   }
-  var vn = {
+  var Vn = {
       uniform: "uniform",
       mutable: "storage, read_write",
       readonly: "storage, read"
     },
-    qe = /*#__PURE__*/function () {
-      function qe(t, r) {
-        (0, _classCallCheck2.default)(this, qe);
+    Ye = /*#__PURE__*/function () {
+      function Ye(t, r) {
+        (0, _classCallCheck2.default)(this, Ye);
         this.resourceType = "buffer-usage";
         this.usage = t;
         this.buffer = r;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           dataType: r.dataType
-        }, this[_chunk5RYM4COI.b] = r;
+        }, this[_chunkL7HIBZAX.d] = r;
       }
-      return (0, _createClass2.default)(qe, [{
+      return (0, _createClass2.default)(Ye, [{
         key: "$name",
         value: function $name(t) {
           return this.buffer.$name(t), this;
@@ -2759,7 +3081,7 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             _t$allocateFixedEntry = t.allocateFixedEntry(this.usage === "uniform" ? {
               uniform: this.buffer.dataType
             } : {
@@ -2768,7 +3090,7 @@ ${Object.entries(t.propTypes).map(function (n) {
             }, this.buffer),
             n = _t$allocateFixedEntry.group,
             a = _t$allocateFixedEntry.binding,
-            o = vn[this.usage];
+            o = Vn[this.usage];
           return t.addDeclaration(`@group(${n}) @binding(${a}) var<${o}> ${r}: ${t.resolve(this.buffer.dataType)};`), r;
         }
       }, {
@@ -2779,108 +3101,114 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "toString",
         value: function toString() {
-          var _p5;
-          return `${this.usage}:${(_p5 = (0, _chunk5RYM4COI.c)(this)) != null ? _p5 : "<unnamed>"}`;
+          var _p12;
+          return `${this.usage}:${(_p12 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p12 : "<unnamed>"}`;
         }
       }, {
-        key: "value",
-        get: function get() {
+        key: _chunkL7HIBZAX.c,
+        value: function value() {
           var _this3 = this;
-          if (!(0, _chunk5RYM4COI.r)()) throw new Error("Cannot access buffer's value directly in JS.");
           return new Proxy((0, _defineProperty2.default)({
             "~resolve": function resolve(t) {
               return t.resolve(_this3);
             },
             toString: function toString() {
-              var _p6;
-              return `.value:${(_p6 = (0, _chunk5RYM4COI.c)(_this3)) != null ? _p6 : "<unnamed>"}`;
+              var _p13;
+              return `.value:${(_p13 = (0, _chunkL7HIBZAX.e)(_this3)) != null ? _p13 : "<unnamed>"}`;
             }
-          }, _chunk5RYM4COI.a, {
-            dataType: this.buffer.dataType
-          }), Y);
+          }, _chunkL7HIBZAX.b, this.buffer.dataType), q);
+        }
+      }, {
+        key: "value",
+        get: function get() {
+          if (!(0, _chunkL7HIBZAX.t)()) throw new Error("Cannot access buffer's value directly in JS.");
+          return this[_chunkL7HIBZAX.c]();
         }
       }]);
     }(),
-    Je = /*#__PURE__*/function () {
-      function Je(t, r, n) {
-        (0, _classCallCheck2.default)(this, Je);
+    Qe = /*#__PURE__*/function () {
+      function Qe(t, r, n) {
+        (0, _classCallCheck2.default)(this, Qe);
         this.resourceType = "buffer-usage";
         this.usage = t;
         this.dataType = r;
         this._membership = n;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           dataType: r
-        }, (0, _chunk5RYM4COI.d)(this, n.key);
+        }, (0, _chunkL7HIBZAX.f)(this, n.key);
       }
-      return (0, _createClass2.default)(Je, [{
+      return (0, _createClass2.default)(Qe, [{
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = t.allocateLayoutEntry(this._membership.layout),
-            a = vn[this.usage];
+            a = Vn[this.usage];
           return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var<${a}> ${r}: ${t.resolve(this.dataType)};`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p7;
-          return `${this.usage}:${(_p7 = (0, _chunk5RYM4COI.c)(this)) != null ? _p7 : "<unnamed>"}`;
+          var _p14;
+          return `${this.usage}:${(_p14 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p14 : "<unnamed>"}`;
         }
       }, {
-        key: "value",
-        get: function get() {
+        key: _chunkL7HIBZAX.c,
+        value: function value() {
           var _this4 = this;
-          if (!(0, _chunk5RYM4COI.r)()) throw new Error("Cannot access buffer's value directly in JS.");
           return new Proxy((0, _defineProperty2.default)({
             "~resolve": function resolve(t) {
               return t.resolve(_this4);
             },
             toString: function toString() {
-              var _p8;
-              return `.value:${(_p8 = (0, _chunk5RYM4COI.c)(_this4)) != null ? _p8 : "<unnamed>"}`;
+              var _p15;
+              return `.value:${(_p15 = (0, _chunkL7HIBZAX.e)(_this4)) != null ? _p15 : "<unnamed>"}`;
             }
-          }, _chunk5RYM4COI.a, {
-            dataType: this.dataType
-          }), Y);
+          }, _chunkL7HIBZAX.b, this.dataType), q);
+        }
+      }, {
+        key: "value",
+        get: function get() {
+          if (!(0, _chunkL7HIBZAX.t)()) throw new Error("Cannot access buffer's value directly in JS.");
+          return this[_chunkL7HIBZAX.c]();
         }
       }]);
     }(),
-    wn = new WeakMap();
-  function mr(e) {
-    if (!xe(e)) throw new Error(`Cannot pass ${e} to asMutable, as it is not allowed to be used as storage. To allow it, call .$usage('storage') when creating the buffer.`);
-    var t = wn.get(e);
-    return t || (t = new qe("mutable", e), wn.set(e, t)), t;
+    Rn = new WeakMap();
+  function dr(e) {
+    if (!Te(e)) throw new Error(`Cannot pass ${e} to asMutable, as it is not allowed to be used as storage. To allow it, call .$usage('storage') when creating the buffer.`);
+    var t = Rn.get(e);
+    return t || (t = new Ye("mutable", e), Rn.set(e, t)), t;
   }
-  var bn = new WeakMap();
+  var Pn = new WeakMap();
   function fr(e) {
-    if (!xe(e)) throw new Error(`Cannot pass ${e} to asReadonly, as it is not allowed to be used as storage. To allow it, call .$usage('storage') when creating the buffer.`);
-    var t = bn.get(e);
-    return t || (t = new qe("readonly", e), bn.set(e, t)), t;
+    if (!Te(e)) throw new Error(`Cannot pass ${e} to asReadonly, as it is not allowed to be used as storage. To allow it, call .$usage('storage') when creating the buffer.`);
+    var t = Pn.get(e);
+    return t || (t = new Ye("readonly", e), Pn.set(e, t)), t;
   }
-  var Sn = new WeakMap();
+  var Cn = new WeakMap();
   function gr(e) {
-    if (!xt(e)) throw new Error(`Cannot pass ${e} to asUniform, as it is not allowed to be used as a uniform. To allow it, call .$usage('uniform') when creating the buffer.`);
-    var t = Sn.get(e);
-    return t || (t = new qe("uniform", e), Sn.set(e, t)), t;
+    if (!wt(e)) throw new Error(`Cannot pass ${e} to asUniform, as it is not allowed to be used as a uniform. To allow it, call .$usage('uniform') when creating the buffer.`);
+    var t = Cn.get(e);
+    return t || (t = new Ye("uniform", e), Cn.set(e, t)), t;
   }
-  var va = {
+  var $a = {
     uniform: gr,
-    mutable: mr,
+    mutable: dr,
     readonly: fr
   };
-  function Fn(e, t, r) {
-    return (0, _chunk5RYM4COI.A)(t) ? new ht(e, t, r) : new ht(e, t, r, ["storage", "uniform"]);
+  function kn(e, t, r) {
+    return (0, _chunkL7HIBZAX.I)(t) ? new bt(e, t, r) : new bt(e, t, r, ["storage", "uniform"]);
   }
-  function ae(e) {
+  function ue(e) {
     return e.resourceType === "buffer";
   }
-  function Da(e) {
+  function ka(e) {
     return !!e.usableAsVertex;
   }
-  var Dn = (0, _typedBinary.getSystemEndianness)(),
-    ht = /*#__PURE__*/function () {
-      function ht(t, r, n, a) {
-        (0, _classCallCheck2.default)(this, ht);
+  var $n = (0, _typedBinary.getSystemEndianness)(),
+    bt = /*#__PURE__*/function () {
+      function bt(t, r, n, a) {
+        (0, _classCallCheck2.default)(this, bt);
         this.resourceType = "buffer";
         this.flags = GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC;
         this._buffer = null;
@@ -2892,22 +3220,22 @@ ${Object.entries(t.propTypes).map(function (n) {
         this.dataType = r;
         this.initialOrBuffer = n;
         this._disallowedUsages = a;
-        nn(n) ? (this._ownBuffer = !1, this._buffer = n) : (this._ownBuffer = !0, this.initial = n);
+        fn(n) ? (this._ownBuffer = !1, this._buffer = n) : (this._ownBuffer = !0, this.initial = n);
       }
-      return (0, _createClass2.default)(ht, [{
+      return (0, _createClass2.default)(bt, [{
         key: "buffer",
         get: function get() {
-          var _p9;
+          var _p16;
           var t = this._group.device;
           if (this._destroyed) throw new Error("This buffer has been destroyed");
           if (!this._buffer && (this._buffer = t.createBuffer({
-            size: (0, _chunkSMTSXYNG.ba)(this.dataType),
+            size: (0, _chunkSFECI7OX.V)(this.dataType),
             usage: this.flags,
             mappedAtCreation: !!this.initial,
-            label: (_p9 = (0, _chunk5RYM4COI.c)(this)) != null ? _p9 : "<unnamed>"
+            label: (_p16 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p16 : "<unnamed>"
           }), this.initial)) {
             var r = new _typedBinary.BufferWriter(this._buffer.getMappedRange());
-            ne(r, this.dataType, this.initial), this._buffer.unmap();
+            se(r, this.dataType, this.initial), this._buffer.unmap();
           }
           return this._buffer;
         }
@@ -2919,13 +3247,13 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this, t), this._buffer && (this._buffer.label = t), this;
+          return (0, _chunkL7HIBZAX.f)(this, t), this._buffer && (this._buffer.label = t), this;
         }
       }, {
         key: "$usage",
         value: function $usage() {
-          for (var _len = arguments.length, t = new Array(_len), _key = 0; _key < _len; _key++) {
-            t[_key] = arguments[_key];
+          for (var _len9 = arguments.length, t = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+            t[_key9] = arguments[_key9];
           }
           for (var r of t) {
             var _this$_disallowedUsag;
@@ -2943,7 +3271,7 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "compileWriter",
         value: function compileWriter() {
-          if (yt) Tt(this.dataType);else throw new Error("This environment does not allow eval");
+          if (xt) ht(this.dataType);else throw new Error("This environment does not allow eval");
         }
       }, {
         key: "write",
@@ -2952,33 +3280,33 @@ ${Object.entries(t.propTypes).map(function (n) {
             n = this._group.device;
           if (r.mapState === "mapped") {
             var o = r.getMappedRange();
-            if (yt) {
-              Tt(this.dataType)(new DataView(o), 0, t, Dn === "little");
+            if (xt) {
+              ht(this.dataType)(new DataView(o), 0, t, $n === "little");
               return;
             }
-            ne(new _typedBinary.BufferWriter(o), this.dataType, t);
+            se(new _typedBinary.BufferWriter(o), this.dataType, t);
             return;
           }
-          var a = (0, _chunkSMTSXYNG.ba)(this.dataType);
-          this._hostBuffer || (this._hostBuffer = new ArrayBuffer(a)), this._group.flush(), yt ? Tt(this.dataType)(new DataView(this._hostBuffer), 0, t, Dn === "little") : ne(new _typedBinary.BufferWriter(this._hostBuffer), this.dataType, t), n.queue.writeBuffer(r, 0, this._hostBuffer, 0, a);
+          var a = (0, _chunkSFECI7OX.V)(this.dataType);
+          this._hostBuffer || (this._hostBuffer = new ArrayBuffer(a)), this._group.flush(), xt ? ht(this.dataType)(new DataView(this._hostBuffer), 0, t, $n === "little") : se(new _typedBinary.BufferWriter(this._hostBuffer), this.dataType, t), n.queue.writeBuffer(r, 0, this._hostBuffer, 0, a);
         }
       }, {
         key: "writePartial",
         value: function writePartial(t) {
           var r = this.buffer,
             n = this._group.device,
-            a = hn(this.dataType, t);
+            a = Bn(this.dataType, t);
           if (r.mapState === "mapped") {
             var o = r.getMappedRange(),
-              s = new Uint8Array(o);
-            for (var i of a) s.set(i.data, i.data.byteOffset);
-          } else for (var _o5 of a) n.queue.writeBuffer(r, _o5.data.byteOffset, _o5.data, 0, _o5.data.byteLength);
+              i = new Uint8Array(o);
+            for (var s of a) i.set(s.data, s.data.byteOffset);
+          } else for (var _o4 of a) n.queue.writeBuffer(r, _o4.data.byteOffset, _o4.data, 0, _o4.data.byteLength);
         }
       }, {
         key: "copyFrom",
         value: function copyFrom(t) {
           if (this.buffer.mapState === "mapped") throw new Error("Cannot copy to a mapped buffer.");
-          var r = (0, _chunkSMTSXYNG.ba)(this.dataType);
+          var r = (0, _chunkSFECI7OX.V)(this.dataType);
           this._group.commandEncoder.copyBufferToBuffer(t.buffer, 0, this.buffer, 0, r);
         }
       }, {
@@ -2989,22 +3317,22 @@ ${Object.entries(t.propTypes).map(function (n) {
             var t = this.buffer,
               r = this._group.device;
             if (t.mapState === "mapped") {
-              var s = t.getMappedRange();
-              return M(new _typedBinary.BufferReader(s), this.dataType);
+              var i = t.getMappedRange();
+              return N(new _typedBinary.BufferReader(i), this.dataType);
             }
             if (t.usage & GPUBufferUsage.MAP_READ) {
               yield t.mapAsync(GPUMapMode.READ);
-              var _s5 = t.getMappedRange(),
-                i = M(new _typedBinary.BufferReader(_s5), this.dataType);
-              return t.unmap(), i;
+              var _i4 = t.getMappedRange(),
+                s = N(new _typedBinary.BufferReader(_i4), this.dataType);
+              return t.unmap(), s;
             }
             var n = r.createBuffer({
-                size: (0, _chunkSMTSXYNG.ba)(this.dataType),
+                size: (0, _chunkSFECI7OX.V)(this.dataType),
                 usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
               }),
               a = r.createCommandEncoder();
-            a.copyBufferToBuffer(t, 0, n, 0, (0, _chunkSMTSXYNG.ba)(this.dataType)), r.queue.submit([a.finish()]), yield r.queue.onSubmittedWorkDone(), yield n.mapAsync(GPUMapMode.READ, 0, (0, _chunkSMTSXYNG.ba)(this.dataType));
-            var o = M(new _typedBinary.BufferReader(n.getMappedRange()), this.dataType);
+            a.copyBufferToBuffer(t, 0, n, 0, (0, _chunkSFECI7OX.V)(this.dataType)), r.queue.submit([a.finish()]), yield r.queue.onSubmittedWorkDone(), yield n.mapAsync(GPUMapMode.READ, 0, (0, _chunkSFECI7OX.V)(this.dataType));
+            var o = N(new _typedBinary.BufferReader(n.getMappedRange()), this.dataType);
             return n.unmap(), n.destroy(), o;
           });
           function read() {
@@ -3015,8 +3343,8 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "as",
         value: function as(t) {
-          var _va$t;
-          return (_va$t = va[t]) == null ? void 0 : _va$t.call(va, this);
+          var _$a$t;
+          return (_$a$t = $a[t]) == null ? void 0 : _$a$t.call($a, this);
         }
       }, {
         key: "destroy",
@@ -3027,66 +3355,66 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "toString",
         value: function toString() {
-          var _p10;
-          return `buffer:${(_p10 = (0, _chunk5RYM4COI.c)(this)) != null ? _p10 : "<unnamed>"}`;
+          var _p17;
+          return `buffer:${(_p17 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p17 : "<unnamed>"}`;
         }
       }]);
     }();
-  function An(e) {
+  function _n(e) {
     return new Tr(e);
   }
-  function In(e) {
+  function En(e) {
     return new xr(e);
   }
-  function Ye(e) {
+  function Xe(e) {
     var t = e;
-    return (t == null ? void 0 : t.resourceType) === "sampler" && !!t[_chunk5RYM4COI.a];
+    return (t == null ? void 0 : t.resourceType) === "sampler" && !!t[_chunkL7HIBZAX.a];
   }
-  function Qe(e) {
+  function Ze(e) {
     var t = e;
-    return (t == null ? void 0 : t.resourceType) === "sampler-comparison" && !!t[_chunk5RYM4COI.a];
+    return (t == null ? void 0 : t.resourceType) === "sampler-comparison" && !!t[_chunkL7HIBZAX.a];
   }
-  var wt = /*#__PURE__*/function () {
-      function wt(t) {
-        (0, _classCallCheck2.default)(this, wt);
+  var St = /*#__PURE__*/function () {
+      function St(t) {
+        (0, _classCallCheck2.default)(this, St);
         this.resourceType = "sampler";
         this._membership = t;
-        this[_chunk5RYM4COI.a] = {}, (0, _chunk5RYM4COI.d)(this, t.key);
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {}, (0, _chunkL7HIBZAX.f)(this, t.key);
       }
-      return (0, _createClass2.default)(wt, [{
+      return (0, _createClass2.default)(St, [{
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = t.allocateLayoutEntry(this._membership.layout);
           return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: sampler;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p11;
-          return `${this.resourceType}:${(_p11 = (0, _chunk5RYM4COI.c)(this)) != null ? _p11 : "<unnamed>"}`;
+          var _p18;
+          return `${this.resourceType}:${(_p18 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p18 : "<unnamed>"}`;
         }
       }]);
     }(),
-    bt = /*#__PURE__*/function () {
-      function bt(t) {
-        (0, _classCallCheck2.default)(this, bt);
+    vt = /*#__PURE__*/function () {
+      function vt(t) {
+        (0, _classCallCheck2.default)(this, vt);
         this.resourceType = "sampler-comparison";
         this._membership = t;
-        this[_chunk5RYM4COI.a] = {}, (0, _chunk5RYM4COI.d)(this, t.key);
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {}, (0, _chunkL7HIBZAX.f)(this, t.key);
       }
-      return (0, _createClass2.default)(bt, [{
+      return (0, _createClass2.default)(vt, [{
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = t.allocateLayoutEntry(this._membership.layout);
           return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: sampler_comparison;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p12;
-          return `${this.resourceType}:${(_p12 = (0, _chunk5RYM4COI.c)(this)) != null ? _p12 : "<unnamed>"}`;
+          var _p19;
+          return `${this.resourceType}:${(_p19 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p19 : "<unnamed>"}`;
         }
       }]);
     }(),
@@ -3097,11 +3425,11 @@ ${Object.entries(t.propTypes).map(function (n) {
         this.resourceType = "sampler";
         this._sampler = null;
         this._props = t;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {
           unwrap: function unwrap(r) {
-            var _p13;
+            var _p20;
             return _this5._sampler || (_this5._sampler = r.device.createSampler(Object.assign({}, _this5._props, {
-              label: (_p13 = (0, _chunk5RYM4COI.c)(_this5)) != null ? _p13 : "<unnamed>"
+              label: (_p20 = (0, _chunkL7HIBZAX.e)(_this5)) != null ? _p20 : "<unnamed>"
             }))), _this5._sampler;
           }
         }, this._filtering = t.minFilter === "linear" || t.magFilter === "linear" || t.mipmapFilter === "linear";
@@ -3109,12 +3437,12 @@ ${Object.entries(t.propTypes).map(function (n) {
       return (0, _createClass2.default)(Tr, [{
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this, t), this;
+          return (0, _chunkL7HIBZAX.f)(this, t), this;
         }
       }, {
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             _t$allocateFixedEntry2 = t.allocateFixedEntry({
               sampler: this._filtering ? "filtering" : "non-filtering"
             }, this),
@@ -3125,8 +3453,8 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "toString",
         value: function toString() {
-          var _p14;
-          return `${this.resourceType}:${(_p14 = (0, _chunk5RYM4COI.c)(this)) != null ? _p14 : "<unnamed>"}`;
+          var _p21;
+          return `${this.resourceType}:${(_p21 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p21 : "<unnamed>"}`;
         }
       }]);
     }(),
@@ -3137,11 +3465,11 @@ ${Object.entries(t.propTypes).map(function (n) {
         this.resourceType = "sampler-comparison";
         this._sampler = null;
         this._props = t;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {
           unwrap: function unwrap(r) {
-            var _p15;
+            var _p22;
             return _this6._sampler || (_this6._sampler = r.device.createSampler(Object.assign({}, _this6._props, {
-              label: (_p15 = (0, _chunk5RYM4COI.c)(_this6)) != null ? _p15 : "<unnamed>"
+              label: (_p22 = (0, _chunkL7HIBZAX.e)(_this6)) != null ? _p22 : "<unnamed>"
             }))), _this6._sampler;
           }
         };
@@ -3149,12 +3477,12 @@ ${Object.entries(t.propTypes).map(function (n) {
       return (0, _createClass2.default)(xr, [{
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this, t), this;
+          return (0, _chunkL7HIBZAX.f)(this, t), this;
         }
       }, {
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             _t$allocateFixedEntry3 = t.allocateFixedEntry({
               sampler: "comparison"
             }, this),
@@ -3165,174 +3493,174 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "toString",
         value: function toString() {
-          var _p16;
-          return `${this.resourceType}:${(_p16 = (0, _chunk5RYM4COI.c)(this)) != null ? _p16 : "<unnamed>"}`;
+          var _p23;
+          return `${this.resourceType}:${(_p23 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p23 : "<unnamed>"}`;
         }
       }]);
     }();
-  var St = /*#__PURE__*/function () {
-    function St(t) {
-      (0, _classCallCheck2.default)(this, St);
+  var Dt = /*#__PURE__*/function () {
+    function Dt(t) {
+      (0, _classCallCheck2.default)(this, Dt);
       this.resourceType = "external-texture";
       this._membership = t;
-      (0, _chunk5RYM4COI.d)(this, t.key);
+      (0, _chunkL7HIBZAX.f)(this, t.key);
     }
-    return (0, _createClass2.default)(St, [{
+    return (0, _createClass2.default)(Dt, [{
       key: "~resolve",
       value: function resolve(t) {
-        var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+        var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
           n = t.allocateLayoutEntry(this._membership.layout);
         return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: texture_external;`), r;
       }
     }, {
       key: "toString",
       value: function toString() {
-        var _p17;
-        return `${this.resourceType}:${(_p17 = (0, _chunk5RYM4COI.c)(this)) != null ? _p17 : "<unnamed>"}`;
+        var _p24;
+        return `${this.resourceType}:${(_p24 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p24 : "<unnamed>"}`;
       }
     }]);
   }();
-  var Un = {
-      r8unorm: _chunk5RYM4COI.T,
-      r8snorm: _chunk5RYM4COI.T,
-      r8uint: _chunk5RYM4COI.R,
-      r8sint: _chunk5RYM4COI.S,
-      r16uint: _chunk5RYM4COI.R,
-      r16sint: _chunk5RYM4COI.S,
-      r16float: _chunk5RYM4COI.T,
-      rg8unorm: _chunk5RYM4COI.T,
-      rg8snorm: _chunk5RYM4COI.T,
-      rg8uint: _chunk5RYM4COI.R,
-      rg8sint: _chunk5RYM4COI.S,
-      r32uint: _chunk5RYM4COI.R,
-      r32sint: _chunk5RYM4COI.S,
-      r32float: _chunk5RYM4COI.T,
-      rg16uint: _chunk5RYM4COI.R,
-      rg16sint: _chunk5RYM4COI.S,
-      rg16float: _chunk5RYM4COI.T,
-      rgba8unorm: _chunk5RYM4COI.T,
-      "rgba8unorm-srgb": _chunk5RYM4COI.T,
-      rgba8snorm: _chunk5RYM4COI.T,
-      rgba8uint: _chunk5RYM4COI.R,
-      rgba8sint: _chunk5RYM4COI.S,
-      bgra8unorm: _chunk5RYM4COI.T,
-      "bgra8unorm-srgb": _chunk5RYM4COI.T,
-      rgb9e5ufloat: _chunk5RYM4COI.T,
-      rgb10a2uint: _chunk5RYM4COI.R,
-      rgb10a2unorm: _chunk5RYM4COI.T,
-      rg11b10ufloat: _chunk5RYM4COI.T,
-      rg32uint: _chunk5RYM4COI.R,
-      rg32sint: _chunk5RYM4COI.S,
-      rg32float: _chunk5RYM4COI.T,
-      rgba16uint: _chunk5RYM4COI.R,
-      rgba16sint: _chunk5RYM4COI.S,
-      rgba16float: _chunk5RYM4COI.T,
-      rgba32uint: _chunk5RYM4COI.R,
-      rgba32sint: _chunk5RYM4COI.S,
-      rgba32float: _chunk5RYM4COI.T,
-      stencil8: _chunk5RYM4COI.T,
-      depth16unorm: _chunk5RYM4COI.T,
-      depth24plus: _chunk5RYM4COI.T,
-      "depth24plus-stencil8": _chunk5RYM4COI.T,
-      depth32float: _chunk5RYM4COI.T,
-      "depth32float-stencil8": _chunk5RYM4COI.T,
-      "bc1-rgba-unorm": _chunk5RYM4COI.T,
-      "bc1-rgba-unorm-srgb": _chunk5RYM4COI.T,
-      "bc2-rgba-unorm": _chunk5RYM4COI.T,
-      "bc2-rgba-unorm-srgb": _chunk5RYM4COI.T,
-      "bc3-rgba-unorm": _chunk5RYM4COI.T,
-      "bc3-rgba-unorm-srgb": _chunk5RYM4COI.T,
-      "bc4-r-unorm": _chunk5RYM4COI.T,
-      "bc4-r-snorm": _chunk5RYM4COI.T,
-      "bc5-rg-unorm": _chunk5RYM4COI.T,
-      "bc5-rg-snorm": _chunk5RYM4COI.T,
-      "bc6h-rgb-ufloat": _chunk5RYM4COI.T,
-      "bc6h-rgb-float": _chunk5RYM4COI.T,
-      "bc7-rgba-unorm": _chunk5RYM4COI.T,
-      "bc7-rgba-unorm-srgb": _chunk5RYM4COI.T,
-      "etc2-rgb8unorm": _chunk5RYM4COI.T,
-      "etc2-rgb8unorm-srgb": _chunk5RYM4COI.T,
-      "etc2-rgb8a1unorm": _chunk5RYM4COI.T,
-      "etc2-rgb8a1unorm-srgb": _chunk5RYM4COI.T,
-      "etc2-rgba8unorm": _chunk5RYM4COI.T,
-      "etc2-rgba8unorm-srgb": _chunk5RYM4COI.T,
-      "eac-r11unorm": _chunk5RYM4COI.T,
-      "eac-r11snorm": _chunk5RYM4COI.T,
-      "eac-rg11unorm": _chunk5RYM4COI.T,
-      "eac-rg11snorm": _chunk5RYM4COI.T,
-      "astc-4x4-unorm": _chunk5RYM4COI.T,
-      "astc-4x4-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-5x4-unorm": _chunk5RYM4COI.T,
-      "astc-5x4-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-5x5-unorm": _chunk5RYM4COI.T,
-      "astc-5x5-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-6x5-unorm": _chunk5RYM4COI.T,
-      "astc-6x5-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-6x6-unorm": _chunk5RYM4COI.T,
-      "astc-6x6-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-8x5-unorm": _chunk5RYM4COI.T,
-      "astc-8x5-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-8x6-unorm": _chunk5RYM4COI.T,
-      "astc-8x6-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-8x8-unorm": _chunk5RYM4COI.T,
-      "astc-8x8-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-10x5-unorm": _chunk5RYM4COI.T,
-      "astc-10x5-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-10x6-unorm": _chunk5RYM4COI.T,
-      "astc-10x6-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-10x8-unorm": _chunk5RYM4COI.T,
-      "astc-10x8-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-10x10-unorm": _chunk5RYM4COI.T,
-      "astc-10x10-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-12x10-unorm": _chunk5RYM4COI.T,
-      "astc-12x10-unorm-srgb": _chunk5RYM4COI.T,
-      "astc-12x12-unorm": _chunk5RYM4COI.T,
-      "astc-12x12-unorm-srgb": _chunk5RYM4COI.T
+  var Gn = {
+      r8unorm: _chunkL7HIBZAX.ka,
+      r8snorm: _chunkL7HIBZAX.ka,
+      r8uint: _chunkL7HIBZAX.ia,
+      r8sint: _chunkL7HIBZAX.ja,
+      r16uint: _chunkL7HIBZAX.ia,
+      r16sint: _chunkL7HIBZAX.ja,
+      r16float: _chunkL7HIBZAX.ka,
+      rg8unorm: _chunkL7HIBZAX.ka,
+      rg8snorm: _chunkL7HIBZAX.ka,
+      rg8uint: _chunkL7HIBZAX.ia,
+      rg8sint: _chunkL7HIBZAX.ja,
+      r32uint: _chunkL7HIBZAX.ia,
+      r32sint: _chunkL7HIBZAX.ja,
+      r32float: _chunkL7HIBZAX.ka,
+      rg16uint: _chunkL7HIBZAX.ia,
+      rg16sint: _chunkL7HIBZAX.ja,
+      rg16float: _chunkL7HIBZAX.ka,
+      rgba8unorm: _chunkL7HIBZAX.ka,
+      "rgba8unorm-srgb": _chunkL7HIBZAX.ka,
+      rgba8snorm: _chunkL7HIBZAX.ka,
+      rgba8uint: _chunkL7HIBZAX.ia,
+      rgba8sint: _chunkL7HIBZAX.ja,
+      bgra8unorm: _chunkL7HIBZAX.ka,
+      "bgra8unorm-srgb": _chunkL7HIBZAX.ka,
+      rgb9e5ufloat: _chunkL7HIBZAX.ka,
+      rgb10a2uint: _chunkL7HIBZAX.ia,
+      rgb10a2unorm: _chunkL7HIBZAX.ka,
+      rg11b10ufloat: _chunkL7HIBZAX.ka,
+      rg32uint: _chunkL7HIBZAX.ia,
+      rg32sint: _chunkL7HIBZAX.ja,
+      rg32float: _chunkL7HIBZAX.ka,
+      rgba16uint: _chunkL7HIBZAX.ia,
+      rgba16sint: _chunkL7HIBZAX.ja,
+      rgba16float: _chunkL7HIBZAX.ka,
+      rgba32uint: _chunkL7HIBZAX.ia,
+      rgba32sint: _chunkL7HIBZAX.ja,
+      rgba32float: _chunkL7HIBZAX.ka,
+      stencil8: _chunkL7HIBZAX.ka,
+      depth16unorm: _chunkL7HIBZAX.ka,
+      depth24plus: _chunkL7HIBZAX.ka,
+      "depth24plus-stencil8": _chunkL7HIBZAX.ka,
+      depth32float: _chunkL7HIBZAX.ka,
+      "depth32float-stencil8": _chunkL7HIBZAX.ka,
+      "bc1-rgba-unorm": _chunkL7HIBZAX.ka,
+      "bc1-rgba-unorm-srgb": _chunkL7HIBZAX.ka,
+      "bc2-rgba-unorm": _chunkL7HIBZAX.ka,
+      "bc2-rgba-unorm-srgb": _chunkL7HIBZAX.ka,
+      "bc3-rgba-unorm": _chunkL7HIBZAX.ka,
+      "bc3-rgba-unorm-srgb": _chunkL7HIBZAX.ka,
+      "bc4-r-unorm": _chunkL7HIBZAX.ka,
+      "bc4-r-snorm": _chunkL7HIBZAX.ka,
+      "bc5-rg-unorm": _chunkL7HIBZAX.ka,
+      "bc5-rg-snorm": _chunkL7HIBZAX.ka,
+      "bc6h-rgb-ufloat": _chunkL7HIBZAX.ka,
+      "bc6h-rgb-float": _chunkL7HIBZAX.ka,
+      "bc7-rgba-unorm": _chunkL7HIBZAX.ka,
+      "bc7-rgba-unorm-srgb": _chunkL7HIBZAX.ka,
+      "etc2-rgb8unorm": _chunkL7HIBZAX.ka,
+      "etc2-rgb8unorm-srgb": _chunkL7HIBZAX.ka,
+      "etc2-rgb8a1unorm": _chunkL7HIBZAX.ka,
+      "etc2-rgb8a1unorm-srgb": _chunkL7HIBZAX.ka,
+      "etc2-rgba8unorm": _chunkL7HIBZAX.ka,
+      "etc2-rgba8unorm-srgb": _chunkL7HIBZAX.ka,
+      "eac-r11unorm": _chunkL7HIBZAX.ka,
+      "eac-r11snorm": _chunkL7HIBZAX.ka,
+      "eac-rg11unorm": _chunkL7HIBZAX.ka,
+      "eac-rg11snorm": _chunkL7HIBZAX.ka,
+      "astc-4x4-unorm": _chunkL7HIBZAX.ka,
+      "astc-4x4-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-5x4-unorm": _chunkL7HIBZAX.ka,
+      "astc-5x4-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-5x5-unorm": _chunkL7HIBZAX.ka,
+      "astc-5x5-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-6x5-unorm": _chunkL7HIBZAX.ka,
+      "astc-6x5-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-6x6-unorm": _chunkL7HIBZAX.ka,
+      "astc-6x6-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-8x5-unorm": _chunkL7HIBZAX.ka,
+      "astc-8x5-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-8x6-unorm": _chunkL7HIBZAX.ka,
+      "astc-8x6-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-8x8-unorm": _chunkL7HIBZAX.ka,
+      "astc-8x8-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-10x5-unorm": _chunkL7HIBZAX.ka,
+      "astc-10x5-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-10x6-unorm": _chunkL7HIBZAX.ka,
+      "astc-10x6-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-10x8-unorm": _chunkL7HIBZAX.ka,
+      "astc-10x8-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-10x10-unorm": _chunkL7HIBZAX.ka,
+      "astc-10x10-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-12x10-unorm": _chunkL7HIBZAX.ka,
+      "astc-12x10-unorm-srgb": _chunkL7HIBZAX.ka,
+      "astc-12x12-unorm": _chunkL7HIBZAX.ka,
+      "astc-12x12-unorm-srgb": _chunkL7HIBZAX.ka
     },
-    Xe = {
-      rgba8unorm: _chunk5RYM4COI.da,
-      rgba8snorm: _chunk5RYM4COI.da,
-      rgba8uint: _chunk5RYM4COI.ga,
-      rgba8sint: _chunk5RYM4COI.fa,
-      rgba16uint: _chunk5RYM4COI.ga,
-      rgba16sint: _chunk5RYM4COI.fa,
-      rgba16float: _chunk5RYM4COI.da,
-      r32uint: _chunk5RYM4COI.ga,
-      r32sint: _chunk5RYM4COI.fa,
-      r32float: _chunk5RYM4COI.da,
-      rg32uint: _chunk5RYM4COI.ga,
-      rg32sint: _chunk5RYM4COI.fa,
-      rg32float: _chunk5RYM4COI.da,
-      rgba32uint: _chunk5RYM4COI.ga,
-      rgba32sint: _chunk5RYM4COI.fa,
-      rgba32float: _chunk5RYM4COI.da,
-      bgra8unorm: _chunk5RYM4COI.da
+    et = {
+      rgba8unorm: _chunkL7HIBZAX.wa,
+      rgba8snorm: _chunkL7HIBZAX.wa,
+      rgba8uint: _chunkL7HIBZAX.za,
+      rgba8sint: _chunkL7HIBZAX.ya,
+      rgba16uint: _chunkL7HIBZAX.za,
+      rgba16sint: _chunkL7HIBZAX.ya,
+      rgba16float: _chunkL7HIBZAX.wa,
+      r32uint: _chunkL7HIBZAX.za,
+      r32sint: _chunkL7HIBZAX.ya,
+      r32float: _chunkL7HIBZAX.wa,
+      rg32uint: _chunkL7HIBZAX.za,
+      rg32sint: _chunkL7HIBZAX.ya,
+      rg32float: _chunkL7HIBZAX.wa,
+      rgba32uint: _chunkL7HIBZAX.za,
+      rgba32sint: _chunkL7HIBZAX.ya,
+      rgba32float: _chunkL7HIBZAX.wa,
+      bgra8unorm: _chunkL7HIBZAX.wa
     },
-    Bn = {
+    Ln = {
       f32: "float",
       u32: "uint",
       i32: "sint"
     },
-    Rn = {
-      float: _chunk5RYM4COI.T,
-      "unfilterable-float": _chunk5RYM4COI.T,
-      uint: _chunk5RYM4COI.R,
-      sint: _chunk5RYM4COI.S,
-      depth: _chunk5RYM4COI.T
+    On = {
+      float: _chunkL7HIBZAX.ka,
+      "unfilterable-float": _chunkL7HIBZAX.ka,
+      uint: _chunkL7HIBZAX.ia,
+      sint: _chunkL7HIBZAX.ja,
+      depth: _chunkL7HIBZAX.ka
     };
-  function Cn(e, t) {
+  function Mn(e, t) {
     return new hr(e, t);
   }
-  function X(e) {
-    return (e == null ? void 0 : e.resourceType) === "texture" && !!e[_chunk5RYM4COI.a];
+  function Q(e) {
+    return (e == null ? void 0 : e.resourceType) === "texture" && !!e[_chunkL7HIBZAX.a];
   }
-  function Ze(e) {
-    return (e == null ? void 0 : e.resourceType) === "texture-storage-view" && !!e[_chunk5RYM4COI.a];
+  function tt(e) {
+    return (e == null ? void 0 : e.resourceType) === "texture-storage-view" && !!e[_chunkL7HIBZAX.a];
   }
-  function et(e) {
-    return (e == null ? void 0 : e.resourceType) === "texture-sampled-view" && !!e[_chunk5RYM4COI.a];
+  function rt(e) {
+    return (e == null ? void 0 : e.resourceType) === "texture-sampled-view" && !!e[_chunkL7HIBZAX.a];
   }
-  var Pn = {
+  var Wn = {
       mutable: "read_write",
       readonly: "read",
       writeonly: "write"
@@ -3350,12 +3678,12 @@ ${Object.entries(t.propTypes).map(function (n) {
         this._texture = null;
         this.props = t;
         this._branch = r;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           unwrap: function unwrap() {
-            var _p18, _this7$props$dimensio, _this7$props$viewForm, _this7$props$mipLevel, _this7$props$sampleCo;
+            var _p25, _this7$props$dimensio, _this7$props$viewForm, _this7$props$mipLevel, _this7$props$sampleCo;
             if (_this7._destroyed) throw new Error("This texture has been destroyed");
             return _this7._texture || (_this7._texture = _this7._branch.device.createTexture({
-              label: (_p18 = (0, _chunk5RYM4COI.c)(_this7)) != null ? _p18 : "<unnamed>",
+              label: (_p25 = (0, _chunkL7HIBZAX.e)(_this7)) != null ? _p25 : "<unnamed>",
               format: _this7.props.format,
               size: _this7.props.size,
               usage: _this7._flags,
@@ -3370,13 +3698,13 @@ ${Object.entries(t.propTypes).map(function (n) {
       return (0, _createClass2.default)(hr, [{
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this, t), this;
+          return (0, _chunkL7HIBZAX.f)(this, t), this;
         }
       }, {
         key: "$usage",
         value: function $usage() {
-          for (var _len2 = arguments.length, t = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-            t[_key2] = arguments[_key2];
+          for (var _len10 = arguments.length, t = new Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+            t[_key10] = arguments[_key10];
           }
           var r = t.includes("storage"),
             n = t.includes("sampled"),
@@ -3403,8 +3731,8 @@ ${Object.entries(t.propTypes).map(function (n) {
           var _t$format;
           if (!this.usableAsStorage) throw new Error("Unusable as storage");
           var n = (_t$format = t == null ? void 0 : t.format) != null ? _t$format : this.props.format,
-            a = Xe[n];
-          return (0, _chunk5RYM4COI.f)(!!a, `Unsupported storage texture format: ${n}`), new wr(t != null ? t : {}, r, this);
+            a = et[n];
+          return (0, _chunkL7HIBZAX.h)(!!a, `Unsupported storage texture format: ${n}`), new wr(t != null ? t : {}, r, this);
         }
       }, {
         key: "_asReadonly",
@@ -3427,7 +3755,7 @@ ${Object.entries(t.propTypes).map(function (n) {
           var _t$format2;
           if (!this.usableAsSampled) throw new Error("Unusable as sampled");
           var r = (_t$format2 = t == null ? void 0 : t.format) != null ? _t$format2 : this.props.format;
-          if (!Xe[r]) throw new Error(`Unsupported storage texture format: ${r}`);
+          if (!et[r]) throw new Error(`Unsupported storage texture format: ${r}`);
           return new br(t, this);
         }
       }, {
@@ -3438,7 +3766,7 @@ ${Object.entries(t.propTypes).map(function (n) {
         }
       }]);
     }(),
-    Ft = {
+    Ut = {
       "1d": "1d",
       "2d": "2d",
       "2d-array": "2d_array",
@@ -3449,23 +3777,23 @@ ${Object.entries(t.propTypes).map(function (n) {
     wr = /*#__PURE__*/function () {
       function wr(t, r, n) {
         var _this8 = this,
-          _ref22,
+          _ref32,
           _t$dimension,
           _t$format3;
         (0, _classCallCheck2.default)(this, wr);
         this.resourceType = "texture-storage-view";
         this.access = r;
         this._texture = n;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {
           unwrap: function unwrap() {
-            var _p19;
-            return _this8._view || (_this8._view = _this8._texture[_chunk5RYM4COI.a].unwrap().createView({
-              label: `${(_p19 = (0, _chunk5RYM4COI.c)(_this8)) != null ? _p19 : "<unnamed>"} - View`,
+            var _p26;
+            return _this8._view || (_this8._view = _this8._texture[_chunkL7HIBZAX.a].unwrap().createView({
+              label: `${(_p26 = (0, _chunkL7HIBZAX.e)(_this8)) != null ? _p26 : "<unnamed>"} - View`,
               format: _this8._format,
               dimension: _this8.dimension
             })), _this8._view;
           }
-        }, this[_chunk5RYM4COI.b] = n, this.dimension = (_ref22 = (_t$dimension = t == null ? void 0 : t.dimension) != null ? _t$dimension : n.props.dimension) != null ? _ref22 : "2d", this._format = (_t$format3 = t == null ? void 0 : t.format) != null ? _t$format3 : n.props.format, this.texelDataType = Xe[this._format];
+        }, this[_chunkL7HIBZAX.d] = n, this.dimension = (_ref32 = (_t$dimension = t == null ? void 0 : t.dimension) != null ? _t$dimension : n.props.dimension) != null ? _ref32 : "2d", this._format = (_t$format3 = t == null ? void 0 : t.format) != null ? _t$format3 : n.props.format, this.texelDataType = et[this._format];
       }
       return (0, _createClass2.default)(wr, [{
         key: "$name",
@@ -3475,7 +3803,7 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             _t$allocateFixedEntry4 = t.allocateFixedEntry({
               storageTexture: this._format,
               access: this.access,
@@ -3483,61 +3811,61 @@ ${Object.entries(t.propTypes).map(function (n) {
             }, this),
             n = _t$allocateFixedEntry4.group,
             a = _t$allocateFixedEntry4.binding,
-            o = `texture_storage_${Ft[this.dimension]}`;
-          return t.addDeclaration(`@group(${n}) @binding(${a}) var ${r}: ${o}<${this._format}, ${Pn[this.access]}>;`), r;
+            o = `texture_storage_${Ut[this.dimension]}`;
+          return t.addDeclaration(`@group(${n}) @binding(${a}) var ${r}: ${o}<${this._format}, ${Wn[this.access]}>;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p20;
-          return `${this.resourceType}:${(_p20 = (0, _chunk5RYM4COI.c)(this)) != null ? _p20 : "<unnamed>"}`;
+          var _p27;
+          return `${this.resourceType}:${(_p27 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p27 : "<unnamed>"}`;
         }
       }]);
     }(),
-    vt = /*#__PURE__*/function () {
-      function vt(t, r, n, a) {
-        (0, _classCallCheck2.default)(this, vt);
+    Ft = /*#__PURE__*/function () {
+      function Ft(t, r, n, a) {
+        (0, _classCallCheck2.default)(this, Ft);
         this.resourceType = "texture-storage-view";
         this._format = t;
         this.dimension = r;
         this.access = n;
         this._membership = a;
-        this[_chunk5RYM4COI.a] = {}, this.texelDataType = Xe[this._format], (0, _chunk5RYM4COI.d)(this, a.key);
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {}, this.texelDataType = et[this._format], (0, _chunkL7HIBZAX.f)(this, a.key);
       }
-      return (0, _createClass2.default)(vt, [{
+      return (0, _createClass2.default)(Ft, [{
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = t.allocateLayoutEntry(this._membership.layout),
-            a = `texture_storage_${Ft[this.dimension]}`;
-          return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: ${a}<${this._format}, ${Pn[this.access]}>;`), r;
+            a = `texture_storage_${Ut[this.dimension]}`;
+          return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: ${a}<${this._format}, ${Wn[this.access]}>;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p21;
-          return `${this.resourceType}:${(_p21 = (0, _chunk5RYM4COI.c)(this)) != null ? _p21 : "<unnamed>"}`;
+          var _p28;
+          return `${this.resourceType}:${(_p28 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p28 : "<unnamed>"}`;
         }
       }]);
     }(),
     br = /*#__PURE__*/function () {
       function br(t, r) {
         var _this9 = this,
-          _ref23,
+          _ref33,
           _t$dimension2,
           _t$format4;
         (0, _classCallCheck2.default)(this, br);
         this.resourceType = "texture-sampled-view";
         this._props = t;
         this._texture = r;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {
           unwrap: function unwrap() {
-            var _p22;
-            return _this9._view || (_this9._view = _this9._texture[_chunk5RYM4COI.a].unwrap().createView(Object.assign({
-              label: `${(_p22 = (0, _chunk5RYM4COI.c)(_this9)) != null ? _p22 : "<unnamed>"} - View`
+            var _p29;
+            return _this9._view || (_this9._view = _this9._texture[_chunkL7HIBZAX.a].unwrap().createView(Object.assign({
+              label: `${(_p29 = (0, _chunkL7HIBZAX.e)(_this9)) != null ? _p29 : "<unnamed>"} - View`
             }, _this9._props))), _this9._view;
           }
-        }, this[_chunk5RYM4COI.b] = r, this.dimension = (_ref23 = (_t$dimension2 = t == null ? void 0 : t.dimension) != null ? _t$dimension2 : r.props.dimension) != null ? _ref23 : "2d", this._format = (_t$format4 = t == null ? void 0 : t.format) != null ? _t$format4 : r.props.format, this.channelDataType = Un[this._format];
+        }, this[_chunkL7HIBZAX.d] = r, this.dimension = (_ref33 = (_t$dimension2 = t == null ? void 0 : t.dimension) != null ? _t$dimension2 : r.props.dimension) != null ? _ref33 : "2d", this._format = (_t$format4 = t == null ? void 0 : t.format) != null ? _t$format4 : r.props.format, this.channelDataType = Gn[this._format];
       }
       return (0, _createClass2.default)(br, [{
         key: "$name",
@@ -3548,72 +3876,72 @@ ${Object.entries(t.propTypes).map(function (n) {
         key: "~resolve",
         value: function resolve(t) {
           var _this$_texture$props$;
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = ((_this$_texture$props$ = this._texture.props.sampleCount) != null ? _this$_texture$props$ : 1) > 1,
             _t$allocateFixedEntry5 = t.allocateFixedEntry({
-              texture: Bn[this.channelDataType.type],
+              texture: Ln[this.channelDataType.type],
               viewDimension: this.dimension,
               multisampled: n
             }, this),
             a = _t$allocateFixedEntry5.group,
             o = _t$allocateFixedEntry5.binding,
-            s = n ? "texture_multisampled_2d" : `texture_${Ft[this.dimension]}`;
-          return t.addDeclaration(`@group(${a}) @binding(${o}) var ${r}: ${s}<${t.resolve(this.channelDataType)}>;`), r;
+            i = n ? "texture_multisampled_2d" : `texture_${Ut[this.dimension]}`;
+          return t.addDeclaration(`@group(${a}) @binding(${o}) var ${r}: ${i}<${t.resolve(this.channelDataType)}>;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p23;
-          return `${this.resourceType}:${(_p23 = (0, _chunk5RYM4COI.c)(this)) != null ? _p23 : "<unnamed>"}`;
+          var _p30;
+          return `${this.resourceType}:${(_p30 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p30 : "<unnamed>"}`;
         }
       }]);
     }(),
-    Dt = /*#__PURE__*/function () {
-      function Dt(t, r, n, a) {
-        (0, _classCallCheck2.default)(this, Dt);
+    It = /*#__PURE__*/function () {
+      function It(t, r, n, a) {
+        (0, _classCallCheck2.default)(this, It);
         this.resourceType = "texture-sampled-view";
         this.dimension = r;
         this._multisampled = n;
         this._membership = a;
-        this[_chunk5RYM4COI.a] = {}, (0, _chunk5RYM4COI.d)(this, a.key), this.channelDataType = Rn[t];
+        this[_chunkL7HIBZAX.b] = this, this[_chunkL7HIBZAX.a] = {}, (0, _chunkL7HIBZAX.f)(this, a.key), this.channelDataType = On[t];
       }
-      return (0, _createClass2.default)(Dt, [{
+      return (0, _createClass2.default)(It, [{
         key: "~resolve",
         value: function resolve(t) {
-          var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this)),
+          var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this)),
             n = t.allocateLayoutEntry(this._membership.layout),
-            a = this._multisampled ? "texture_multisampled_2d" : `texture_${Ft[this.dimension]}`;
+            a = this._multisampled ? "texture_multisampled_2d" : `texture_${Ut[this.dimension]}`;
           return t.addDeclaration(`@group(${n}) @binding(${this._membership.idx}) var ${r}: ${a}<${t.resolve(this.channelDataType)}>;`), r;
         }
       }, {
         key: "toString",
         value: function toString() {
-          var _p24;
-          return `${this.resourceType}:${(_p24 = (0, _chunk5RYM4COI.c)(this)) != null ? _p24 : "<unnamed>"}`;
+          var _p31;
+          return `${this.resourceType}:${(_p31 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p31 : "<unnamed>"}`;
         }
       }]);
     }();
   function Sr(e) {
     return !!(e != null && e.usableAsSampled);
   }
-  function Fa(e) {
+  function _a(e) {
     return !!(e != null && e.usableAsRender);
   }
   var At = /*#__PURE__*/function (_Error2) {
     function e(t) {
-      var _p25;
+      var _p32;
       var _this10;
       (0, _classCallCheck2.default)(this, e);
-      _this10 = _callSuper(this, e, [`Resource '${(_p25 = (0, _chunk5RYM4COI.c)(t)) != null ? _p25 : "<unnamed>"}' cannot be bound as 'sampled'. Use .$usage('sampled') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this10), e.prototype);
+      _this10 = _callSuper(this, e, [`Resource '${(_p32 = (0, _chunkL7HIBZAX.e)(t)) != null ? _p32 : "<unnamed>"}' cannot be bound as 'sampled'. Use .$usage('sampled') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this10), e.prototype);
       return _this10;
     }
     (0, _inherits2.default)(e, _Error2);
     return (0, _createClass2.default)(e);
   }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error));
-  function It(e) {
+  function Bt(e) {
     return new Dr(e);
   }
-  function Ut(e) {
+  function Rt(e) {
     return !!e && e.resourceType === "bind-group-layout";
   }
   function Fr(e) {
@@ -3629,8 +3957,8 @@ ${Object.entries(t.propTypes).map(function (n) {
       (0, _inherits2.default)(e, _Error3);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    Vn = ["compute"],
-    Ce = ["compute", "vertex", "fragment"],
+    Nn = ["compute"],
+    Ve = ["compute", "vertex", "fragment"],
     Dr = /*#__PURE__*/function () {
       function Dr(t) {
         var _this12 = this;
@@ -3652,29 +3980,29 @@ ${Object.entries(t.propTypes).map(function (n) {
             key: n,
             idx: r
           };
-          if ("uniform" in a && (_this12.bound[n] = new Je("uniform", a.uniform, o)), "storage" in a) {
+          if ("uniform" in a && (_this12.bound[n] = new Qe("uniform", a.uniform, o)), "storage" in a) {
             var _a$access;
-            var s = "type" in a.storage ? a.storage : a.storage(0);
-            _this12.bound[n] = new Je((_a$access = a.access) != null ? _a$access : "readonly", s, o);
+            var i = "type" in a.storage ? a.storage : a.storage(0);
+            _this12.bound[n] = new Qe((_a$access = a.access) != null ? _a$access : "readonly", i, o);
           }
-          "texture" in a && (_this12.bound[n] = new Dt(a.texture, (_a$viewDimension = a.viewDimension) != null ? _a$viewDimension : "2d", (_a$multisampled = a.multisampled) != null ? _a$multisampled : !1, o)), "storageTexture" in a && (_this12.bound[n] = new vt(a.storageTexture, (_a$viewDimension2 = a.viewDimension) != null ? _a$viewDimension2 : "2d", (_a$access2 = a.access) != null ? _a$access2 : "writeonly", o)), "externalTexture" in a && (_this12.bound[n] = new St(o)), "sampler" in a && (a.sampler === "comparison" ? _this12.bound[n] = new bt(o) : _this12.bound[n] = new wt(o)), "texture" in a || "storageTexture" in a || "externalTexture" in a || "sampler" in a ? _this12.value[n] = _this12.bound[n] : Object.defineProperty(_this12.value, n, {
+          "texture" in a && (_this12.bound[n] = new It(a.texture, (_a$viewDimension = a.viewDimension) != null ? _a$viewDimension : "2d", (_a$multisampled = a.multisampled) != null ? _a$multisampled : !1, o)), "storageTexture" in a && (_this12.bound[n] = new Ft(a.storageTexture, (_a$viewDimension2 = a.viewDimension) != null ? _a$viewDimension2 : "2d", (_a$access2 = a.access) != null ? _a$access2 : "writeonly", o)), "externalTexture" in a && (_this12.bound[n] = new Dt(o)), "sampler" in a && (a.sampler === "comparison" ? _this12.bound[n] = new vt(o) : _this12.bound[n] = new St(o)), "texture" in a || "storageTexture" in a || "externalTexture" in a || "sampler" in a ? _this12.value[n] = _this12.bound[n] : Object.defineProperty(_this12.value, n, {
             get: function get() {
               return _this12.bound[n].value;
             }
           }), r++;
         };
-        for (var _ref24 of Object.entries(t)) {
-          var _ref25 = (0, _slicedToArray2.default)(_ref24, 2);
-          var n = _ref25[0];
-          var a = _ref25[1];
+        for (var _ref34 of Object.entries(t)) {
+          var _ref35 = (0, _slicedToArray2.default)(_ref34, 2);
+          var n = _ref35[0];
+          var a = _ref35[1];
           if (_loop(n)) continue;
         }
       }
       return (0, _createClass2.default)(Dr, [{
         key: "toString",
         value: function toString() {
-          var _p26;
-          return `bindGroupLayout:${(_p26 = (0, _chunk5RYM4COI.c)(this)) != null ? _p26 : "<unnamed>"}`;
+          var _p33;
+          return `bindGroupLayout:${(_p33 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p33 : "<unnamed>"}`;
         }
       }, {
         key: "index",
@@ -3684,7 +4012,7 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this, t), this;
+          return (0, _chunkL7HIBZAX.f)(this, t), this;
         }
       }, {
         key: "$idx",
@@ -3694,41 +4022,41 @@ ${Object.entries(t.propTypes).map(function (n) {
       }, {
         key: "unwrap",
         value: function unwrap(t) {
-          var _p27;
+          var _p34;
           return t.device.createBindGroupLayout({
-            label: (_p27 = (0, _chunk5RYM4COI.c)(this)) != null ? _p27 : "<unnamed>",
+            label: (_p34 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p34 : "<unnamed>",
             entries: Object.values(this.entries).map(function (n, a) {
-              var _n$viewDimension, _n$multisampled, _o6, _o7, _o8;
+              var _n$viewDimension, _n$multisampled, _o5, _o6, _o7;
               if (n === null) return null;
               var o = n.visibility,
-                s = {
+                i = {
                   binding: a,
                   visibility: 0
                 };
-              if ("uniform" in n) o = o != null ? o : Ce, s.buffer = {
+              if ("uniform" in n) o = o != null ? o : Ve, i.buffer = {
                 type: "uniform"
-              };else if ("storage" in n) o = o != null ? o : n.access === "mutable" ? Vn : Ce, s.buffer = {
+              };else if ("storage" in n) o = o != null ? o : n.access === "mutable" ? Nn : Ve, i.buffer = {
                 type: n.access === "mutable" ? "storage" : "read-only-storage"
-              };else if ("sampler" in n) o = o != null ? o : Ce, s.sampler = {
+              };else if ("sampler" in n) o = o != null ? o : Ve, i.sampler = {
                 type: n.sampler
-              };else if ("texture" in n) o = o != null ? o : Ce, s.texture = {
+              };else if ("texture" in n) o = o != null ? o : Ve, i.texture = {
                 sampleType: n.texture,
                 viewDimension: (_n$viewDimension = n.viewDimension) != null ? _n$viewDimension : "2d",
                 multisampled: (_n$multisampled = n.multisampled) != null ? _n$multisampled : !1
               };else if ("storageTexture" in n) {
                 var _n$access, _n$viewDimension2;
-                var i = (_n$access = n.access) != null ? _n$access : "writeonly";
-                o = o != null ? o : i === "readonly" ? Ce : Vn, s.storageTexture = {
+                var s = (_n$access = n.access) != null ? _n$access : "writeonly";
+                o = o != null ? o : s === "readonly" ? Ve : Nn, i.storageTexture = {
                   format: n.storageTexture,
                   access: {
                     mutable: "read-write",
                     readonly: "read-only",
                     writeonly: "write-only"
-                  }[i],
+                  }[s],
                   viewDimension: (_n$viewDimension2 = n.viewDimension) != null ? _n$viewDimension2 : "2d"
                 };
-              } else "externalTexture" in n && (o = o != null ? o : Ce, s.externalTexture = {});
-              return (_o6 = o) != null && _o6.includes("compute") && (s.visibility |= GPUShaderStage.COMPUTE), (_o7 = o) != null && _o7.includes("vertex") && (s.visibility |= GPUShaderStage.VERTEX), (_o8 = o) != null && _o8.includes("fragment") && (s.visibility |= GPUShaderStage.FRAGMENT), s;
+              } else "externalTexture" in n && (o = o != null ? o : Ve, i.externalTexture = {});
+              return (_o5 = o) != null && _o5.includes("compute") && (i.visibility |= GPUShaderStage.COMPUTE), (_o6 = o) != null && _o6.includes("vertex") && (i.visibility |= GPUShaderStage.VERTEX), (_o7 = o) != null && _o7.includes("fragment") && (i.visibility |= GPUShaderStage.FRAGMENT), i;
             }).filter(function (n) {
               return n !== null;
             })
@@ -3736,94 +4064,94 @@ ${Object.entries(t.propTypes).map(function (n) {
         }
       }]);
     }(),
-    Pe = /*#__PURE__*/function () {
-      function Pe(t, r) {
-        (0, _classCallCheck2.default)(this, Pe);
+    $e = /*#__PURE__*/function () {
+      function $e(t, r) {
+        (0, _classCallCheck2.default)(this, $e);
         this.resourceType = "bind-group";
         this.layout = t;
         this.entries = r;
-        for (var n of Object.keys(t.entries)) if (t.entries[n] !== null && !(n in r)) throw new vr((0, _chunk5RYM4COI.c)(t), n);
+        for (var n of Object.keys(t.entries)) if (t.entries[n] !== null && !(n in r)) throw new vr((0, _chunkL7HIBZAX.e)(t), n);
       }
-      return (0, _createClass2.default)(Pe, [{
+      return (0, _createClass2.default)($e, [{
         key: "unwrap",
         value: function unwrap(t) {
-          var _p28,
+          var _p35,
             _this13 = this;
           return t.device.createBindGroup({
-            label: (_p28 = (0, _chunk5RYM4COI.c)(this.layout)) != null ? _p28 : "<unnamed>",
+            label: (_p35 = (0, _chunkL7HIBZAX.e)(this.layout)) != null ? _p35 : "<unnamed>",
             layout: t.unwrap(this.layout),
-            entries: Object.entries(this.layout.entries).map(function (_ref26, o) {
-              var _p29;
-              var _ref27 = (0, _slicedToArray2.default)(_ref26, 2),
-                n = _ref27[0],
-                a = _ref27[1];
+            entries: Object.entries(this.layout.entries).map(function (_ref36, o) {
+              var _p36;
+              var _ref37 = (0, _slicedToArray2.default)(_ref36, 2),
+                n = _ref37[0],
+                a = _ref37[1];
               if (a === null) return null;
-              var s = _this13.entries[n];
-              if (s === void 0) throw new Error(`'${n}' is a resource required to populate bind group layout '${(_p29 = (0, _chunk5RYM4COI.c)(_this13.layout)) != null ? _p29 : "<unnamed>"}'.`);
+              var i = _this13.entries[n];
+              if (i === void 0) throw new Error(`'${n}' is a resource required to populate bind group layout '${(_p36 = (0, _chunkL7HIBZAX.e)(_this13.layout)) != null ? _p36 : "<unnamed>"}'.`);
               if ("uniform" in a) {
-                var i;
-                if (ae(s)) {
-                  if (!xt(s)) throw new _chunk5RYM4COI.i(s);
-                  i = {
-                    buffer: t.unwrap(s)
+                var s;
+                if (ue(i)) {
+                  if (!wt(i)) throw new _chunkL7HIBZAX.k(i);
+                  s = {
+                    buffer: t.unwrap(i)
                   };
-                } else i = {
-                  buffer: s
+                } else s = {
+                  buffer: i
                 };
                 return {
                   binding: o,
-                  resource: i
+                  resource: s
                 };
               }
               if ("storage" in a) {
-                var _i3;
-                if (ae(s)) {
-                  if (!xe(s)) throw new He(s);
-                  _i3 = {
-                    buffer: t.unwrap(s)
+                var _s3;
+                if (ue(i)) {
+                  if (!Te(i)) throw new Je(i);
+                  _s3 = {
+                    buffer: t.unwrap(i)
                   };
-                } else _i3 = {
-                  buffer: s
+                } else _s3 = {
+                  buffer: i
                 };
                 return {
                   binding: o,
-                  resource: _i3
+                  resource: _s3
                 };
               }
               if ("texture" in a) {
-                var _i4;
-                if (X(s)) {
-                  if (!Sr(s)) throw new At(s);
-                  _i4 = t.unwrap(s.createView("sampled"));
-                } else et(s) ? _i4 = t.unwrap(s) : _i4 = s;
+                var _s4;
+                if (Q(i)) {
+                  if (!Sr(i)) throw new At(i);
+                  _s4 = t.unwrap(i.createView("sampled"));
+                } else rt(i) ? _s4 = t.unwrap(i) : _s4 = i;
                 return {
                   binding: o,
-                  resource: _i4
+                  resource: _s4
                 };
               }
               if ("storageTexture" in a) {
-                var _i5;
-                if (X(s)) {
-                  if (!xe(s)) throw new He(s);
-                  a.access === "readonly" ? _i5 = t.unwrap(s.createView("readonly")) : a.access === "mutable" ? _i5 = t.unwrap(s.createView("mutable")) : _i5 = t.unwrap(s.createView("writeonly"));
-                } else Ze(s) ? _i5 = t.unwrap(s) : _i5 = s;
+                var _s5;
+                if (Q(i)) {
+                  if (!Te(i)) throw new Je(i);
+                  a.access === "readonly" ? _s5 = t.unwrap(i.createView("readonly")) : a.access === "mutable" ? _s5 = t.unwrap(i.createView("mutable")) : _s5 = t.unwrap(i.createView("writeonly"));
+                } else tt(i) ? _s5 = t.unwrap(i) : _s5 = i;
                 return {
                   binding: o,
-                  resource: _i5
+                  resource: _s5
                 };
               }
-              if ("sampler" in a) return Ye(s) || Qe(s) ? {
+              if ("sampler" in a) return Xe(i) || Ze(i) ? {
                 binding: o,
-                resource: t.unwrap(s)
+                resource: t.unwrap(i)
               } : {
                 binding: o,
-                resource: s
+                resource: i
               };
               if ("externalTexture" in a) return {
                 binding: o,
-                resource: s
+                resource: i
               };
-              throw new Error(`Malformed bind group entry: ${s} (${JSON.stringify(s)})`);
+              throw new Error(`Malformed bind group entry: ${i} (${JSON.stringify(i)})`);
             }).filter(function (n) {
               return n !== null;
             })
@@ -3831,30 +4159,24 @@ ${Object.entries(t.propTypes).map(function (n) {
         }
       }]);
     }();
-  var v = Aa.NodeTypeCatalog,
-    Ia = ["==", "!=", "<", "<=", ">", ">=", "<<", ">>", "+", "-", "*", "/", "%", "|", "^", "&", "&&", "||"],
-    Ua = ["&&", "||", "==", "!=", "<", "<=", ">", ">="];
-  function $n(e, t, r) {
-    return r ? Ua.includes(t) ? _chunk5RYM4COI.Q : t === "=" ? r : e : t === "!" || t === "~" ? _chunk5RYM4COI.Q : e;
+  var F = Ea.NodeTypeCatalog,
+    Ga = ["==", "!=", "<", "<=", ">", ">=", "<<", ">>", "+", "-", "*", "/", "%", "|", "^", "&", "&&", "||"],
+    La = ["&&", "||", "==", "!=", "<", "<=", ">", ">="];
+  function jn(e, t, r) {
+    return r ? La.includes(t) ? _chunkL7HIBZAX.ha : t === "=" ? r : e : t === "!" || t === "~" ? _chunkL7HIBZAX.ha : e;
   }
-  function Ba(e) {
+  function Oa(e) {
     throw new Error(`'${JSON.stringify(e)}' was not handled by the WGSL generator.`);
   }
-  function kn(e, t) {
-    return {
-      value: t ? "true" : "false",
-      dataType: _chunk5RYM4COI.Q
-    };
-  }
-  function En(e, _ref28) {
-    var _ref29 = (0, _slicedToArray2.default)(_ref28, 2),
-      t = _ref29[0],
-      r = _ref29[1];
+  function zn(e, _ref10) {
+    var _ref13 = (0, _slicedToArray2.default)(_ref10, 2),
+      t = _ref13[0],
+      r = _ref13[1];
     e.pushBlockScope();
     try {
       return `${e.indent()}{
 ${r.map(function (n) {
-        return he(e, n);
+        return xe(e, n);
       }).join(`
 `)}
 ${e.dedent()}}`;
@@ -3862,381 +4184,308 @@ ${e.dedent()}}`;
       e.popBlockScope();
     }
   }
-  function Ra(e, t, r) {
+  function Ma(e, t, r) {
     return e.defineVariable(t, r);
   }
-  function Ar(e, t) {
+  function Ir(e, t) {
     var r = e.getById(t);
     if (!r) throw new Error(`Identifier ${t} not found`);
     return r;
   }
-  function V(e, t) {
-    if (typeof t == "string") return Ar(e, t);
-    if (typeof t == "boolean") return kn(e, t);
-    if (t[0] === v.logicalExpr || t[0] === v.binaryExpr || t[0] === v.assignmentExpr) {
-      var _t3 = (0, _slicedToArray2.default)(t, 4),
-        r = _t3[0],
-        n = _t3[1],
-        a = _t3[2],
-        o = _t3[3],
-        s = V(e, n),
-        i = V(e, o),
-        l = W(e, [s, i]),
-        _ref30 = l || [s, i],
-        _ref31 = (0, _slicedToArray2.default)(_ref30, 2),
-        u = _ref31[0],
-        d = _ref31[1],
-        g = A(e, u),
-        c = A(e, d),
-        y = $n(u.dataType, a, d.dataType);
-      return {
-        value: Ia.includes(a) ? `(${g} ${a} ${c})` : `${g} ${a} ${c}`,
-        dataType: y
-      };
+  function $(e, t) {
+    if (typeof t == "string") return Ir(e, t);
+    if (typeof t == "boolean") return (0, _chunkL7HIBZAX.ba)(t ? "true" : "false", _chunkL7HIBZAX.ha);
+    if (t[0] === F.logicalExpr || t[0] === F.binaryExpr || t[0] === F.assignmentExpr) {
+      var _t2 = (0, _slicedToArray2.default)(t, 4),
+        r = _t2[0],
+        n = _t2[1],
+        a = _t2[2],
+        o = _t2[3],
+        i = $(e, n),
+        s = $(e, o),
+        l = W(e, [i, s]),
+        _ref14 = l || [i, s],
+        _ref38 = (0, _slicedToArray2.default)(_ref14, 2),
+        u = _ref38[0],
+        d = _ref38[1],
+        g = e.resolve(u.value),
+        c = e.resolve(d.value),
+        y = jn(u.dataType, a, d.dataType);
+      return (0, _chunkL7HIBZAX.ba)(Ga.includes(a) ? `(${g} ${a} ${c})` : `${g} ${a} ${c}`, y);
     }
-    if (t[0] === v.postUpdate) {
+    if (t[0] === F.postUpdate) {
+      var _t3 = (0, _slicedToArray2.default)(t, 3),
+        _r2 = _t3[0],
+        _n2 = _t3[1],
+        _a5 = _t3[2],
+        _o8 = $(e, _a5),
+        _i5 = e.resolve(_o8.value);
+      return (0, _chunkL7HIBZAX.ba)(`${_i5}${_n2}`, _o8.dataType);
+    }
+    if (t[0] === F.unaryExpr) {
       var _t4 = (0, _slicedToArray2.default)(t, 3),
-        _r2 = _t4[0],
-        _n2 = _t4[1],
-        _a5 = _t4[2],
-        _o9 = V(e, _a5);
-      return {
-        value: `${A(e, _o9)}${_n2}`,
-        dataType: _o9.dataType
-      };
+        _r3 = _t4[0],
+        _n3 = _t4[1],
+        _a6 = _t4[2],
+        _o9 = $(e, _a6),
+        _i6 = e.resolve(_o9.value),
+        _s6 = jn(_o9.dataType, _n3);
+      return (0, _chunkL7HIBZAX.ba)(`${_n3}${_i6}`, _s6);
     }
-    if (t[0] === v.unaryExpr) {
+    if (t[0] === F.memberAccess) {
       var _t5 = (0, _slicedToArray2.default)(t, 3),
-        _r3 = _t5[0],
-        _n3 = _t5[1],
-        _a6 = _t5[2],
-        _o10 = V(e, _a6),
-        _s6 = A(e, _o10),
-        _i6 = $n(_o10.dataType, _n3);
-      return {
-        value: `${_n3}${_s6}`,
-        dataType: _i6
-      };
-    }
-    if (t[0] === v.memberAccess) {
-      var _t6 = (0, _slicedToArray2.default)(t, 3),
-        _r4 = _t6[0],
-        _n4 = _t6[1],
-        _a7 = _t6[2],
-        _o11 = V(e, _n4);
-      if ((0, _chunk5RYM4COI.D)(_o11.dataType)) return {
-        value: `(*${_o11.value}).${_a7}`,
-        dataType: (0, _chunkSMTSXYNG.i)(_o11.dataType.inner) ? ce(_o11.dataType.inner, _a7) : U
-      };
-      if (typeof _o11.value == "string") return {
-        value: `${_o11.value}.${_a7}`,
-        dataType: (0, _chunkSMTSXYNG.i)(_o11.dataType) ? ce(_o11.dataType, _a7) : U
-      };
-      if ((0, _chunk5RYM4COI.B)(_o11.dataType) && _a7 === "length") return _o11.dataType.elementCount === 0 ? {
-        value: `arrayLength(&${e.resolve(_o11.value)})`,
-        dataType: _chunk5RYM4COI.R
-      } : {
-        value: String(_o11.dataType.elementCount),
-        dataType: _chunk5RYM4COI.O
-      };
-      var _s7 = _o11.value[_a7];
-      if (_o11.dataType.type !== "unknown") return (0, _chunk5RYM4COI.z)(_o11.dataType) && _a7 === "columns" ? {
-        value: _o11.value,
-        dataType: _o11.dataType
-      } : {
-        value: _s7,
-        dataType: ce(_o11.dataType, _a7)
-      };
-      if (J(_o11.value)) return {
-        value: _s7,
-        dataType: ce(_o11.value, _a7)
-      };
-      if (typeof _o11.value == "object") {
-        var _i7 = J(_s7) ? mt(_s7) : U;
-        return {
-          value: _s7,
-          dataType: _i7
-        };
+        _r4 = _t5[0],
+        _n4 = _t5[1],
+        _a7 = _t5[2],
+        _o10 = $(e, _n4);
+      if (_o10.dataType.type === "unknown") {
+        var _i7 = _o10.value[_a7];
+        return fe(_i7);
       }
-      throw new Error(`Cannot access member ${_a7} of ${_o11.value}`);
+      return (0, _chunkL7HIBZAX.L)(_o10.dataType) ? (0, _chunkL7HIBZAX.ba)(`(*${e.resolve(_o10.value)}).${_a7}`, je(_o10.dataType.inner, _a7)) : (0, _chunkL7HIBZAX.J)(_o10.dataType) && _a7 === "length" ? _o10.dataType.elementCount === 0 ? (0, _chunkL7HIBZAX.ba)(`arrayLength(&${e.resolve(_o10.value)})`, _chunkL7HIBZAX.ia) : (0, _chunkL7HIBZAX.ba)(String(_o10.dataType.elementCount), _chunkL7HIBZAX.fa) : (0, _chunkL7HIBZAX.G)(_o10.dataType) && _a7 === "columns" ? (0, _chunkL7HIBZAX.ba)(_o10.value, _o10.dataType) : (0, _chunkL7HIBZAX.C)(_o10.dataType) && (0, _chunkL7HIBZAX.z)(_o10.value) ? fe(_o10.value[_a7]) : (0, _chunkL7HIBZAX.ba)(`${e.resolve(_o10.value)}.${_a7}`, je(_o10.dataType, _a7));
     }
-    if (t[0] === v.indexAccess) {
-      var _t7 = (0, _slicedToArray2.default)(t, 3),
-        _r5 = _t7[0],
-        _n5 = _t7[1],
-        _a8 = _t7[2],
-        _o12 = V(e, _n5),
-        _s8 = V(e, _a8),
-        _i8 = A(e, _o12),
-        _l3 = A(e, _s8);
-      return (0, _chunk5RYM4COI.D)(_o12.dataType) ? {
-        value: `(*${_i8})[${_l3}]`,
-        dataType: (0, _chunkSMTSXYNG.i)(_o12.dataType.inner) ? er(_o12.dataType.inner) : U
-      } : {
-        value: `${_i8}[${_l3}]`,
-        dataType: (0, _chunkSMTSXYNG.i)(_o12.dataType) ? er(_o12.dataType) : U
-      };
+    if (t[0] === F.indexAccess) {
+      var _t6 = (0, _slicedToArray2.default)(t, 3),
+        _r5 = _t6[0],
+        _n5 = _t6[1],
+        _a8 = _t6[2],
+        _o11 = $(e, _n5),
+        _i8 = $(e, _a8),
+        _s7 = e.resolve(_o11.value),
+        _l3 = e.resolve(_i8.value);
+      if (_o11.dataType.type === "unknown") {
+        if (Array.isArray(_a8) && _a8[0] === F.numericLiteral) return fe(_o11.value[_a8[1]]);
+        throw new Error(`Cannot index value ${_s7} of unknown type with index ${_l3}`);
+      }
+      return (0, _chunkL7HIBZAX.L)(_o11.dataType) ? (0, _chunkL7HIBZAX.ba)(`(*${_s7})[${_l3}]`, Qt(_o11.dataType.inner)) : (0, _chunkL7HIBZAX.ba)(`${_s7}[${_l3}]`, (0, _chunkL7HIBZAX.$)(_o11.dataType) ? Qt(_o11.dataType) : _chunkL7HIBZAX.aa);
     }
-    if (t[0] === v.numericLiteral) {
-      var _r6 = ft(t[1]);
+    if (t[0] === F.numericLiteral) {
+      var _r6 = Xt(t[1]);
       if (!_r6) throw new Error(`Invalid numeric literal ${t[1]}`);
       return _r6;
     }
-    if (t[0] === v.call) {
-      var _s9$m, _W2;
-      var _t8 = (0, _slicedToArray2.default)(t, 3),
-        _r7 = _t8[0],
-        _n6 = _t8[1],
-        _a9 = _t8[2],
-        _o13 = V(e, _n6),
-        _s9 = _o13.value;
-      e.callStack.push(_s9);
-      var _i9 = _a9.map(function (y) {
-          return V(e, y);
+    if (t[0] === F.call) {
+      var _o12$value$f, _W2;
+      var _t7 = (0, _slicedToArray2.default)(t, 3),
+        _r7 = _t7[0],
+        _n6 = _t7[1],
+        _a9 = _t7[2],
+        _o12 = $(e, _n6);
+      e.callStack.push(_o12.value);
+      var _s8 = _a9.map(function (c) {
+          return $(e, c);
+        }).map(function (c) {
+          return (0, _chunkL7HIBZAX.ba)(e.resolve(c.value), c.dataType);
         }),
-        _l4 = _i9.map(function (y) {
-          return {
-            value: A(e, y),
-            dataType: y.dataType
-          };
-        }),
-        _u3 = _l4.map(function (y) {
-          return y.value;
+        _l4 = _s8.map(function (c) {
+          return c.value;
         });
-      if (e.callStack.pop(), typeof _s9 == "string") return {
-        value: `${_s9}(${_u3.join(", ")})`,
-        dataType: _o13.dataType
-      };
-      if ((0, _chunk5RYM4COI.C)(_s9)) return {
-        value: `${e.resolve(_s9)}(${_u3.join(", ")})`,
-        dataType: _o13.dataType
-      };
-      if (!Zt(_s9)) throw new Error(`Function ${String(_s9)} has not been created using TypeGPU APIs. Did you mean to wrap the function with tgpu.fn(args, return)(...) ?`);
-      var _d = (_s9$m = _s9[_chunk5RYM4COI.a]) == null ? void 0 : _s9$m.argTypes,
-        _g;
-      !_d || _d === "keep" ? _g = _l4 : _d === "coerce" ? _g = (_W2 = W(e, _l4)) != null ? _W2 : _l4 : _g = (Array.isArray(_d) ? _d.map(function (x, h) {
-        return [x, _l4[h]];
-      }).filter(function (_ref32) {
-        var _ref33 = (0, _slicedToArray2.default)(_ref32, 2),
-          x = _ref33[1];
-        return !!x;
-      }) : typeof _d == "function" ? _d.apply(void 0, (0, _toConsumableArray2.default)(_l4)).map(function (x, h) {
-        return [x, _l4[h]];
-      }).filter(function (_ref34) {
-        var _ref35 = (0, _slicedToArray2.default)(_ref34, 2),
-          x = _ref35[1];
-        return !!x;
-      }) : Object.entries(_d).map(function (_ref36) {
-        var _i9$;
-        var _ref37 = (0, _slicedToArray2.default)(_ref36, 2),
-          x = _ref37[0],
-          h = _ref37[1];
-        var T = ((_i9$ = _i9[0]) == null ? void 0 : _i9$.value)[x];
-        if (!T) throw new Error(`Missing argument ${x} in function call`);
-        return [h, T];
-      })).map(function (_ref38) {
+      if (e.callStack.pop(), _s8.forEach(function (c, y) {
+        var _p37;
+        if (c.dataType === _chunkL7HIBZAX.aa) throw new Error(`Tried to pass '${c.value}' of unknown type as argument #${y} to '${typeof _o12.value == "string" ? _o12.value : (_p37 = (0, _chunkL7HIBZAX.e)(_o12.value)) != null ? _p37 : "<unnamed>"}()'`);
+      }), typeof _o12.value == "string") return (0, _chunkL7HIBZAX.ba)(`${_o12.value}(${_l4.join(", ")})`, _o12.dataType);
+      if ((0, _chunkL7HIBZAX.K)(_o12.value)) {
+        var _c2 = e.resolve(_o12.value);
+        return (0, _chunkL7HIBZAX.ba)(`${_c2}(${_l4.join(", ")})`, _o12.value);
+      }
+      if (!ar(_o12.value)) throw new Error(`Function ${String(_o12.value)} has not been created using TypeGPU APIs. Did you mean to wrap the function with tgpu.fn(args, return)(...) ?`);
+      var _u5 = (_o12$value$f = _o12.value[_chunkL7HIBZAX.a]) == null ? void 0 : _o12$value$f.argTypes,
+        _d2;
+      !_u5 || _u5 === "keep" ? _d2 = _s8 : _u5 === "coerce" ? _d2 = (_W2 = W(e, _s8)) != null ? _W2 : _s8 : _d2 = (Array.isArray(_u5) ? _u5 : _u5.apply(void 0, (0, _toConsumableArray2.default)(_s8))).map(function (y, x) {
+        return [y, _s8[x]];
+      }).map(function (_ref39) {
         var _W3;
-        var _ref39 = (0, _slicedToArray2.default)(_ref38, 2),
-          x = _ref39[0],
-          h = _ref39[1];
-        var T = (_W3 = W(e, [h], [x])) == null ? void 0 : _W3[0];
-        if (!T) throw new Error(`Cannot convert ${e.resolve(h.dataType)} to ${e.resolve(x)}`);
-        return T;
+        var _ref40 = (0, _slicedToArray2.default)(_ref39, 2),
+          y = _ref40[0],
+          x = _ref40[1];
+        if (x.dataType.type === "unknown") return console.warn(`Internal error: unknown type when generating expression: ${t}`), x;
+        var w = (_W3 = W(e, [x], [y])) == null ? void 0 : _W3[0];
+        if (!w) throw new Error(`Cannot convert ${e.resolve(x.dataType)} to ${e.resolve(y)}`);
+        return w;
       });
-      var _c = _s9.apply(void 0, (0, _toConsumableArray2.default)(_g));
-      return {
-        value: A(e, _c),
-        dataType: _c.dataType
-      };
+      var _g2 = _o12.value.apply(_o12, (0, _toConsumableArray2.default)(_d2));
+      return (0, _chunkL7HIBZAX.ba)(e.resolve(_g2.value), _g2.dataType);
     }
-    if (t[0] === v.objectExpr) {
+    if (t[0] === F.objectExpr) {
       var _r8 = t[1],
         _n7 = e.callStack[e.callStack.length - 1];
-      if ((0, _chunk5RYM4COI.C)(_n7)) {
+      if ((0, _chunkL7HIBZAX.K)(_n7)) {
         var _a10 = Object.keys(_n7.propTypes),
-          _o14 = Object.fromEntries(_a10.map(function (i) {
-            var l = _r8[i];
-            if (l === void 0) throw new Error(`Missing property ${i} in object literal for struct ${_n7}`);
-            return [i, V(e, l)];
-          }));
-        return {
-          value: nr(e, _n7, _o14).map(function (i) {
-            return A(e, i);
-          }).join(", "),
-          dataType: _n7
-        };
+          _o13 = Object.fromEntries(_a10.map(function (s) {
+            var l = _r8[s];
+            if (l === void 0) throw new Error(`Missing property ${s} in object literal for struct ${_n7}`);
+            return [s, $(e, l)];
+          })),
+          _i9 = tr(e, _n7, _o13);
+        return (0, _chunkL7HIBZAX.ba)(_i9.map(function (s) {
+          return e.resolve(s.value);
+        }).join(", "), _n7);
       }
-      if (Zt(_n7)) {
-        var _n7$m;
-        var _a11 = (_n7$m = _n7[_chunk5RYM4COI.a]) == null ? void 0 : _n7$m.argTypes;
+      if (ar(_n7)) {
+        var _n7$f;
+        var _a11 = (_n7$f = _n7[_chunkL7HIBZAX.a]) == null ? void 0 : _n7$f.argTypes;
         if (typeof _a11 == "object" && _a11 !== null) {
-          var _o15 = Object.keys(_a11),
-            _s10 = {};
-          for (var _i10 of _o15) {
-            var _g2$;
-            var _l5 = _r8[_i10];
-            if (_l5 === void 0) throw new Error(`Missing property ${_i10} in object literal for function ${_n7}`);
-            var _u4 = V(e, _l5),
-              _d2 = _a11[_i10],
-              _g2 = W(e, [_u4], [_d2]);
-            _s10[_i10] = (_g2$ = _g2 == null ? void 0 : _g2[0]) != null ? _g2$ : _u4;
+          var _o14 = Object.keys(_a11),
+            _i10 = {};
+          for (var _s9 of _o14) {
+            var _g3$;
+            var _l5 = _r8[_s9];
+            if (_l5 === void 0) throw new Error(`Missing property ${_s9} in object literal for function ${_n7}`);
+            var _u6 = $(e, _l5),
+              _d3 = _a11[_s9],
+              _g3 = W(e, [_u6], [_d3]);
+            _i10[_s9] = (_g3$ = _g3 == null ? void 0 : _g3[0]) != null ? _g3$ : _u6;
           }
-          return {
-            value: _s10,
-            dataType: U
-          };
+          return (0, _chunkL7HIBZAX.ba)(_i10, _chunkL7HIBZAX.aa);
         }
       }
       throw new Error("Object expressions are only allowed as return values of functions or as arguments to structs.");
     }
-    if (t[0] === v.arrayExpr) {
-      var _o16$;
-      var _t9 = (0, _slicedToArray2.default)(t, 2),
-        _r9 = _t9[0],
-        _n8 = _t9[1],
+    if (t[0] === F.arrayExpr) {
+      var _o15$;
+      var _t8 = (0, _slicedToArray2.default)(t, 2),
+        _r9 = _t8[0],
+        _n8 = _t8[1],
         _a12 = _n8.map(function (g) {
-          return V(e, g);
+          return $(e, g);
         });
       if (_a12.length === 0) throw new Error("Cannot create empty array literal.");
-      var _o16 = W(e, _a12);
-      if (!_o16) throw new Error("The given values cannot be automatically converted to a common type. Consider explicitly casting them.");
-      var _s11 = (_o16$ = _o16[0]) == null ? void 0 : _o16$.dataType,
-        _i11 = _s11.type === "abstractFloat" ? _chunk5RYM4COI.T : _s11.type === "abstractInt" ? _chunk5RYM4COI.S : _s11,
-        _u5 = `array<${e.resolve(_i11)}, ${_a12.length}>`,
-        _d3 = _o16.map(function (g) {
-          return A(e, g);
+      var _o15 = W(e, _a12);
+      if (!_o15) throw new Error("The given values cannot be automatically converted to a common type. Consider explicitly casting them.");
+      var _i11 = (_o15$ = _o15[0]) == null ? void 0 : _o15$.dataType,
+        _s10 = _i11.type === "abstractFloat" ? _chunkL7HIBZAX.ka : _i11.type === "abstractInt" ? _chunkL7HIBZAX.ja : _i11,
+        _u7 = `array<${e.resolve(_s10)}, ${_a12.length}>`,
+        _d4 = _o15.map(function (g) {
+          return e.resolve(g.value);
         });
-      return {
-        value: `${_u5}( ${_d3.join(", ")} )`,
-        dataType: (0, _chunkSMTSXYNG.da)(_i11, _a12.length)
-      };
+      return (0, _chunkL7HIBZAX.ba)(`${_u7}( ${_d4.join(", ")} )`, (0, _chunkSFECI7OX.X)(_s10, _a12.length));
     }
-    if (t[0] === v.stringLiteral) throw new Error("Cannot use string literals in TGSL.");
-    if (t[0] === v.preUpdate) throw new Error("Cannot use pre-updates in TGSL.");
-    Ba(t);
+    if (t[0] === F.stringLiteral) throw new Error("Cannot use string literals in TGSL.");
+    if (t[0] === F.preUpdate) throw new Error("Cannot use pre-updates in TGSL.");
+    Oa(t);
   }
-  function Bt(e) {
-    return typeof e != "object" || e[0] !== v.block ? [v.block, [e]] : e;
+  function Pt(e) {
+    return typeof e != "object" || e[0] !== F.block ? [F.block, [e]] : e;
   }
-  function he(e, t) {
-    if (typeof t == "string") return `${e.pre}${A(e, Ar(e, t))};`;
-    if (typeof t == "boolean") return `${e.pre}${A(e, kn(e, t))};`;
-    if (t[0] === v.return) {
+  function xe(e, t) {
+    if (typeof t == "string") return `${e.pre}${e.resolve(Ir(e, t).value)};`;
+    if (typeof t == "boolean") return `${e.pre}${t ? "true" : "false"};`;
+    if (t[0] === F.return) {
       var r = t[1],
-        n = r !== void 0 ? A(e, V(e, r)) : void 0;
-      if ((0, _chunk5RYM4COI.C)(e.callStack[e.callStack.length - 1]) && typeof r == "object" && r[0] === v.objectExpr) {
+        n = r !== void 0 ? e.resolve($(e, r).value) : void 0;
+      if ((0, _chunkL7HIBZAX.K)(e.callStack[e.callStack.length - 1]) && typeof r == "object" && r[0] === F.objectExpr) {
         var a = e.resolve(e.callStack[e.callStack.length - 1]);
         return `${e.pre}return ${a}(${n});`;
       }
       return n ? `${e.pre}return ${n};` : `${e.pre}return;`;
     }
-    if (t[0] === v.if) {
+    if (t[0] === F.if) {
       var _l6, _l7;
-      var _t10 = (0, _slicedToArray2.default)(t, 4),
-        _r10 = _t10[0],
-        _n9 = _t10[1],
-        _a13 = _t10[2],
-        o = _t10[3],
-        s = V(e, _n9),
-        i = s,
-        l = W(e, [s], [_chunk5RYM4COI.Q]);
-      (l == null ? void 0 : l[0]) && (_l6 = l, _l7 = (0, _slicedToArray2.default)(_l6, 1), i = _l7[0], _l6);
-      var u = A(e, i);
+      var _t9 = (0, _slicedToArray2.default)(t, 4),
+        _r10 = _t9[0],
+        _n9 = _t9[1],
+        _a13 = _t9[2],
+        o = _t9[3],
+        i = $(e, _n9),
+        s = i,
+        l = W(e, [i], [_chunkL7HIBZAX.ha]);
+      (l == null ? void 0 : l[0]) && (_l6 = l, _l7 = (0, _slicedToArray2.default)(_l6, 1), s = _l7[0], _l6);
+      var u = e.resolve(s.value);
       e.indent();
-      var d = he(e, Bt(_a13));
+      var d = xe(e, Pt(_a13));
       e.dedent(), e.indent();
-      var g = o ? he(e, Bt(o)) : void 0;
+      var g = o ? xe(e, Pt(o)) : void 0;
       return e.dedent(), g ? `${e.pre}if (${u})
 ${d}
 ${e.pre}else
 ${g}` : `${e.pre}if (${u})
 ${d}`;
     }
-    if (t[0] === v.let || t[0] === v.const) {
-      var _t11 = (0, _slicedToArray2.default)(t, 3),
-        _r11 = _t11[0],
-        _n10 = _t11[1],
-        _a14 = _t11[2],
-        _o17 = _a14 !== void 0 ? V(e, _a14) : void 0;
-      if (!_o17) throw new Error(`Cannot create variable '${_n10}' without an initial value.`);
-      if ((0, _chunkSMTSXYNG.d)(_o17.dataType)) throw new Error(`Cannot create variable '${_n10}' with loose data type.`);
-      Ra(e, _n10, rr(_o17.dataType));
-      var _s12 = A(e, Ar(e, _n10));
-      if (typeof _a14 == "object" && _a14[0] === v.objectExpr && (0, _chunk5RYM4COI.C)(e.callStack[e.callStack.length - 1])) {
-        var _i12 = e.callStack[e.callStack.length - 1],
+    if (t[0] === F.let || t[0] === F.const) {
+      var _t10 = (0, _slicedToArray2.default)(t, 3),
+        _r11 = _t10[0],
+        _n10 = _t10[1],
+        _a14 = _t10[2],
+        _o16 = _a14 !== void 0 ? $(e, _a14) : void 0;
+      if (!_o16) throw new Error(`Cannot create variable '${_n10}' without an initial value.`);
+      if ((0, _chunkL7HIBZAX.U)(_o16.dataType)) throw new Error(`Cannot create variable '${_n10}' with loose data type.`);
+      Ma(e, _n10, er(_o16.dataType));
+      var _i12 = e.resolve(Ir(e, _n10).value);
+      if (typeof _a14 == "object" && _a14[0] === F.objectExpr && (0, _chunkL7HIBZAX.K)(e.callStack[e.callStack.length - 1])) {
+        var _s11 = e.callStack[e.callStack.length - 1],
           _l8 = _a14[1],
-          _u6 = {};
-        for (var _ref40 of Object.entries(_l8)) {
-          var _ref41 = (0, _slicedToArray2.default)(_ref40, 2);
-          var c = _ref41[0];
-          var y = _ref41[1];
+          _u8 = {};
+        for (var _ref41 of Object.entries(_l8)) {
+          var _ref42 = (0, _slicedToArray2.default)(_ref41, 2);
+          var c = _ref42[0];
+          var y = _ref42[1];
           if (!y) throw new Error(`Missing property ${c} in object literal`);
-          _u6[c] = V(e, y);
+          _u8[c] = $(e, y);
         }
-        var _d4 = nr(e, _i12, _u6),
-          _g3 = e.resolve(_i12);
-        return `${e.pre}var ${_s12} = ${_g3}(${_d4.map(function (c) {
-          return A(e, c);
+        var _d5 = tr(e, _s11, _u8),
+          _g4 = e.resolve(_s11);
+        return `${e.pre}var ${_i12} = ${_g4}(${_d5.map(function (c) {
+          return e.resolve(c.value);
         }).join(", ")});`;
       }
-      return `${e.pre}var ${_s12} = ${A(e, _o17)};`;
+      return `${e.pre}var ${_i12} = ${e.resolve(_o16.value)};`;
     }
-    if (t[0] === v.block) return En(e, t);
-    if (t[0] === v.for) {
-      var _t12 = (0, _slicedToArray2.default)(t, 5),
-        _r12 = _t12[0],
-        _n11 = _t12[1],
-        _a15 = _t12[2],
-        _o18 = _t12[3],
-        _s13 = _t12[4],
-        _i13 = _n11 ? he(e, _n11) : void 0,
-        _l9 = _i13 ? _i13.slice(0, -1) : "",
-        _u7 = _a15 ? V(e, _a15) : void 0,
-        _d5 = _u7;
-      if (_u7) {
-        var _h2, _h3;
-        var h = W(e, [_u7], [_chunk5RYM4COI.Q]);
-        (h == null ? void 0 : h[0]) && (_h2 = h, _h3 = (0, _slicedToArray2.default)(_h2, 1), _d5 = _h3[0], _h2);
+    if (t[0] === F.block) return zn(e, t);
+    if (t[0] === F.for) {
+      var _t11 = (0, _slicedToArray2.default)(t, 5),
+        _r12 = _t11[0],
+        _n11 = _t11[1],
+        _a15 = _t11[2],
+        _o17 = _t11[3],
+        _i13 = _t11[4],
+        _s12 = _n11 ? xe(e, _n11) : void 0,
+        _l9 = _s12 ? _s12.slice(0, -1) : "",
+        _u9 = _a15 ? $(e, _a15) : void 0,
+        _d6 = _u9;
+      if (_u9) {
+        var _w2, _w3;
+        var w = W(e, [_u9], [_chunkL7HIBZAX.ha]);
+        (w == null ? void 0 : w[0]) && (_w2 = w, _w3 = (0, _slicedToArray2.default)(_w2, 1), _d6 = _w3[0], _w2);
       }
-      var _g4 = _d5 ? A(e, _d5) : "",
-        _c2 = _o18 ? he(e, _o18) : void 0,
-        _y3 = _c2 ? _c2.slice(0, -1) : "";
+      var _g5 = _d6 ? e.resolve(_d6.value) : "",
+        _c3 = _o17 ? xe(e, _o17) : void 0,
+        _y4 = _c3 ? _c3.slice(0, -1) : "";
       e.indent();
-      var x = he(e, Bt(_s13));
-      return e.dedent(), `${e.pre}for (${_l9}; ${_g4}; ${_y3})
+      var x = xe(e, Pt(_i13));
+      return e.dedent(), `${e.pre}for (${_l9}; ${_g5}; ${_y4})
 ${x}`;
     }
-    if (t[0] === v.while) {
-      var _t13 = (0, _slicedToArray2.default)(t, 3),
-        _r13 = _t13[0],
-        _n12 = _t13[1],
-        _a16 = _t13[2],
-        _o19 = V(e, _n12),
-        _s14 = _o19;
-      if (_o19) {
-        var _u9, _u10;
-        var _u8 = W(e, [_o19], [_chunk5RYM4COI.Q]);
-        (_u8 == null ? void 0 : _u8[0]) && (_u9 = _u8, _u10 = (0, _slicedToArray2.default)(_u9, 1), _s14 = _u10[0], _u9);
+    if (t[0] === F.while) {
+      var _t12 = (0, _slicedToArray2.default)(t, 3),
+        _r13 = _t12[0],
+        _n12 = _t12[1],
+        _a16 = _t12[2],
+        _o18 = $(e, _n12),
+        _i14 = _o18;
+      if (_o18) {
+        var _u11, _u12;
+        var _u10 = W(e, [_o18], [_chunkL7HIBZAX.ha]);
+        (_u10 == null ? void 0 : _u10[0]) && (_u11 = _u10, _u12 = (0, _slicedToArray2.default)(_u11, 1), _i14 = _u12[0], _u11);
       }
-      var _i14 = A(e, _s14);
+      var _s13 = e.resolve(_i14.value);
       e.indent();
-      var _l10 = he(e, Bt(_a16));
-      return e.dedent(), `${e.pre}while (${_i14})
+      var _l10 = xe(e, Pt(_a16));
+      return e.dedent(), `${e.pre}while (${_s13})
 ${_l10}`;
     }
-    return t[0] === v.continue ? `${e.pre}continue;` : t[0] === v.break ? `${e.pre}break;` : `${e.pre}${A(e, V(e, t))};`;
+    return t[0] === F.continue ? `${e.pre}continue;` : t[0] === F.break ? `${e.pre}break;` : `${e.pre}${e.resolve($(e, t).value)};`;
   }
-  function Ln(e, t) {
-    return En(e, t);
+  function Kn(e, t) {
+    return zn(e, t);
   }
-  var _n = "#CATCHALL#",
-    Ur = /*#__PURE__*/function () {
-      function Ur() {
-        (0, _classCallCheck2.default)(this, Ur);
+  var Hn = "#CATCHALL#",
+    Ar = /*#__PURE__*/function () {
+      function Ar() {
+        (0, _classCallCheck2.default)(this, Ar);
         this._stack = [];
         this._itemDepth = 0;
       }
-      return (0, _createClass2.default)(Ur, [{
+      return (0, _createClass2.default)(Ar, [{
         key: "itemDepth",
         get: function get() {
           return this._itemDepth;
@@ -4276,12 +4525,13 @@ ${_l10}`;
         }
       }, {
         key: "pushFunctionScope",
-        value: function pushFunctionScope(t, r, n) {
+        value: function pushFunctionScope(t, r, n, a) {
           this._stack.push({
             type: "functionScope",
             args: t,
-            returnType: r,
-            externalMap: n
+            argAliases: r,
+            returnType: n,
+            externalMap: a
           });
         }
       }, {
@@ -4327,38 +4577,34 @@ ${_l10}`;
           for (var r = this._stack.length - 1; r >= 0; --r) {
             var n = this._stack[r];
             if ((n == null ? void 0 : n.type) === "functionScope") {
-              var a = n.args.find(function (s) {
-                return s.value === t;
+              var a = n.args.find(function (i) {
+                return i.value === t;
               });
               if (a !== void 0) return a;
+              if (n.argAliases[t]) return n.argAliases[t];
               var o = n.externalMap[t];
-              return o != null ? ar(o) : void 0;
+              return o != null ? fe(o) : void 0;
             }
             if ((n == null ? void 0 : n.type) === "blockScope") {
               var _a17 = n.declarations.get(t);
-              if (_a17 !== void 0) return {
-                value: t,
-                dataType: _a17
-              };
+              if (_a17 !== void 0) return (0, _chunkL7HIBZAX.ba)(t, _a17);
             }
           }
         }
       }, {
         key: "defineBlockVariable",
         value: function defineBlockVariable(t, r) {
+          if (r.type === "unknown") throw Error(`Tried to define variable '${t}' of unknown type`);
           for (var n = this._stack.length - 1; n >= 0; --n) {
             var a = this._stack[n];
-            if ((a == null ? void 0 : a.type) === "blockScope") return a.declarations.set(t, r), {
-              value: t,
-              dataType: r
-            };
+            if ((a == null ? void 0 : a.type) === "blockScope") return a.declarations.set(t, r), (0, _chunkL7HIBZAX.ba)(t, r);
           }
           throw new Error("No block scope found to define a variable in.");
         }
       }]);
     }(),
-    Rt = ["", "  ", "    ", "      ", "        ", "          ", "            ", "              ", "                "],
-    Ir = Rt.length - 1,
+    Ct = ["", "  ", "    ", "      ", "        ", "          ", "            ", "              ", "                "],
+    Ur = Ct.length - 1,
     Br = /*#__PURE__*/function () {
       function Br() {
         (0, _classCallCheck2.default)(this, Br);
@@ -4367,8 +4613,8 @@ ${_l10}`;
       return (0, _createClass2.default)(Br, [{
         key: "pre",
         get: function get() {
-          var _Rt$this$identLevel;
-          return (_Rt$this$identLevel = Rt[this.identLevel]) != null ? _Rt$this$identLevel : Rt[Ir].repeat(this.identLevel / Ir) + Rt[this.identLevel % Ir];
+          var _Ct$this$identLevel;
+          return (_Ct$this$identLevel = Ct[this.identLevel]) != null ? _Ct$this$identLevel : Ct[Ur].repeat(this.identLevel / Ur) + Ct[this.identLevel % Ur];
         }
       }, {
         key: "indent",
@@ -4389,9 +4635,9 @@ ${_l10}`;
         this._memoizedResolves = new WeakMap();
         this._memoizedDerived = new WeakMap();
         this._indentController = new Br();
-        this._itemStateStack = new Ur();
+        this._itemStateStack = new Ar();
         this._declarations = [];
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           itemStateStack: this._itemStateStack
         };
         this.bindGroupLayoutsToPlaceholderMap = new Map();
@@ -4445,11 +4691,11 @@ ${_l10}`;
       }, {
         key: "fnToWgsl",
         value: function fnToWgsl(t) {
-          this._itemStateStack.pushFunctionScope(t.args, t.returnType, t.externalMap);
+          this._itemStateStack.pushFunctionScope(t.args, t.argAliases, t.returnType, t.externalMap);
           try {
             return {
-              head: Cr(this, t.args, t.returnType),
-              body: Ln(this, t.body)
+              head: Wa(this, t.args, t.returnType),
+              body: Kn(this, t.body)
             };
           } finally {
             this._itemStateStack.popFunctionScope();
@@ -4475,7 +4721,7 @@ ${_l10}`;
             layoutEntry: t,
             resource: r
           }), {
-            group: _n,
+            group: Hn,
             binding: n
           };
         }
@@ -4483,7 +4729,7 @@ ${_l10}`;
         key: "readSlot",
         value: function readSlot(t) {
           var r = this._itemStateStack.readSlot(t);
-          if (r === void 0) throw new _chunk5RYM4COI.h(t);
+          if (r === void 0) throw new _chunkL7HIBZAX.j(t);
           return r;
         }
       }, {
@@ -4500,11 +4746,11 @@ ${_l10}`;
         key: "unwrap",
         value: function unwrap(t) {
           var _this14 = this;
-          if (Ne(t)) return this.withSlots(t["~providing"].pairs, function () {
+          if (Ke(t)) return this.withSlots(t["~providing"].pairs, function () {
             return _this14.unwrap(t["~providing"].inner);
           });
           var r = t;
-          for (;;) if (H(r)) r = this.readSlot(r);else if (q(r)) r = this._getOrCompute(r);else break;
+          for (;;) if (Be(r)) r = this.readSlot(r);else if (Re(r)) r = this._getOrCompute(r);else break;
           return r;
         }
       }, {
@@ -4515,27 +4761,27 @@ ${_l10}`;
           var r = (_this$_memoizedDerive = this._memoizedDerived.get(t)) != null ? _this$_memoizedDerive : [];
           this._itemStateStack.pushItem();
           try {
-            for (var o of r) if ((0, _toConsumableArray2.default)(o.slotToValueMap.entries()).every(function (_ref42) {
-              var _ref43 = (0, _slicedToArray2.default)(_ref42, 2),
-                i = _ref43[0],
-                l = _ref43[1];
-              return i.areEqual(_this15._itemStateStack.readSlot(i), l);
+            for (var o of r) if ((0, _toConsumableArray2.default)(o.slotToValueMap.entries()).every(function (_ref43) {
+              var _ref44 = (0, _slicedToArray2.default)(_ref43, 2),
+                s = _ref44[0],
+                l = _ref44[1];
+              return s.areEqual(_this15._itemStateStack.readSlot(s), l);
             })) return o.result;
-            (0, _chunk5RYM4COI.p)(_chunk5RYM4COI.m.CPU);
+            (0, _chunkL7HIBZAX.r)(_chunkL7HIBZAX.o.CPU);
             var n;
             try {
               n = t["~compute"]();
             } finally {
-              (0, _chunk5RYM4COI.q)(_chunk5RYM4COI.m.CPU);
+              (0, _chunkL7HIBZAX.s)(_chunkL7HIBZAX.o.CPU);
             }
             var a = new Map();
-            for (var _o20 of this._itemStateStack.topItem.usedSlots) a.set(_o20, this._itemStateStack.readSlot(_o20));
+            for (var _o19 of this._itemStateStack.topItem.usedSlots) a.set(_o19, this._itemStateStack.readSlot(_o19));
             return r.push({
               slotToValueMap: a,
               result: n
             }), this._memoizedDerived.set(t, r), n;
           } catch (n) {
-            throw n instanceof _chunk5RYM4COI.g ? n.appendToTrace(t) : new _chunk5RYM4COI.g(n, [t]);
+            throw n instanceof _chunkL7HIBZAX.i ? n.appendToTrace(t) : new _chunkL7HIBZAX.i(n, [t]);
           } finally {
             this._itemStateStack.popItem();
           }
@@ -4548,22 +4794,22 @@ ${_l10}`;
           var r = (_this$_memoizedResolv = this._memoizedResolves.get(t)) != null ? _this$_memoizedResolv : [];
           this._itemStateStack.pushItem();
           try {
-            for (var o of r) if ((0, _toConsumableArray2.default)(o.slotToValueMap.entries()).every(function (_ref44) {
-              var _ref45 = (0, _slicedToArray2.default)(_ref44, 2),
-                i = _ref45[0],
-                l = _ref45[1];
-              return i.areEqual(_this16._itemStateStack.readSlot(i), l);
+            for (var o of r) if ((0, _toConsumableArray2.default)(o.slotToValueMap.entries()).every(function (_ref45) {
+              var _ref46 = (0, _slicedToArray2.default)(_ref45, 2),
+                s = _ref46[0],
+                l = _ref46[1];
+              return s.areEqual(_this16._itemStateStack.readSlot(s), l);
             })) return o.result;
             var n;
-            (0, _chunkSMTSXYNG.i)(t) ? n = ur(this, t) : q(t) || H(t) ? n = this.resolve(this.unwrap(t)) : je(t) ? n = t["~resolve"](this) : n = this.resolveValue(t);
+            (0, _chunkL7HIBZAX.$)(t) ? n = ur(this, t) : Re(t) || Be(t) ? n = this.resolve(this.unwrap(t)) : nr(t) ? n = t["~resolve"](this) : n = this.resolveValue(t);
             var a = new Map();
-            for (var _o21 of this._itemStateStack.topItem.usedSlots) a.set(_o21, this._itemStateStack.readSlot(_o21));
+            for (var _o20 of this._itemStateStack.topItem.usedSlots) a.set(_o20, this._itemStateStack.readSlot(_o20));
             return r.push({
               slotToValueMap: a,
               result: n
             }), this._memoizedResolves.set(t, r), n;
           } catch (n) {
-            throw n instanceof _chunk5RYM4COI.g ? n.appendToTrace(t) : new _chunk5RYM4COI.g(n, [t]);
+            throw n instanceof _chunkL7HIBZAX.i ? n.appendToTrace(t) : new _chunkL7HIBZAX.i(n, [t]);
           } finally {
             this._itemStateStack.popItem();
           }
@@ -4572,20 +4818,20 @@ ${_l10}`;
         key: "resolve",
         value: function resolve(t) {
           var _this17 = this;
-          if (Ne(t)) return this.withSlots(t["~providing"].pairs, function () {
+          if (Ke(t)) return this.withSlots(t["~providing"].pairs, function () {
             return _this17.resolve(t["~providing"].inner);
           });
           if (t && typeof t == "object" || typeof t == "function") {
             if (this._itemStateStack.itemDepth === 0) try {
-              (0, _chunk5RYM4COI.p)(_chunk5RYM4COI.m.GPU);
-              var r = (0, _chunk5RYM4COI.n)(this, function () {
+              (0, _chunkL7HIBZAX.r)(_chunkL7HIBZAX.o.GPU);
+              var r = (0, _chunkL7HIBZAX.p)(this, function () {
                 return _this17._getOrInstantiate(t);
               });
               return `${(0, _toConsumableArray2.default)(this._declarations).join(`
 
 `)}${r}`;
             } finally {
-              (0, _chunk5RYM4COI.q)(_chunk5RYM4COI.m.GPU);
+              (0, _chunkL7HIBZAX.s)(_chunkL7HIBZAX.o.GPU);
             }
             return this._getOrInstantiate(t);
           }
@@ -4595,51 +4841,51 @@ ${_l10}`;
         key: "resolveValue",
         value: function resolveValue(t, r) {
           var _this18 = this;
-          if (J(t)) return this.resolve(t);
-          if (r && (0, _chunk5RYM4COI.B)(r)) return `array(${t.map(function (n) {
+          if (gt(t)) return this.resolve(t);
+          if (r && (0, _chunkL7HIBZAX.J)(r)) return `array(${t.map(function (n) {
             return _this18.resolveValue(n, r.elementType);
           })})`;
           if (Array.isArray(t)) return `array(${t.map(function (n) {
             return _this18.resolveValue(n);
           })})`;
-          if (r && (0, _chunk5RYM4COI.C)(r)) return `${this.resolve(r)}(${Object.entries(r.propTypes).map(function (_ref46) {
-            var _ref47 = (0, _slicedToArray2.default)(_ref46, 2),
-              n = _ref47[0],
-              a = _ref47[1];
+          if (r && (0, _chunkL7HIBZAX.K)(r)) return `${this.resolve(r)}(${Object.entries(r.propTypes).map(function (_ref47) {
+            var _ref48 = (0, _slicedToArray2.default)(_ref47, 2),
+              n = _ref48[0],
+              a = _ref48[1];
             return _this18.resolveValue(t[n], a);
           })})`;
           throw new Error(`Value ${t} (as json: ${JSON.stringify(t)}) of schema ${r} is not resolvable to WGSL`);
         }
       }]);
     }();
-  function Ve(e, t) {
+  function ke(e, t) {
     var r = new Rr(t),
       n = r.resolve(e),
       a = r.bindGroupLayoutsToPlaceholderMap,
       o = [],
-      s = new Set((0, _toConsumableArray2.default)(a.keys()).map(function (g) {
+      i = new Set((0, _toConsumableArray2.default)(a.keys()).map(function (g) {
         return g.index;
       }).filter(function (g) {
         return g !== void 0;
       })),
-      i = (0, _chunk5RYM4COI.M)(s),
+      s = (0, _chunkL7HIBZAX.da)(i),
       l = r.fixedBindings.map(function (g, c) {
         return [String(c), g.layoutEntry];
       }),
       u = function u() {
-        var g = i.next().value,
-          c = It(Object.fromEntries(l));
-        return o[g] = c, n = n.replaceAll(_n, String(g)), [g, new Pe(c, Object.fromEntries(r.fixedBindings.map(function (y, x) {
+        var g = s.next().value,
+          c = Bt(Object.fromEntries(l));
+        return o[g] = c, n = n.replaceAll(Hn, String(g)), [g, new $e(c, Object.fromEntries(r.fixedBindings.map(function (y, x) {
           return [String(x), y.resource];
         })))];
       },
       d = l.length > 0 ? u() : null;
-    for (var _ref48 of a.entries()) {
+    for (var _ref49 of a.entries()) {
       var _g$index;
-      var _ref49 = (0, _slicedToArray2.default)(_ref48, 2);
-      var g = _ref49[0];
-      var c = _ref49[1];
-      var y = (_g$index = g.index) != null ? _g$index : i.next().value;
+      var _ref50 = (0, _slicedToArray2.default)(_ref49, 2);
+      var g = _ref50[0];
+      var c = _ref50[1];
+      var y = (_g$index = g.index) != null ? _g$index : s.next().value;
       o[y] = g, n = n.replaceAll(c, String(y));
     }
     return {
@@ -4648,450 +4894,41 @@ ${_l10}`;
       catchall: d
     };
   }
-  function Cr(e, t, r) {
+  function Wa(e, t, r) {
     var n = t.map(function (a) {
       return `${a.value}: ${e.resolve(a.dataType)}`;
     }).join(", ");
-    return r !== void 0 ? `(${n}) -> ${(0, _chunkSMTSXYNG.ja)(r)} ${e.resolve(r)}` : `(${n})`;
+    return r.type !== "void" ? `(${n}) -> ${(0, _chunkSFECI7OX.ba)(r)} ${e.resolve(r)}` : `(${n})`;
   }
-  function oe(e, t) {
-    var r = [];
-    typeof t == "string" && (e.isEntry ? (Array.isArray(e.argTypes) && (0, _chunk5RYM4COI.C)(e.argTypes[0]) && r.push({
-      In: e.argTypes[0]
-    }), (0, _chunk5RYM4COI.C)(e.returnType) && r.push({
-      Out: e.returnType
-    })) : Array.isArray(e.argTypes) && (dn(t, Array.isArray(e.argTypes) ? e.argTypes : Object.values(e.argTypes), function (o) {
-      return r.push(o);
-    }), Be(t, e.returnType, function (o) {
-      return r.push(o);
-    })));
-    var n = {
-        applyExternals: function applyExternals(o) {
-          r.push(o);
-        },
-        resolve: function resolve(o) {
-          var s = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-          var i = {};
-          for (var u of r) Q(i, u);
-          var l = o.names.makeUnique((0, _chunk5RYM4COI.c)(this));
-          if (typeof t == "string") {
-            var _u11 = "";
-            if (!e.isEntry) _u11 = Array.isArray(e.argTypes) ? "" : Cr(o, Object.entries(e.argTypes).map(function (_ref50) {
-              var _ref51 = (0, _slicedToArray2.default)(_ref50, 2),
-                g = _ref51[0],
-                c = _ref51[1];
-              return {
-                value: g,
-                dataType: c
-              };
-            }), e.returnType);else {
-              var g = Array.isArray(e.argTypes) && (0, _chunk5RYM4COI.C)(e.argTypes[0]) ? "(in: In)" : "()",
-                c = (0, _chunk5RYM4COI.A)(e.returnType) ? (0, _chunkSMTSXYNG.ja)(e.returnType) : "",
-                y = e.returnType !== void 0 ? (0, _chunk5RYM4COI.C)(e.returnType) ? "-> Out" : `-> ${c !== "" ? c : "@location(0)"} ${o.resolve(e.returnType)}` : "";
-              _u11 = `${g} ${y} `;
-            }
-            var d = ye(o, i, `${_u11}${t.trim()}`);
-            o.addDeclaration(`${s}fn ${l}${d}`);
-          } else {
-            var _u12$ast;
-            var _u12 = gn(t);
-            if (_u12 != null && _u12.externals) {
-              var h = Object.fromEntries(Object.entries(_u12.externals).filter(function (_ref52) {
-                var _ref53 = (0, _slicedToArray2.default)(_ref52, 1),
-                  T = _ref53[0];
-                return !(T in i);
-              }));
-              Q(i, h);
-            }
-            var _d6 = (_u12$ast = _u12 == null ? void 0 : _u12.ast) != null ? _u12$ast : o.transpileFn(String(t));
-            _d6.argNames.type === "destructured-object" && Q(i, Object.fromEntries(_d6.argNames.props.map(function (_ref54) {
-              var h = _ref54.prop,
-                T = _ref54.alias;
-              return [T, h];
-            }))), !Array.isArray(e.argTypes) && _d6.argNames.type === "identifiers" && _d6.argNames.names[0] !== void 0 && Q(i, (0, _defineProperty2.default)({}, _d6.argNames.names[0], Object.fromEntries(Object.keys(e.argTypes).map(function (h) {
-              return [h, h];
-            }))));
-            var _g5 = _d6.externalNames.filter(function (h) {
-              return !(h in i);
-            });
-            if (_g5.length > 0) throw new _chunk5RYM4COI.j((0, _chunk5RYM4COI.c)(this), _g5);
-            var _c3 = Array.isArray(e.argTypes) ? _d6.argNames.type === "identifiers" ? e.argTypes.map(function (h, T) {
-                var _ref55;
-                return {
-                  value: (_ref55 = _d6.argNames.type === "identifiers" ? _d6.argNames.names[T] : void 0) != null ? _ref55 : `arg_${T}`,
-                  dataType: h
-                };
-              }) : [] : Object.entries(e.argTypes).map(function (_ref56) {
-                var _ref57 = (0, _slicedToArray2.default)(_ref56, 2),
-                  h = _ref57[0],
-                  T = _ref57[1];
-                return {
-                  value: h,
-                  dataType: T
-                };
-              }),
-              _o$fnToWgsl = o.fnToWgsl({
-                args: _c3,
-                returnType: e.returnType,
-                body: _d6.body,
-                externalMap: i
-              }),
-              _y4 = _o$fnToWgsl.head,
-              x = _o$fnToWgsl.body;
-            o.addDeclaration(`${s}fn ${l}${o.resolve(_y4)}${o.resolve(x)}`);
-          }
-          return l;
-        }
-      },
-      a = (0, _chunk5RYM4COI.c)(t);
-    return a !== void 0 && (0, _chunk5RYM4COI.d)(n, a), n;
-  }
-  function On(e) {
-    var t = 0;
-    return Object.fromEntries(Object.entries(e).map(function (_ref58) {
-      var _ref59 = (0, _slicedToArray2.default)(_ref58, 2),
-        r = _ref59[0],
-        n = _ref59[1];
-      if ((0, _chunkSMTSXYNG.ia)(n)) return [r, n];
-      var a = (0, _chunkSMTSXYNG.h)(n);
-      return a !== void 0 ? (t = a + 1, [r, n]) : [r, (0, _chunkSMTSXYNG.ga)(t++, n)];
-    }));
-  }
-  function Ct(e) {
-    return (0, _chunkSMTSXYNG.i)(e) ? (0, _chunk5RYM4COI.L)(e) ? void 0 : (0, _chunkSMTSXYNG.h)(e) !== void 0 ? e : (0, _chunkSMTSXYNG.ga)(0, e) : (0, _chunkSMTSXYNG.ka)(On(e));
-  }
-  function $e(e) {
-    return (0, _chunkSMTSXYNG.ka)(On(e));
-  }
-  function se(e) {
-    for (var _len3 = arguments.length, t = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-      t[_key3 - 1] = arguments[_key3];
-    }
-    return Ca(e) ? Pa.apply(void 0, [e].concat(t)) : e;
-  }
-  function Ca(e) {
-    return Array.isArray(e) && "raw" in e && Array.isArray(e.raw) && e.raw.every(function (t) {
-      return typeof t == "string";
-    });
-  }
-  function Pa(e) {
-    for (var _len4 = arguments.length, t = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
-      t[_key4 - 1] = arguments[_key4];
-    }
-    return e.slice(1).reduce(function (r, n, a) {
-      return `${r}${t[a]}${n}`;
-    }, e[0]);
-  }
-  function Gn(e) {
-    var _e$workgroupSize$, _e$workgroupSize$2, _e$workgroupSize$3;
-    var t = {
-        argTypes: e.in && Object.keys(e.in).length !== 0 ? [$e(e.in)] : [],
-        returnType: void 0,
-        workgroupSize: [(_e$workgroupSize$ = e.workgroupSize[0]) != null ? _e$workgroupSize$ : 1, (_e$workgroupSize$2 = e.workgroupSize[1]) != null ? _e$workgroupSize$2 : 1, (_e$workgroupSize$3 = e.workgroupSize[2]) != null ? _e$workgroupSize$3 : 1],
-        isEntry: !0
-      },
-      r = function r(n) {
-        for (var _len5 = arguments.length, a = new Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
-          a[_key5 - 1] = arguments[_key5];
-        }
-        return Va(t, e.workgroupSize, se.apply(void 0, [n].concat(a)));
-      };
-    return Object.assign(Object.assign(r, t), {
-      does: r
-    });
-  }
-  function Va(e, t, r) {
-    var n = oe(e, r),
-      a = e.argTypes[0];
-    return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
-      shell: e,
-      $uses: function $uses(o) {
-        return n.applyExternals(o), this;
-      }
-    }, _chunk5RYM4COI.b, n), "$name", function $name(o) {
-      return (0, _chunk5RYM4COI.d)(n, o), (0, _chunk5RYM4COI.e)(a) && a.$name(`${o}_Input`), this;
-    }), "~resolve", function resolve(o) {
-      return n.resolve(o, `@compute @workgroup_size(${t.join(", ")}) `);
-    }), "toString", function toString() {
-      var _p30;
-      return `computeFn:${(_p30 = (0, _chunk5RYM4COI.c)(n)) != null ? _p30 : "<unnamed>"}`;
-    });
-  }
-  function Wn(e, t) {
-    var r = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "argTypes", e), "returnType", t), "isEntry", !1),
-      n = function n(a) {
-        for (var _len6 = arguments.length, o = new Array(_len6 > 1 ? _len6 - 1 : 0), _key6 = 1; _key6 < _len6; _key6++) {
-          o[_key6 - 1] = arguments[_key6];
-        }
-        return ka(r, se.apply(void 0, [a].concat(o)));
-      };
-    return Object.assign(Object.assign(n, r), {
-      does: n
-    });
-  }
-  function Pr(e) {
-    return (e == null ? void 0 : e.resourceType) === "function";
-  }
-  function $a(_ref61) {
-    var _p31;
-    var _ref62 = (0, _slicedToArray2.default)(_ref61, 2),
-      e = _ref62[0],
-      t = _ref62[1];
-    return `${(_p31 = (0, _chunk5RYM4COI.c)(e)) != null ? _p31 : "<unnamed>"}=${t}`;
-  }
-  function ka(e, t) {
-    var r = oe(e, t),
-      n = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, {
-        implementation: t,
-        argTypes: e.argTypes
-      }), "shell", e), "resourceType", "function"), "$uses", function $uses(s) {
-        return r.applyExternals(s), this;
-      }), _chunk5RYM4COI.b, r), "$name", function $name(s) {
-        return (0, _chunk5RYM4COI.d)(r, s), this;
-      }), "with", function _with(s, i) {
-        return Mn(o, [[ge(s) ? s.slot : s, i]]);
-      }), "~resolve", function resolve(s) {
-        if (typeof t == "string") return r.resolve(s);
-        var i = s;
-        if (i.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
-        try {
-          return i.callStack.push(e.returnType), r.resolve(s);
-        } finally {
-          i.callStack.pop();
-        }
-      }),
-      a = (0, _chunk5RYM4COI.N)(function () {
-        if (typeof t == "string") throw new Error("Cannot execute on the CPU functions constructed with raw WGSL");
-        return t.apply(void 0, arguments);
-      }, function () {
-        var _e$returnType;
-        for (var _len7 = arguments.length, s = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
-          s[_key7] = arguments[_key7];
-        }
-        return {
-          value: new Pt(o, s.map(function (i) {
-            return i.value;
-          })),
-          dataType: (_e$returnType = e.returnType) != null ? _e$returnType : U
-        };
-      }, e.argTypes);
-    a[_chunk5RYM4COI.a].implementation = t;
-    var o = Object.assign(a, n);
-    return Object.defineProperty(o, "toString", {
-      value: function value() {
-        var _p32;
-        return `fn:${(_p32 = (0, _chunk5RYM4COI.c)(r)) != null ? _p32 : "<unnamed>"}`;
-      }
-    }), o;
-  }
-  function Mn(e, t) {
-    var r = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, {
-        implementation: e[_chunk5RYM4COI.a].implementation,
-        argTypes: e[_chunk5RYM4COI.a].argTypes
-      }), "resourceType", "function"), "shell", e.shell), "~providing", {
-        inner: e,
-        pairs: t
-      }), "$uses", function $uses(o) {
-        return e.$uses(o), this;
-      }), _chunk5RYM4COI.b, e), "$name", function $name(o) {
-        return e.$name(o), this;
-      }), "with", function _with(o, s) {
-        return Mn(a, [].concat((0, _toConsumableArray2.default)(t), [[ge(o) ? o.slot : o, s]]));
-      }),
-      n = (0, _chunk5RYM4COI.N)(function () {
-        return e.apply(void 0, arguments);
-      }, function () {
-        var _e$shell$returnType;
-        for (var _len8 = arguments.length, o = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
-          o[_key8] = arguments[_key8];
-        }
-        return {
-          value: new Pt(a, o.map(function (s) {
-            return s.value;
-          })),
-          dataType: (_e$shell$returnType = e.shell.returnType) != null ? _e$shell$returnType : U
-        };
-      }, e.shell.argTypes),
-      a = Object.assign(n, r);
-    return Object.defineProperty(a, "toString", {
-      value: function value() {
-        var _p33;
-        return `fn:${(_p33 = (0, _chunk5RYM4COI.c)(e)) != null ? _p33 : "<unnamed>"}[${t.map($a).join(", ")}]`;
-      }
-    }), a[_chunk5RYM4COI.a].implementation = e[_chunk5RYM4COI.a].implementation, a;
-  }
-  var Pt = /*#__PURE__*/function () {
-    function Pt(t, r) {
-      (0, _classCallCheck2.default)(this, Pt);
-      this._fn = t;
-      this._params = r;
-      this[_chunk5RYM4COI.b] = t;
-    }
-    return (0, _createClass2.default)(Pt, [{
-      key: "~resolve",
-      value: function resolve(t) {
-        return t.resolve(`${t.resolve(this._fn)}(${this._params.map(function (r) {
-          return t.resolve(r);
-        }).join(", ")})`);
-      }
-    }, {
-      key: "toString",
-      value: function toString() {
-        var _p34;
-        return `call:${(_p34 = (0, _chunk5RYM4COI.c)(this)) != null ? _p34 : "<unnamed>"}`;
-      }
-    }]);
-  }();
-  function Nn(e) {
-    var t = {
-        argTypes: e.in && Object.keys(e.in).length !== 0 ? [$e(e.in)] : [],
-        targets: e.out,
-        returnType: Ct(e.out),
-        isEntry: !0
-      },
-      r = function r(n) {
-        for (var _len9 = arguments.length, a = new Array(_len9 > 1 ? _len9 - 1 : 0), _key9 = 1; _key9 < _len9; _key9++) {
-          a[_key9 - 1] = arguments[_key9];
-        }
-        return Ea(t, se.apply(void 0, [n].concat(a)));
-      };
-    return Object.assign(Object.assign(r, t), {
-      does: r
-    });
-  }
-  function Ea(e, t) {
-    var r = oe(e, t),
-      n = e.returnType,
-      a = e.argTypes[0];
-    return typeof t == "string" && Be(t, n, function (s) {
-      return r.applyExternals(s);
-    }), (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
-      shell: e,
-      outputType: n,
-      $uses: function $uses(s) {
-        return r.applyExternals(s), this;
-      }
-    }, _chunk5RYM4COI.b, r), "$name", function $name(s) {
-      return (0, _chunk5RYM4COI.d)(r, s), (0, _chunk5RYM4COI.e)(n) && n.$name(`${s}_Output`), (0, _chunk5RYM4COI.e)(a) && a.$name(`${s}_Input`), this;
-    }), "~resolve", function resolve(s) {
-      if (typeof t == "string") return r.resolve(s, "@fragment ");
-      var i = s;
-      if (i.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
-      try {
-        return i.callStack.push(n), r.resolve(s, "@fragment ");
-      } finally {
-        i.callStack.pop();
-      }
-    }), "toString", function toString() {
-      var _p35;
-      return `fragmentFn:${(_p35 = (0, _chunk5RYM4COI.c)(r)) != null ? _p35 : "<unnamed>"}`;
-    });
-  }
-  function jn(e) {
-    var _e$in;
-    var t = {
-        attributes: [(_e$in = e.in) != null ? _e$in : {}],
-        returnType: Object.keys(e.out).length !== 0 ? Ct(e.out) : void 0,
-        argTypes: e.in && Object.keys(e.in).length !== 0 ? [$e(e.in)] : [],
-        isEntry: !0
-      },
-      r = function r(n) {
-        for (var _len10 = arguments.length, a = new Array(_len10 > 1 ? _len10 - 1 : 0), _key10 = 1; _key10 < _len10; _key10++) {
-          a[_key10 - 1] = arguments[_key10];
-        }
-        return La(t, se.apply(void 0, [n].concat(a)));
-      };
-    return Object.assign(Object.assign(r, t), {
-      does: r
-    });
-  }
-  function La(e, t) {
-    var r = oe(e, t),
-      n = e.returnType,
-      a = e.argTypes[0];
-    return typeof t == "string" && Be(t, n, function (o) {
-      return r.applyExternals(o);
-    }), (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
-      shell: e,
-      outputType: n,
-      inputType: a,
-      $uses: function $uses(o) {
-        return r.applyExternals(o), this;
-      }
-    }, _chunk5RYM4COI.b, r), "$name", function $name(o) {
-      return (0, _chunk5RYM4COI.d)(r, o), (0, _chunk5RYM4COI.e)(n) && n.$name(`${o}_Output`), (0, _chunk5RYM4COI.e)(a) && a.$name(`${o}_Input`), this;
-    }), "~resolve", function resolve(o) {
-      if (typeof t == "string") return r.resolve(o, "@vertex ");
-      var s = o;
-      if (s.callStack === void 0) throw new Error("Cannot resolve a TGSL function outside of a generation context");
-      try {
-        return s.callStack.push(n), r.resolve(o, "@vertex ");
-      } finally {
-        s.callStack.pop();
-      }
-    }), "toString", function toString() {
-      var _p36;
-      return `vertexFn:${(_p36 = (0, _chunk5RYM4COI.c)(r)) != null ? _p36 : "<unnamed>"}`;
-    });
-  }
-  var ie = exports.RandomNameRegistry = /*#__PURE__*/function () {
-      function ie() {
-        (0, _classCallCheck2.default)(this, ie);
-        this.lastUniqueId = 0;
-      }
-      return (0, _createClass2.default)(ie, [{
-        key: "makeUnique",
-        value: function makeUnique(t) {
-          var r;
-          return t ? (r = t.replaceAll(/\s/g, "_"), r = r.replaceAll(/[^\w\d]/g, "")) : r = "item", `${r}_${this.lastUniqueId++}`;
-        }
-      }]);
-    }(),
-    ue = exports.StrictNameRegistry = /*#__PURE__*/function () {
-      function ue() {
-        (0, _classCallCheck2.default)(this, ue);
-        this._usedNames = new Set();
-      }
-      return (0, _createClass2.default)(ue, [{
-        key: "makeUnique",
-        value: function makeUnique(t) {
-          if (t === void 0) throw new Error("Unnamed item found when using a strict name registry");
-          var r = 0,
-            n = t;
-          for (; this._usedNames.has(n);) r++, n = `${t}_${r}`;
-          return this._usedNames.add(n), n;
-        }
-      }]);
-    }();
-  function zn(e) {
+  function qn(e) {
     var t = e.externals,
       r = e.template,
       n = e.names,
       a = e.unstable_jitTranspiler,
       o = {};
-    Q(o, t != null ? t : {});
-    var s = {
+    ge(o, t != null ? t : {});
+    var i = {
         "~resolve": function resolve(l) {
-          return ye(l, o, r != null ? r : "");
+          return ce(l, o, r != null ? r : "");
         },
         toString: function toString() {
           return "<root>";
         }
       },
-      _Ve = Ve(s, {
-        names: n === "strict" ? new ue() : new ie(),
+      _ke = ke(i, {
+        names: n === "strict" ? new ie() : new oe(),
         jitTranspiler: a
       }),
-      i = _Ve.code;
-    return i;
+      s = _ke.code;
+    return s;
   }
-  var tt = /*#__PURE__*/function () {
-    function tt(t) {
-      (0, _classCallCheck2.default)(this, tt);
+  var nt = /*#__PURE__*/function () {
+    function nt(t) {
+      (0, _classCallCheck2.default)(this, nt);
       this._map = new WeakMap();
       this._make = t;
     }
-    return (0, _createClass2.default)(tt, [{
+    return (0, _createClass2.default)(nt, [{
       key: "getOrMake",
       value: function getOrMake(t) {
         if (this._map.has(t)) return this._map.get(t);
@@ -5103,24 +4940,24 @@ ${_l10}`;
       }
     }]);
   }();
-  function Kn(e, t, r) {
-    return new Vr(new $r(e, t, r), {});
+  function Jn(e, t, r) {
+    return new Pr(new Cr(e, t, r), {});
   }
-  function Hn(e) {
+  function Yn(e) {
     var t = e;
-    return (t == null ? void 0 : t.resourceType) === "compute-pipeline" && !!t[_chunk5RYM4COI.a];
+    return (t == null ? void 0 : t.resourceType) === "compute-pipeline" && !!t[_chunkL7HIBZAX.a];
   }
-  var Vr = /*#__PURE__*/function () {
+  var Pr = /*#__PURE__*/function () {
       function e(t, r) {
         (0, _classCallCheck2.default)(this, e);
         this.resourceType = "compute-pipeline";
         this._core = t;
         this._priors = r;
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           get rawPipeline() {
             return t.unwrap().pipeline;
           }
-        }, this[_chunk5RYM4COI.b] = t;
+        }, this[_chunkL7HIBZAX.d] = t;
       }
       return (0, _createClass2.default)(e, [{
         key: "rawPipeline",
@@ -5138,74 +4975,74 @@ ${_l10}`;
       }, {
         key: "dispatchWorkgroups",
         value: function dispatchWorkgroups(t, r, n) {
-          var _p37,
+          var _p38,
             _this19 = this;
           var a = this._core.unwrap(),
             o = this._core.branch,
-            s = o.commandEncoder.beginComputePass({
-              label: (_p37 = (0, _chunk5RYM4COI.c)(this._core)) != null ? _p37 : "<unnamed>"
+            i = o.commandEncoder.beginComputePass({
+              label: (_p38 = (0, _chunkL7HIBZAX.e)(this._core)) != null ? _p38 : "<unnamed>"
             });
-          s.setPipeline(a.pipeline);
-          var i = new Set(a.bindGroupLayouts);
+          i.setPipeline(a.pipeline);
+          var s = new Set(a.bindGroupLayouts);
           if (a.bindGroupLayouts.forEach(function (l, u) {
-            if (a.catchall && u === a.catchall[0]) s.setBindGroup(u, o.unwrap(a.catchall[1])), i.delete(l);else {
+            if (a.catchall && u === a.catchall[0]) i.setBindGroup(u, o.unwrap(a.catchall[1])), s.delete(l);else {
               var _this19$_priors$bindG;
               var d = (_this19$_priors$bindG = _this19._priors.bindGroupLayoutMap) == null ? void 0 : _this19$_priors$bindG.get(l);
-              d !== void 0 && (i.delete(l), s.setBindGroup(u, o.unwrap(d)));
+              d !== void 0 && (s.delete(l), i.setBindGroup(u, o.unwrap(d)));
             }
-          }), i.size > 0) throw new _chunk5RYM4COI.k(i);
-          s.dispatchWorkgroups(t, r, n), s.end();
+          }), s.size > 0) throw new _chunkL7HIBZAX.m(s);
+          i.dispatchWorkgroups(t, r, n), i.end();
         }
       }, {
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this._core, t), this;
+          return (0, _chunkL7HIBZAX.f)(this._core, t), this;
         }
       }]);
     }(),
-    $r = /*#__PURE__*/function () {
-      function $r(t, r, n) {
-        (0, _classCallCheck2.default)(this, $r);
+    Cr = /*#__PURE__*/function () {
+      function Cr(t, r, n) {
+        (0, _classCallCheck2.default)(this, Cr);
         this.branch = t;
         this._slotBindings = r;
         this._entryFn = n;
       }
-      return (0, _createClass2.default)($r, [{
+      return (0, _createClass2.default)(Cr, [{
         key: "unwrap",
         value: function unwrap() {
           var _this20 = this;
           if (this._memo === void 0) {
-            var _n$a$, _p39, _p40, _p41, _p42;
+            var _n$a$, _p40, _p41, _p42, _p43;
             var t = this.branch.device,
-              _Ve2 = Ve({
+              _ke2 = ke({
                 "~resolve": function resolve(o) {
                   return o.withSlots(_this20._slotBindings, function () {
                     o.resolve(_this20._entryFn);
                   }), "";
                 },
                 toString: function toString() {
-                  var _p38;
-                  return `computePipeline:${(_p38 = (0, _chunk5RYM4COI.c)(_this20)) != null ? _p38 : "<unnamed>"}`;
+                  var _p39;
+                  return `computePipeline:${(_p39 = (0, _chunkL7HIBZAX.e)(_this20)) != null ? _p39 : "<unnamed>"}`;
                 }
               }, {
                 names: this.branch.nameRegistry,
                 jitTranspiler: this.branch.jitTranspiler
               }),
-              r = _Ve2.code,
-              n = _Ve2.bindGroupLayouts,
-              a = _Ve2.catchall;
-            a !== null && (_n$a$ = n[a[0]]) != null && _n$a$.$name(`${(_p39 = (0, _chunk5RYM4COI.c)(this)) != null ? _p39 : "<unnamed>"} - Automatic Bind Group & Layout`), this._memo = {
+              r = _ke2.code,
+              n = _ke2.bindGroupLayouts,
+              a = _ke2.catchall;
+            a !== null && (_n$a$ = n[a[0]]) != null && _n$a$.$name(`${(_p40 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p40 : "<unnamed>"} - Automatic Bind Group & Layout`), this._memo = {
               pipeline: t.createComputePipeline({
-                label: (_p40 = (0, _chunk5RYM4COI.c)(this)) != null ? _p40 : "<unnamed>",
+                label: (_p41 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p41 : "<unnamed>",
                 layout: t.createPipelineLayout({
-                  label: `${(_p41 = (0, _chunk5RYM4COI.c)(this)) != null ? _p41 : "<unnamed>"} - Pipeline Layout`,
+                  label: `${(_p42 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p42 : "<unnamed>"} - Pipeline Layout`,
                   bindGroupLayouts: n.map(function (o) {
                     return _this20.branch.unwrap(o);
                   })
                 }),
                 compute: {
                   module: t.createShaderModule({
-                    label: `${(_p42 = (0, _chunk5RYM4COI.c)(this)) != null ? _p42 : "<unnamed>"} - Shader`,
+                    label: `${(_p43 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p43 : "<unnamed>"} - Shader`,
                     code: r
                   })
                 }
@@ -5218,71 +5055,71 @@ ${_l10}`;
         }
       }]);
     }();
-  function Lr(e) {
+  function kr(e) {
     var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "vertex";
-    return new Er(e, t);
+    return new $r(e, t);
   }
   function $t(e) {
     return (e == null ? void 0 : e.resourceType) === "vertex-layout";
   }
-  var kr = Symbol("defaultAttribEntry");
+  var Vr = Symbol("defaultAttribEntry");
   function Vt(e, t, r, n, a) {
-    if ((0, _chunk5RYM4COI.K)(t) || (0, _chunkSMTSXYNG.g)(t)) {
-      var o = (0, _chunkSMTSXYNG.h)(t);
-      return o !== void 0 && (n[a != null ? a : kr] = o), Vt(e, t.inner, (0, _chunkSMTSXYNG.a)(r, (0, _chunkSMTSXYNG.$)(t)), n);
+    if ((0, _chunkL7HIBZAX.S)(t) || (0, _chunkL7HIBZAX.X)(t)) {
+      var o = (0, _chunkL7HIBZAX._)(t);
+      return o !== void 0 && (n[a != null ? a : Vr] = o), Vt(e, t.inner, (0, _chunkSFECI7OX.a)(r, (0, _chunkSFECI7OX.T)(t)), n);
     }
-    if ((0, _chunk5RYM4COI.C)(t)) {
-      var _o22 = r;
-      return Object.fromEntries(Object.entries(t.propTypes).map(function (_ref65) {
-        var _ref66 = (0, _slicedToArray2.default)(_ref65, 2),
-          s = _ref66[0],
-          i = _ref66[1];
-        _o22 = (0, _chunkSMTSXYNG.a)(_o22, (0, _chunkSMTSXYNG._)(i));
-        var l = [s, Vt(e, i, _o22, n, s)];
-        return _o22 += (0, _chunkSMTSXYNG.ba)(i), l;
+    if ((0, _chunkL7HIBZAX.K)(t)) {
+      var _o21 = r;
+      return Object.fromEntries(Object.entries(t.propTypes).map(function (_ref51) {
+        var _ref52 = (0, _slicedToArray2.default)(_ref51, 2),
+          i = _ref52[0],
+          s = _ref52[1];
+        _o21 = (0, _chunkSFECI7OX.a)(_o21, (0, _chunkSFECI7OX.S)(s));
+        var l = [i, Vt(e, s, _o21, n, i)];
+        return _o21 += (0, _chunkSFECI7OX.V)(s), l;
       }));
     }
-    if ((0, _chunkSMTSXYNG.f)(t)) {
-      var _o23 = r;
-      return Object.fromEntries(Object.entries(t.propTypes).map(function (_ref67) {
-        var _ref68 = (0, _slicedToArray2.default)(_ref67, 2),
-          s = _ref68[0],
-          i = _ref68[1];
-        _o23 = (0, _chunkSMTSXYNG.a)(_o23, (0, _chunkSMTSXYNG.$)(i));
-        var l = [s, Vt(e, i, _o23, n, s)];
-        return _o23 += (0, _chunkSMTSXYNG.ba)(i), l;
+    if ((0, _chunkL7HIBZAX.W)(t)) {
+      var _o22 = r;
+      return Object.fromEntries(Object.entries(t.propTypes).map(function (_ref53) {
+        var _ref54 = (0, _slicedToArray2.default)(_ref53, 2),
+          i = _ref54[0],
+          s = _ref54[1];
+        _o22 = (0, _chunkSFECI7OX.a)(_o22, (0, _chunkSFECI7OX.T)(s));
+        var l = [i, Vt(e, s, _o22, n, i)];
+        return _o22 += (0, _chunkSFECI7OX.V)(s), l;
       }));
     }
     if ("type" in t && typeof t.type == "string") {
-      if (_chunkSMTSXYNG.b.includes(t.type)) return {
+      if (_chunkL7HIBZAX.u.includes(t.type)) return {
         _layout: e,
         format: t.type,
         offset: r
       };
-      var _o24 = _chunkSMTSXYNG.c[t.type];
-      if (_o24) return {
+      var _o23 = _chunkL7HIBZAX.v[t.type];
+      if (_o23) return {
         _layout: e,
-        format: _o24,
+        format: _o23,
         offset: r
       };
     }
     throw new Error(`Unsupported data used in vertex layout: ${String(t)}`);
   }
-  var Er = /*#__PURE__*/function () {
-    function Er(t, r) {
-      (0, _classCallCheck2.default)(this, Er);
+  var $r = /*#__PURE__*/function () {
+    function $r(t, r) {
+      (0, _classCallCheck2.default)(this, $r);
       this.resourceType = "vertex-layout";
       this._customLocationMap = {};
       this.schemaForCount = t;
       this.stepMode = r;
       var n = t(0);
-      this.stride = (0, _chunkSMTSXYNG.a)((0, _chunkSMTSXYNG.ba)(n.elementType), (0, _chunkSMTSXYNG._)(n)), this.attrib = Vt(this, n.elementType, 0, this._customLocationMap);
+      this.stride = (0, _chunkSFECI7OX.a)((0, _chunkSFECI7OX.V)(n.elementType), (0, _chunkSFECI7OX.S)(n)), this.attrib = Vt(this, n.elementType, 0, this._customLocationMap);
     }
-    return (0, _createClass2.default)(Er, [{
+    return (0, _createClass2.default)($r, [{
       key: "vertexLayout",
       get: function get() {
         var _this21 = this;
-        if (this._customLocationMap[kr] !== void 0) {
+        if (this._customLocationMap[Vr] !== void 0) {
           if (typeof this.attrib.format != "string" || typeof this.attrib.offset != "number") throw new Error("Single attribute vertex layouts must have a format and offset.");
           return {
             arrayStride: this.stride,
@@ -5290,7 +5127,7 @@ ${_l10}`;
             attributes: [{
               format: this.attrib.format,
               offset: this.attrib.offset,
-              shaderLocation: this._customLocationMap[kr]
+              shaderLocation: this._customLocationMap[Vr]
             }]
           };
         }
@@ -5300,10 +5137,10 @@ ${_l10}`;
         return {
           arrayStride: this.stride,
           stepMode: this.stepMode,
-          attributes: (0, _toConsumableArray2.default)(Object.entries(this.attrib).map(function (_ref69) {
-            var _ref70 = (0, _slicedToArray2.default)(_ref69, 2),
-              r = _ref70[0],
-              n = _ref70[1];
+          attributes: (0, _toConsumableArray2.default)(Object.entries(this.attrib).map(function (_ref55) {
+            var _ref56 = (0, _slicedToArray2.default)(_ref55, 2),
+              r = _ref56[0],
+              n = _ref56[1];
             return {
               format: n.format,
               offset: n.offset,
@@ -5315,16 +5152,16 @@ ${_l10}`;
     }, {
       key: "$name",
       value: function $name(t) {
-        return (0, _chunk5RYM4COI.d)(this, t), this;
+        return (0, _chunkL7HIBZAX.f)(this, t), this;
       }
     }]);
   }();
-  function _a(e) {
+  function Na(e) {
     return typeof (e == null ? void 0 : e.loadOp) == "string";
   }
-  function qn(e, t) {
-    if ((0, _chunkSMTSXYNG.i)(e)) {
-      if (!_a(t)) throw new Error("Expected a single color attachment, not a record.");
+  function Qn(e, t) {
+    if ((0, _chunkL7HIBZAX.$)(e)) {
+      if (!Na(t)) throw new Error("Expected a single color attachment, not a record.");
       return [t];
     }
     var r = [];
@@ -5335,13 +5172,13 @@ ${_l10}`;
     }
     return r;
   }
-  function Oa(e) {
+  function ja(e) {
     return typeof (e == null ? void 0 : e.format) == "string";
   }
-  function Jn(e, t) {
-    if ((0, _chunkSMTSXYNG.i)(e)) {
-      if ((0, _chunk5RYM4COI.L)(e)) return [];
-      if (!Oa(t)) throw new Error("Expected a single color target configuration, not a record.");
+  function Xn(e, t) {
+    if ((0, _chunkL7HIBZAX.$)(e)) {
+      if ((0, _chunkL7HIBZAX.T)(e)) return [];
+      if (!ja(t)) throw new Error("Expected a single color target configuration, not a record.");
       return [t];
     }
     var r = [];
@@ -5352,33 +5189,33 @@ ${_l10}`;
     }
     return r;
   }
-  function Yn(e) {
-    return new _r(new Or(e), {});
+  function Zn(e) {
+    return new _r(new Er(e), {});
   }
-  function Qn(e) {
+  function ea(e) {
     var t = e;
-    return (t == null ? void 0 : t.resourceType) === "render-pipeline" && !!t[_chunk5RYM4COI.a];
+    return (t == null ? void 0 : t.resourceType) === "render-pipeline" && !!t[_chunkL7HIBZAX.a];
   }
   var _r = /*#__PURE__*/function () {
       function e(t, r) {
         (0, _classCallCheck2.default)(this, e);
         this.resourceType = "render-pipeline";
-        this[_chunk5RYM4COI.a] = {
+        this[_chunkL7HIBZAX.a] = {
           core: t,
           priors: r
-        }, this[_chunk5RYM4COI.b] = t;
+        }, this[_chunkL7HIBZAX.d] = t;
       }
       return (0, _createClass2.default)(e, [{
         key: "$name",
         value: function $name(t) {
-          return (0, _chunk5RYM4COI.d)(this[_chunk5RYM4COI.a].core, t), this;
+          return (0, _chunkL7HIBZAX.f)(this[_chunkL7HIBZAX.a].core, t), this;
         }
       }, {
         key: "with",
         value: function _with(t, r) {
           var _n$priors$bindGroupLa, _n$priors$vertexLayou;
-          var n = this[_chunk5RYM4COI.a];
-          if (Ut(t)) return new e(n.core, Object.assign({}, n.priors, {
+          var n = this[_chunkL7HIBZAX.a];
+          if (Rt(t)) return new e(n.core, Object.assign({}, n.priors, {
             bindGroupLayoutMap: new Map([].concat((0, _toConsumableArray2.default)((_n$priors$bindGroupLa = n.priors.bindGroupLayoutMap) != null ? _n$priors$bindGroupLa : []), [[t, r]]))
           }));
           if ($t(t)) return new e(n.core, Object.assign({}, n.priors, {
@@ -5389,7 +5226,7 @@ ${_l10}`;
       }, {
         key: "withColorAttachment",
         value: function withColorAttachment(t) {
-          var r = this[_chunk5RYM4COI.a];
+          var r = this[_chunkL7HIBZAX.a];
           return new e(r.core, Object.assign({}, r.priors, {
             colorAttachment: t
           }));
@@ -5397,7 +5234,7 @@ ${_l10}`;
       }, {
         key: "withDepthStencilAttachment",
         value: function withDepthStencilAttachment(t) {
-          var r = this[_chunk5RYM4COI.a];
+          var r = this[_chunkL7HIBZAX.a];
           return new e(r.core, Object.assign({}, r.priors, {
             depthStencilAttachment: t
           }));
@@ -5406,95 +5243,95 @@ ${_l10}`;
         key: "draw",
         value: function draw(t, r, n, a) {
           var _o$priors$colorAttach;
-          var o = this[_chunk5RYM4COI.a],
-            s = o.core.unwrap(),
+          var o = this[_chunkL7HIBZAX.a],
+            i = o.core.unwrap(),
             _o$core$options = o.core.options,
-            i = _o$core$options.branch,
+            s = _o$core$options.branch,
             l = _o$core$options.fragmentFn,
             d = {
-              colorAttachments: qn(l.shell.targets, (_o$priors$colorAttach = o.priors.colorAttachment) != null ? _o$priors$colorAttach : {}).map(function (T) {
-                return X(T.view) ? Object.assign({}, T, {
-                  view: i.unwrap(T.view).createView()
-                }) : T;
+              colorAttachments: Qn(l.shell.targets, (_o$priors$colorAttach = o.priors.colorAttachment) != null ? _o$priors$colorAttach : {}).map(function (b) {
+                return Q(b.view) ? Object.assign({}, b, {
+                  view: s.unwrap(b.view).createView()
+                }) : b;
               })
             },
-            g = (0, _chunk5RYM4COI.c)(o.core);
+            g = (0, _chunkL7HIBZAX.e)(o.core);
           if (g !== void 0 && (d.label = g), o.priors.depthStencilAttachment !== void 0) {
-            var T = o.priors.depthStencilAttachment;
-            X(T.view) ? d.depthStencilAttachment = Object.assign({}, T, {
-              view: i.unwrap(T.view).createView()
-            }) : d.depthStencilAttachment = T;
+            var b = o.priors.depthStencilAttachment;
+            Q(b.view) ? d.depthStencilAttachment = Object.assign({}, b, {
+              view: s.unwrap(b.view).createView()
+            }) : d.depthStencilAttachment = b;
           }
-          var c = i.commandEncoder.beginRenderPass(d);
-          c.setPipeline(s.pipeline);
-          var y = new Set(s.bindGroupLayouts);
-          s.bindGroupLayouts.forEach(function (T, D) {
-            if (s.catchall && D === s.catchall[0]) c.setBindGroup(D, i.unwrap(s.catchall[1])), y.delete(T);else {
+          var c = s.commandEncoder.beginRenderPass(d);
+          c.setPipeline(i.pipeline);
+          var y = new Set(i.bindGroupLayouts);
+          i.bindGroupLayouts.forEach(function (b, U) {
+            if (i.catchall && U === i.catchall[0]) c.setBindGroup(U, s.unwrap(i.catchall[1])), y.delete(b);else {
               var _o$priors$bindGroupLa;
-              var ke = (_o$priors$bindGroupLa = o.priors.bindGroupLayoutMap) == null ? void 0 : _o$priors$bindGroupLa.get(T);
-              ke !== void 0 && (y.delete(T), c.setBindGroup(D, i.unwrap(ke)));
+              var _e = (_o$priors$bindGroupLa = o.priors.bindGroupLayoutMap) == null ? void 0 : _o$priors$bindGroupLa.get(b);
+              _e !== void 0 && (y.delete(b), c.setBindGroup(U, s.unwrap(_e)));
             }
           });
           var x = new Set(o.core.usedVertexLayouts);
-          if (o.core.usedVertexLayouts.forEach(function (T, D) {
+          if (o.core.usedVertexLayouts.forEach(function (b, U) {
             var _o$priors$vertexLayou;
-            var ke = (_o$priors$vertexLayou = o.priors.vertexLayoutMap) == null ? void 0 : _o$priors$vertexLayou.get(T);
-            ke && (x.delete(T), c.setVertexBuffer(D, i.unwrap(ke)));
-          }), y.size > 0) throw new _chunk5RYM4COI.k(y);
-          if (x.size > 0) throw new _chunk5RYM4COI.l(x);
-          c.draw(t, r, n, a), c.end(), i.flush();
+            var _e = (_o$priors$vertexLayou = o.priors.vertexLayoutMap) == null ? void 0 : _o$priors$vertexLayou.get(b);
+            _e && (x.delete(b), c.setVertexBuffer(U, s.unwrap(_e)));
+          }), y.size > 0) throw new _chunkL7HIBZAX.m(y);
+          if (x.size > 0) throw new _chunkL7HIBZAX.n(x);
+          c.draw(t, r, n, a), c.end(), s.flush();
         }
       }]);
     }(),
-    Or = /*#__PURE__*/function () {
-      function Or(t) {
-        (0, _classCallCheck2.default)(this, Or);
+    Er = /*#__PURE__*/function () {
+      function Er(t) {
+        (0, _classCallCheck2.default)(this, Er);
         this.options = t;
-        var r = Tn(t.vertexFn.shell.attributes[0], t.vertexAttribs);
-        this._vertexBufferLayouts = r.bufferDefinitions, this.usedVertexLayouts = r.usedVertexLayouts, this._targets = Jn(t.fragmentFn.shell.targets, t.targets);
+        var r = Un(t.vertexFn.shell.attributes[0], t.vertexAttribs);
+        this._vertexBufferLayouts = r.bufferDefinitions, this.usedVertexLayouts = r.usedVertexLayouts, this._targets = Xn(t.fragmentFn.shell.targets, t.targets);
       }
-      return (0, _createClass2.default)(Or, [{
+      return (0, _createClass2.default)(Er, [{
         key: "unwrap",
         value: function unwrap() {
           var _this22 = this;
           if (this._memo === void 0) {
-            var _u$d$, _p44, _p45, _p46;
+            var _u$d$, _p45, _p46, _p47;
             var _this$options = this.options,
               t = _this$options.branch,
               r = _this$options.vertexFn,
               n = _this$options.fragmentFn,
               a = _this$options.slotBindings,
               o = _this$options.primitiveState,
-              s = _this$options.depthStencilState,
-              i = _this$options.multisampleState,
-              _Ve3 = Ve({
-                "~resolve": function resolve(h) {
-                  return h.withSlots(a, function () {
-                    h.resolve(r), h.resolve(n);
+              i = _this$options.depthStencilState,
+              s = _this$options.multisampleState,
+              _ke3 = ke({
+                "~resolve": function resolve(w) {
+                  return w.withSlots(a, function () {
+                    w.resolve(r), w.resolve(n);
                   }), "";
                 },
                 toString: function toString() {
-                  var _p43;
-                  return `renderPipeline:${(_p43 = (0, _chunk5RYM4COI.c)(_this22)) != null ? _p43 : "<unnamed>"}`;
+                  var _p44;
+                  return `renderPipeline:${(_p44 = (0, _chunkL7HIBZAX.e)(_this22)) != null ? _p44 : "<unnamed>"}`;
                 }
               }, {
                 names: t.nameRegistry,
                 jitTranspiler: t.jitTranspiler
               }),
-              l = _Ve3.code,
-              u = _Ve3.bindGroupLayouts,
-              d = _Ve3.catchall;
-            d !== null && ((_u$d$ = u[d[0]]) == null ? void 0 : _u$d$.$name(`${(_p44 = (0, _chunk5RYM4COI.c)(this)) != null ? _p44 : "<unnamed>"} - Automatic Bind Group & Layout`));
+              l = _ke3.code,
+              u = _ke3.bindGroupLayouts,
+              d = _ke3.catchall;
+            d !== null && ((_u$d$ = u[d[0]]) == null ? void 0 : _u$d$.$name(`${(_p45 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p45 : "<unnamed>"} - Automatic Bind Group & Layout`));
             var g = t.device,
               c = g.createShaderModule({
-                label: `${(_p45 = (0, _chunk5RYM4COI.c)(this)) != null ? _p45 : "<unnamed>"} - Shader`,
+                label: `${(_p46 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p46 : "<unnamed>"} - Shader`,
                 code: l
               }),
               y = {
                 layout: g.createPipelineLayout({
-                  label: `${(_p46 = (0, _chunk5RYM4COI.c)(this)) != null ? _p46 : "<unnamed>"} - Pipeline Layout`,
-                  bindGroupLayouts: u.map(function (h) {
-                    return t.unwrap(h);
+                  label: `${(_p47 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p47 : "<unnamed>"} - Pipeline Layout`,
+                  bindGroupLayouts: u.map(function (w) {
+                    return t.unwrap(w);
                   })
                 }),
                 vertex: {
@@ -5506,8 +5343,8 @@ ${_l10}`;
                   targets: this._targets
                 }
               },
-              x = (0, _chunk5RYM4COI.c)(this);
-            x !== void 0 && (y.label = x), o && (y.primitive = o), s && (y.depthStencil = s), i && (y.multisample = i), this._memo = {
+              x = (0, _chunkL7HIBZAX.e)(this);
+            x !== void 0 && (y.label = x), o && (y.primitive = o), i && (y.depthStencil = i), s && (y.multisample = s), this._memo = {
               pipeline: g.createRenderPipeline(y),
               bindGroupLayouts: u,
               catchall: d
@@ -5526,17 +5363,17 @@ ${_l10}`;
       return (0, _createClass2.default)(e, [{
         key: "with",
         value: function _with(t, r) {
-          return new e(this._getRoot, [].concat((0, _toConsumableArray2.default)(this._slotBindings), [[ge(t) ? t.slot : t, r]]));
+          return new e(this._getRoot, [].concat((0, _toConsumableArray2.default)(this._slotBindings), [[He(t) ? t.slot : t, r]]));
         }
       }, {
         key: "withCompute",
         value: function withCompute(t) {
-          return new Wr(this._getRoot(), this._slotBindings, t);
+          return new Lr(this._getRoot(), this._slotBindings, t);
         }
       }, {
         key: "withVertex",
         value: function withVertex(t, r) {
-          return new Mr({
+          return new Or({
             branch: this._getRoot(),
             primitiveState: void 0,
             depthStencilState: void 0,
@@ -5548,36 +5385,36 @@ ${_l10}`;
         }
       }]);
     }(),
-    Wr = /*#__PURE__*/function () {
-      function Wr(t, r, n) {
-        (0, _classCallCheck2.default)(this, Wr);
+    Lr = /*#__PURE__*/function () {
+      function Lr(t, r, n) {
+        (0, _classCallCheck2.default)(this, Lr);
         this._root = t;
         this._slotBindings = r;
         this._entryFn = n;
       }
-      return (0, _createClass2.default)(Wr, [{
+      return (0, _createClass2.default)(Lr, [{
         key: "createPipeline",
         value: function createPipeline() {
-          return Kn(this._root, this._slotBindings, this._entryFn);
+          return Jn(this._root, this._slotBindings, this._entryFn);
         }
       }]);
     }(),
-    Mr = /*#__PURE__*/function () {
-      function Mr(t) {
-        (0, _classCallCheck2.default)(this, Mr);
+    Or = /*#__PURE__*/function () {
+      function Or(t) {
+        (0, _classCallCheck2.default)(this, Or);
         this._options = t;
       }
-      return (0, _createClass2.default)(Mr, [{
+      return (0, _createClass2.default)(Or, [{
         key: "withFragment",
         value: function withFragment(t, r, n) {
-          return (0, _chunk5RYM4COI.f)(typeof t != "string", "Just type mismatch validation"), (0, _chunk5RYM4COI.f)(typeof r != "string", "Just type mismatch validation"), new Nr(Object.assign({}, this._options, {
+          return (0, _chunkL7HIBZAX.h)(typeof t != "string", "Just type mismatch validation"), (0, _chunkL7HIBZAX.h)(typeof r != "string", "Just type mismatch validation"), new Mr(Object.assign({}, this._options, {
             fragmentFn: t,
             targets: r
           }));
         }
       }]);
     }(),
-    Nr = /*#__PURE__*/function () {
+    Mr = /*#__PURE__*/function () {
       function e(t) {
         (0, _classCallCheck2.default)(this, e);
         this._options = t;
@@ -5606,26 +5443,26 @@ ${_l10}`;
       }, {
         key: "createPipeline",
         value: function createPipeline() {
-          return Yn(this._options);
+          return Zn(this._options);
         }
       }]);
     }(),
     kt = /*#__PURE__*/function (_Gr) {
-      function kt(_r16, n, a, o) {
+      function kt(_r14, n, a, o) {
         var _this23;
         (0, _classCallCheck2.default)(this, kt);
         _this23 = _callSuper(this, kt, [function () {
           return (0, _assertThisInitialized2.default)(_this23);
         }, []]);
         _this23._disposables = [];
-        _this23._unwrappedBindGroupLayouts = new tt(function (r) {
+        _this23._unwrappedBindGroupLayouts = new nt(function (r) {
           return r.unwrap(_this23);
         });
-        _this23._unwrappedBindGroups = new tt(function (r) {
+        _this23._unwrappedBindGroups = new nt(function (r) {
           return r.unwrap(_this23);
         });
         _this23._commandEncoder = null;
-        _this23.device = _r16;
+        _this23.device = _r14;
         _this23.nameRegistry = n;
         _this23.jitTranspiler = a;
         _this23._ownDevice = o;
@@ -5641,7 +5478,7 @@ ${_l10}`;
       }, {
         key: "createBuffer",
         value: function createBuffer(r, n) {
-          var a = Fn(this, r, n);
+          var a = kn(this, r, n);
           return this._disposables.push(a), a;
         }
       }, {
@@ -5662,7 +5499,7 @@ ${_l10}`;
       }, {
         key: "createBindGroup",
         value: function createBindGroup(r, n) {
-          return new Pe(r, n);
+          return new $e(r, n);
         }
       }, {
         key: "destroy",
@@ -5673,33 +5510,33 @@ ${_l10}`;
       }, {
         key: "createTexture",
         value: function createTexture(r) {
-          var n = Cn(r, this);
+          var n = Mn(r, this);
           return this._disposables.push(n), n;
         }
       }, {
         key: "unwrap",
         value: function unwrap(r) {
-          if (Hn(r)) return r[_chunk5RYM4COI.a].rawPipeline;
-          if (Qn(r)) return r[_chunk5RYM4COI.a].core.unwrap().pipeline;
-          if (Ut(r)) return this._unwrappedBindGroupLayouts.getOrMake(r);
+          if (Yn(r)) return r[_chunkL7HIBZAX.a].rawPipeline;
+          if (ea(r)) return r[_chunkL7HIBZAX.a].core.unwrap().pipeline;
+          if (Rt(r)) return this._unwrappedBindGroupLayouts.getOrMake(r);
           if (Fr(r)) return this._unwrappedBindGroups.getOrMake(r);
-          if (ae(r)) return r.buffer;
-          if (X(r)) return r[_chunk5RYM4COI.a].unwrap();
-          if (Ze(r)) {
-            if (r[_chunk5RYM4COI.a].unwrap) return r[_chunk5RYM4COI.a].unwrap();
+          if (ue(r)) return r.buffer;
+          if (Q(r)) return r[_chunkL7HIBZAX.a].unwrap();
+          if (tt(r)) {
+            if (r[_chunkL7HIBZAX.a].unwrap) return r[_chunkL7HIBZAX.a].unwrap();
             throw new Error("Cannot unwrap laid-out texture view.");
           }
-          if (et(r)) {
-            if (r[_chunk5RYM4COI.a].unwrap) return r[_chunk5RYM4COI.a].unwrap();
+          if (rt(r)) {
+            if (r[_chunkL7HIBZAX.a].unwrap) return r[_chunkL7HIBZAX.a].unwrap();
             throw new Error("Cannot unwrap laid-out texture view.");
           }
           if ($t(r)) return r.vertexLayout;
-          if (Ye(r)) {
-            if (r[_chunk5RYM4COI.a].unwrap) return r[_chunk5RYM4COI.a].unwrap(this);
+          if (Xe(r)) {
+            if (r[_chunkL7HIBZAX.a].unwrap) return r[_chunkL7HIBZAX.a].unwrap(this);
             throw new Error("Cannot unwrap laid-out sampler.");
           }
-          if (Qe(r)) {
-            if (r[_chunk5RYM4COI.a].unwrap) return r[_chunk5RYM4COI.a].unwrap(this);
+          if (Ze(r)) {
+            if (r[_chunkL7HIBZAX.a].unwrap) return r[_chunkL7HIBZAX.a].unwrap(this);
             throw new Error("Cannot unwrap laid-out comparison sampler.");
           }
           throw new Error(`Unknown resource type: ${r}`);
@@ -5710,35 +5547,35 @@ ${_l10}`;
           var _this24 = this;
           var a = this.commandEncoder.beginRenderPass(r),
             o = new Map(),
-            s = new Map(),
-            i,
+            i = new Map(),
+            s,
             l = function l() {
-              if (!i) throw new Error("Cannot draw without a call to pass.setPipeline");
-              var _i$m = i[_chunk5RYM4COI.a],
-                u = _i$m.core,
-                d = _i$m.priors,
+              if (!s) throw new Error("Cannot draw without a call to pass.setPipeline");
+              var _s$f = s[_chunkL7HIBZAX.a],
+                u = _s$f.core,
+                d = _s$f.priors,
                 g = u.unwrap();
               a.setPipeline(g.pipeline);
               var c = new Set(g.bindGroupLayouts);
-              g.bindGroupLayouts.forEach(function (x, h) {
-                if (g.catchall && h === g.catchall[0]) a.setBindGroup(h, _this24.unwrap(g.catchall[1])), c.delete(x);else {
+              g.bindGroupLayouts.forEach(function (x, w) {
+                if (g.catchall && w === g.catchall[0]) a.setBindGroup(w, _this24.unwrap(g.catchall[1])), c.delete(x);else {
                   var _d$bindGroupLayoutMap, _d$bindGroupLayoutMap2;
-                  var T = (_d$bindGroupLayoutMap = (_d$bindGroupLayoutMap2 = d.bindGroupLayoutMap) == null ? void 0 : _d$bindGroupLayoutMap2.get(x)) != null ? _d$bindGroupLayoutMap : o.get(x);
-                  T !== void 0 && (c.delete(x), Fr(T) ? a.setBindGroup(h, _this24.unwrap(T)) : a.setBindGroup(h, T));
+                  var b = (_d$bindGroupLayoutMap = (_d$bindGroupLayoutMap2 = d.bindGroupLayoutMap) == null ? void 0 : _d$bindGroupLayoutMap2.get(x)) != null ? _d$bindGroupLayoutMap : o.get(x);
+                  b !== void 0 && (c.delete(x), Fr(b) ? a.setBindGroup(w, _this24.unwrap(b)) : a.setBindGroup(w, b));
                 }
               });
               var y = new Set();
-              if (u.usedVertexLayouts.forEach(function (x, h) {
+              if (u.usedVertexLayouts.forEach(function (x, w) {
                 var _d$vertexLayoutMap;
-                var T = (_d$vertexLayoutMap = d.vertexLayoutMap) == null ? void 0 : _d$vertexLayoutMap.get(x),
-                  D = T ? {
-                    buffer: T,
+                var b = (_d$vertexLayoutMap = d.vertexLayoutMap) == null ? void 0 : _d$vertexLayoutMap.get(x),
+                  U = b ? {
+                    buffer: b,
                     offset: void 0,
                     size: void 0
-                  } : s.get(x);
-                !D || !D.buffer ? y.add(x) : ae(D.buffer) ? a.setVertexBuffer(h, _this24.unwrap(D.buffer), D.offset, D.size) : a.setVertexBuffer(h, D.buffer, D.offset, D.size);
-              }), c.size > 0) throw new _chunk5RYM4COI.k(c);
-              if (y.size > 0) throw new _chunk5RYM4COI.l(y);
+                  } : i.get(x);
+                !U || !U.buffer ? y.add(x) : ue(U.buffer) ? a.setVertexBuffer(w, _this24.unwrap(U.buffer), U.offset, U.size) : a.setVertexBuffer(w, U.buffer, U.offset, U.size);
+              }), c.size > 0) throw new _chunkL7HIBZAX.m(c);
+              if (y.size > 0) throw new _chunkL7HIBZAX.n(y);
             };
           n({
             setViewport: function setViewport() {
@@ -5763,13 +5600,13 @@ ${_l10}`;
               a.executeBundles.apply(a, arguments);
             },
             setPipeline: function setPipeline(u) {
-              i = u;
+              s = u;
             },
             setIndexBuffer: function setIndexBuffer(u, d, g, c) {
-              ae(u) ? a.setIndexBuffer(_this24.unwrap(u), d, g, c) : a.setIndexBuffer(u, d, g, c);
+              ue(u) ? a.setIndexBuffer(_this24.unwrap(u), d, g, c) : a.setIndexBuffer(u, d, g, c);
             },
             setVertexBuffer: function setVertexBuffer(u, d, g, c) {
-              s.set(u, {
+              i.set(u, {
                 buffer: d,
                 offset: g,
                 size: c
@@ -5799,46 +5636,46 @@ ${_l10}`;
         }
       }]);
     }(Gr);
-  function Xn(_x2) {
-    return _Xn.apply(this, arguments);
+  function ta(_x2) {
+    return _ta.apply(this, arguments);
   }
-  function _Xn() {
-    _Xn = (0, _asyncToGenerator2.default)(function* (e) {
-      var _ref76 = e != null ? e : {},
-        t = _ref76.adapter,
-        r = _ref76.device,
-        _ref76$unstable_names = _ref76.unstable_names,
-        n = _ref76$unstable_names === void 0 ? "random" : _ref76$unstable_names,
-        a = _ref76.unstable_jitTranspiler;
+  function _ta() {
+    _ta = (0, _asyncToGenerator2.default)(function* (e) {
+      var _ref62 = e != null ? e : {},
+        t = _ref62.adapter,
+        r = _ref62.device,
+        _ref62$unstable_names = _ref62.unstable_names,
+        n = _ref62$unstable_names === void 0 ? "random" : _ref62$unstable_names,
+        a = _ref62.unstable_jitTranspiler;
       if (!navigator.gpu) throw new Error("WebGPU is not supported by this browser.");
       var o = yield navigator.gpu.requestAdapter(t);
       if (!o) throw new Error("Could not find a compatible GPU");
-      return new kt(yield o.requestDevice(r), n === "random" ? new ie() : new ue(), a, !0);
+      return new kt(yield o.requestDevice(r), n === "random" ? new oe() : new ie(), a, !0);
     });
-    return _Xn.apply(this, arguments);
+    return _ta.apply(this, arguments);
   }
-  function Zn(e) {
-    var _ref71 = e != null ? e : {},
-      t = _ref71.device,
-      _ref71$unstable_names = _ref71.unstable_names,
-      r = _ref71$unstable_names === void 0 ? "random" : _ref71$unstable_names,
-      n = _ref71.unstable_jitTranspiler;
-    return new kt(t, r === "random" ? new ie() : new ue(), n, !1);
+  function ra(e) {
+    var _ref57 = e != null ? e : {},
+      t = _ref57.device,
+      _ref57$unstable_names = _ref57.unstable_names,
+      r = _ref57$unstable_names === void 0 ? "random" : _ref57$unstable_names,
+      n = _ref57.unstable_jitTranspiler;
+    return new kt(t, r === "random" ? new oe() : new ie(), n, !1);
   }
-  function Et(e) {
-    return new jr(e);
+  function _t(e) {
+    return new Wr(e);
   }
-  var jr = /*#__PURE__*/function () {
-    function jr() {
+  var Wr = /*#__PURE__*/function () {
+    function Wr() {
       var t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : void 0;
-      (0, _classCallCheck2.default)(this, jr);
+      (0, _classCallCheck2.default)(this, Wr);
       this.resourceType = "slot";
       this.defaultValue = t;
     }
-    return (0, _createClass2.default)(jr, [{
+    return (0, _createClass2.default)(Wr, [{
       key: "$name",
       value: function $name(t) {
-        return (0, _chunk5RYM4COI.d)(this, t), this;
+        return (0, _chunkL7HIBZAX.f)(this, t), this;
       }
     }, {
       key: "areEqual",
@@ -5848,31 +5685,36 @@ ${_l10}`;
     }, {
       key: "toString",
       value: function toString() {
-        var _p47;
-        return `slot:${(_p47 = (0, _chunk5RYM4COI.c)(this)) != null ? _p47 : "<unnamed>"}`;
+        var _p48;
+        return `slot:${(_p48 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p48 : "<unnamed>"}`;
+      }
+    }, {
+      key: _chunkL7HIBZAX.c,
+      value: function value(t) {
+        return ze(t, t.unwrap(this));
       }
     }, {
       key: "value",
       get: function get() {
-        var t = (0, _chunk5RYM4COI.o)();
+        var t = (0, _chunkL7HIBZAX.q)();
         if (!t) throw new Error("Cannot access tgpu.slot's value outside of resolution.");
-        return ze(t.unwrap(this));
+        return this[_chunkL7HIBZAX.c](t);
       }
     }]);
   }();
-  function ea(e, t) {
-    return new zr(e, t);
+  function na(e, t) {
+    return new Nr(e, t);
   }
-  var zr = /*#__PURE__*/function () {
-    function zr(t) {
+  var Nr = /*#__PURE__*/function () {
+    function Nr(t) {
       var r = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : void 0;
-      (0, _classCallCheck2.default)(this, zr);
+      (0, _classCallCheck2.default)(this, Nr);
       this.resourceType = "accessor";
       this.schema = t;
       this.defaultValue = r;
-      this.slot = Et(r), this[_chunk5RYM4COI.b] = this.slot;
+      this.slot = _t(r), this[_chunkL7HIBZAX.d] = this.slot;
     }
-    return (0, _createClass2.default)(zr, [{
+    return (0, _createClass2.default)(Nr, [{
       key: "$name",
       value: function $name(t) {
         return this.slot.$name(t), this;
@@ -5880,155 +5722,168 @@ ${_l10}`;
     }, {
       key: "toString",
       value: function toString() {
-        var _p48;
-        return `accessor:${(_p48 = (0, _chunk5RYM4COI.c)(this)) != null ? _p48 : "<unnamed>"}`;
+        var _p49;
+        return `accessor:${(_p49 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p49 : "<unnamed>"}`;
+      }
+    }, {
+      key: _chunkL7HIBZAX.c,
+      value: function value() {
+        var _this25 = this;
+        return new Proxy((0, _defineProperty2.default)({
+          "~resolve": function resolve(t) {
+            return t.resolve(_this25);
+          },
+          toString: function toString() {
+            var _p50;
+            return `.value:${(_p50 = (0, _chunkL7HIBZAX.e)(_this25)) != null ? _p50 : "<unnamed>"}`;
+          }
+        }, _chunkL7HIBZAX.b, this.schema), q);
       }
     }, {
       key: "value",
       get: function get() {
-        var _this25 = this;
-        if (!(0, _chunk5RYM4COI.o)()) throw new Error("Cannot access tgpu.accessor's value outside of resolution.");
-        return new Proxy((0, _defineProperty2.default)({
-          "~resolve": function resolve(r) {
-            return r.resolve(_this25);
-          },
-          toString: function toString() {
-            var _p49;
-            return `.value:${(_p49 = (0, _chunk5RYM4COI.c)(_this25)) != null ? _p49 : "<unnamed>"}`;
-          }
-        }, _chunk5RYM4COI.a, {
-          dataType: this.schema
-        }), Y);
+        if (!(0, _chunkL7HIBZAX.t)()) throw new Error("`tgpu.accessor` values are only accessible on the GPU");
+        return this[_chunkL7HIBZAX.c]();
       }
     }, {
       key: "~resolve",
       value: function resolve(t) {
         var r = t.unwrap(this.slot);
-        return lt(r) ? t.resolve(r) : Pr(r) ? `${t.resolve(r)}()` : t.resolveValue(r, this.schema);
+        return gn(r) ? t.resolve(r) : ir(r) ? `${t.resolve(r)}()` : t.resolveValue(r, this.schema);
       }
     }]);
   }();
-  function ta(e) {
-    return Wa(e);
+  function aa(e) {
+    return Ka(e);
   }
-  function Ga(_ref72) {
-    var _p50;
-    var _ref73 = (0, _slicedToArray2.default)(_ref72, 2),
-      e = _ref73[0],
-      t = _ref73[1];
-    return `${(_p50 = (0, _chunk5RYM4COI.c)(e)) != null ? _p50 : "<unnamed>"}=${t}`;
+  function za(_ref58) {
+    var _p51;
+    var _ref59 = (0, _slicedToArray2.default)(_ref58, 2),
+      e = _ref59[0],
+      t = _ref59[1];
+    return `${(_p51 = (0, _chunkL7HIBZAX.e)(e)) != null ? _p51 : "<unnamed>"}=${t}`;
   }
-  function Wa(e) {
-    if ((0, _chunk5RYM4COI.o)()) throw new Error("Cannot create tgpu.derived objects at the resolution stage.");
-    return (0, _defineProperty2.default)((0, _defineProperty2.default)(_defineAccessor("get", (0, _defineProperty2.default)({
+  function Ka(e) {
+    if ((0, _chunkL7HIBZAX.q)()) throw new Error("Cannot create tgpu.derived objects at the resolution stage.");
+    return (0, _defineProperty2.default)((0, _defineProperty2.default)(_defineAccessor("get", (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
       resourceType: "derived",
       "~compute": e
-    }, _chunk5RYM4COI.s, void 0), "value", function () {
-      var r = (0, _chunk5RYM4COI.o)();
+    }, _chunkL7HIBZAX.w, void 0), "~gpuRepr", void 0), _chunkL7HIBZAX.c, function (r) {
+      return ze(r, r.unwrap(this));
+    }), "value", function () {
+      var r = (0, _chunkL7HIBZAX.q)();
       if (!r) throw new Error("Cannot access tgpu.derived's value outside of resolution.");
-      return ze(r.unwrap(this));
+      return this[_chunkL7HIBZAX.c](r);
     }), "with", function _with(r, n) {
-      return ra(this, [[r, n]]);
+      return oa(this, [[r, n]]);
     }), "toString", function toString() {
       return "derived";
     });
   }
-  function ra(e, t) {
-    return (0, _defineProperty2.default)((0, _defineProperty2.default)(_defineAccessor("get", (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
+  function oa(e, t) {
+    return (0, _defineProperty2.default)((0, _defineProperty2.default)(_defineAccessor("get", (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({
       resourceType: "derived"
-    }, _chunk5RYM4COI.s, void 0), "~compute", function compute() {
+    }, _chunkL7HIBZAX.w, void 0), "~gpuRepr", void 0), "~compute", function compute() {
       throw new Error("'~compute' should never be read on bound derived items.");
     }), "~providing", {
       inner: e,
       pairs: t
+    }), _chunkL7HIBZAX.c, function (n) {
+      return ze(n, n.unwrap(this));
     }), "value", function () {
-      var n = (0, _chunk5RYM4COI.o)();
+      var n = (0, _chunkL7HIBZAX.q)();
       if (!n) throw new Error("Cannot access tgpu.derived's value outside of resolution.");
-      return ze(n.unwrap(this));
+      return this[_chunkL7HIBZAX.c](n);
     }), "with", function _with(n, a) {
-      return ra(e, [].concat((0, _toConsumableArray2.default)(t), [[n, a]]));
+      return oa(e, [].concat((0, _toConsumableArray2.default)(t), [[n, a]]));
     }), "toString", function toString() {
-      return `derived[${t.map(Ga).join(", ")}]`;
+      return `derived[${t.map(za).join(", ")}]`;
     });
   }
-  function na(e, t) {
-    return new Lt("private", e, t);
+  function ia(e, t) {
+    return new Et("private", e, t);
   }
-  function aa(e) {
-    return new Lt("workgroup", e);
+  function sa(e) {
+    return new Et("workgroup", e);
   }
-  var Lt = /*#__PURE__*/function () {
-    function Lt(t, r, n) {
-      (0, _classCallCheck2.default)(this, Lt);
+  var Et = /*#__PURE__*/function () {
+    function Et(t, r, n) {
+      (0, _classCallCheck2.default)(this, Et);
       this.scope = t;
       this._dataType = r;
       this._initialValue = n;
+      this[_chunkL7HIBZAX.a] = {
+        scope: t
+      };
     }
-    return (0, _createClass2.default)(Lt, [{
+    return (0, _createClass2.default)(Et, [{
       key: "~resolve",
       value: function resolve(t) {
-        var r = t.names.makeUnique((0, _chunk5RYM4COI.c)(this));
+        var r = t.names.makeUnique((0, _chunkL7HIBZAX.e)(this));
         return this._initialValue ? t.addDeclaration(`var<${this.scope}> ${r}: ${t.resolve(this._dataType)} = ${t.resolveValue(this._initialValue, this._dataType)};`) : t.addDeclaration(`var<${this.scope}> ${r}: ${t.resolve(this._dataType)};`), r;
       }
     }, {
       key: "$name",
       value: function $name(t) {
-        return (0, _chunk5RYM4COI.d)(this, t), this;
+        return (0, _chunkL7HIBZAX.f)(this, t), this;
       }
     }, {
       key: "toString",
       value: function toString() {
-        var _p51;
-        return `var:${(_p51 = (0, _chunk5RYM4COI.c)(this)) != null ? _p51 : "<unnamed>"}`;
+        var _p52;
+        return `var:${(_p52 = (0, _chunkL7HIBZAX.e)(this)) != null ? _p52 : "<unnamed>"}`;
       }
     }, {
-      key: "value",
-      get: function get() {
+      key: _chunkL7HIBZAX.c,
+      value: function value() {
         var _this26 = this;
-        if (!(0, _chunk5RYM4COI.r)()) throw new Error("Cannot access tgpu.var's value directly in JS.");
         return new Proxy((0, _defineProperty2.default)({
           "~resolve": function resolve(t) {
             return t.resolve(_this26);
           },
           toString: function toString() {
-            var _p52;
-            return `.value:${(_p52 = (0, _chunk5RYM4COI.c)(_this26)) != null ? _p52 : "<unnamed>"}`;
+            var _p53;
+            return `.value:${(_p53 = (0, _chunkL7HIBZAX.e)(_this26)) != null ? _p53 : "<unnamed>"}`;
           }
-        }, _chunk5RYM4COI.a, {
-          dataType: this._dataType
-        }), Y);
+        }, _chunkL7HIBZAX.b, this._dataType), q);
+      }
+    }, {
+      key: "value",
+      get: function get() {
+        if (!(0, _chunkL7HIBZAX.t)()) throw new Error("`tgpu.var` values are only accessible on the GPU");
+        return this[_chunkL7HIBZAX.c]();
       }
     }]);
   }();
-  var oa = exports.tgpu = {
-      bindGroupLayout: It,
-      vertexLayout: Lr,
-      init: Xn,
-      initFromDevice: Zn,
-      resolve: zn,
+  var ua = exports.tgpu = {
+      bindGroupLayout: Bt,
+      vertexLayout: kr,
+      init: ta,
+      initFromDevice: ra,
+      resolve: qn,
       "~unstable": {
-        fn: Wn,
-        fragmentFn: Nn,
-        vertexFn: jn,
-        computeFn: Gn,
-        vertexLayout: Lr,
-        derived: ta,
-        slot: Et,
-        accessor: ea,
-        privateVar: na,
-        workgroupVar: aa,
-        const: ln,
-        declare: mn,
-        sampler: An,
-        comparisonSampler: In
+        fn: vn,
+        fragmentFn: Fn,
+        vertexFn: In,
+        computeFn: Sn,
+        vertexLayout: kr,
+        derived: aa,
+        slot: _t,
+        accessor: na,
+        privateVar: ia,
+        workgroupVar: sa,
+        const: dn,
+        declare: yn,
+        sampler: _n,
+        comparisonSampler: En
       }
     },
-    jp = exports.default = oa;
-  Object.assign(oa, {
-    __assignAst: cn,
-    __removedJsImpl: yn
+    rl = exports.default = ua;
+  Object.assign(ua, {
+    __assignAst: hn,
+    __removedJsImpl: wn
   });
-},1,[2,3,4,5,7,8,10,14,20,21,24,25,29,30,31,32],"node_modules/typegpu/index.js");
+},1,[2,3,4,5,7,8,10,14,20,21,24,25,29,32,30,33,31],"node_modules/typegpu/index.js");
 global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(e) {
     return e && e.__esModule ? e : {
@@ -6349,38 +6204,30 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.$ = A;
-  exports.Z = exports.Y = exports.X = exports.W = exports.V = exports.U = exports.T = exports.S = exports.R = exports.Q = exports.P = exports.O = exports.N = exports.M = exports.L = exports.K = exports.J = exports.I = exports.H = exports.G = exports.F = exports.E = exports.D = exports.C = exports.B = exports.A = void 0;
-  exports._ = x;
+  exports.$ = dt;
+  exports.R = exports.Q = exports.P = exports.O = exports.N = exports.M = exports.L = exports.K = exports.J = exports.I = exports.H = exports.G = exports.F = exports.E = exports.D = exports.C = exports.B = exports.A = void 0;
+  exports.S = x;
+  exports.T = I;
+  exports.U = rt;
+  exports.V = l;
+  exports.W = ut;
+  exports.X = G;
+  exports.Y = ct;
+  exports.Z = yt;
+  exports._ = ft;
   exports.a = void 0;
-  exports.aa = st;
+  exports.aa = Tt;
   exports.b = void 0;
-  exports.ba = l;
+  exports.ba = $e;
   exports.c = void 0;
-  exports.ca = mt;
-  exports.d = W;
-  exports.da = G;
-  exports.e = g;
-  exports.ea = Tt;
-  exports.f = b;
-  exports.fa = gt;
-  exports.g = m;
-  exports.ga = bt;
-  exports.h = Pt;
-  exports.ha = Dt;
-  exports.i = rt;
-  exports.ia = At;
-  exports.j = void 0;
-  exports.ja = qe;
-  exports.k = void 0;
-  exports.ka = Z;
-  exports.l = void 0;
-  exports.la = ct;
-  exports.m = void 0;
-  exports.ma = yt;
-  exports.n = void 0;
-  exports.na = dt;
-  exports.z = exports.y = exports.x = exports.w = exports.v = exports.u = exports.t = exports.s = exports.r = exports.q = exports.p = exports.oa = exports.o = void 0;
+  exports.ca = X;
+  exports.d = void 0;
+  exports.da = pt;
+  exports.e = void 0;
+  exports.ea = xt;
+  exports.f = void 0;
+  exports.fa = mt;
+  exports.z = exports.y = exports.x = exports.w = exports.v = exports.u = exports.t = exports.s = exports.r = exports.q = exports.p = exports.o = exports.n = exports.m = exports.l = exports.k = exports.j = exports.i = exports.h = exports.ga = exports.g = void 0;
   var _possibleConstructorReturn2 = _interopRequireDefault(require(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn"));
   var _getPrototypeOf2 = _interopRequireDefault(require(_dependencyMap[2], "@babel/runtime/helpers/getPrototypeOf"));
   var _inherits2 = _interopRequireDefault(require(_dependencyMap[3], "@babel/runtime/helpers/inherits"));
@@ -6388,163 +6235,117 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   var _createClass2 = _interopRequireDefault(require(_dependencyMap[5], "@babel/runtime/helpers/createClass"));
   var _classCallCheck2 = _interopRequireDefault(require(_dependencyMap[6], "@babel/runtime/helpers/classCallCheck"));
   var _defineProperty2 = _interopRequireDefault(require(_dependencyMap[7], "@babel/runtime/helpers/defineProperty"));
-  var _chunk5RYM4COI = require(_dependencyMap[8], "./chunk-5RYM4COI.js");
+  var _chunkL7HIBZAX = require(_dependencyMap[8], "./chunk-L7HIBZAX.js");
   function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2.default)(o), (0, _possibleConstructorReturn2.default)(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], (0, _getPrototypeOf2.default)(t).constructor) : o.apply(t, e)); }
   function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-  function Z(t) {
-    var e = function e(n) {
-      return n;
+  function X(t) {
+    var e = function e(r) {
+      return r;
     };
-    return Object.setPrototypeOf(e, tt), e.propTypes = t, e;
+    return Object.setPrototypeOf(e, Y), e.propTypes = t, e;
   }
-  var tt = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "struct"), "$name", function $name(t) {
-    return (0, _chunk5RYM4COI.d)(this, t), this;
+  var Y = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "struct"), "$name", function $name(t) {
+    return (0, _chunkL7HIBZAX.f)(this, t), this;
   }), "toString", function toString() {
-    var _k;
-    return `struct:${(_k = (0, _chunk5RYM4COI.c)(this)) != null ? _k : "<unnamed>"}`;
+    var _h;
+    return `struct:${(_h = (0, _chunkL7HIBZAX.e)(this)) != null ? _h : "<unnamed>"}`;
   });
-  var T = exports.a = function T(t, e) {
-    var n = e - 1,
-      i = ~n;
-    return (t & n) === 0 ? t : (t & i) + e;
+  var b = exports.a = function b(t, e) {
+    var r = e - 1,
+      i = ~r;
+    return (t & r) === 0 ? t : (t & i) + e;
   };
-  var H = exports.b = ["uint8", "uint8x2", "uint8x4", "sint8", "sint8x2", "sint8x4", "unorm8", "unorm8x2", "unorm8x4", "snorm8", "snorm8x2", "snorm8x4", "uint16", "uint16x2", "uint16x4", "sint16", "sint16x2", "sint16x4", "unorm16", "unorm16x2", "unorm16x4", "snorm16", "snorm16x2", "snorm16x4", "float16", "float16x2", "float16x4", "float32", "float32x2", "float32x3", "float32x4", "uint32", "uint32x2", "uint32x3", "uint32x4", "sint32", "sint32x2", "sint32x3", "sint32x4", "unorm10-10-10-2", "unorm8x4-bgra"],
-    Ft = exports.c = {
-      f32: "float32",
-      vec2f: "float32x2",
-      vec3f: "float32x3",
-      vec4f: "float32x4",
-      f16: "float16",
-      vec2h: "float16x2",
-      vec4h: "float16x4",
-      u32: "uint32",
-      vec2u: "uint32x2",
-      vec3u: "uint32x3",
-      vec4u: "uint32x4",
-      i32: "sint32",
-      vec2i: "sint32x2",
-      vec3i: "sint32x3",
-      vec4i: "sint32x4"
-    };
-  var et = ["unstruct", "disarray", "loose-decorated"].concat(H);
-  function W(t) {
-    return (t == null ? void 0 : t[_chunk5RYM4COI.a]) && et.includes(t == null ? void 0 : t.type);
-  }
-  function g(t) {
-    return (t == null ? void 0 : t[_chunk5RYM4COI.a]) && (t == null ? void 0 : t.type) === "disarray";
-  }
-  function b(t) {
-    return (t == null ? void 0 : t[_chunk5RYM4COI.a]) && (t == null ? void 0 : t.type) === "unstruct";
-  }
-  function m(t) {
-    return (t == null ? void 0 : t[_chunk5RYM4COI.a]) && (t == null ? void 0 : t.type) === "loose-decorated";
-  }
-  function D(t) {
-    var _t$attribs;
-    return (_t$attribs = t.attribs) == null || (_t$attribs = _t$attribs.find(_chunk5RYM4COI.F)) == null ? void 0 : _t$attribs.value;
-  }
-  function J(t) {
-    var _t$attribs2;
-    return (_t$attribs2 = t.attribs) == null || (_t$attribs2 = _t$attribs2.find(_chunk5RYM4COI.G)) == null ? void 0 : _t$attribs2.value;
-  }
-  function Pt(t) {
-    var _t$attribs3;
-    return (_t$attribs3 = t.attribs) == null || (_t$attribs3 = _t$attribs3.find(_chunk5RYM4COI.H)) == null ? void 0 : _t$attribs3.value;
-  }
-  function rt(t) {
-    return (0, _chunk5RYM4COI.A)(t) || W(t);
-  }
-  var r = /*#__PURE__*/(0, _createClass2.default)(function r(e) {
-      (0, _classCallCheck2.default)(this, r);
-      this[_chunk5RYM4COI.a] = !0;
+  var n = /*#__PURE__*/(0, _createClass2.default)(function n(e) {
+      (0, _classCallCheck2.default)(this, n);
+      this[_chunkL7HIBZAX.a] = !0;
       this.type = e;
     }),
-    nt = exports.j = {
-      uint8: _chunk5RYM4COI.R,
-      uint8x2: _chunk5RYM4COI.Y,
-      uint8x4: _chunk5RYM4COI.ga,
-      sint8: _chunk5RYM4COI.S,
-      sint8x2: _chunk5RYM4COI.X,
-      sint8x4: _chunk5RYM4COI.fa,
-      unorm8: _chunk5RYM4COI.T,
-      unorm8x2: _chunk5RYM4COI.V,
-      unorm8x4: _chunk5RYM4COI.da,
-      snorm8: _chunk5RYM4COI.T,
-      snorm8x2: _chunk5RYM4COI.V,
-      snorm8x4: _chunk5RYM4COI.da,
-      uint16: _chunk5RYM4COI.R,
-      uint16x2: _chunk5RYM4COI.Y,
-      uint16x4: _chunk5RYM4COI.ga,
-      sint16: _chunk5RYM4COI.S,
-      sint16x2: _chunk5RYM4COI.X,
-      sint16x4: _chunk5RYM4COI.fa,
-      unorm16: _chunk5RYM4COI.T,
-      unorm16x2: _chunk5RYM4COI.V,
-      unorm16x4: _chunk5RYM4COI.da,
-      snorm16: _chunk5RYM4COI.T,
-      snorm16x2: _chunk5RYM4COI.V,
-      snorm16x4: _chunk5RYM4COI.da,
-      float16: _chunk5RYM4COI.T,
-      float16x2: _chunk5RYM4COI.V,
-      float16x4: _chunk5RYM4COI.da,
-      float32: _chunk5RYM4COI.T,
-      float32x2: _chunk5RYM4COI.V,
-      float32x3: _chunk5RYM4COI._,
-      float32x4: _chunk5RYM4COI.da,
-      uint32: _chunk5RYM4COI.R,
-      uint32x2: _chunk5RYM4COI.Y,
-      uint32x3: _chunk5RYM4COI.ba,
-      uint32x4: _chunk5RYM4COI.ga,
-      sint32: _chunk5RYM4COI.S,
-      sint32x2: _chunk5RYM4COI.X,
-      sint32x3: _chunk5RYM4COI.aa,
-      sint32x4: _chunk5RYM4COI.fa,
-      "unorm10-10-10-2": _chunk5RYM4COI.da,
-      "unorm8x4-bgra": _chunk5RYM4COI.da
+    Z = exports.b = {
+      uint8: _chunkL7HIBZAX.ia,
+      uint8x2: _chunkL7HIBZAX.pa,
+      uint8x4: _chunkL7HIBZAX.za,
+      sint8: _chunkL7HIBZAX.ja,
+      sint8x2: _chunkL7HIBZAX.oa,
+      sint8x4: _chunkL7HIBZAX.ya,
+      unorm8: _chunkL7HIBZAX.ka,
+      unorm8x2: _chunkL7HIBZAX.ma,
+      unorm8x4: _chunkL7HIBZAX.wa,
+      snorm8: _chunkL7HIBZAX.ka,
+      snorm8x2: _chunkL7HIBZAX.ma,
+      snorm8x4: _chunkL7HIBZAX.wa,
+      uint16: _chunkL7HIBZAX.ia,
+      uint16x2: _chunkL7HIBZAX.pa,
+      uint16x4: _chunkL7HIBZAX.za,
+      sint16: _chunkL7HIBZAX.ja,
+      sint16x2: _chunkL7HIBZAX.oa,
+      sint16x4: _chunkL7HIBZAX.ya,
+      unorm16: _chunkL7HIBZAX.ka,
+      unorm16x2: _chunkL7HIBZAX.ma,
+      unorm16x4: _chunkL7HIBZAX.wa,
+      snorm16: _chunkL7HIBZAX.ka,
+      snorm16x2: _chunkL7HIBZAX.ma,
+      snorm16x4: _chunkL7HIBZAX.wa,
+      float16: _chunkL7HIBZAX.ka,
+      float16x2: _chunkL7HIBZAX.ma,
+      float16x4: _chunkL7HIBZAX.wa,
+      float32: _chunkL7HIBZAX.ka,
+      float32x2: _chunkL7HIBZAX.ma,
+      float32x3: _chunkL7HIBZAX.ra,
+      float32x4: _chunkL7HIBZAX.wa,
+      uint32: _chunkL7HIBZAX.ia,
+      uint32x2: _chunkL7HIBZAX.pa,
+      uint32x3: _chunkL7HIBZAX.ua,
+      uint32x4: _chunkL7HIBZAX.za,
+      sint32: _chunkL7HIBZAX.ja,
+      sint32x2: _chunkL7HIBZAX.oa,
+      sint32x3: _chunkL7HIBZAX.ta,
+      sint32x4: _chunkL7HIBZAX.ya,
+      "unorm10-10-10-2": _chunkL7HIBZAX.wa,
+      "unorm8x4-bgra": _chunkL7HIBZAX.wa
     },
-    q = exports.k = Object.keys(nt),
-    $t = exports.l = new r("uint8"),
-    zt = exports.m = new r("uint8x2"),
-    Et = exports.n = new r("uint8x4"),
-    Ot = exports.o = new r("sint8"),
-    Mt = exports.p = new r("sint8x2"),
-    Nt = exports.q = new r("sint8x4"),
-    Rt = exports.r = new r("unorm8"),
-    Gt = exports.s = new r("unorm8x2"),
-    jt = exports.t = new r("unorm8x4"),
-    Kt = exports.u = new r("snorm8"),
-    Ht = exports.v = new r("snorm8x2"),
-    Jt = exports.w = new r("snorm8x4"),
-    qt = exports.x = new r("uint16"),
-    Qt = exports.y = new r("uint16x2"),
-    Xt = exports.z = new r("uint16x4"),
-    Yt = exports.A = new r("sint16"),
-    Zt = exports.B = new r("sint16x2"),
-    te = exports.C = new r("sint16x4"),
-    ee = exports.D = new r("unorm16"),
-    re = exports.E = new r("unorm16x2"),
-    ne = exports.F = new r("unorm16x4"),
-    oe = exports.G = new r("snorm16"),
-    ie = exports.H = new r("snorm16x2"),
-    ae = exports.I = new r("snorm16x4"),
-    se = exports.J = new r("float16"),
-    ue = exports.K = new r("float16x2"),
-    pe = exports.L = new r("float16x4"),
-    xe = exports.M = new r("float32"),
-    le = exports.N = new r("float32x2"),
-    me = exports.O = new r("float32x3"),
-    ce = exports.P = new r("float32x4"),
-    ye = exports.Q = new r("uint32"),
-    fe = exports.R = new r("uint32x2"),
-    de = exports.S = new r("uint32x3"),
-    Te = exports.T = new r("uint32x4"),
-    ge = exports.U = new r("sint32"),
-    be = exports.V = new r("sint32x2"),
-    De = exports.W = new r("sint32x3"),
-    Ae = exports.X = new r("sint32x4"),
-    Ie = exports.Y = new r("unorm10-10-10-2"),
-    ve = exports.Z = new r("unorm8x4-bgra");
-  var ot = {
+    H = exports.c = Object.keys(Z),
+    Vt = exports.d = new n("uint8"),
+    Ft = exports.e = new n("uint8x2"),
+    St = exports.f = new n("uint8x4"),
+    _t = exports.g = new n("sint8"),
+    ht = exports.h = new n("sint8x2"),
+    Lt = exports.i = new n("sint8x4"),
+    Wt = exports.j = new n("unorm8"),
+    kt = exports.k = new n("unorm8x2"),
+    Pt = exports.l = new n("unorm8x4"),
+    zt = exports.m = new n("snorm8"),
+    Ut = exports.n = new n("snorm8x2"),
+    Ot = exports.o = new n("snorm8x4"),
+    $t = exports.p = new n("uint16"),
+    Et = exports.q = new n("uint16x2"),
+    Nt = exports.r = new n("uint16x4"),
+    Mt = exports.s = new n("sint16"),
+    Ct = exports.t = new n("sint16x2"),
+    Gt = exports.u = new n("sint16x4"),
+    jt = exports.v = new n("unorm16"),
+    Rt = exports.w = new n("unorm16x2"),
+    Kt = exports.x = new n("unorm16x4"),
+    Ht = exports.y = new n("snorm16"),
+    Jt = exports.z = new n("snorm16x2"),
+    qt = exports.A = new n("snorm16x4"),
+    Qt = exports.B = new n("float16"),
+    Xt = exports.C = new n("float16x2"),
+    Yt = exports.D = new n("float16x4"),
+    Zt = exports.E = new n("float32"),
+    te = exports.F = new n("float32x2"),
+    ee = exports.G = new n("float32x3"),
+    ne = exports.H = new n("float32x4"),
+    re = exports.I = new n("uint32"),
+    oe = exports.J = new n("uint32x2"),
+    ie = exports.K = new n("uint32x3"),
+    ae = exports.L = new n("uint32x4"),
+    se = exports.M = new n("sint32"),
+    ue = exports.N = new n("sint32x2"),
+    pe = exports.O = new n("sint32x3"),
+    xe = exports.P = new n("sint32x4"),
+    le = exports.Q = new n("unorm10-10-10-2"),
+    me = exports.R = new n("unorm8x4-bgra");
+  var tt = {
     f32: 4,
     f16: 2,
     i32: 4,
@@ -6566,47 +6367,47 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
     mat4x4f: 16,
     atomic: 4
   };
-  function it(t) {
+  function et(t) {
     var _D2, _D3;
     var e = t == null ? void 0 : t.type,
-      n = ot[e];
-    if (n !== void 0) return n;
-    if ((0, _chunk5RYM4COI.C)(t)) return Object.values(t.propTypes).map(x).reduce(function (i, y) {
+      r = tt[e];
+    if (r !== void 0) return r;
+    if ((0, _chunkL7HIBZAX.K)(t)) return Object.values(t.propTypes).map(x).reduce(function (i, y) {
       return i > y ? i : y;
     });
-    if ((0, _chunk5RYM4COI.B)(t)) return x(t.elementType);
-    if (b(t)) {
+    if ((0, _chunkL7HIBZAX.J)(t)) return x(t.elementType);
+    if ((0, _chunkL7HIBZAX.W)(t)) {
       var _D;
       var i = Object.values(t.propTypes)[0];
-      return i ? (_D = D(i)) != null ? _D : 1 : 1;
+      return i ? (_D = (0, _chunkL7HIBZAX.Y)(i)) != null ? _D : 1 : 1;
     }
-    if (g(t)) return (_D2 = D(t.elementType)) != null ? _D2 : 1;
-    if ((0, _chunk5RYM4COI.K)(t) || m(t)) return (_D3 = D(t)) != null ? _D3 : x(t.inner);
-    if (q.includes(e)) return 1;
+    if ((0, _chunkL7HIBZAX.V)(t)) return (_D2 = (0, _chunkL7HIBZAX.Y)(t.elementType)) != null ? _D2 : 1;
+    if ((0, _chunkL7HIBZAX.S)(t) || (0, _chunkL7HIBZAX.X)(t)) return (_D3 = (0, _chunkL7HIBZAX.Y)(t)) != null ? _D3 : x(t.inner);
+    if (H.includes(e)) return 1;
     throw new Error(`Cannot determine alignment of data: ${JSON.stringify(t)}`);
   }
-  function at(t) {
+  function nt(t) {
     var _D4, _D5;
-    if (b(t)) {
+    if ((0, _chunkL7HIBZAX.W)(t)) {
       var e = Object.values(t.propTypes)[0];
-      return e ? A(e) : 1;
+      return e ? I(e) : 1;
     }
-    return g(t) ? A(t.elementType) : m(t) ? (_D4 = D(t)) != null ? _D4 : A(t.inner) : (_D5 = D(t)) != null ? _D5 : 1;
+    return (0, _chunkL7HIBZAX.V)(t) ? I(t.elementType) : (0, _chunkL7HIBZAX.X)(t) ? (_D4 = (0, _chunkL7HIBZAX.Y)(t)) != null ? _D4 : I(t.inner) : (_D5 = (0, _chunkL7HIBZAX.Y)(t)) != null ? _D5 : 1;
   }
-  var Q = new WeakMap(),
-    X = new WeakMap();
+  var J = new WeakMap(),
+    q = new WeakMap();
   function x(t) {
-    var e = Q.get(t);
-    return e === void 0 && (e = it(t), Q.set(t, e)), e;
+    var e = J.get(t);
+    return e === void 0 && (e = et(t), J.set(t, e)), e;
   }
-  function A(t) {
-    var e = X.get(t);
-    return e === void 0 && (e = at(t), X.set(t, e)), e;
+  function I(t) {
+    var e = q.get(t);
+    return e === void 0 && (e = nt(t), q.set(t, e)), e;
   }
-  function st(t) {
+  function rt(t) {
     return x(t);
   }
-  var ut = {
+  var ot = {
     f32: 4,
     f16: 2,
     i32: 4,
@@ -6669,241 +6470,263 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
     "unorm8x4-bgra": 4,
     atomic: 4
   };
-  function pt(t) {
+  function it(t) {
     var e = 0;
-    for (var n of Object.values(t.propTypes)) {
+    for (var r of Object.values(t.propTypes)) {
       if (Number.isNaN(e)) throw new Error("Only the last property of a struct can be unbounded");
-      if (e = T(e, x(n)), e += l(n), Number.isNaN(e) && n.type !== "array") throw new Error("Cannot nest unbounded struct within another struct");
+      if (e = b(e, x(r)), e += l(r), Number.isNaN(e) && r.type !== "array") throw new Error("Cannot nest unbounded struct within another struct");
     }
-    return T(e, x(t));
+    return b(e, x(t));
   }
-  function xt(t) {
+  function at(t) {
     var e = 0;
-    for (var n of Object.values(t.propTypes)) {
-      var i = A(n);
-      e = T(e, i), e += l(n);
+    for (var r of Object.values(t.propTypes)) {
+      var i = I(r);
+      e = b(e, i), e += l(r);
     }
     return e;
   }
-  function lt(t) {
-    var _J;
-    var e = ut[t == null ? void 0 : t.type];
+  function st(t) {
+    var _K;
+    var e = ot[t == null ? void 0 : t.type];
     if (e !== void 0) return e;
-    if ((0, _chunk5RYM4COI.C)(t)) return pt(t);
-    if (b(t)) return xt(t);
-    if ((0, _chunk5RYM4COI.B)(t)) {
+    if ((0, _chunkL7HIBZAX.K)(t)) return it(t);
+    if ((0, _chunkL7HIBZAX.W)(t)) return at(t);
+    if ((0, _chunkL7HIBZAX.J)(t)) {
       if (t.elementCount === 0) return Number.NaN;
-      var n = x(t.elementType);
-      return T(l(t.elementType), n) * t.elementCount;
+      var r = x(t.elementType);
+      return b(l(t.elementType), r) * t.elementCount;
     }
-    if (g(t)) {
-      var _n = A(t.elementType);
-      return T(l(t.elementType), _n) * t.elementCount;
+    if ((0, _chunkL7HIBZAX.V)(t)) {
+      var _r = I(t.elementType);
+      return b(l(t.elementType), _r) * t.elementCount;
     }
-    if ((0, _chunk5RYM4COI.K)(t) || m(t)) return (_J = J(t)) != null ? _J : l(t.inner);
+    if ((0, _chunkL7HIBZAX.S)(t) || (0, _chunkL7HIBZAX.X)(t)) return (_K = (0, _chunkL7HIBZAX.Z)(t)) != null ? _K : l(t.inner);
     throw new Error(`Cannot determine size of data: ${t}`);
   }
-  var Y = new WeakMap();
+  var Q = new WeakMap();
   function l(t) {
-    var e = Y.get(t);
-    return e === void 0 && (e = lt(t), Y.set(t, e)), e;
+    var e = Q.get(t);
+    return e === void 0 && (e = st(t), Q.set(t, e)), e;
   }
-  function mt(t) {
+  function ut(t) {
     return l(t);
   }
   function G(t, e) {
-    return new R(t, e);
+    return new C(t, e);
   }
-  var R = /*#__PURE__*/function () {
-    function R(e, n) {
-      (0, _classCallCheck2.default)(this, R);
-      this[_chunk5RYM4COI.a] = !0;
+  var C = /*#__PURE__*/function () {
+    function C(e, r) {
+      (0, _classCallCheck2.default)(this, C);
+      this[_chunkL7HIBZAX.a] = !0;
       this.type = "array";
       this.elementType = e;
-      this.elementCount = n;
+      this.elementCount = r;
       if (Number.isNaN(l(e))) throw new Error("Cannot nest runtime sized arrays.");
-      if (!Number.isInteger(n) || n < 0) throw new Error(`Cannot create array schema with invalid element count: ${n}.`);
+      if (!Number.isInteger(r) || r < 0) throw new Error(`Cannot create array schema with invalid element count: ${r}.`);
     }
-    return (0, _createClass2.default)(R, [{
+    return (0, _createClass2.default)(C, [{
       key: "toString",
       value: function toString() {
         return `arrayOf(${this.elementType})`;
       }
     }]);
   }();
-  function ct(t, e) {
+  function pt(t, e) {
     return new j(t, e);
   }
-  var j = /*#__PURE__*/(0, _createClass2.default)(function j(e, n) {
+  var j = /*#__PURE__*/(0, _createClass2.default)(function j(e, r) {
     (0, _classCallCheck2.default)(this, j);
-    this[_chunk5RYM4COI.a] = !0;
+    this[_chunkL7HIBZAX.a] = !0;
     this.type = "disarray";
     this.elementType = e;
-    this.elementCount = n;
-    if (!Number.isInteger(n) || n < 0) throw new Error(`Cannot create disarray schema with invalid element count: ${n}.`);
+    this.elementCount = r;
+    if (!Number.isInteger(r) || r < 0) throw new Error(`Cannot create disarray schema with invalid element count: ${r}.`);
   });
-  function yt(t) {
-    var e = function e(n) {
-      return n;
+  function xt(t) {
+    var e = function e(r) {
+      return r;
     };
-    return Object.setPrototypeOf(e, ft), e.propTypes = t, e;
+    return Object.setPrototypeOf(e, lt), e.propTypes = t, e;
   }
-  var ft = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "unstruct"), "$name", function $name(t) {
-    return (0, _chunk5RYM4COI.d)(this, t), this;
+  var lt = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "unstruct"), "$name", function $name(t) {
+    return (0, _chunkL7HIBZAX.f)(this, t), this;
   }), "toString", function toString() {
-    var _k2;
-    return `unstruct:${(_k2 = (0, _chunk5RYM4COI.c)(this)) != null ? _k2 : "<unnamed>"}`;
+    var _h2;
+    return `unstruct:${(_h2 = (0, _chunkL7HIBZAX.e)(this)) != null ? _h2 : "<unnamed>"}`;
   });
-  function dt(t) {
-    return new K(t);
+  function mt(t) {
+    return new R(t);
   }
-  var K = /*#__PURE__*/(0, _createClass2.default)(function K(e) {
-    (0, _classCallCheck2.default)(this, K);
-    this[_chunk5RYM4COI.a] = !0;
+  var R = /*#__PURE__*/(0, _createClass2.default)(function R(e) {
+    (0, _classCallCheck2.default)(this, R);
+    this[_chunkL7HIBZAX.a] = !0;
     this.type = "atomic";
     this.inner = e;
   });
-  function I(t, e) {
-    return (0, _chunk5RYM4COI.K)(t) ? new $(t.inner, [e].concat((0, _toConsumableArray2.default)(t.attribs))) : m(t) ? new z(t.inner, [e].concat((0, _toConsumableArray2.default)(t.attribs))) : W(t) ? new z(t, [e]) : new $(t, [e]);
+  function B(t, e) {
+    return (0, _chunkL7HIBZAX.S)(t) ? new k(t.inner, [e].concat((0, _toConsumableArray2.default)(t.attribs))) : (0, _chunkL7HIBZAX.X)(t) ? new P(t.inner, [e].concat((0, _toConsumableArray2.default)(t.attribs))) : (0, _chunkL7HIBZAX.U)(t) ? new P(t, [e]) : new k(t, [e]);
   }
-  function Tt(t, e) {
-    return I(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "@align"), "value", t));
+  function ct(t, e) {
+    return B(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "@align"), "value", t));
   }
-  function gt(t, e) {
-    return I(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "@size"), "value", t));
+  function yt(t, e) {
+    return B(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "@size"), "value", t));
   }
-  function bt(t, e) {
-    return I(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "@location"), "value", t));
+  function ft(t, e) {
+    return B(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "@location"), "value", t));
   }
-  function Dt(t, e) {
-    return I(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "@interpolate"), "value", t));
+  function dt(t, e) {
+    return B(e, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "@interpolate"), "value", t));
   }
-  function At(t) {
-    return ((0, _chunk5RYM4COI.K)(t) || m(t)) && t.attribs.find(_chunk5RYM4COI.J) !== void 0;
+  function Tt(t) {
+    return ((0, _chunkL7HIBZAX.S)(t) || (0, _chunkL7HIBZAX.X)(t)) && t.attribs.find(_chunkL7HIBZAX.R) !== void 0;
   }
-  function qe(t) {
-    return !(0, _chunk5RYM4COI.K)(t) && !m(t) ? "" : t.attribs.map(function (e) {
+  function $e(t) {
+    return !(0, _chunkL7HIBZAX.S)(t) && !(0, _chunkL7HIBZAX.X)(t) ? "" : t.attribs.map(function (e) {
       return `${e.type}(${e.value}) `;
     }).join("");
   }
-  var C = /*#__PURE__*/(0, _createClass2.default)(function C(e, n) {
-      var _n$find, _n$find2;
-      (0, _classCallCheck2.default)(this, C);
-      this[_chunk5RYM4COI.a] = !0;
+  var W = /*#__PURE__*/(0, _createClass2.default)(function W(e, r) {
+      var _r$find, _r$find2;
+      (0, _classCallCheck2.default)(this, W);
+      this[_chunkL7HIBZAX.a] = !0;
       this.inner = e;
-      this.attribs = n;
-      var i = (_n$find = n.find(_chunk5RYM4COI.F)) == null ? void 0 : _n$find.value,
-        y = (_n$find2 = n.find(_chunk5RYM4COI.G)) == null ? void 0 : _n$find2.value;
+      this.attribs = r;
+      var i = (_r$find = r.find(_chunkL7HIBZAX.N)) == null ? void 0 : _r$find.value,
+        y = (_r$find2 = r.find(_chunkL7HIBZAX.O)) == null ? void 0 : _r$find2.value;
       if (i !== void 0) {
         if (i <= 0) throw new Error(`Custom data alignment must be a positive number, got: ${i}.`);
         if (Math.log2(i) % 1 !== 0) throw new Error(`Alignment has to be a power of 2, got: ${i}.`);
-        if ((0, _chunk5RYM4COI.A)(this.inner) && i % x(this.inner) !== 0) throw new Error(`Custom alignment has to be a multiple of the standard data alignment. Got: ${i}, expected multiple of: ${x(this.inner)}.`);
+        if ((0, _chunkL7HIBZAX.I)(this.inner) && i % x(this.inner) !== 0) throw new Error(`Custom alignment has to be a multiple of the standard data alignment. Got: ${i}, expected multiple of: ${x(this.inner)}.`);
       }
       if (y !== void 0) {
         if (y < l(this.inner)) throw new Error(`Custom data size cannot be smaller then the standard data size. Got: ${y}, expected at least: ${l(this.inner)}.`);
         if (y <= 0) throw new Error(`Custom data size must be a positive number. Got: ${y}.`);
       }
     }),
-    $ = /*#__PURE__*/function (_C) {
-      function $() {
+    k = /*#__PURE__*/function (_W) {
+      function k() {
         var _this;
-        (0, _classCallCheck2.default)(this, $);
+        (0, _classCallCheck2.default)(this, k);
         for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
           args[_key] = arguments[_key];
         }
-        _this = _callSuper(this, $, [].concat(args));
-        _this[_chunk5RYM4COI.a] = !0;
+        _this = _callSuper(this, k, [].concat(args));
+        _this[_chunkL7HIBZAX.a] = !0;
         _this.type = "decorated";
         return _this;
       }
-      (0, _inherits2.default)($, _C);
-      return (0, _createClass2.default)($);
-    }(C),
-    z = /*#__PURE__*/function (_C2) {
-      function z() {
+      (0, _inherits2.default)(k, _W);
+      return (0, _createClass2.default)(k);
+    }(W),
+    P = /*#__PURE__*/function (_W2) {
+      function P() {
         var _this2;
-        (0, _classCallCheck2.default)(this, z);
+        (0, _classCallCheck2.default)(this, P);
         for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
           args[_key2] = arguments[_key2];
         }
-        _this2 = _callSuper(this, z, [].concat(args));
-        _this2[_chunk5RYM4COI.a] = !0;
+        _this2 = _callSuper(this, P, [].concat(args));
+        _this2[_chunkL7HIBZAX.a] = !0;
         _this2.type = "loose-decorated";
         return _this2;
       }
-      (0, _inherits2.default)(z, _C2);
-      return (0, _createClass2.default)(z);
-    }(C);
+      (0, _inherits2.default)(P, _W2);
+      return (0, _createClass2.default)(P);
+    }(W);
   function a(t, e) {
-    return I(t, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunk5RYM4COI.a, !0), "type", "@builtin"), "value", e));
+    return B(t, (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, _chunkL7HIBZAX.a, !0), "type", "@builtin"), "value", e));
   }
-  var It = exports.oa = {
-    vertexIndex: a(_chunk5RYM4COI.R, "vertex_index"),
-    instanceIndex: a(_chunk5RYM4COI.R, "instance_index"),
-    position: a(_chunk5RYM4COI.da, "position"),
-    clipDistances: a(G(_chunk5RYM4COI.R, 8), "clip_distances"),
-    frontFacing: a(_chunk5RYM4COI.T, "front_facing"),
-    fragDepth: a(_chunk5RYM4COI.T, "frag_depth"),
-    sampleIndex: a(_chunk5RYM4COI.R, "sample_index"),
-    sampleMask: a(_chunk5RYM4COI.R, "sample_mask"),
-    localInvocationId: a(_chunk5RYM4COI.ba, "local_invocation_id"),
-    localInvocationIndex: a(_chunk5RYM4COI.R, "local_invocation_index"),
-    globalInvocationId: a(_chunk5RYM4COI.ba, "global_invocation_id"),
-    workgroupId: a(_chunk5RYM4COI.ba, "workgroup_id"),
-    numWorkgroups: a(_chunk5RYM4COI.ba, "num_workgroups"),
-    subgroupInvocationId: a(_chunk5RYM4COI.R, "subgroup_invocation_id"),
-    subgroupSize: a(_chunk5RYM4COI.R, "subgroup_size")
+  var gt = exports.ga = {
+    vertexIndex: a(_chunkL7HIBZAX.ia, "vertex_index"),
+    instanceIndex: a(_chunkL7HIBZAX.ia, "instance_index"),
+    position: a(_chunkL7HIBZAX.wa, "position"),
+    clipDistances: a(G(_chunkL7HIBZAX.ia, 8), "clip_distances"),
+    frontFacing: a(_chunkL7HIBZAX.ka, "front_facing"),
+    fragDepth: a(_chunkL7HIBZAX.ka, "frag_depth"),
+    sampleIndex: a(_chunkL7HIBZAX.ia, "sample_index"),
+    sampleMask: a(_chunkL7HIBZAX.ia, "sample_mask"),
+    localInvocationId: a(_chunkL7HIBZAX.ua, "local_invocation_id"),
+    localInvocationIndex: a(_chunkL7HIBZAX.ia, "local_invocation_index"),
+    globalInvocationId: a(_chunkL7HIBZAX.ua, "global_invocation_id"),
+    workgroupId: a(_chunkL7HIBZAX.ua, "workgroup_id"),
+    numWorkgroups: a(_chunkL7HIBZAX.ua, "num_workgroups"),
+    subgroupInvocationId: a(_chunkL7HIBZAX.ia, "subgroup_invocation_id"),
+    subgroupSize: a(_chunkL7HIBZAX.ia, "subgroup_size")
   };
-},29,[2,5,7,8,25,21,20,24,30],"node_modules/typegpu/chunk-SMTSXYNG.js");
+},29,[2,5,7,8,25,21,20,24,30],"node_modules/typegpu/chunk-SFECI7OX.js");
 global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.$ = void 0;
-  exports.A = Je;
-  exports.B = Qe;
-  exports.C = Xe;
-  exports.D = Ze;
-  exports.E = et;
-  exports.F = tt;
-  exports.G = nt;
-  exports.H = rt;
-  exports.I = st;
-  exports.J = it;
-  exports.K = oe;
-  exports.L = ht;
-  exports.M = mt;
-  exports.N = y;
-  exports.ba = exports.b = exports.aa = exports.a = exports._ = exports.Z = exports.Y = exports.X = exports.W = exports.V = exports.U = exports.T = exports.S = exports.R = exports.Q = exports.P = exports.O = void 0;
-  exports.c = k;
-  exports.ca = void 0;
-  exports.d = U;
-  exports.da = void 0;
-  exports.e = Ge;
-  exports.ea = void 0;
-  exports.f = L;
-  exports.m = exports.la = exports.l = exports.ka = exports.k = exports.ja = exports.j = exports.ia = exports.i = exports.ha = exports.h = exports.ga = exports.g = exports.fa = void 0;
-  exports.ma = Gt;
-  exports.n = yt;
-  exports.na = Lt;
-  exports.o = ut;
-  exports.oa = jt;
-  exports.p = ct;
-  exports.pa = Kt;
-  exports.q = lt;
-  exports.qa = Yt;
-  exports.r = void 0;
-  exports.ra = Ht;
-  exports.s = void 0;
-  exports.sa = qt;
-  exports.t = void 0;
-  exports.u = le;
-  exports.v = xe;
-  exports.w = ae;
-  exports.x = de;
-  exports.y = me;
-  exports.z = qe;
+  exports.$ = Ct;
+  exports.A = Ve;
+  exports.Aa = void 0;
+  exports.B = ve;
+  exports.Ba = void 0;
+  exports.C = ce;
+  exports.Ca = void 0;
+  exports.D = xt;
+  exports.Da = void 0;
+  exports.E = Ae;
+  exports.Ea = void 0;
+  exports.F = Ie;
+  exports.Fa = fn;
+  exports.G = wt;
+  exports.Ga = Vn;
+  exports.H = dt;
+  exports.Ha = vn;
+  exports.I = le;
+  exports.Ia = _n;
+  exports.J = pt;
+  exports.Ja = An;
+  exports.K = mt;
+  exports.Ka = In;
+  exports.L = gt;
+  exports.La = kn;
+  exports.M = Tt;
+  exports.N = xe;
+  exports.O = we;
+  exports.P = de;
+  exports.Q = ft;
+  exports.R = bt;
+  exports.S = pe;
+  exports.T = zt;
+  exports.U = De;
+  exports.V = It;
+  exports.W = kt;
+  exports.X = $t;
+  exports.Y = St;
+  exports.Z = Dt;
+  exports._ = Pt;
+  exports.b = exports.aa = exports.a = void 0;
+  exports.ba = u;
+  exports.c = void 0;
+  exports.ca = Mt;
+  exports.d = void 0;
+  exports.da = Ot;
+  exports.e = P;
+  exports.ea = y;
+  exports.f = B;
+  exports.fa = void 0;
+  exports.g = st;
+  exports.ga = void 0;
+  exports.h = H;
+  exports.oa = exports.o = exports.na = exports.n = exports.ma = exports.m = exports.la = exports.l = exports.ka = exports.k = exports.ja = exports.j = exports.ia = exports.i = exports.ha = void 0;
+  exports.p = Rt;
+  exports.pa = void 0;
+  exports.q = Bt;
+  exports.qa = void 0;
+  exports.r = Wt;
+  exports.ra = void 0;
+  exports.s = Lt;
+  exports.wa = exports.w = exports.va = exports.v = exports.ua = exports.u = exports.ta = exports.t = exports.sa = void 0;
+  exports.x = ct;
+  exports.ya = exports.y = exports.xa = void 0;
+  exports.z = ze;
+  exports.za = void 0;
   var _construct2 = _interopRequireDefault(require(_dependencyMap[1], "@babel/runtime/helpers/construct"));
   var _defineProperty2 = _interopRequireDefault(require(_dependencyMap[2], "@babel/runtime/helpers/defineProperty"));
   var _assertThisInitialized2 = _interopRequireDefault(require(_dependencyMap[3], "@babel/runtime/helpers/assertThisInitialized"));
@@ -6917,16 +6740,19 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   var _typedBinary = _interopRequireDefault(require(_dependencyMap[11], "typed-binary"));
   function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2.default)(o), (0, _possibleConstructorReturn2.default)(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], (0, _getPrototypeOf2.default)(t).constructor) : o.apply(t, e)); }
   function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-  var r = exports.a = Symbol("internal"),
-    O = exports.b = Symbol("get name forward");
-  function ue(e) {
+  var D = "0.5.8";
+  var r = exports.a = Symbol(`typegpu:${D}:$internal`),
+    se = exports.b = Symbol(`typegpu:${D}:$wgslDataType`),
+    tt = exports.c = Symbol(`typegpu:${D}:$gpuValueOf`),
+    O = exports.d = Symbol(`typegpu:${D}:$getNameForward`);
+  function fe(e) {
     return !!(e != null && e[O]);
   }
-  function k(e) {
+  function P(e) {
     var _globalThis$__TYPEGPU;
-    return ue(e) ? k(e[O]) : (_globalThis$__TYPEGPU = globalThis.__TYPEGPU_META__) == null || (_globalThis$__TYPEGPU = _globalThis$__TYPEGPU.get(e)) == null ? void 0 : _globalThis$__TYPEGPU.name;
+    return fe(e) ? P(e[O]) : (_globalThis$__TYPEGPU = globalThis.__TYPEGPU_META__) == null || (_globalThis$__TYPEGPU = _globalThis$__TYPEGPU.get(e)) == null ? void 0 : _globalThis$__TYPEGPU.name;
   }
-  function U(e, t) {
+  function B(e, t) {
     var _globalThis$__TYPEGPU2;
     (_globalThis$__TYPEGPU2 = globalThis.__TYPEGPU_META__) != null ? _globalThis$__TYPEGPU2 : globalThis.__TYPEGPU_META__ = new WeakMap();
     var n = globalThis.__TYPEGPU_META__;
@@ -6934,20 +6760,20 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
       name: t
     }));
   }
-  function Ge(e) {
+  function st(e) {
     return !!(e != null && e.$name);
   }
-  var E = "Invariant failed";
-  function L(e, t) {
+  var K = "Invariant failed";
+  function H(e, t) {
     if (e) return;
-    throw new Error(E);
+    throw new Error(K);
   }
-  var te = exports.g = /*#__PURE__*/function (_Error) {
+  var ie = exports.i = /*#__PURE__*/function (_Error) {
       function e(n, i) {
         var _this;
         (0, _classCallCheck2.default)(this, e);
-        var s = i.map(function (h) {
-          return `- ${h}`;
+        var s = i.map(function (a) {
+          return `- ${a}`;
         });
         s.length > 20 && (s = [].concat((0, _toConsumableArray2.default)(s.slice(0, 11)), ["..."], (0, _toConsumableArray2.default)(s.slice(-10))));
         _this = _callSuper(this, e, [`Resolution of the following tree failed: 
@@ -6967,7 +6793,7 @@ ${s.join(`
         }
       }]);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    ne = exports.h = /*#__PURE__*/function (_Error2) {
+    ae = exports.j = /*#__PURE__*/function (_Error2) {
       function e(n) {
         var _this2;
         (0, _classCallCheck2.default)(this, e);
@@ -6979,18 +6805,18 @@ ${s.join(`
       (0, _inherits2.default)(e, _Error2);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    re = exports.i = /*#__PURE__*/function (_Error3) {
+    oe = exports.k = /*#__PURE__*/function (_Error3) {
       function e(t) {
-        var _k;
+        var _P;
         var _this3;
         (0, _classCallCheck2.default)(this, e);
-        _this3 = _callSuper(this, e, [`Buffer '${(_k = k(t)) != null ? _k : "<unnamed>"}' is not bindable as a uniform. Use .$usage('uniform') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this3), e.prototype);
+        _this3 = _callSuper(this, e, [`Buffer '${(_P = P(t)) != null ? _P : "<unnamed>"}' is not bindable as a uniform. Use .$usage('uniform') to allow it.`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this3), e.prototype);
         return _this3;
       }
       (0, _inherits2.default)(e, _Error3);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    se = exports.j = /*#__PURE__*/function (_Error4) {
+    he = exports.l = /*#__PURE__*/function (_Error4) {
       function e(t, n) {
         var _this4;
         (0, _classCallCheck2.default)(this, e);
@@ -7000,204 +6826,277 @@ ${s.join(`
       (0, _inherits2.default)(e, _Error4);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    ie = exports.k = /*#__PURE__*/function (_Error5) {
+    ue = exports.m = /*#__PURE__*/function (_Error5) {
       function e(t) {
         var _this5;
         (0, _classCallCheck2.default)(this, e);
         _this5 = _callSuper(this, e, [`Missing bind groups for layouts: '${(0, _toConsumableArray2.default)(t).map(function (n) {
-          var _k2;
-          return (_k2 = k(n)) != null ? _k2 : "<unnamed>";
+          var _P2;
+          return (_P2 = P(n)) != null ? _P2 : "<unnamed>";
         }).join(", ")}'. Please provide it using pipeline.with(layout, bindGroup).(...)`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this5), e.prototype);
         return _this5;
       }
       (0, _inherits2.default)(e, _Error5);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error)),
-    he = exports.l = /*#__PURE__*/function (_Error6) {
+    ye = exports.n = /*#__PURE__*/function (_Error6) {
       function e(t) {
         var _this6;
         (0, _classCallCheck2.default)(this, e);
         _this6 = _callSuper(this, e, [`Missing vertex buffers for layouts: '${(0, _toConsumableArray2.default)(t).map(function (n) {
-          var _k3;
-          return (_k3 = k(n)) != null ? _k3 : "<unnamed>";
+          var _P3;
+          return (_P3 = P(n)) != null ? _P3 : "<unnamed>";
         }).join(", ")}'. Please provide it using pipeline.with(layout, buffer).(...)`]), Object.setPrototypeOf((0, _assertThisInitialized2.default)(_this6), e.prototype);
         return _this6;
       }
       (0, _inherits2.default)(e, _Error6);
       return (0, _createClass2.default)(e);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Error));
-  var x = exports.s = Symbol("Type token for the inferred (CPU & GPU) representation of a resource");
-  var He = exports.t = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "void"), x, void 0),
-    ce = ["bool", "f32", "f16", "i32", "u32", "vec2f", "vec2h", "vec2i", "vec2u", "vec2<bool>", "vec3f", "vec3h", "vec3i", "vec3u", "vec3<bool>", "vec4f", "vec4h", "vec4i", "vec4u", "vec4<bool>", "mat2x2f", "mat3x3f", "mat4x4f", "struct", "array", "ptr", "atomic", "decorated", "abstractInt", "abstractFloat", "void"];
-  function le(e) {
-    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type.startsWith("vec2"));
+  var w = exports.w = Symbol("Type token for the inferred (CPU & GPU) representation of a resource");
+  function ct(e) {
+    return !!(e != null && e[se]);
   }
-  function xe(e) {
-    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type.startsWith("vec3"));
+  var lt = exports.y = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "void"), w, void 0),
+    be = ["bool", "f32", "f16", "i32", "u32", "vec2f", "vec2h", "vec2i", "vec2u", "vec2<bool>", "vec3f", "vec3h", "vec3i", "vec3u", "vec3<bool>", "vec4f", "vec4h", "vec4i", "vec4u", "vec4<bool>", "mat2x2f", "mat3x3f", "mat4x4f", "struct", "array", "ptr", "atomic", "decorated", "abstractInt", "abstractFloat", "void"];
+  function ze(e) {
+    var _t$kind;
+    var t = e;
+    return !!(t != null && t[r]) && typeof ((_t$kind = t.kind) == null ? void 0 : _t$kind.startsWith) == "function" && t.kind.startsWith("vec");
   }
-  function we(e) {
-    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type.startsWith("vec4"));
+  function Ve(e) {
+    var _t$type;
+    var t = e;
+    return !!(t != null && t[r]) && typeof ((_t$type = t.type) == null ? void 0 : _t$type.startsWith) == "function" && (t.type.startsWith == null ? void 0 : t.type.startsWith("vec2"));
   }
-  function ae(e) {
-    return le(e) || xe(e) || we(e);
+  function ve(e) {
+    var _t$type2;
+    var t = e;
+    return !!(t != null && t[r]) && typeof ((_t$type2 = t.type) == null ? void 0 : _t$type2.startsWith) == "function" && t.type.startsWith("vec3");
   }
-  function de(e) {
+  function _e(e) {
+    var _t$type3;
+    var t = e;
+    return !!(t != null && t[r]) && typeof ((_t$type3 = t.type) == null ? void 0 : _t$type3.startsWith) == "function" && t.type.startsWith("vec4");
+  }
+  function ce(e) {
+    return Ve(e) || ve(e) || _e(e);
+  }
+  function xt(e) {
+    var _t$kind2;
+    var t = e;
+    return !!(t != null && t[r]) && typeof ((_t$kind2 = t.kind) == null ? void 0 : _t$kind2.startsWith) == "function" && t.kind.startsWith("mat");
+  }
+  function Ae(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "mat2x2f";
   }
-  function me(e) {
+  function Ie(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "mat3x3f";
   }
-  function pe(e) {
+  function ke(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "mat4x4f";
   }
-  function qe(e) {
-    return de(e) || me(e) || pe(e);
+  function wt(e) {
+    return Ae(e) || Ie(e) || ke(e);
   }
-  function Je(e) {
-    return (e == null ? void 0 : e[r]) && ce.includes(e == null ? void 0 : e.type);
+  function dt(e) {
+    return ze(e) && ["vec2f", "vec3f", "vec4f"].includes(e.kind);
   }
-  function Qe(e) {
+  function le(e) {
+    return (e == null ? void 0 : e[r]) && be.includes(e == null ? void 0 : e.type);
+  }
+  function pt(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "array";
   }
-  function Xe(e) {
+  function mt(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "struct";
   }
-  function Ze(e) {
+  function gt(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "ptr";
   }
-  function et(e) {
+  function Tt(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "atomic";
   }
-  function tt(e) {
+  function xe(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "@align";
   }
-  function nt(e) {
+  function we(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "@size";
   }
-  function rt(e) {
+  function de(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "@location";
   }
-  function st(e) {
+  function ft(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "@interpolate";
   }
-  function it(e) {
+  function bt(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "@builtin";
   }
-  function oe(e) {
+  function pe(e) {
     return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "decorated";
   }
-  function ht(e) {
+  function zt(e) {
     return (e == null ? void 0 : e[r]) && e.type === "void";
   }
-  var B = null,
-    ze = Symbol("CPU"),
-    Te = Symbol("GPU"),
-    ge = exports.m = {
-      CPU: ze,
-      GPU: Te
+  var me = exports.u = ["uint8", "uint8x2", "uint8x4", "sint8", "sint8x2", "sint8x4", "unorm8", "unorm8x2", "unorm8x4", "snorm8", "snorm8x2", "snorm8x4", "uint16", "uint16x2", "uint16x4", "sint16", "sint16x2", "sint16x4", "unorm16", "unorm16x2", "unorm16x4", "snorm16", "snorm16x2", "snorm16x4", "float16", "float16x2", "float16x4", "float32", "float32x2", "float32x3", "float32x4", "uint32", "uint32x2", "uint32x3", "uint32x4", "sint32", "sint32x2", "sint32x3", "sint32x4", "unorm10-10-10-2", "unorm8x4-bgra"],
+    Vt = exports.v = {
+      f32: "float32",
+      vec2f: "float32x2",
+      vec3f: "float32x3",
+      vec4f: "float32x4",
+      f16: "float16",
+      vec2h: "float16x2",
+      vec4h: "float16x4",
+      u32: "uint32",
+      vec2u: "uint32x2",
+      vec3u: "uint32x3",
+      vec4u: "uint32x4",
+      i32: "sint32",
+      vec2i: "sint32x2",
+      vec3i: "sint32x3",
+      vec4i: "sint32x4"
+    };
+  var Se = ["unstruct", "disarray", "loose-decorated"].concat(me);
+  function De(e) {
+    return (e == null ? void 0 : e[r]) && Se.includes(e == null ? void 0 : e.type);
+  }
+  function It(e) {
+    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "disarray";
+  }
+  function kt(e) {
+    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "unstruct";
+  }
+  function $t(e) {
+    return (e == null ? void 0 : e[r]) && (e == null ? void 0 : e.type) === "loose-decorated";
+  }
+  function St(e) {
+    var _e$attribs;
+    return (_e$attribs = e.attribs) == null || (_e$attribs = _e$attribs.find(xe)) == null ? void 0 : _e$attribs.value;
+  }
+  function Dt(e) {
+    var _e$attribs2;
+    return (_e$attribs2 = e.attribs) == null || (_e$attribs2 = _e$attribs2.find(we)) == null ? void 0 : _e$attribs2.value;
+  }
+  function Pt(e) {
+    var _e$attribs3;
+    return (_e$attribs3 = e.attribs) == null || (_e$attribs3 = _e$attribs3.find(de)) == null ? void 0 : _e$attribs3.value;
+  }
+  function Ct(e) {
+    return le(e) || De(e);
+  }
+  var Ft = exports.aa = {
+      type: "unknown",
+      toString: function toString() {
+        return "unknown";
+      }
     },
-    D = [];
-  function yt(e, t) {
-    L(B === null, "Cannot nest context providers"), B = e;
+    W = /*#__PURE__*/(0, _createClass2.default)(function W(t, n) {
+      (0, _classCallCheck2.default)(this, W);
+      this.value = t;
+      this.dataType = n;
+    });
+  function u(e, t) {
+    return new W(e, t.type === "decorated" || t.type === "loose-decorated" ? t.inner : t);
+  }
+  function Mt(e) {
+    return e instanceof W;
+  }
+  var L = null,
+    Pe = Symbol("CPU"),
+    Ce = Symbol("GPU"),
+    Fe = exports.o = {
+      CPU: Pe,
+      GPU: Ce
+    },
+    C = [];
+  function Rt(e, t) {
+    H(L === null, "Cannot nest context providers"), L = e;
     try {
       return t();
     } finally {
-      B = null;
+      L = null;
     }
   }
-  function ut() {
-    return B;
+  function Bt() {
+    return L;
   }
-  function ct(e) {
-    D.push(e);
+  function Wt(e) {
+    C.push(e);
   }
-  function lt(e) {
-    var t = D.pop();
-    e !== void 0 && L(t === e, "Unexpected mode");
+  function Lt(e) {
+    var t = C.pop();
+    e !== void 0 && H(t === e, "Unexpected mode");
   }
-  var ye = exports.r = function ye() {
-    return D.length > 0 && D[D.length - 1] === ge.GPU;
+  var ge = exports.t = function ge() {
+    return C.length > 0 && C[C.length - 1] === Fe.GPU;
   };
-  function* mt(e) {
+  function* Ot(e) {
     var t = 0;
     for (;;) e.has(t) || (yield t), t++;
   }
   function y(e, t, n) {
     var i = function i() {
-      return ye() ? t.apply(void 0, arguments) : e.apply(void 0, arguments);
+      return ge() ? t.apply(void 0, arguments) : e.apply(void 0, arguments);
     };
     return i[r] = {
       implementation: e,
       argTypes: n
     }, i;
   }
-  var Vt = exports.O = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "abstractInt"),
-    bt = exports.P = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "abstractFloat"),
-    W = exports.Q = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "bool"),
-    Ve = y(function (e) {
+  var Qt = exports.fa = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "abstractInt"),
+    Xt = exports.ga = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "abstractFloat"),
+    G = exports.ha = (0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "bool"),
+    Me = y(function (e) {
       return typeof e == "boolean" ? e ? 1 : 0 : Number.isInteger(e) ? ((e < 0 || e > 4294967295) && console.warn(`u32 value ${e} overflowed`), (e & 4294967295) >>> 0) : Math.max(0, Math.min(4294967295, Math.floor(e)));
     }, function (e) {
-      return {
-        value: `u32(${e.value})`,
-        dataType: P
-      };
+      return u(`u32(${e.value})`, F);
     }),
-    P = exports.R = Object.assign(Ve, {
+    F = exports.ia = Object.assign(Me, {
       type: "u32"
     }),
-    be = y(function (e) {
+    Ne = y(function (e) {
       if (typeof e == "boolean") return e ? 1 : 0;
       if (Number.isInteger(e)) return (e < -2147483648 || e > 2147483647) && console.warn(`i32 value ${e} overflowed`), (e | 0) & 4294967295;
       var t = e < 0 ? Math.ceil(e) : Math.floor(e);
       return Math.max(-2147483648, Math.min(2147483647, t));
     }, function (e) {
-      return {
-        value: `i32(${e.value})`,
-        dataType: M
-      };
+      return u(`i32(${e.value})`, M);
     }),
-    M = exports.S = Object.assign(be, {
+    M = exports.ja = Object.assign(Ne, {
       type: "i32"
     }),
-    fe = y(function (e) {
+    Ue = y(function (e) {
       if (typeof e == "boolean") return e ? 1 : 0;
       var t = new Float32Array(1);
       return t[0] = e, t[0];
     }, function (e) {
-      return {
-        value: `f32(${e.value})`,
-        dataType: C
-      };
+      return u(`f32(${e.value})`, N);
     }),
-    C = exports.T = Object.assign(fe, {
+    N = exports.ka = Object.assign(Ue, {
       type: "f32"
     }),
-    ve = y(function (e) {
+    Re = y(function (e) {
       if (typeof e == "boolean") return e ? 1 : 0;
       var t = new ArrayBuffer(2);
       return _typedBinary.default.f16.write(new _typedBinary.default.BufferWriter(t), e), _typedBinary.default.f16.read(new _typedBinary.default.BufferReader(t));
     }, function (e) {
-      return {
-        value: `f16(${e.value})`,
-        dataType: N
-      };
+      return u(`f16(${e.value})`, U);
     }),
-    N = exports.U = Object.assign(ve, {
+    U = exports.la = Object.assign(Re, {
       type: "f16"
     });
-  var F = /*#__PURE__*/function (_Array) {
-      function F() {
+  var R = /*#__PURE__*/function (_Array) {
+      function R() {
         var _this7;
-        (0, _classCallCheck2.default)(this, F);
+        (0, _classCallCheck2.default)(this, R);
         for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
           args[_key] = arguments[_key];
         }
-        _this7 = _callSuper(this, F, [].concat(args));
+        _this7 = _callSuper(this, R, [].concat(args));
         _this7[r] = !0;
         return _this7;
       }
-      (0, _inherits2.default)(F, _Array);
-      return (0, _createClass2.default)(F, [{
+      (0, _inherits2.default)(R, _Array);
+      return (0, _createClass2.default)(R, [{
         key: "~resolve",
         value: function resolve() {
           return `${this.kind}(${this.join(", ")})`;
@@ -8889,16 +8788,16 @@ ${s.join(`
         }
       }]);
     }(/*#__PURE__*/(0, _wrapNativeSuper2.default)(Array)),
-    u = /*#__PURE__*/function (_F) {
-      function u(t, n) {
+    c = /*#__PURE__*/function (_R) {
+      function c(t, n) {
         var _ref;
         var _this8;
-        (0, _classCallCheck2.default)(this, u);
-        _this8 = _callSuper(this, u, [2]), _this8[0] = t != null ? t : _this8.getDefaultValue(), _this8[1] = (_ref = n != null ? n : t) != null ? _ref : _this8.getDefaultValue();
+        (0, _classCallCheck2.default)(this, c);
+        _this8 = _callSuper(this, c, [2]), _this8[0] = t != null ? t : _this8.getDefaultValue(), _this8[1] = (_ref = n != null ? n : t) != null ? _ref : _this8.getDefaultValue();
         return _this8;
       }
-      (0, _inherits2.default)(u, _F);
-      return (0, _createClass2.default)(u, [{
+      (0, _inherits2.default)(c, _R);
+      return (0, _createClass2.default)(c, [{
         key: "x",
         get: function get() {
           return this[0];
@@ -8915,17 +8814,17 @@ ${s.join(`
           this[1] = t;
         }
       }]);
-    }(F),
-    c = /*#__PURE__*/function (_F2) {
-      function c(t, n, i) {
+    }(R),
+    l = /*#__PURE__*/function (_R2) {
+      function l(t, n, i) {
         var _ref2, _ref3;
         var _this9;
-        (0, _classCallCheck2.default)(this, c);
-        _this9 = _callSuper(this, c, [3]), _this9[0] = t != null ? t : _this9.getDefaultValue(), _this9[1] = (_ref2 = n != null ? n : t) != null ? _ref2 : _this9.getDefaultValue(), _this9[2] = (_ref3 = i != null ? i : t) != null ? _ref3 : _this9.getDefaultValue();
+        (0, _classCallCheck2.default)(this, l);
+        _this9 = _callSuper(this, l, [3]), _this9[0] = t != null ? t : _this9.getDefaultValue(), _this9[1] = (_ref2 = n != null ? n : t) != null ? _ref2 : _this9.getDefaultValue(), _this9[2] = (_ref3 = i != null ? i : t) != null ? _ref3 : _this9.getDefaultValue();
         return _this9;
       }
-      (0, _inherits2.default)(c, _F2);
-      return (0, _createClass2.default)(c, [{
+      (0, _inherits2.default)(l, _R2);
+      return (0, _createClass2.default)(l, [{
         key: "x",
         get: function get() {
           return this[0];
@@ -8950,17 +8849,17 @@ ${s.join(`
           this[2] = t;
         }
       }]);
-    }(F),
-    l = /*#__PURE__*/function (_F3) {
-      function l(t, n, i, s) {
+    }(R),
+    x = /*#__PURE__*/function (_R3) {
+      function x(t, n, i, s) {
         var _ref4, _ref5, _ref6;
         var _this10;
-        (0, _classCallCheck2.default)(this, l);
-        _this10 = _callSuper(this, l, [4]), _this10[0] = t != null ? t : _this10.getDefaultValue(), _this10[1] = (_ref4 = n != null ? n : t) != null ? _ref4 : _this10.getDefaultValue(), _this10[2] = (_ref5 = i != null ? i : t) != null ? _ref5 : _this10.getDefaultValue(), _this10[3] = (_ref6 = s != null ? s : t) != null ? _ref6 : _this10.getDefaultValue();
+        (0, _classCallCheck2.default)(this, x);
+        _this10 = _callSuper(this, x, [4]), _this10[0] = t != null ? t : _this10.getDefaultValue(), _this10[1] = (_ref4 = n != null ? n : t) != null ? _ref4 : _this10.getDefaultValue(), _this10[2] = (_ref5 = i != null ? i : t) != null ? _ref5 : _this10.getDefaultValue(), _this10[3] = (_ref6 = s != null ? s : t) != null ? _ref6 : _this10.getDefaultValue();
         return _this10;
       }
-      (0, _inherits2.default)(l, _F3);
-      return (0, _createClass2.default)(l, [{
+      (0, _inherits2.default)(x, _R3);
+      return (0, _createClass2.default)(x, [{
         key: "x",
         get: function get() {
           return this[0];
@@ -8993,13 +8892,13 @@ ${s.join(`
           this[3] = t;
         }
       }]);
-    }(F),
-    w = /*#__PURE__*/function (_u) {
+    }(R),
+    d = /*#__PURE__*/function (_c) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _u);
+      (0, _inherits2.default)(e, _c);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9018,21 +8917,21 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return T;
+          return f;
         }
       }, {
         key: "_Vec4",
         get: function get() {
-          return v;
+          return _;
         }
       }]);
-    }(u),
-    d = /*#__PURE__*/function (_u2) {
+    }(c),
+    p = /*#__PURE__*/function (_c2) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _u2);
+      (0, _inherits2.default)(e, _c2);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9051,21 +8950,21 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return g;
+          return b;
         }
       }, {
         key: "_Vec4",
         get: function get() {
-          return _;
+          return A;
         }
       }]);
-    }(u),
-    m = /*#__PURE__*/function (_u3) {
+    }(c),
+    m = /*#__PURE__*/function (_c3) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _u3);
+      (0, _inherits2.default)(e, _c3);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9084,7 +8983,7 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return V;
+          return z;
         }
       }, {
         key: "_Vec4",
@@ -9092,13 +8991,13 @@ ${s.join(`
           return I;
         }
       }]);
-    }(u),
-    p = /*#__PURE__*/function (_u4) {
+    }(c),
+    g = /*#__PURE__*/function (_c4) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _u4);
+      (0, _inherits2.default)(e, _c4);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9117,21 +9016,21 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return b;
+          return V;
         }
       }, {
         key: "_Vec4",
         get: function get() {
-          return A;
+          return k;
         }
       }]);
-    }(u),
-    z = /*#__PURE__*/function (_u5) {
+    }(c),
+    T = /*#__PURE__*/function (_c5) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _u5);
+      (0, _inherits2.default)(e, _c5);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9150,21 +9049,21 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return f;
+          return v;
         }
       }, {
         key: "_Vec4",
         get: function get() {
-          return S;
+          return $;
         }
       }]);
-    }(u),
-    T = /*#__PURE__*/function (_c) {
+    }(c),
+    f = /*#__PURE__*/function (_l) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _c);
+      (0, _inherits2.default)(e, _l);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9174,39 +9073,6 @@ ${s.join(`
         key: "kind",
         get: function get() {
           return "vec3f";
-        }
-      }, {
-        key: "_Vec2",
-        get: function get() {
-          return w;
-        }
-      }, {
-        key: "_Vec3",
-        get: function get() {
-          return e;
-        }
-      }, {
-        key: "_Vec4",
-        get: function get() {
-          return v;
-        }
-      }]);
-    }(c),
-    g = /*#__PURE__*/function (_c2) {
-      function e() {
-        (0, _classCallCheck2.default)(this, e);
-        return _callSuper(this, e, arguments);
-      }
-      (0, _inherits2.default)(e, _c2);
-      return (0, _createClass2.default)(e, [{
-        key: "getDefaultValue",
-        value: function getDefaultValue() {
-          return 0;
-        }
-      }, {
-        key: "kind",
-        get: function get() {
-          return "vec3h";
         }
       }, {
         key: "_Vec2",
@@ -9224,13 +9090,46 @@ ${s.join(`
           return _;
         }
       }]);
-    }(c),
-    V = /*#__PURE__*/function (_c3) {
+    }(l),
+    b = /*#__PURE__*/function (_l2) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _c3);
+      (0, _inherits2.default)(e, _l2);
+      return (0, _createClass2.default)(e, [{
+        key: "getDefaultValue",
+        value: function getDefaultValue() {
+          return 0;
+        }
+      }, {
+        key: "kind",
+        get: function get() {
+          return "vec3h";
+        }
+      }, {
+        key: "_Vec2",
+        get: function get() {
+          return p;
+        }
+      }, {
+        key: "_Vec3",
+        get: function get() {
+          return e;
+        }
+      }, {
+        key: "_Vec4",
+        get: function get() {
+          return A;
+        }
+      }]);
+    }(l),
+    z = /*#__PURE__*/function (_l3) {
+      function e() {
+        (0, _classCallCheck2.default)(this, e);
+        return _callSuper(this, e, arguments);
+      }
+      (0, _inherits2.default)(e, _l3);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9257,13 +9156,13 @@ ${s.join(`
           return I;
         }
       }]);
-    }(c),
-    b = /*#__PURE__*/function (_c4) {
+    }(l),
+    V = /*#__PURE__*/function (_l4) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _c4);
+      (0, _inherits2.default)(e, _l4);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9277,7 +9176,7 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return p;
+          return g;
         }
       }, {
         key: "_Vec3",
@@ -9287,16 +9186,16 @@ ${s.join(`
       }, {
         key: "_Vec4",
         get: function get() {
-          return A;
+          return k;
         }
       }]);
-    }(c),
-    f = /*#__PURE__*/function (_c5) {
+    }(l),
+    v = /*#__PURE__*/function (_l5) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _c5);
+      (0, _inherits2.default)(e, _l5);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9310,7 +9209,7 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return z;
+          return T;
         }
       }, {
         key: "_Vec3",
@@ -9320,16 +9219,16 @@ ${s.join(`
       }, {
         key: "_Vec4",
         get: function get() {
-          return S;
+          return $;
         }
       }]);
-    }(c),
-    v = /*#__PURE__*/function (_l) {
+    }(l),
+    _ = /*#__PURE__*/function (_x) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _l);
+      (0, _inherits2.default)(e, _x);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9343,12 +9242,12 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return w;
+          return d;
         }
       }, {
         key: "_Vec3",
         get: function get() {
-          return T;
+          return f;
         }
       }, {
         key: "_Vec4",
@@ -9356,13 +9255,13 @@ ${s.join(`
           return e;
         }
       }]);
-    }(l),
-    _ = /*#__PURE__*/function (_l2) {
+    }(x),
+    A = /*#__PURE__*/function (_x2) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _l2);
+      (0, _inherits2.default)(e, _x2);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9376,12 +9275,12 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return d;
+          return p;
         }
       }, {
         key: "_Vec3",
         get: function get() {
-          return g;
+          return b;
         }
       }, {
         key: "_Vec4",
@@ -9389,13 +9288,13 @@ ${s.join(`
           return e;
         }
       }]);
-    }(l),
-    I = /*#__PURE__*/function (_l3) {
+    }(x),
+    I = /*#__PURE__*/function (_x3) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _l3);
+      (0, _inherits2.default)(e, _x3);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9414,7 +9313,7 @@ ${s.join(`
       }, {
         key: "_Vec3",
         get: function get() {
-          return V;
+          return z;
         }
       }, {
         key: "_Vec4",
@@ -9422,13 +9321,13 @@ ${s.join(`
           return e;
         }
       }]);
-    }(l),
-    A = /*#__PURE__*/function (_l4) {
+    }(x),
+    k = /*#__PURE__*/function (_x4) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _l4);
+      (0, _inherits2.default)(e, _x4);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9442,12 +9341,12 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return p;
+          return g;
         }
       }, {
         key: "_Vec3",
         get: function get() {
-          return b;
+          return V;
         }
       }, {
         key: "_Vec4",
@@ -9455,13 +9354,13 @@ ${s.join(`
           return e;
         }
       }]);
-    }(l),
-    S = /*#__PURE__*/function (_l5) {
+    }(x),
+    $ = /*#__PURE__*/function (_x5) {
       function e() {
         (0, _classCallCheck2.default)(this, e);
         return _callSuper(this, e, arguments);
       }
-      (0, _inherits2.default)(e, _l5);
+      (0, _inherits2.default)(e, _x5);
       return (0, _createClass2.default)(e, [{
         key: "getDefaultValue",
         value: function getDefaultValue() {
@@ -9475,12 +9374,12 @@ ${s.join(`
       }, {
         key: "_Vec2",
         get: function get() {
-          return z;
+          return T;
         }
       }, {
         key: "_Vec3",
         get: function get() {
-          return f;
+          return v;
         }
       }, {
         key: "_Vec4",
@@ -9488,57 +9387,57 @@ ${s.join(`
           return e;
         }
       }]);
-    }(l);
-  var j = exports.V = a(w),
-    _e = exports.W = a(d),
-    Ie = exports.X = a(m),
-    Ae = exports.Y = a(p),
-    Se = exports.Z = a(z),
-    K = exports._ = a(T),
-    $e = exports.$ = a(g),
-    ke = exports.aa = a(V),
-    De = exports.ba = a(b),
-    Pe = exports.ca = a(f),
-    Y = exports.da = a(v),
-    Me = exports.ea = a(_),
-    Ce = exports.fa = a(I),
-    Ne = exports.ga = a(A),
-    Fe = exports.ha = a(S),
-    Ue = {
-      vec2f: j,
-      vec2h: _e,
-      vec2i: Ie,
-      vec2u: Ae,
-      "vec2<bool>": Se,
-      vec3f: K,
-      vec3h: $e,
-      vec3i: ke,
-      vec3u: De,
-      "vec3<bool>": Pe,
-      vec4f: Y,
-      vec4h: Me,
-      vec4i: Ce,
-      vec4u: Ne,
-      "vec4<bool>": Fe
+    }(x);
+  var Y = exports.ma = o(d),
+    Be = exports.na = o(p),
+    We = exports.oa = o(m),
+    Le = exports.pa = o(g),
+    je = exports.qa = o(T),
+    J = exports.ra = o(f),
+    Ge = exports.sa = o(b),
+    Ee = exports.ta = o(z),
+    Oe = exports.ua = o(V),
+    Ke = exports.va = o(v),
+    q = exports.wa = o(_),
+    He = exports.xa = o(A),
+    Ye = exports.ya = o(I),
+    Je = exports.za = o(k),
+    qe = exports.Aa = o($),
+    Qe = {
+      vec2f: Y,
+      vec2h: Be,
+      vec2i: We,
+      vec2u: Le,
+      "vec2<bool>": je,
+      vec3f: J,
+      vec3h: Ge,
+      vec3i: Ee,
+      vec3u: Oe,
+      "vec3<bool>": Ke,
+      vec4f: q,
+      vec4h: He,
+      vec4i: Ye,
+      vec4u: Je,
+      "vec4<bool>": qe
     },
-    Be = exports.ia = {
-      vec2f: C,
-      vec2h: N,
+    Xe = exports.Ba = {
+      vec2f: N,
+      vec2h: U,
       vec2i: M,
-      vec2u: P,
-      "vec2<bool>": W,
-      vec3f: C,
-      vec3h: N,
+      vec2u: F,
+      "vec2<bool>": G,
+      vec3f: N,
+      vec3h: U,
       vec3i: M,
-      vec3u: P,
-      "vec3<bool>": W,
-      vec4f: C,
-      vec4h: N,
+      vec3u: F,
+      "vec3<bool>": G,
+      vec4f: N,
+      vec4h: U,
       vec4i: M,
-      vec4u: P,
-      "vec4<bool>": W
+      vec4u: F,
+      "vec4<bool>": G
     };
-  function a(e) {
+  function o(e) {
     var _e2 = new e(),
       t = _e2.kind,
       n = _e2.length,
@@ -9546,66 +9445,61 @@ ${s.join(`
         for (var _len2 = arguments.length, s = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
           s[_key2] = arguments[_key2];
         }
-        var h = new Array(s.length),
-          o = 0;
-        for (var $ of s) if (typeof $ == "number" || typeof $ == "boolean") h[o++] = $;else for (var G = 0; G < $.length; ++G) h[o++] = $[G];
-        if (h.length <= 1 || h.length === n) return (0, _construct2.default)(e, h);
+        var a = new Array(s.length),
+          h = 0;
+        for (var S of s) if (typeof S == "number" || typeof S == "boolean") a[h++] = S;else for (var E = 0; E < S.length; ++E) a[h++] = S[E];
+        if (a.length <= 1 || a.length === n) return (0, _construct2.default)(e, a);
         throw new Error(`'${t}' constructor called with invalid number of arguments.`);
       }, function () {
         for (var _len3 = arguments.length, s = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
           s[_key3] = arguments[_key3];
         }
-        return {
-          value: `${t}(${s.map(function (h) {
-            return h.value;
-          }).join(", ")})`,
-          dataType: Ue[t]
-        };
+        return u(`${t}(${s.map(function (a) {
+          return a.value;
+        }).join(", ")})`, Qe[t]);
       }, function () {
         for (var _len4 = arguments.length, s = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
           s[_key4] = arguments[_key4];
         }
-        return s.map(function (h) {
-          var o = h.dataType;
-          return oe(o) && (o = o.inner), ae(o) ? o : Be[t];
+        return s.map(function (a) {
+          var h = a.dataType;
+          return pe(h) && (h = h.inner), ce(h) ? h : Xe[t];
         });
       });
-    return U(i, t), Object.assign(i, (0, _defineProperty2.default)({
+    return B(i, t), Object.assign(i, (0, _defineProperty2.default)({
       type: t
-    }, x, void 0));
+    }, w, void 0));
   }
-  function ee(e) {
-    var t = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), x, void 0), "type", e.type);
-    U(t, e.type);
+  function re(e) {
+    var t = (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), w, void 0), "type", e.type);
+    B(t, e.type);
     var n = y(function () {
       var s = [];
       for (var _len5 = arguments.length, i = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
         i[_key5] = arguments[_key5];
       }
-      for (var h of i) if (typeof h == "number") s.push(h);else for (var o = 0; o < h.length; ++o) s.push(h[o]);
-      for (var _h = s.length; _h < e.columns * e.rows; ++_h) s.push(0);
+      for (var a of i) if (typeof a == "number") s.push(a);else for (var h = 0; h < a.length; ++h) s.push(a[h]);
+      if (s.length !== 0 && s.length !== e.columns * e.rows) throw new Error(`'${e.type}' constructor called with invalid number of arguments.`);
+      for (var _a = s.length; _a < e.columns * e.rows; ++_a) s.push(0);
       return e.makeFromElements.apply(e, s);
     }, function () {
       for (var _len6 = arguments.length, i = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
         i[_key6] = arguments[_key6];
       }
-      return {
-        value: `${t.type}(${i.map(function (s) {
-          return s.value;
-        }).join(", ")})`,
-        dataType: t
-      };
+      return u(`${t.type}(${i.map(function (s) {
+        return s.value;
+      }).join(", ")})`, t);
     });
     return Object.assign(n, t);
   }
-  var H = /*#__PURE__*/function () {
-      function H() {
-        (0, _classCallCheck2.default)(this, H);
+  var Q = /*#__PURE__*/function () {
+      function Q() {
+        (0, _classCallCheck2.default)(this, Q);
         this[r] = !0;
         this.length = 4;
         this.columns = [this.makeColumn(arguments.length <= 0 ? undefined : arguments[0], arguments.length <= 1 ? undefined : arguments[1]), this.makeColumn(arguments.length <= 2 ? undefined : arguments[2], arguments.length <= 3 ? undefined : arguments[3])];
       }
-      return (0, _createClass2.default)(H, [{
+      return (0, _createClass2.default)(Q, [{
         key: "0",
         get: function get() {
           return this.columns[0].x;
@@ -9654,33 +9548,33 @@ ${s.join(`
         }
       }]);
     }(),
-    q = /*#__PURE__*/function (_H) {
-      function q() {
+    X = /*#__PURE__*/function (_Q) {
+      function X() {
         var _this12;
-        (0, _classCallCheck2.default)(this, q);
+        (0, _classCallCheck2.default)(this, X);
         for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
           args[_key7] = arguments[_key7];
         }
-        _this12 = _callSuper(this, q, [].concat(args));
+        _this12 = _callSuper(this, X, [].concat(args));
         _this12.kind = "mat2x2f";
         return _this12;
       }
-      (0, _inherits2.default)(q, _H);
-      return (0, _createClass2.default)(q, [{
+      (0, _inherits2.default)(X, _Q);
+      return (0, _createClass2.default)(X, [{
         key: "makeColumn",
         value: function makeColumn(t, n) {
-          return j(t, n);
+          return Y(t, n);
         }
       }]);
-    }(H),
-    J = /*#__PURE__*/function () {
-      function J() {
-        (0, _classCallCheck2.default)(this, J);
+    }(Q),
+    Z = /*#__PURE__*/function () {
+      function Z() {
+        (0, _classCallCheck2.default)(this, Z);
         this[r] = !0;
         this.length = 12;
         this.columns = [this.makeColumn(arguments.length <= 0 ? undefined : arguments[0], arguments.length <= 1 ? undefined : arguments[1], arguments.length <= 2 ? undefined : arguments[2]), this.makeColumn(arguments.length <= 3 ? undefined : arguments[3], arguments.length <= 4 ? undefined : arguments[4], arguments.length <= 5 ? undefined : arguments[5]), this.makeColumn(arguments.length <= 6 ? undefined : arguments[6], arguments.length <= 7 ? undefined : arguments[7], arguments.length <= 8 ? undefined : arguments[8])];
       }
-      return (0, _createClass2.default)(J, [{
+      return (0, _createClass2.default)(Z, [{
         key: "0",
         get: function get() {
           return this.columns[0].x;
@@ -9782,33 +9676,33 @@ ${s.join(`
         }
       }]);
     }(),
-    Q = /*#__PURE__*/function (_J) {
-      function Q() {
+    ee = /*#__PURE__*/function (_Z) {
+      function ee() {
         var _this13;
-        (0, _classCallCheck2.default)(this, Q);
+        (0, _classCallCheck2.default)(this, ee);
         for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
           args[_key8] = arguments[_key8];
         }
-        _this13 = _callSuper(this, Q, [].concat(args));
+        _this13 = _callSuper(this, ee, [].concat(args));
         _this13.kind = "mat3x3f";
         return _this13;
       }
-      (0, _inherits2.default)(Q, _J);
-      return (0, _createClass2.default)(Q, [{
+      (0, _inherits2.default)(ee, _Z);
+      return (0, _createClass2.default)(ee, [{
         key: "makeColumn",
         value: function makeColumn(t, n, i) {
-          return K(t, n, i);
+          return J(t, n, i);
         }
       }]);
-    }(J),
-    X = /*#__PURE__*/function () {
-      function X() {
-        (0, _classCallCheck2.default)(this, X);
+    }(Z),
+    te = /*#__PURE__*/function () {
+      function te() {
+        (0, _classCallCheck2.default)(this, te);
         this[r] = !0;
         this.length = 16;
         this.columns = [this.makeColumn(arguments.length <= 0 ? undefined : arguments[0], arguments.length <= 1 ? undefined : arguments[1], arguments.length <= 2 ? undefined : arguments[2], arguments.length <= 3 ? undefined : arguments[3]), this.makeColumn(arguments.length <= 4 ? undefined : arguments[4], arguments.length <= 5 ? undefined : arguments[5], arguments.length <= 6 ? undefined : arguments[6], arguments.length <= 7 ? undefined : arguments[7]), this.makeColumn(arguments.length <= 8 ? undefined : arguments[8], arguments.length <= 9 ? undefined : arguments[9], arguments.length <= 10 ? undefined : arguments[10], arguments.length <= 11 ? undefined : arguments[11]), this.makeColumn(arguments.length <= 12 ? undefined : arguments[12], arguments.length <= 13 ? undefined : arguments[13], arguments.length <= 14 ? undefined : arguments[14], arguments.length <= 15 ? undefined : arguments[15])];
       }
-      return (0, _createClass2.default)(X, [{
+      return (0, _createClass2.default)(te, [{
         key: "0",
         get: function get() {
           return this.columns[0].x;
@@ -9953,26 +9847,26 @@ ${s.join(`
         }
       }]);
     }(),
-    Z = /*#__PURE__*/function (_X) {
-      function Z() {
+    ne = /*#__PURE__*/function (_te) {
+      function ne() {
         var _this15;
-        (0, _classCallCheck2.default)(this, Z);
+        (0, _classCallCheck2.default)(this, ne);
         for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
           args[_key9] = arguments[_key9];
         }
-        _this15 = _callSuper(this, Z, [].concat(args));
+        _this15 = _callSuper(this, ne, [].concat(args));
         _this15.kind = "mat4x4f";
         return _this15;
       }
-      (0, _inherits2.default)(Z, _X);
-      return (0, _createClass2.default)(Z, [{
+      (0, _inherits2.default)(ne, _te);
+      return (0, _createClass2.default)(ne, [{
         key: "makeColumn",
         value: function makeColumn(t, n, i, s) {
-          return Y(t, n, i, s);
+          return q(t, n, i, s);
         }
       }]);
-    }(X),
-    Bt = exports.ja = ee({
+    }(te),
+    mn = exports.Ca = re({
       type: "mat2x2f",
       rows: 2,
       columns: 2,
@@ -9980,10 +9874,10 @@ ${s.join(`
         for (var _len10 = arguments.length, e = new Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
           e[_key10] = arguments[_key10];
         }
-        return (0, _construct2.default)(q, e);
+        return (0, _construct2.default)(X, e);
       }
     }),
-    Rt = exports.ka = ee({
+    gn = exports.Da = re({
       type: "mat3x3f",
       rows: 3,
       columns: 3,
@@ -9991,10 +9885,10 @@ ${s.join(`
         for (var _len11 = arguments.length, e = new Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
           e[_key11] = arguments[_key11];
         }
-        return (0, _construct2.default)(Q, e);
+        return (0, _construct2.default)(ee, e);
       }
     }),
-    Wt = exports.la = ee({
+    Tn = exports.Ea = re({
       type: "mat4x4f",
       rows: 4,
       columns: 4,
@@ -10002,36 +9896,36 @@ ${s.join(`
         for (var _len12 = arguments.length, e = new Array(_len12), _key12 = 0; _key12 < _len12; _key12++) {
           e[_key12] = arguments[_key12];
         }
-        return (0, _construct2.default)(Z, e);
+        return (0, _construct2.default)(ne, e);
       }
     });
-  function Gt(e) {
+  function fn(e) {
     return e.kind === "mat3x3f" ? [e[0], e[1], e[2], e[4], e[5], e[6], e[8], e[9], e[10]] : Array.from({
       length: e.length
     }).map(function (t, n) {
       return e[n];
     });
   }
-  function Lt(e) {
+  function Vn(e) {
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "function"), "access", "read-write");
   }
-  function jt(e) {
+  function vn(e) {
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "private"), "access", "read-write");
   }
-  function Kt(e) {
+  function _n(e) {
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "workgroup"), "access", "read-write");
   }
-  function Yt(e) {
+  function An(e) {
     var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "read";
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "storage"), "access", t);
   }
-  function Ht(e) {
+  function In(e) {
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "uniform"), "access", "read");
   }
-  function qt(e) {
+  function kn(e) {
     return (0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)((0, _defineProperty2.default)({}, r, !0), "type", "ptr"), "inner", e), "addressSpace", "handle"), "access", "read");
   }
-},30,[2,12,24,4,25,20,21,5,7,8,10,31],"node_modules/typegpu/chunk-5RYM4COI.js");
+},30,[2,12,24,4,25,20,21,5,7,8,10,31],"node_modules/typegpu/chunk-L7HIBZAX.js");
 global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
   Object.defineProperty(exports, "__esModule", {
@@ -11686,285 +11580,291 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.NodeTypeCatalog = void 0;
-  var e = exports.NodeTypeCatalog = {
-    block: 0,
-    binaryExpr: 1,
-    assignmentExpr: 2,
-    logicalExpr: 3,
-    unaryExpr: 4,
-    numericLiteral: 5,
-    call: 6,
-    memberAccess: 7,
-    indexAccess: 8,
-    return: 10,
-    if: 11,
-    let: 12,
-    const: 13,
-    for: 14,
-    while: 15,
-    continue: 16,
-    break: 17,
-    arrayExpr: 100,
-    preUpdate: 101,
-    postUpdate: 102,
-    stringLiteral: 103,
-    objectExpr: 104
-  };
-},32,[],"node_modules/tinyest/index.js");
-global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.workgroupBarrier = exports.unpack4x8unorm = exports.unpack2x16float = exports.textureStore = exports.textureSampleLevel = exports.textureSample = exports.textureLoad = exports.textureDimensions = exports.textureBarrier = exports.sub = exports.storageBarrier = exports.sqrt = exports.sin = exports.sign = exports.select = exports.reflect = exports.pow = exports.pack4x8unorm = exports.pack2x16float = exports.or = exports.not = exports.normalize = exports.neg = exports.ne = exports.mul = exports.mix = exports.min = exports.max = exports.lt = exports.length = exports.le = exports.isCloseTo = exports.gt = exports.ge = exports.fract = exports.floor = exports.exp = exports.eq = exports.dot = exports.div = exports.distance = exports.discard = exports.cross = exports.cos = exports.clamp = exports.ceil = exports.atomicXor = exports.atomicSub = exports.atomicStore = exports.atomicOr = exports.atomicMin = exports.atomicMax = exports.atomicLoad = exports.atomicAnd = exports.atomicAdd = exports.atan2 = exports.asin = exports.arrayLength = exports.any = exports.and = exports.allEq = exports.all = exports.add = exports.acos = exports.abs = void 0;
-  var _chunk5RYM4COI = require(_dependencyMap[0], "../chunk-5RYM4COI.js");
-  var k = _interopRequireWildcard(require(_dependencyMap[1], "typed-binary"));
-  function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
-  function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-  var Ae = exports.discard = (0, _chunk5RYM4COI.N)(function () {
-    throw new Error("discard() can only be used on the GPU.");
-  }, function () {
-    return {
-      value: "discard;",
-      dataType: _chunk5RYM4COI.t
-    };
-  });
-  var K = function K(e) {
+  exports.a = exports.E = exports.D = exports.C = exports.B = exports.A = void 0;
+  exports.b = G;
+  exports.c = Te;
+  exports.z = exports.y = exports.x = exports.w = exports.v = exports.u = exports.t = exports.s = exports.r = exports.q = exports.p = exports.o = exports.n = exports.m = exports.l = exports.k = exports.j = exports.i = exports.h = exports.g = exports.f = exports.e = exports.d = void 0;
+  var _chunkL7HIBZAX = require(_dependencyMap[0], "./chunk-L7HIBZAX.js");
+  var S = function S(e) {
       return Math.sqrt(e.x ** 2 + e.y ** 2);
     },
-    _ = function _(e) {
+    D = function D(e) {
       return Math.sqrt(e.x ** 2 + e.y ** 2 + e.z ** 2);
     },
-    W = function W(e) {
+    E = function E(e) {
       return Math.sqrt(e.x ** 2 + e.y ** 2 + e.z ** 2 + e.w ** 2);
     },
-    j = function j(e, t) {
-      return e.x * t.x + e.y * t.y;
+    re = function re(e, n) {
+      return e.x * n.x + e.y * n.y;
     },
-    X = function X(e, t) {
-      return e.x * t.x + e.y * t.y + e.z * t.z;
+    ae = function ae(e, n) {
+      return e.x * n.x + e.y * n.y + e.z * n.z;
     },
-    Z = function Z(e, t) {
-      return e.x * t.x + e.y * t.y + e.z * t.z + e.w * t.w;
+    ve = function ve(e, n) {
+      return e.x * n.x + e.y * n.y + e.z * n.z + e.w * n.w;
     },
-    c = function c(e, t, n) {
-      return Math.min(Math.max(t, e), n);
+    c = function c(e, n, s) {
+      return Math.min(Math.max(n, e), s);
     },
-    z = function z(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.V)(e(t.x), e(t.y));
+    x = function x(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.ma)(e(n.x), e(n.y));
       };
     },
-    h = function h(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.W)(e(t.x), e(t.y));
+    w = function w(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.na)(e(n.x), e(n.y));
       };
     },
-    P = function P(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.X)(e(t.x), e(t.y));
+    N = function N(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.oa)(e(n.x), e(n.y));
       };
     },
-    H = function H(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.Y)(e(t.x), e(t.y));
+    K = function K(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.pa)(e(n.x), e(n.y));
       };
     },
-    b = function b(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI._)(e(t.x), e(t.y), e(t.z));
+    y = function y(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.ra)(e(n.x), e(n.y), e(n.z));
       };
     },
-    M = function M(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.$)(e(t.x), e(t.y), e(t.z));
+    l = function l(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.sa)(e(n.x), e(n.y), e(n.z));
       };
     },
-    C = function C(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.aa)(e(t.x), e(t.y), e(t.z));
+    R = function R(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.ta)(e(n.x), e(n.y), e(n.z));
       };
     },
-    Q = function Q(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.ba)(e(t.x), e(t.y), e(t.z));
+    k = function k(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.ua)(e(n.x), e(n.y), e(n.z));
       };
     },
-    A = function A(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.da)(e(t.x), e(t.y), e(t.z), e(t.w));
+    u = function u(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.wa)(e(n.x), e(n.y), e(n.z), e(n.w));
       };
     },
-    V = function V(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.ea)(e(t.x), e(t.y), e(t.z), e(t.w));
+    i = function i(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.xa)(e(n.x), e(n.y), e(n.z), e(n.w));
       };
     },
-    G = function G(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.fa)(e(t.x), e(t.y), e(t.z), e(t.w));
+    $ = function $(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.ya)(e(n.x), e(n.y), e(n.z), e(n.w));
       };
     },
-    Y = function Y(e) {
-      return function (t) {
-        return (0, _chunk5RYM4COI.ga)(e(t.x), e(t.y), e(t.z), e(t.w));
-      };
-    },
-    ee = function ee(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.V)(e(t.x, n.x), e(t.y, n.y));
-      };
-    },
-    te = function te(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.W)(e(t.x, n.x), e(t.y, n.y));
+    O = function O(e) {
+      return function (n) {
+        return (0, _chunkL7HIBZAX.za)(e(n.x), e(n.y), e(n.z), e(n.w));
       };
     },
     le = function le(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.X)(e(t.x, n.x), e(t.y, n.y));
-      };
-    },
-    xe = function xe(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.Y)(e(t.x, n.x), e(t.y, n.y));
-      };
-    },
-    ne = function ne(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI._)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z));
-      };
-    },
-    ae = function ae(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.$)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z));
-      };
-    },
-    Te = function Te(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.aa)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z));
+      return function (n) {
+        var s = n.columns;
+        return (0, _chunkL7HIBZAX.Ca)(x(e)(s[0]), x(e)(s[1]));
       };
     },
     ie = function ie(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.ba)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z));
+      return function (n) {
+        var s = n.columns;
+        return (0, _chunkL7HIBZAX.Da)(y(e)(s[0]), y(e)(s[1]), y(e)(s[2]));
       };
     },
-    re = function re(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.da)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z), e(t.w, n.w));
+    me = function me(e) {
+      return function (n) {
+        var s = n.columns;
+        return (0, _chunkL7HIBZAX.Ea)(u(e)(s[0]), u(e)(s[1]), u(e)(s[2]), u(e)(s[3]));
       };
     },
-    se = function se(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.ea)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z), e(t.w, n.w));
+    F = function F(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.ma)(e(n.x, s.x), e(n.y, s.y));
       };
     },
-    we = function we(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.fa)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z), e(t.w, n.w));
+    j = function j(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.na)(e(n.x, s.x), e(n.y, s.y));
+      };
+    },
+    J = function J(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.oa)(e(n.x, s.x), e(n.y, s.y));
+      };
+    },
+    Q = function Q(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.pa)(e(n.x, s.x), e(n.y, s.y));
+      };
+    },
+    B = function B(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.ra)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z));
+      };
+    },
+    P = function P(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.sa)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z));
+      };
+    },
+    X = function X(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.ta)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z));
+      };
+    },
+    Y = function Y(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.ua)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z));
+      };
+    },
+    p = function p(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.wa)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z), e(n.w, s.w));
+      };
+    },
+    Z = function Z(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.xa)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z), e(n.w, s.w));
+      };
+    },
+    ee = function ee(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.ya)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z), e(n.w, s.w));
+      };
+    },
+    ne = function ne(e) {
+      return function (n, s) {
+        return (0, _chunkL7HIBZAX.za)(e(n.x, s.x), e(n.y, s.y), e(n.z, s.z), e(n.w, s.w));
+      };
+    },
+    ge = function ge(e) {
+      return function (n, s) {
+        var t = n.columns,
+          T = s.columns;
+        return (0, _chunkL7HIBZAX.Ca)(F(e)(t[0], T[0]), F(e)(t[1], T[1]));
       };
     },
     de = function de(e) {
-      return function (t, n) {
-        return (0, _chunk5RYM4COI.ga)(e(t.x, n.x), e(t.y, n.y), e(t.z, n.z), e(t.w, n.w));
+      return function (n, s) {
+        var t = n.columns,
+          T = s.columns;
+        return (0, _chunkL7HIBZAX.Da)(B(e)(t[0], T[0]), B(e)(t[1], T[1]), B(e)(t[2], T[2]));
       };
     },
-    s = {
+    he = function he(e) {
+      return function (n, s) {
+        var t = n.columns,
+          T = s.columns;
+        return (0, _chunkL7HIBZAX.Ea)(p(e)(t[0], T[0]), p(e)(t[1], T[1]), p(e)(t[2], T[2]), p(e)(t[3], T[3]));
+      };
+    },
+    h = {
+      divInteger: function divInteger(e, n) {
+        return n === 0 ? e : Math.trunc(e / n);
+      }
+    },
+    r = exports.a = {
       eq: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x === t.x, e.y === t.y);
+        vec2f: function vec2f(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x === n.x, e.y === n.y);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x === t.x, e.y === t.y);
+        vec2h: function vec2h(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x === n.x, e.y === n.y);
         },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x === t.x, e.y === t.y);
+        vec2i: function vec2i(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x === n.x, e.y === n.y);
         },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x === t.x, e.y === t.y);
+        vec2u: function vec2u(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x === n.x, e.y === n.y);
         },
-        "vec2<bool>": function vec2Bool(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x === t.x, e.y === t.y);
+        "vec2<bool>": function vec2Bool(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x === n.x, e.y === n.y);
         },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x === t.x, e.y === t.y, e.z === t.z);
+        vec3f: function vec3f(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x === n.x, e.y === n.y, e.z === n.z);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x === t.x, e.y === t.y, e.z === t.z);
+        vec3h: function vec3h(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x === n.x, e.y === n.y, e.z === n.z);
         },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x === t.x, e.y === t.y, e.z === t.z);
+        vec3i: function vec3i(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x === n.x, e.y === n.y, e.z === n.z);
         },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x === t.x, e.y === t.y, e.z === t.z);
+        vec3u: function vec3u(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x === n.x, e.y === n.y, e.z === n.z);
         },
-        "vec3<bool>": function vec3Bool(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x === t.x, e.y === t.y, e.z === t.z);
+        "vec3<bool>": function vec3Bool(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x === n.x, e.y === n.y, e.z === n.z);
         },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x === t.x, e.y === t.y, e.z === t.z, e.w === t.w);
+        vec4f: function vec4f(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x === n.x, e.y === n.y, e.z === n.z, e.w === n.w);
         },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x === t.x, e.y === t.y, e.z === t.z, e.w === t.w);
+        vec4h: function vec4h(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x === n.x, e.y === n.y, e.z === n.z, e.w === n.w);
         },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x === t.x, e.y === t.y, e.z === t.z, e.w === t.w);
+        vec4i: function vec4i(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x === n.x, e.y === n.y, e.z === n.z, e.w === n.w);
         },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x === t.x, e.y === t.y, e.z === t.z, e.w === t.w);
+        vec4u: function vec4u(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x === n.x, e.y === n.y, e.z === n.z, e.w === n.w);
         },
-        "vec4<bool>": function vec4Bool(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x === t.x, e.y === t.y, e.z === t.z, e.w === t.w);
+        "vec4<bool>": function vec4Bool(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x === n.x, e.y === n.y, e.z === n.z, e.w === n.w);
         }
       },
       lt: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x < t.x, e.y < t.y);
+        vec2f: function vec2f(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x < n.x, e.y < n.y);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x < t.x, e.y < t.y);
+        vec2h: function vec2h(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x < n.x, e.y < n.y);
         },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x < t.x, e.y < t.y);
+        vec2i: function vec2i(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x < n.x, e.y < n.y);
         },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x < t.x, e.y < t.y);
+        vec2u: function vec2u(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x < n.x, e.y < n.y);
         },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x < t.x, e.y < t.y, e.z < t.z);
+        vec3f: function vec3f(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x < n.x, e.y < n.y, e.z < n.z);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x < t.x, e.y < t.y, e.z < t.z);
+        vec3h: function vec3h(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x < n.x, e.y < n.y, e.z < n.z);
         },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x < t.x, e.y < t.y, e.z < t.z);
+        vec3i: function vec3i(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x < n.x, e.y < n.y, e.z < n.z);
         },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x < t.x, e.y < t.y, e.z < t.z);
+        vec3u: function vec3u(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x < n.x, e.y < n.y, e.z < n.z);
         },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x < t.x, e.y < t.y, e.z < t.z, e.w < t.w);
+        vec4f: function vec4f(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x < n.x, e.y < n.y, e.z < n.z, e.w < n.w);
         },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x < t.x, e.y < t.y, e.z < t.z, e.w < t.w);
+        vec4h: function vec4h(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x < n.x, e.y < n.y, e.z < n.z, e.w < n.w);
         },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x < t.x, e.y < t.y, e.z < t.z, e.w < t.w);
+        vec4i: function vec4i(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x < n.x, e.y < n.y, e.z < n.z, e.w < n.w);
         },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x < t.x, e.y < t.y, e.z < t.z, e.w < t.w);
+        vec4u: function vec4u(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x < n.x, e.y < n.y, e.z < n.z, e.w < n.w);
         }
       },
       or: {
-        "vec2<bool>": function vec2Bool(e, t) {
-          return (0, _chunk5RYM4COI.Z)(e.x || t.x, e.y || t.y);
+        "vec2<bool>": function vec2Bool(e, n) {
+          return (0, _chunkL7HIBZAX.qa)(e.x || n.x, e.y || n.y);
         },
-        "vec3<bool>": function vec3Bool(e, t) {
-          return (0, _chunk5RYM4COI.ca)(e.x || t.x, e.y || t.y, e.z || t.z);
+        "vec3<bool>": function vec3Bool(e, n) {
+          return (0, _chunkL7HIBZAX.va)(e.x || n.x, e.y || n.y, e.z || n.z);
         },
-        "vec4<bool>": function vec4Bool(e, t) {
-          return (0, _chunk5RYM4COI.ha)(e.x || t.x, e.y || t.y, e.z || t.z, e.w || t.w);
+        "vec4<bool>": function vec4Bool(e, n) {
+          return (0, _chunkL7HIBZAX.Aa)(e.x || n.x, e.y || n.y, e.z || n.z, e.w || n.w);
         }
       },
       all: {
@@ -11979,1901 +11879,2545 @@ global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module
         }
       },
       abs: {
-        vec2f: z(Math.abs),
-        vec2h: h(Math.abs),
-        vec2i: P(Math.abs),
-        vec2u: H(Math.abs),
-        vec3f: b(Math.abs),
-        vec3h: M(Math.abs),
-        vec3i: C(Math.abs),
-        vec3u: Q(Math.abs),
-        vec4f: A(Math.abs),
-        vec4h: V(Math.abs),
-        vec4i: G(Math.abs),
-        vec4u: Y(Math.abs)
+        vec2f: x(Math.abs),
+        vec2h: w(Math.abs),
+        vec2i: N(Math.abs),
+        vec2u: K(Math.abs),
+        vec3f: y(Math.abs),
+        vec3h: l(Math.abs),
+        vec3i: R(Math.abs),
+        vec3u: k(Math.abs),
+        vec4f: u(Math.abs),
+        vec4h: i(Math.abs),
+        vec4i: $(Math.abs),
+        vec4u: O(Math.abs)
       },
       atan2: {
-        vec2f: ee(Math.atan2),
-        vec2h: te(Math.atan2),
-        vec3f: ne(Math.atan2),
-        vec3h: ae(Math.atan2),
-        vec4f: re(Math.atan2),
-        vec4h: se(Math.atan2)
+        vec2f: F(Math.atan2),
+        vec2h: j(Math.atan2),
+        vec3f: B(Math.atan2),
+        vec3h: P(Math.atan2),
+        vec4f: p(Math.atan2),
+        vec4h: Z(Math.atan2)
       },
       acos: {
-        vec2f: z(Math.acos),
-        vec2h: h(Math.acos),
-        vec2i: P(Math.acos),
-        vec2u: H(Math.acos),
-        vec3f: b(Math.acos),
-        vec3h: M(Math.acos),
-        vec3i: C(Math.acos),
-        vec3u: Q(Math.acos),
-        vec4f: A(Math.acos),
-        vec4h: V(Math.acos),
-        vec4i: G(Math.acos),
-        vec4u: Y(Math.acos)
+        vec2f: x(Math.acos),
+        vec2h: w(Math.acos),
+        vec2i: N(Math.acos),
+        vec2u: K(Math.acos),
+        vec3f: y(Math.acos),
+        vec3h: l(Math.acos),
+        vec3i: R(Math.acos),
+        vec3u: k(Math.acos),
+        vec4f: u(Math.acos),
+        vec4h: i(Math.acos),
+        vec4i: $(Math.acos),
+        vec4u: O(Math.acos)
       },
       asin: {
-        vec2f: z(Math.asin),
-        vec2h: h(Math.asin),
-        vec2i: P(Math.asin),
-        vec2u: H(Math.asin),
-        vec3f: b(Math.asin),
-        vec3h: M(Math.asin),
-        vec3i: C(Math.asin),
-        vec3u: Q(Math.asin),
-        vec4f: A(Math.asin),
-        vec4h: V(Math.asin),
-        vec4i: G(Math.asin),
-        vec4u: Y(Math.asin)
+        vec2f: x(Math.asin),
+        vec2h: w(Math.asin),
+        vec2i: N(Math.asin),
+        vec2u: K(Math.asin),
+        vec3f: y(Math.asin),
+        vec3h: l(Math.asin),
+        vec3i: R(Math.asin),
+        vec3u: k(Math.asin),
+        vec4f: u(Math.asin),
+        vec4h: i(Math.asin),
+        vec4i: $(Math.asin),
+        vec4u: O(Math.asin)
       },
       ceil: {
-        vec2f: z(Math.ceil),
-        vec2h: h(Math.ceil),
-        vec3f: b(Math.ceil),
-        vec3h: M(Math.ceil),
-        vec4f: A(Math.ceil),
-        vec4h: V(Math.ceil)
+        vec2f: x(Math.ceil),
+        vec2h: w(Math.ceil),
+        vec3f: y(Math.ceil),
+        vec3h: l(Math.ceil),
+        vec4f: u(Math.ceil),
+        vec4h: i(Math.ceil)
       },
       clamp: {
-        vec2f: function vec2f(e, t, n) {
-          return (0, _chunk5RYM4COI.V)(c(e.x, t.x, n.x), c(e.y, t.y, n.y));
+        vec2f: function vec2f(e, n, s) {
+          return (0, _chunkL7HIBZAX.ma)(c(e.x, n.x, s.x), c(e.y, n.y, s.y));
         },
-        vec2h: function vec2h(e, t, n) {
-          return (0, _chunk5RYM4COI.W)(c(e.x, t.x, n.x), c(e.y, t.y, n.y));
+        vec2h: function vec2h(e, n, s) {
+          return (0, _chunkL7HIBZAX.na)(c(e.x, n.x, s.x), c(e.y, n.y, s.y));
         },
-        vec2i: function vec2i(e, t, n) {
-          return (0, _chunk5RYM4COI.X)(c(e.x, t.x, n.x), c(e.y, t.y, n.y));
+        vec2i: function vec2i(e, n, s) {
+          return (0, _chunkL7HIBZAX.oa)(c(e.x, n.x, s.x), c(e.y, n.y, s.y));
         },
-        vec2u: function vec2u(e, t, n) {
-          return (0, _chunk5RYM4COI.Y)(c(e.x, t.x, n.x), c(e.y, t.y, n.y));
+        vec2u: function vec2u(e, n, s) {
+          return (0, _chunkL7HIBZAX.pa)(c(e.x, n.x, s.x), c(e.y, n.y, s.y));
         },
-        vec3f: function vec3f(e, t, n) {
-          return (0, _chunk5RYM4COI._)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z));
+        vec3f: function vec3f(e, n, s) {
+          return (0, _chunkL7HIBZAX.ra)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z));
         },
-        vec3h: function vec3h(e, t, n) {
-          return (0, _chunk5RYM4COI.$)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z));
+        vec3h: function vec3h(e, n, s) {
+          return (0, _chunkL7HIBZAX.sa)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z));
         },
-        vec3i: function vec3i(e, t, n) {
-          return (0, _chunk5RYM4COI.aa)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z));
+        vec3i: function vec3i(e, n, s) {
+          return (0, _chunkL7HIBZAX.ta)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z));
         },
-        vec3u: function vec3u(e, t, n) {
-          return (0, _chunk5RYM4COI.ba)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z));
+        vec3u: function vec3u(e, n, s) {
+          return (0, _chunkL7HIBZAX.ua)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z));
         },
-        vec4f: function vec4f(e, t, n) {
-          return (0, _chunk5RYM4COI.da)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z), c(e.w, t.w, n.w));
+        vec4f: function vec4f(e, n, s) {
+          return (0, _chunkL7HIBZAX.wa)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z), c(e.w, n.w, s.w));
         },
-        vec4h: function vec4h(e, t, n) {
-          return (0, _chunk5RYM4COI.ea)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z), c(e.w, t.w, n.w));
+        vec4h: function vec4h(e, n, s) {
+          return (0, _chunkL7HIBZAX.xa)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z), c(e.w, n.w, s.w));
         },
-        vec4i: function vec4i(e, t, n) {
-          return (0, _chunk5RYM4COI.fa)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z), c(e.w, t.w, n.w));
+        vec4i: function vec4i(e, n, s) {
+          return (0, _chunkL7HIBZAX.ya)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z), c(e.w, n.w, s.w));
         },
-        vec4u: function vec4u(e, t, n) {
-          return (0, _chunk5RYM4COI.ga)(c(e.x, t.x, n.x), c(e.y, t.y, n.y), c(e.z, t.z, n.z), c(e.w, t.w, n.w));
+        vec4u: function vec4u(e, n, s) {
+          return (0, _chunkL7HIBZAX.za)(c(e.x, n.x, s.x), c(e.y, n.y, s.y), c(e.z, n.z, s.z), c(e.w, n.w, s.w));
         }
       },
       length: {
-        vec2f: K,
-        vec2h: K,
-        vec3f: _,
-        vec3h: _,
-        vec4f: W,
-        vec4h: W
+        vec2f: S,
+        vec2h: S,
+        vec3f: D,
+        vec3h: D,
+        vec4f: E,
+        vec4h: E
       },
       add: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.V)(e.x + t.x, e.y + t.y);
-        },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.W)(e.x + t.x, e.y + t.y);
-        },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.X)(e.x + t.x, e.y + t.y);
-        },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Y)(e.x + t.x, e.y + t.y);
-        },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e.x + t.x, e.y + t.y, e.z + t.z);
-        },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e.x + t.x, e.y + t.y, e.z + t.z);
-        },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.aa)(e.x + t.x, e.y + t.y, e.z + t.z);
-        },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ba)(e.x + t.x, e.y + t.y, e.z + t.z);
-        },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.da)(e.x + t.x, e.y + t.y, e.z + t.z, e.w + t.w);
-        },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ea)(e.x + t.x, e.y + t.y, e.z + t.z, e.w + t.w);
-        },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.fa)(e.x + t.x, e.y + t.y, e.z + t.z, e.w + t.w);
-        },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ga)(e.x + t.x, e.y + t.y, e.z + t.z, e.w + t.w);
-        }
+        vec2f: F(function (e, n) {
+          return e + n;
+        }),
+        vec2h: j(function (e, n) {
+          return e + n;
+        }),
+        vec2i: J(function (e, n) {
+          return e + n;
+        }),
+        vec2u: Q(function (e, n) {
+          return e + n;
+        }),
+        vec3f: B(function (e, n) {
+          return e + n;
+        }),
+        vec3h: P(function (e, n) {
+          return e + n;
+        }),
+        vec3i: X(function (e, n) {
+          return e + n;
+        }),
+        vec3u: Y(function (e, n) {
+          return e + n;
+        }),
+        vec4f: p(function (e, n) {
+          return e + n;
+        }),
+        vec4h: Z(function (e, n) {
+          return e + n;
+        }),
+        vec4i: ee(function (e, n) {
+          return e + n;
+        }),
+        vec4u: ne(function (e, n) {
+          return e + n;
+        }),
+        mat2x2f: ge(function (e, n) {
+          return e + n;
+        }),
+        mat3x3f: de(function (e, n) {
+          return e + n;
+        }),
+        mat4x4f: he(function (e, n) {
+          return e + n;
+        })
       },
-      sub: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.V)(e.x - t.x, e.y - t.y);
+      addMixed: {
+        vec2f: function vec2f(e, n) {
+          return x(function (s) {
+            return s + n;
+          })(e);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.W)(e.x - t.x, e.y - t.y);
+        vec2h: function vec2h(e, n) {
+          return w(function (s) {
+            return s + n;
+          })(e);
         },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.X)(e.x - t.x, e.y - t.y);
+        vec2i: function vec2i(e, n) {
+          return N(function (s) {
+            return s + n;
+          })(e);
         },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Y)(e.x - t.x, e.y - t.y);
+        vec2u: function vec2u(e, n) {
+          return K(function (s) {
+            return s + n;
+          })(e);
         },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e.x - t.x, e.y - t.y, e.z - t.z);
+        vec3f: function vec3f(e, n) {
+          return y(function (s) {
+            return s + n;
+          })(e);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e.x - t.x, e.y - t.y, e.z - t.z);
+        vec3h: function vec3h(e, n) {
+          return l(function (s) {
+            return s + n;
+          })(e);
         },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.aa)(e.x - t.x, e.y - t.y, e.z - t.z);
+        vec3i: function vec3i(e, n) {
+          return R(function (s) {
+            return s + n;
+          })(e);
         },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ba)(e.x - t.x, e.y - t.y, e.z - t.z);
+        vec3u: function vec3u(e, n) {
+          return k(function (s) {
+            return s + n;
+          })(e);
         },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.da)(e.x - t.x, e.y - t.y, e.z - t.z, e.w - t.w);
+        vec4f: function vec4f(e, n) {
+          return u(function (s) {
+            return s + n;
+          })(e);
         },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ea)(e.x - t.x, e.y - t.y, e.z - t.z, e.w - t.w);
+        vec4h: function vec4h(e, n) {
+          return i(function (s) {
+            return s + n;
+          })(e);
         },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.fa)(e.x - t.x, e.y - t.y, e.z - t.z, e.w - t.w);
+        vec4i: function vec4i(e, n) {
+          return $(function (s) {
+            return s + n;
+          })(e);
         },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ga)(e.x - t.x, e.y - t.y, e.z - t.z, e.w - t.w);
+        vec4u: function vec4u(e, n) {
+          return O(function (s) {
+            return s + n;
+          })(e);
+        },
+        mat2x2f: function mat2x2f(e, n) {
+          return le(function (s) {
+            return s + n;
+          })(e);
+        },
+        mat3x3f: function mat3x3f(e, n) {
+          return ie(function (s) {
+            return s + n;
+          })(e);
+        },
+        mat4x4f: function mat4x4f(e, n) {
+          return me(function (s) {
+            return s + n;
+          })(e);
         }
       },
       mulSxV: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.V)(e * t.x, e * t.y);
+        vec2f: function vec2f(e, n) {
+          return x(function (s) {
+            return e * s;
+          })(n);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.W)(e * t.x, e * t.y);
+        vec2h: function vec2h(e, n) {
+          return w(function (s) {
+            return e * s;
+          })(n);
         },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.X)(e * t.x, e * t.y);
+        vec2i: function vec2i(e, n) {
+          return N(function (s) {
+            return e * s;
+          })(n);
         },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Y)(e * t.x, e * t.y);
+        vec2u: function vec2u(e, n) {
+          return K(function (s) {
+            return e * s;
+          })(n);
         },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e * t.x, e * t.y, e * t.z);
+        vec3f: function vec3f(e, n) {
+          return y(function (s) {
+            return e * s;
+          })(n);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e * t.x, e * t.y, e * t.z);
+        vec3h: function vec3h(e, n) {
+          return l(function (s) {
+            return e * s;
+          })(n);
         },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.aa)(e * t.x, e * t.y, e * t.z);
+        vec3i: function vec3i(e, n) {
+          return R(function (s) {
+            return e * s;
+          })(n);
         },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ba)(e * t.x, e * t.y, e * t.z);
+        vec3u: function vec3u(e, n) {
+          return k(function (s) {
+            return e * s;
+          })(n);
         },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.da)(e * t.x, e * t.y, e * t.z, e * t.w);
+        vec4f: function vec4f(e, n) {
+          return u(function (s) {
+            return e * s;
+          })(n);
         },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ea)(e * t.x, e * t.y, e * t.z, e * t.w);
+        vec4h: function vec4h(e, n) {
+          return i(function (s) {
+            return e * s;
+          })(n);
         },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.fa)(e * t.x, e * t.y, e * t.z, e * t.w);
+        vec4i: function vec4i(e, n) {
+          return $(function (s) {
+            return e * s;
+          })(n);
         },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ga)(e * t.x, e * t.y, e * t.z, e * t.w);
+        vec4u: function vec4u(e, n) {
+          return O(function (s) {
+            return e * s;
+          })(n);
         },
-        mat2x2f: function mat2x2f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI.ja)(e * n[0].x, e * n[0].y, e * n[1].x, e * n[1].y);
+        mat2x2f: function mat2x2f(e, n) {
+          return le(function (s) {
+            return e * s;
+          })(n);
         },
-        mat3x3f: function mat3x3f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI.ka)(e * n[0].x, e * n[0].y, e * n[0].z, e * n[1].x, e * n[1].y, e * n[1].z, e * n[2].x, e * n[2].y, e * n[2].z);
+        mat3x3f: function mat3x3f(e, n) {
+          return ie(function (s) {
+            return e * s;
+          })(n);
         },
-        mat4x4f: function mat4x4f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI.la)(e * n[0].x, e * n[0].y, e * n[0].z, e * n[0].w, e * n[1].x, e * n[1].y, e * n[1].z, e * n[1].w, e * n[2].x, e * n[2].y, e * n[2].z, e * n[2].w, e * n[3].x, e * n[3].y, e * n[3].z, e * n[3].w);
+        mat4x4f: function mat4x4f(e, n) {
+          return me(function (s) {
+            return e * s;
+          })(n);
         }
       },
       mulVxV: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.V)(e.x * t.x, e.y * t.y);
+        vec2f: F(function (e, n) {
+          return e * n;
+        }),
+        vec2h: j(function (e, n) {
+          return e * n;
+        }),
+        vec2i: J(function (e, n) {
+          return e * n;
+        }),
+        vec2u: Q(function (e, n) {
+          return e * n;
+        }),
+        vec3f: B(function (e, n) {
+          return e * n;
+        }),
+        vec3h: P(function (e, n) {
+          return e * n;
+        }),
+        vec3i: X(function (e, n) {
+          return e * n;
+        }),
+        vec3u: Y(function (e, n) {
+          return e * n;
+        }),
+        vec4f: p(function (e, n) {
+          return e * n;
+        }),
+        vec4h: Z(function (e, n) {
+          return e * n;
+        }),
+        vec4i: ee(function (e, n) {
+          return e * n;
+        }),
+        vec4u: ne(function (e, n) {
+          return e * n;
+        }),
+        mat2x2f: function mat2x2f(e, n) {
+          var s = e.columns,
+            t = n.columns;
+          return (0, _chunkL7HIBZAX.Ca)(s[0].x * t[0].x + s[1].x * t[0].y, s[0].y * t[0].x + s[1].y * t[0].y, s[0].x * t[1].x + s[1].x * t[1].y, s[0].y * t[1].x + s[1].y * t[1].y);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.W)(e.x * t.x, e.y * t.y);
+        mat3x3f: function mat3x3f(e, n) {
+          var s = e.columns,
+            t = n.columns;
+          return (0, _chunkL7HIBZAX.Da)(s[0].x * t[0].x + s[1].x * t[0].y + s[2].x * t[0].z, s[0].y * t[0].x + s[1].y * t[0].y + s[2].y * t[0].z, s[0].z * t[0].x + s[1].z * t[0].y + s[2].z * t[0].z, s[0].x * t[1].x + s[1].x * t[1].y + s[2].x * t[1].z, s[0].y * t[1].x + s[1].y * t[1].y + s[2].y * t[1].z, s[0].z * t[1].x + s[1].z * t[1].y + s[2].z * t[1].z, s[0].x * t[2].x + s[1].x * t[2].y + s[2].x * t[2].z, s[0].y * t[2].x + s[1].y * t[2].y + s[2].y * t[2].z, s[0].z * t[2].x + s[1].z * t[2].y + s[2].z * t[2].z);
         },
-        vec2i: function vec2i(e, t) {
-          return (0, _chunk5RYM4COI.X)(e.x * t.x, e.y * t.y);
-        },
-        vec2u: function vec2u(e, t) {
-          return (0, _chunk5RYM4COI.Y)(e.x * t.x, e.y * t.y);
-        },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e.x * t.x, e.y * t.y, e.z * t.z);
-        },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e.x * t.x, e.y * t.y, e.z * t.z);
-        },
-        vec3i: function vec3i(e, t) {
-          return (0, _chunk5RYM4COI.aa)(e.x * t.x, e.y * t.y, e.z * t.z);
-        },
-        vec3u: function vec3u(e, t) {
-          return (0, _chunk5RYM4COI.ba)(e.x * t.x, e.y * t.y, e.z * t.z);
-        },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.da)(e.x * t.x, e.y * t.y, e.z * t.z, e.w * t.w);
-        },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ea)(e.x * t.x, e.y * t.y, e.z * t.z, e.w * t.w);
-        },
-        vec4i: function vec4i(e, t) {
-          return (0, _chunk5RYM4COI.fa)(e.x * t.x, e.y * t.y, e.z * t.z, e.w * t.w);
-        },
-        vec4u: function vec4u(e, t) {
-          return (0, _chunk5RYM4COI.ga)(e.x * t.x, e.y * t.y, e.z * t.z, e.w * t.w);
-        },
-        mat2x2f: function mat2x2f(e, t) {
-          var n = e.columns,
-            a = t.columns;
-          return (0, _chunk5RYM4COI.ja)(n[0].x * a[0].x + n[1].x * a[0].y, n[0].y * a[0].x + n[1].y * a[0].y, n[0].x * a[1].x + n[1].x * a[1].y, n[0].y * a[1].x + n[1].y * a[1].y);
-        },
-        mat3x3f: function mat3x3f(e, t) {
-          var n = e.columns,
-            a = t.columns;
-          return (0, _chunk5RYM4COI.ka)(n[0].x * a[0].x + n[1].x * a[0].y + n[2].x * a[0].z, n[0].y * a[0].x + n[1].y * a[0].y + n[2].y * a[0].z, n[0].z * a[0].x + n[1].z * a[0].y + n[2].z * a[0].z, n[0].x * a[1].x + n[1].x * a[1].y + n[2].x * a[1].z, n[0].y * a[1].x + n[1].y * a[1].y + n[2].y * a[1].z, n[0].z * a[1].x + n[1].z * a[1].y + n[2].z * a[1].z, n[0].x * a[2].x + n[1].x * a[2].y + n[2].x * a[2].z, n[0].y * a[2].x + n[1].y * a[2].y + n[2].y * a[2].z, n[0].z * a[2].x + n[1].z * a[2].y + n[2].z * a[2].z);
-        },
-        mat4x4f: function mat4x4f(e, t) {
-          var n = e.columns,
-            a = t.columns;
-          return (0, _chunk5RYM4COI.la)(n[0].x * a[0].x + n[1].x * a[0].y + n[2].x * a[0].z + n[3].x * a[0].w, n[0].y * a[0].x + n[1].y * a[0].y + n[2].y * a[0].z + n[3].y * a[0].w, n[0].z * a[0].x + n[1].z * a[0].y + n[2].z * a[0].z + n[3].z * a[0].w, n[0].w * a[0].x + n[1].w * a[0].y + n[2].w * a[0].z + n[3].w * a[0].w, n[0].x * a[1].x + n[1].x * a[1].y + n[2].x * a[1].z + n[3].x * a[1].w, n[0].y * a[1].x + n[1].y * a[1].y + n[2].y * a[1].z + n[3].y * a[1].w, n[0].z * a[1].x + n[1].z * a[1].y + n[2].z * a[1].z + n[3].z * a[1].w, n[0].w * a[1].x + n[1].w * a[1].y + n[2].w * a[1].z + n[3].w * a[1].w, n[0].x * a[2].x + n[1].x * a[2].y + n[2].x * a[2].z + n[3].x * a[2].w, n[0].y * a[2].x + n[1].y * a[2].y + n[2].y * a[2].z + n[3].y * a[2].w, n[0].z * a[2].x + n[1].z * a[2].y + n[2].z * a[2].z + n[3].z * a[2].w, n[0].w * a[2].x + n[1].w * a[2].y + n[2].w * a[2].z + n[3].w * a[2].w, n[0].x * a[3].x + n[1].x * a[3].y + n[2].x * a[3].z + n[3].x * a[3].w, n[0].y * a[3].x + n[1].y * a[3].y + n[2].y * a[3].z + n[3].y * a[3].w, n[0].z * a[3].x + n[1].z * a[3].y + n[2].z * a[3].z + n[3].z * a[3].w, n[0].w * a[3].x + n[1].w * a[3].y + n[2].w * a[3].z + n[3].w * a[3].w);
+        mat4x4f: function mat4x4f(e, n) {
+          var s = e.columns,
+            t = n.columns;
+          return (0, _chunkL7HIBZAX.Ea)(s[0].x * t[0].x + s[1].x * t[0].y + s[2].x * t[0].z + s[3].x * t[0].w, s[0].y * t[0].x + s[1].y * t[0].y + s[2].y * t[0].z + s[3].y * t[0].w, s[0].z * t[0].x + s[1].z * t[0].y + s[2].z * t[0].z + s[3].z * t[0].w, s[0].w * t[0].x + s[1].w * t[0].y + s[2].w * t[0].z + s[3].w * t[0].w, s[0].x * t[1].x + s[1].x * t[1].y + s[2].x * t[1].z + s[3].x * t[1].w, s[0].y * t[1].x + s[1].y * t[1].y + s[2].y * t[1].z + s[3].y * t[1].w, s[0].z * t[1].x + s[1].z * t[1].y + s[2].z * t[1].z + s[3].z * t[1].w, s[0].w * t[1].x + s[1].w * t[1].y + s[2].w * t[1].z + s[3].w * t[1].w, s[0].x * t[2].x + s[1].x * t[2].y + s[2].x * t[2].z + s[3].x * t[2].w, s[0].y * t[2].x + s[1].y * t[2].y + s[2].y * t[2].z + s[3].y * t[2].w, s[0].z * t[2].x + s[1].z * t[2].y + s[2].z * t[2].z + s[3].z * t[2].w, s[0].w * t[2].x + s[1].w * t[2].y + s[2].w * t[2].z + s[3].w * t[2].w, s[0].x * t[3].x + s[1].x * t[3].y + s[2].x * t[3].z + s[3].x * t[3].w, s[0].y * t[3].x + s[1].y * t[3].y + s[2].y * t[3].z + s[3].y * t[3].w, s[0].z * t[3].x + s[1].z * t[3].y + s[2].z * t[3].z + s[3].z * t[3].w, s[0].w * t[3].x + s[1].w * t[3].y + s[2].w * t[3].z + s[3].w * t[3].w);
         }
       },
       mulMxV: {
-        mat2x2f: function mat2x2f(e, t) {
-          var n = e.columns;
-          return (0, _chunk5RYM4COI.V)(n[0].x * t.x + n[1].x * t.y, n[0].y * t.x + n[1].y * t.y);
+        mat2x2f: function mat2x2f(e, n) {
+          var s = e.columns;
+          return (0, _chunkL7HIBZAX.ma)(s[0].x * n.x + s[1].x * n.y, s[0].y * n.x + s[1].y * n.y);
         },
-        mat3x3f: function mat3x3f(e, t) {
-          var n = e.columns;
-          return (0, _chunk5RYM4COI._)(n[0].x * t.x + n[1].x * t.y + n[2].x * t.z, n[0].y * t.x + n[1].y * t.y + n[2].y * t.z, n[0].z * t.x + n[1].z * t.y + n[2].z * t.z);
+        mat3x3f: function mat3x3f(e, n) {
+          var s = e.columns;
+          return (0, _chunkL7HIBZAX.ra)(s[0].x * n.x + s[1].x * n.y + s[2].x * n.z, s[0].y * n.x + s[1].y * n.y + s[2].y * n.z, s[0].z * n.x + s[1].z * n.y + s[2].z * n.z);
         },
-        mat4x4f: function mat4x4f(e, t) {
-          var n = e.columns;
-          return (0, _chunk5RYM4COI.da)(n[0].x * t.x + n[1].x * t.y + n[2].x * t.z + n[3].x * t.w, n[0].y * t.x + n[1].y * t.y + n[2].y * t.z + n[3].y * t.w, n[0].z * t.x + n[1].z * t.y + n[2].z * t.z + n[3].z * t.w, n[0].w * t.x + n[1].w * t.y + n[2].w * t.z + n[3].w * t.w);
+        mat4x4f: function mat4x4f(e, n) {
+          var s = e.columns;
+          return (0, _chunkL7HIBZAX.wa)(s[0].x * n.x + s[1].x * n.y + s[2].x * n.z + s[3].x * n.w, s[0].y * n.x + s[1].y * n.y + s[2].y * n.z + s[3].y * n.w, s[0].z * n.x + s[1].z * n.y + s[2].z * n.z + s[3].z * n.w, s[0].w * n.x + s[1].w * n.y + s[2].w * n.z + s[3].w * n.w);
         }
       },
       mulVxM: {
-        mat2x2f: function mat2x2f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI.V)(e.x * n[0].x + e.y * n[0].y, e.x * n[1].x + e.y * n[1].y);
+        mat2x2f: function mat2x2f(e, n) {
+          var s = n.columns;
+          return (0, _chunkL7HIBZAX.ma)(e.x * s[0].x + e.y * s[0].y, e.x * s[1].x + e.y * s[1].y);
         },
-        mat3x3f: function mat3x3f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI._)(e.x * n[0].x + e.y * n[0].y + e.z * n[0].z, e.x * n[1].x + e.y * n[1].y + e.z * n[1].z, e.x * n[2].x + e.y * n[2].y + e.z * n[2].z);
+        mat3x3f: function mat3x3f(e, n) {
+          var s = n.columns;
+          return (0, _chunkL7HIBZAX.ra)(e.x * s[0].x + e.y * s[0].y + e.z * s[0].z, e.x * s[1].x + e.y * s[1].y + e.z * s[1].z, e.x * s[2].x + e.y * s[2].y + e.z * s[2].z);
         },
-        mat4x4f: function mat4x4f(e, t) {
-          var n = t.columns;
-          return (0, _chunk5RYM4COI.da)(e.x * n[0].x + e.y * n[0].y + e.z * n[0].z + e.w * n[0].w, e.x * n[1].x + e.y * n[1].y + e.z * n[1].z + e.w * n[1].w, e.x * n[2].x + e.y * n[2].y + e.z * n[2].z + e.w * n[2].w, e.x * n[3].x + e.y * n[3].y + e.z * n[3].z + e.w * n[3].w);
+        mat4x4f: function mat4x4f(e, n) {
+          var s = n.columns;
+          return (0, _chunkL7HIBZAX.wa)(e.x * s[0].x + e.y * s[0].y + e.z * s[0].z + e.w * s[0].w, e.x * s[1].x + e.y * s[1].y + e.z * s[1].z + e.w * s[1].w, e.x * s[2].x + e.y * s[2].y + e.z * s[2].z + e.w * s[2].w, e.x * s[3].x + e.y * s[3].y + e.z * s[3].z + e.w * s[3].w);
+        }
+      },
+      div: {
+        vec2f: F(function (e, n) {
+          return e / n;
+        }),
+        vec2h: j(function (e, n) {
+          return e / n;
+        }),
+        vec2i: J(h.divInteger),
+        vec2u: Q(h.divInteger),
+        vec3f: B(function (e, n) {
+          return e / n;
+        }),
+        vec3h: P(function (e, n) {
+          return e / n;
+        }),
+        vec3i: X(h.divInteger),
+        vec3u: Y(h.divInteger),
+        vec4f: p(function (e, n) {
+          return e / n;
+        }),
+        vec4h: Z(function (e, n) {
+          return e / n;
+        }),
+        vec4i: ee(h.divInteger),
+        vec4u: ne(h.divInteger)
+      },
+      divMixed: {
+        vec2f: function vec2f(e, n) {
+          return x(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec2h: function vec2h(e, n) {
+          return w(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec2i: function vec2i(e, n) {
+          return N(function (s) {
+            return h.divInteger(s, n);
+          })(e);
+        },
+        vec2u: function vec2u(e, n) {
+          return K(function (s) {
+            return h.divInteger(s, n);
+          })(e);
+        },
+        vec3f: function vec3f(e, n) {
+          return y(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec3h: function vec3h(e, n) {
+          return l(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec3i: function vec3i(e, n) {
+          return R(function (s) {
+            return h.divInteger(s, n);
+          })(e);
+        },
+        vec3u: function vec3u(e, n) {
+          return k(function (s) {
+            return h.divInteger(s, n);
+          })(e);
+        },
+        vec4f: function vec4f(e, n) {
+          return u(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec4h: function vec4h(e, n) {
+          return i(function (s) {
+            return s / n;
+          })(e);
+        },
+        vec4i: function vec4i(e, n) {
+          return $(function (s) {
+            return h.divInteger(s, n);
+          })(e);
+        },
+        vec4u: function vec4u(e, n) {
+          return O(function (s) {
+            return h.divInteger(s, n);
+          })(e);
         }
       },
       dot: {
-        vec2f: j,
-        vec2h: j,
-        vec2i: j,
-        vec2u: j,
-        vec3f: X,
-        vec3h: X,
-        vec3i: X,
-        vec3u: X,
-        vec4f: Z,
-        vec4h: Z,
-        vec4i: Z,
-        vec4u: Z
+        vec2f: re,
+        vec2h: re,
+        vec2i: re,
+        vec2u: re,
+        vec3f: ae,
+        vec3h: ae,
+        vec3i: ae,
+        vec3u: ae,
+        vec4f: ve,
+        vec4h: ve,
+        vec4i: ve,
+        vec4u: ve
       },
       normalize: {
         vec2f: function vec2f(e) {
-          var t = K(e);
-          return (0, _chunk5RYM4COI.V)(e.x / t, e.y / t);
+          var n = S(e);
+          return (0, _chunkL7HIBZAX.ma)(e.x / n, e.y / n);
         },
         vec2h: function vec2h(e) {
-          var t = K(e);
-          return (0, _chunk5RYM4COI.W)(e.x / t, e.y / t);
+          var n = S(e);
+          return (0, _chunkL7HIBZAX.na)(e.x / n, e.y / n);
         },
         vec2i: function vec2i(e) {
-          var t = K(e);
-          return (0, _chunk5RYM4COI.X)(e.x / t, e.y / t);
+          var n = S(e);
+          return (0, _chunkL7HIBZAX.oa)(e.x / n, e.y / n);
         },
         vec2u: function vec2u(e) {
-          var t = K(e);
-          return (0, _chunk5RYM4COI.Y)(e.x / t, e.y / t);
+          var n = S(e);
+          return (0, _chunkL7HIBZAX.pa)(e.x / n, e.y / n);
         },
         vec3f: function vec3f(e) {
-          var t = _(e);
-          return (0, _chunk5RYM4COI._)(e.x / t, e.y / t, e.z / t);
+          var n = D(e);
+          return (0, _chunkL7HIBZAX.ra)(e.x / n, e.y / n, e.z / n);
         },
         vec3h: function vec3h(e) {
-          var t = _(e);
-          return (0, _chunk5RYM4COI.$)(e.x / t, e.y / t, e.z / t);
+          var n = D(e);
+          return (0, _chunkL7HIBZAX.sa)(e.x / n, e.y / n, e.z / n);
         },
         vec3i: function vec3i(e) {
-          var t = _(e);
-          return (0, _chunk5RYM4COI.aa)(e.x / t, e.y / t, e.z / t);
+          var n = D(e);
+          return (0, _chunkL7HIBZAX.ta)(e.x / n, e.y / n, e.z / n);
         },
         vec3u: function vec3u(e) {
-          var t = _(e);
-          return (0, _chunk5RYM4COI.ba)(e.x / t, e.y / t, e.z / t);
+          var n = D(e);
+          return (0, _chunkL7HIBZAX.ua)(e.x / n, e.y / n, e.z / n);
         },
         vec4f: function vec4f(e) {
-          var t = W(e);
-          return (0, _chunk5RYM4COI.da)(e.x / t, e.y / t, e.z / t, e.w / t);
+          var n = E(e);
+          return (0, _chunkL7HIBZAX.wa)(e.x / n, e.y / n, e.z / n, e.w / n);
         },
         vec4h: function vec4h(e) {
-          var t = W(e);
-          return (0, _chunk5RYM4COI.ea)(e.x / t, e.y / t, e.z / t, e.w / t);
+          var n = E(e);
+          return (0, _chunkL7HIBZAX.xa)(e.x / n, e.y / n, e.z / n, e.w / n);
         },
         vec4i: function vec4i(e) {
-          var t = W(e);
-          return (0, _chunk5RYM4COI.fa)(e.x / t, e.y / t, e.z / t, e.w / t);
+          var n = E(e);
+          return (0, _chunkL7HIBZAX.ya)(e.x / n, e.y / n, e.z / n, e.w / n);
         },
         vec4u: function vec4u(e) {
-          var t = W(e);
-          return (0, _chunk5RYM4COI.ga)(e.x / t, e.y / t, e.z / t, e.w / t);
+          var n = E(e);
+          return (0, _chunkL7HIBZAX.za)(e.x / n, e.y / n, e.z / n, e.w / n);
         }
       },
       cross: {
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e.y * t.z - e.z * t.y, e.z * t.x - e.x * t.z, e.x * t.y - e.y * t.x);
+        vec3f: function vec3f(e, n) {
+          return (0, _chunkL7HIBZAX.ra)(e.y * n.z - e.z * n.y, e.z * n.x - e.x * n.z, e.x * n.y - e.y * n.x);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e.y * t.z - e.z * t.y, e.z * t.x - e.x * t.z, e.x * t.y - e.y * t.x);
+        vec3h: function vec3h(e, n) {
+          return (0, _chunkL7HIBZAX.sa)(e.y * n.z - e.z * n.y, e.z * n.x - e.x * n.z, e.x * n.y - e.y * n.x);
         }
       },
       floor: {
-        vec2f: z(Math.floor),
-        vec2h: h(Math.floor),
-        vec3f: b(Math.floor),
-        vec3h: M(Math.floor),
-        vec4f: A(Math.floor),
-        vec4h: V(Math.floor)
+        vec2f: x(Math.floor),
+        vec2h: w(Math.floor),
+        vec3f: y(Math.floor),
+        vec3h: l(Math.floor),
+        vec4f: u(Math.floor),
+        vec4h: i(Math.floor)
       },
       max: {
-        vec2f: ee(Math.max),
-        vec2h: te(Math.max),
-        vec2i: le(Math.max),
-        vec2u: xe(Math.max),
-        vec3f: ne(Math.max),
-        vec3h: ae(Math.max),
-        vec3i: Te(Math.max),
-        vec3u: ie(Math.max),
-        vec4f: re(Math.max),
-        vec4h: se(Math.max),
-        vec4i: we(Math.max),
-        vec4u: de(Math.max)
+        vec2f: F(Math.max),
+        vec2h: j(Math.max),
+        vec2i: J(Math.max),
+        vec2u: Q(Math.max),
+        vec3f: B(Math.max),
+        vec3h: P(Math.max),
+        vec3i: X(Math.max),
+        vec3u: Y(Math.max),
+        vec4f: p(Math.max),
+        vec4h: Z(Math.max),
+        vec4i: ee(Math.max),
+        vec4u: ne(Math.max)
       },
       min: {
-        vec2f: ee(Math.min),
-        vec2h: te(Math.min),
-        vec2i: le(Math.min),
-        vec2u: xe(Math.min),
-        vec3f: ne(Math.min),
-        vec3h: ae(Math.min),
-        vec3i: Te(Math.min),
-        vec3u: ie(Math.min),
-        vec4f: re(Math.min),
-        vec4h: se(Math.min),
-        vec4i: we(Math.min),
-        vec4u: de(Math.min)
+        vec2f: F(Math.min),
+        vec2h: j(Math.min),
+        vec2i: J(Math.min),
+        vec2u: Q(Math.min),
+        vec3f: B(Math.min),
+        vec3h: P(Math.min),
+        vec3i: X(Math.min),
+        vec3u: Y(Math.min),
+        vec4f: p(Math.min),
+        vec4h: Z(Math.min),
+        vec4i: ee(Math.min),
+        vec4u: ne(Math.min)
       },
       pow: {
-        vec2f: function vec2f(e, t) {
-          return (0, _chunk5RYM4COI.V)(e.x ** t.x, e.y ** t.y);
+        vec2f: function vec2f(e, n) {
+          return (0, _chunkL7HIBZAX.ma)(e.x ** n.x, e.y ** n.y);
         },
-        vec2h: function vec2h(e, t) {
-          return (0, _chunk5RYM4COI.W)(e.x ** t.x, e.y ** t.y);
+        vec2h: function vec2h(e, n) {
+          return (0, _chunkL7HIBZAX.na)(e.x ** n.x, e.y ** n.y);
         },
-        vec3f: function vec3f(e, t) {
-          return (0, _chunk5RYM4COI._)(e.x ** t.x, e.y ** t.y, e.z ** t.z);
+        vec3f: function vec3f(e, n) {
+          return (0, _chunkL7HIBZAX.ra)(e.x ** n.x, e.y ** n.y, e.z ** n.z);
         },
-        vec3h: function vec3h(e, t) {
-          return (0, _chunk5RYM4COI.$)(e.x ** t.x, e.y ** t.y, e.z ** t.z);
+        vec3h: function vec3h(e, n) {
+          return (0, _chunkL7HIBZAX.sa)(e.x ** n.x, e.y ** n.y, e.z ** n.z);
         },
-        vec4f: function vec4f(e, t) {
-          return (0, _chunk5RYM4COI.da)(e.x ** t.x, e.y ** t.y, e.z ** t.z, e.w ** t.w);
+        vec4f: function vec4f(e, n) {
+          return (0, _chunkL7HIBZAX.wa)(e.x ** n.x, e.y ** n.y, e.z ** n.z, e.w ** n.w);
         },
-        vec4h: function vec4h(e, t) {
-          return (0, _chunk5RYM4COI.ea)(e.x ** t.x, e.y ** t.y, e.z ** t.z, e.w ** t.w);
+        vec4h: function vec4h(e, n) {
+          return (0, _chunkL7HIBZAX.xa)(e.x ** n.x, e.y ** n.y, e.z ** n.z, e.w ** n.w);
         }
       },
       sign: {
-        vec2f: z(Math.sign),
-        vec2h: h(Math.sign),
-        vec2i: P(Math.sign),
-        vec3f: b(Math.sign),
-        vec3h: M(Math.sign),
-        vec3i: C(Math.sign),
-        vec4f: A(Math.sign),
-        vec4h: V(Math.sign),
-        vec4i: G(Math.sign)
+        vec2f: x(Math.sign),
+        vec2h: w(Math.sign),
+        vec2i: N(Math.sign),
+        vec3f: y(Math.sign),
+        vec3h: l(Math.sign),
+        vec3i: R(Math.sign),
+        vec4f: u(Math.sign),
+        vec4h: i(Math.sign),
+        vec4i: $(Math.sign)
       },
       sqrt: {
-        vec2f: z(Math.sqrt),
-        vec2h: h(Math.sqrt),
-        vec3f: b(Math.sqrt),
-        vec3h: M(Math.sqrt),
-        vec4f: A(Math.sqrt),
-        vec4h: V(Math.sqrt)
-      },
-      div: {
-        vec2f: ee(function (e, t) {
-          return e / t;
-        }),
-        vec2h: te(function (e, t) {
-          return e / t;
-        }),
-        vec2i: le(function (e, t) {
-          return e / t;
-        }),
-        vec2u: xe(function (e, t) {
-          return e / t;
-        }),
-        vec3f: ne(function (e, t) {
-          return e / t;
-        }),
-        vec3h: ae(function (e, t) {
-          return e / t;
-        }),
-        vec3i: Te(function (e, t) {
-          return e / t;
-        }),
-        vec3u: ie(function (e, t) {
-          return e / t;
-        }),
-        vec4f: re(function (e, t) {
-          return e / t;
-        }),
-        vec4h: se(function (e, t) {
-          return e / t;
-        }),
-        vec4i: we(function (e, t) {
-          return e / t;
-        }),
-        vec4u: de(function (e, t) {
-          return e / t;
-        })
+        vec2f: x(Math.sqrt),
+        vec2h: w(Math.sqrt),
+        vec3f: y(Math.sqrt),
+        vec3h: l(Math.sqrt),
+        vec4f: u(Math.sqrt),
+        vec4h: i(Math.sqrt)
       },
       mix: {
-        vec2f: function vec2f(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI.V)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n) : (0, _chunk5RYM4COI.V)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y);
+        vec2f: function vec2f(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.ma)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s) : (0, _chunkL7HIBZAX.ma)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y);
         },
-        vec2h: function vec2h(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI.W)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n) : (0, _chunk5RYM4COI.W)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y);
+        vec2h: function vec2h(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.na)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s) : (0, _chunkL7HIBZAX.na)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y);
         },
-        vec3f: function vec3f(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI._)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n, e.z * (1 - n) + t.z * n) : (0, _chunk5RYM4COI._)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y, e.z * (1 - n.z) + t.z * n.z);
+        vec3f: function vec3f(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.ra)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s, e.z * (1 - s) + n.z * s) : (0, _chunkL7HIBZAX.ra)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y, e.z * (1 - s.z) + n.z * s.z);
         },
-        vec3h: function vec3h(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI.$)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n, e.z * (1 - n) + t.z * n) : (0, _chunk5RYM4COI.$)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y, e.z * (1 - n.z) + t.z * n.z);
+        vec3h: function vec3h(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.sa)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s, e.z * (1 - s) + n.z * s) : (0, _chunkL7HIBZAX.sa)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y, e.z * (1 - s.z) + n.z * s.z);
         },
-        vec4f: function vec4f(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI.da)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n, e.z * (1 - n) + t.z * n, e.w * (1 - n) + t.w * n) : (0, _chunk5RYM4COI.da)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y, e.z * (1 - n.z) + t.z * n.z, e.w * (1 - n.w) + t.w * n.w);
+        vec4f: function vec4f(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.wa)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s, e.z * (1 - s) + n.z * s, e.w * (1 - s) + n.w * s) : (0, _chunkL7HIBZAX.wa)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y, e.z * (1 - s.z) + n.z * s.z, e.w * (1 - s.w) + n.w * s.w);
         },
-        vec4h: function vec4h(e, t, n) {
-          return typeof n == "number" ? (0, _chunk5RYM4COI.ea)(e.x * (1 - n) + t.x * n, e.y * (1 - n) + t.y * n, e.z * (1 - n) + t.z * n, e.w * (1 - n) + t.w * n) : (0, _chunk5RYM4COI.ea)(e.x * (1 - n.x) + t.x * n.x, e.y * (1 - n.y) + t.y * n.y, e.z * (1 - n.z) + t.z * n.z, e.w * (1 - n.w) + t.w * n.w);
+        vec4h: function vec4h(e, n, s) {
+          return typeof s == "number" ? (0, _chunkL7HIBZAX.xa)(e.x * (1 - s) + n.x * s, e.y * (1 - s) + n.y * s, e.z * (1 - s) + n.z * s, e.w * (1 - s) + n.w * s) : (0, _chunkL7HIBZAX.xa)(e.x * (1 - s.x) + n.x * s.x, e.y * (1 - s.y) + n.y * s.y, e.z * (1 - s.z) + n.z * s.z, e.w * (1 - s.w) + n.w * s.w);
         }
       },
       sin: {
-        vec2f: z(Math.sin),
-        vec2h: h(Math.sin),
-        vec3f: b(Math.sin),
-        vec3h: M(Math.sin),
-        vec4f: A(Math.sin),
-        vec4h: V(Math.sin)
+        vec2f: x(Math.sin),
+        vec2h: w(Math.sin),
+        vec3f: y(Math.sin),
+        vec3h: l(Math.sin),
+        vec4f: u(Math.sin),
+        vec4h: i(Math.sin)
       },
       cos: {
-        vec2f: z(Math.cos),
-        vec2h: h(Math.cos),
-        vec3f: b(Math.cos),
-        vec3h: M(Math.cos),
-        vec4f: A(Math.cos),
-        vec4h: V(Math.cos)
+        vec2f: x(Math.cos),
+        vec2h: w(Math.cos),
+        vec3f: y(Math.cos),
+        vec3h: l(Math.cos),
+        vec4f: u(Math.cos),
+        vec4h: i(Math.cos)
       },
       exp: {
-        vec2f: z(Math.exp),
-        vec2h: h(Math.exp),
-        vec3f: b(Math.exp),
-        vec3h: M(Math.exp),
-        vec4f: A(Math.exp),
-        vec4h: V(Math.exp)
+        vec2f: x(Math.exp),
+        vec2h: w(Math.exp),
+        vec3f: y(Math.exp),
+        vec3h: l(Math.exp),
+        vec4f: u(Math.exp),
+        vec4h: i(Math.exp)
       },
       fract: {
-        vec2f: z(function (e) {
+        vec2f: x(function (e) {
           return e - Math.floor(e);
         }),
-        vec2h: h(function (e) {
+        vec2h: w(function (e) {
           return e - Math.floor(e);
         }),
-        vec3f: b(function (e) {
+        vec3f: y(function (e) {
           return e - Math.floor(e);
         }),
-        vec3h: M(function (e) {
+        vec3h: l(function (e) {
           return e - Math.floor(e);
         }),
-        vec4f: A(function (e) {
+        vec4f: u(function (e) {
           return e - Math.floor(e);
         }),
-        vec4h: V(function (e) {
+        vec4h: i(function (e) {
           return e - Math.floor(e);
         })
       },
       isCloseToZero: {
-        vec2f: function vec2f(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t;
+        vec2f: function vec2f(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n;
         },
-        vec2h: function vec2h(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t;
+        vec2h: function vec2h(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n;
         },
-        vec3f: function vec3f(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t;
+        vec3f: function vec3f(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n && Math.abs(e.z) <= n;
         },
-        vec3h: function vec3h(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t;
+        vec3h: function vec3h(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n && Math.abs(e.z) <= n;
         },
-        vec4f: function vec4f(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t && Math.abs(e.w) <= t;
+        vec4f: function vec4f(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n && Math.abs(e.z) <= n && Math.abs(e.w) <= n;
         },
-        vec4h: function vec4h(e, t) {
-          return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t && Math.abs(e.w) <= t;
+        vec4h: function vec4h(e, n) {
+          return Math.abs(e.x) <= n && Math.abs(e.y) <= n && Math.abs(e.z) <= n && Math.abs(e.w) <= n;
         }
       },
       neg: {
-        vec2f: z(function (e) {
+        vec2f: x(function (e) {
           return -e;
         }),
-        vec2h: h(function (e) {
+        vec2h: w(function (e) {
           return -e;
         }),
-        vec2i: P(function (e) {
+        vec2i: N(function (e) {
           return -e;
         }),
-        vec2u: H(function (e) {
+        vec2u: K(function (e) {
           return -e;
         }),
         "vec2<bool>": function vec2Bool(e) {
-          return (0, _chunk5RYM4COI.Z)(!e.x, !e.y);
+          return (0, _chunkL7HIBZAX.qa)(!e.x, !e.y);
         },
-        vec3f: b(function (e) {
+        vec3f: y(function (e) {
           return -e;
         }),
-        vec3h: M(function (e) {
+        vec3h: l(function (e) {
           return -e;
         }),
-        vec3i: C(function (e) {
+        vec3i: R(function (e) {
           return -e;
         }),
-        vec3u: Q(function (e) {
+        vec3u: k(function (e) {
           return -e;
         }),
         "vec3<bool>": function vec3Bool(e) {
-          return (0, _chunk5RYM4COI.ca)(!e.x, !e.y, !e.z);
+          return (0, _chunkL7HIBZAX.va)(!e.x, !e.y, !e.z);
         },
-        vec4f: A(function (e) {
+        vec4f: u(function (e) {
           return -e;
         }),
-        vec4h: V(function (e) {
+        vec4h: i(function (e) {
           return -e;
         }),
-        vec4i: G(function (e) {
+        vec4i: $(function (e) {
           return -e;
         }),
-        vec4u: Y(function (e) {
+        vec4u: O(function (e) {
           return -e;
         }),
         "vec4<bool>": function vec4Bool(e) {
-          return (0, _chunk5RYM4COI.ha)(!e.x, !e.y, !e.z, !e.w);
+          return (0, _chunkL7HIBZAX.Aa)(!e.x, !e.y, !e.z, !e.w);
         }
       },
       select: {
-        vec2f: function vec2f(e, t, n) {
-          return (0, _chunk5RYM4COI.V)(n.x ? t.x : e.x, n.y ? t.y : e.y);
+        vec2f: function vec2f(e, n, s) {
+          return (0, _chunkL7HIBZAX.ma)(s.x ? n.x : e.x, s.y ? n.y : e.y);
         },
-        vec2h: function vec2h(e, t, n) {
-          return (0, _chunk5RYM4COI.W)(n.x ? t.x : e.x, n.y ? t.y : e.y);
+        vec2h: function vec2h(e, n, s) {
+          return (0, _chunkL7HIBZAX.na)(s.x ? n.x : e.x, s.y ? n.y : e.y);
         },
-        vec2i: function vec2i(e, t, n) {
-          return (0, _chunk5RYM4COI.X)(n.x ? t.x : e.x, n.y ? t.y : e.y);
+        vec2i: function vec2i(e, n, s) {
+          return (0, _chunkL7HIBZAX.oa)(s.x ? n.x : e.x, s.y ? n.y : e.y);
         },
-        vec2u: function vec2u(e, t, n) {
-          return (0, _chunk5RYM4COI.Y)(n.x ? t.x : e.x, n.y ? t.y : e.y);
+        vec2u: function vec2u(e, n, s) {
+          return (0, _chunkL7HIBZAX.pa)(s.x ? n.x : e.x, s.y ? n.y : e.y);
         },
-        "vec2<bool>": function vec2Bool(e, t, n) {
-          return (0, _chunk5RYM4COI.Z)(n.x ? t.x : e.x, n.y ? t.y : e.y);
+        "vec2<bool>": function vec2Bool(e, n, s) {
+          return (0, _chunkL7HIBZAX.qa)(s.x ? n.x : e.x, s.y ? n.y : e.y);
         },
-        vec3f: function vec3f(e, t, n) {
-          return (0, _chunk5RYM4COI._)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z);
+        vec3f: function vec3f(e, n, s) {
+          return (0, _chunkL7HIBZAX.ra)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z);
         },
-        vec3h: function vec3h(e, t, n) {
-          return (0, _chunk5RYM4COI.$)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z);
+        vec3h: function vec3h(e, n, s) {
+          return (0, _chunkL7HIBZAX.sa)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z);
         },
-        vec3i: function vec3i(e, t, n) {
-          return (0, _chunk5RYM4COI.aa)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z);
+        vec3i: function vec3i(e, n, s) {
+          return (0, _chunkL7HIBZAX.ta)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z);
         },
-        vec3u: function vec3u(e, t, n) {
-          return (0, _chunk5RYM4COI.ba)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z);
+        vec3u: function vec3u(e, n, s) {
+          return (0, _chunkL7HIBZAX.ua)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z);
         },
-        "vec3<bool>": function vec3Bool(e, t, n) {
-          return (0, _chunk5RYM4COI.ca)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z);
+        "vec3<bool>": function vec3Bool(e, n, s) {
+          return (0, _chunkL7HIBZAX.va)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z);
         },
-        vec4f: function vec4f(e, t, n) {
-          return (0, _chunk5RYM4COI.da)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z, n.w ? t.w : e.w);
+        vec4f: function vec4f(e, n, s) {
+          return (0, _chunkL7HIBZAX.wa)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z, s.w ? n.w : e.w);
         },
-        vec4h: function vec4h(e, t, n) {
-          return (0, _chunk5RYM4COI.ea)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z, n.w ? t.w : e.w);
+        vec4h: function vec4h(e, n, s) {
+          return (0, _chunkL7HIBZAX.xa)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z, s.w ? n.w : e.w);
         },
-        vec4i: function vec4i(e, t, n) {
-          return (0, _chunk5RYM4COI.fa)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z, n.w ? t.w : e.w);
+        vec4i: function vec4i(e, n, s) {
+          return (0, _chunkL7HIBZAX.ya)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z, s.w ? n.w : e.w);
         },
-        vec4u: function vec4u(e, t, n) {
-          return (0, _chunk5RYM4COI.ga)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z, n.w ? t.w : e.w);
+        vec4u: function vec4u(e, n, s) {
+          return (0, _chunkL7HIBZAX.za)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z, s.w ? n.w : e.w);
         },
-        "vec4<bool>": function vec4Bool(e, t, n) {
-          return (0, _chunk5RYM4COI.ha)(n.x ? t.x : e.x, n.y ? t.y : e.y, n.z ? t.z : e.z, n.w ? t.w : e.w);
+        "vec4<bool>": function vec4Bool(e, n, s) {
+          return (0, _chunkL7HIBZAX.Aa)(s.x ? n.x : e.x, s.y ? n.y : e.y, s.z ? n.z : e.z, s.w ? n.w : e.w);
         }
       }
     };
-  function E(e) {
-    var t = e.dataType.type;
-    return t === "abstractInt" || t === "abstractFloat" || t === "f32" || t === "f16" || t === "i32" || t === "u32";
+  function G(e) {
+    return Te(e.dataType);
   }
-  var Ve = exports.add = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.add[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} + ${t.value})`,
-        dataType: e.dataType
-      };
-    }, "coerce"),
-    L = exports.sub = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.sub[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} - ${t.value})`,
-        dataType: e.dataType
-      };
-    }, "coerce"),
-    ze = exports.mul = (0, _chunk5RYM4COI.N)(function (e, t) {
-      if (typeof e == "number") return s.mulSxV[t.kind](e, t);
-      if (typeof e == "object" && typeof t == "object" && "kind" in e && "kind" in t) {
-        var n = !e.kind.startsWith("mat"),
-          a = !t.kind.startsWith("mat");
-        if (!n && a) return s.mulMxV[e.kind](e, t);
-        if (n && !a) return s.mulVxM[t.kind](e, t);
-      }
-      return s.mulVxV[t.kind](e, t);
-    }, function (e, t) {
-      var n = E(e) ? t.dataType : e.dataType.type.startsWith("mat") ? t.dataType.type.startsWith("mat") ? e.dataType : t.dataType : e.dataType;
-      return {
-        value: `(${e.value} * ${t.value})`,
-        dataType: n
-      };
-    }),
-    Ie = exports.abs = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.abs(e) : s.abs[e.kind](e);
-    }, function (e) {
-      return {
-        value: `abs(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Se = exports.atan2 = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return typeof e == "number" && typeof t == "number" ? Math.atan2(e, t) : s.atan2[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `atan2(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    $e = exports.acos = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.acos(e) : s.acos[e.kind](e);
-    }, function (e) {
-      return {
-        value: `acos(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Be = exports.asin = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.asin(e) : s.asin[e.kind](e);
-    }, function (e) {
-      return {
-        value: `asin(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    ke = exports.ceil = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.ceil(e) : s.ceil[e.kind](e);
-    }, function (e) {
-      return {
-        value: `ceil(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Oe = exports.clamp = (0, _chunk5RYM4COI.N)(function (e, t, n) {
-      return typeof e == "number" ? Math.min(Math.max(t, e), n) : s.clamp[e.kind](e, t, n);
-    }, function (e, t, n) {
-      return {
-        value: `clamp(${e.value}, ${t.value}, ${n.value})`,
-        dataType: e.dataType
-      };
-    }),
-    De = exports.cos = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.cos(e) : s.cos[e.kind](e);
-    }, function (e) {
-      return {
-        value: `cos(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Fe = exports.cross = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.cross[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `cross(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    he = exports.dot = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.dot[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `dot(${e.value}, ${t.value})`,
-        dataType: _chunk5RYM4COI.T
-      };
-    }),
-    Ue = exports.normalize = (0, _chunk5RYM4COI.N)(function (e) {
-      return s.normalize[e.kind](e);
-    }, function (e) {
-      return {
-        value: `normalize(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Ne = exports.floor = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.floor(e) : s.floor[e.kind](e);
-    }, function (e) {
-      return {
-        value: `floor(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Re = exports.fract = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? e - Math.floor(e) : s.fract[e.kind](e);
-    }, function (e) {
-      return {
-        value: `fract(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    be = exports.length = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.abs(e) : s.length[e.kind](e);
-    }, function (e) {
-      return {
-        value: `length(${e.value})`,
-        dataType: _chunk5RYM4COI.T
-      };
-    }),
-    Ke = exports.max = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return typeof e == "number" ? Math.max(e, t) : s.max[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `max(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }, "coerce"),
-    _e = exports.min = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return typeof e == "number" ? Math.min(e, t) : s.min[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `min(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }, "coerce"),
-    We = exports.sign = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.sign(e) : s.sign[e.kind](e);
-    }, function (e) {
-      return {
-        value: `sign(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Ee = exports.sin = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.sin(e) : s.sin[e.kind](e);
-    }, function (e) {
-      return {
-        value: `sin(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    qe = exports.exp = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.exp(e) : s.exp[e.kind](e);
-    }, function (e) {
-      return {
-        value: `exp(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Pe = exports.pow = (0, _chunk5RYM4COI.N)(function (e, t) {
-      if (typeof e == "number" && typeof t == "number") return e ** t;
-      if (typeof e == "object" && typeof t == "object" && "kind" in e && "kind" in t) return s.pow[e.kind](e, t);
-      throw new Error("Invalid arguments to pow()");
-    }, function (e, t) {
-      return {
-        value: `pow(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Ce = exports.mix = (0, _chunk5RYM4COI.N)(function (e, t, n) {
-      if (typeof e == "number") {
-        if (typeof n != "number" || typeof t != "number") throw new Error("When e1 and e2 are numbers, the blend factor must be a number.");
-        return e * (1 - n) + t * n;
-      }
-      if (typeof e == "number" || typeof t == "number") throw new Error("e1 and e2 need to both be vectors of the same kind.");
-      return s.mix[e.kind](e, t, n);
-    }, function (e, t, n) {
-      return {
-        value: `mix(${e.value}, ${t.value}, ${n.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Ge = exports.reflect = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return L(e, ze(2 * he(t, e), t));
-    }, function (e, t) {
-      return {
-        value: `reflect(${e.value}, ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Le = exports.distance = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return typeof e == "number" && typeof t == "number" ? Math.abs(e - t) : be(L(e, t));
-    }, function (e, t) {
-      return {
-        value: `distance(${e.value}, ${t.value})`,
-        dataType: _chunk5RYM4COI.T
-      };
-    }),
-    Je = exports.neg = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? -e : s.neg[e.kind](e);
-    }, function (e) {
-      return {
-        value: `-(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    je = exports.sqrt = (0, _chunk5RYM4COI.N)(function (e) {
-      return typeof e == "number" ? Math.sqrt(e) : s.sqrt[e.kind](e);
-    }, function (e) {
-      return {
-        value: `sqrt(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Xe = exports.div = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return typeof e == "number" && typeof t == "number" ? e / t : typeof t == "number" ? s.mulSxV[e.kind](1 / t, e) : s.div[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} / ${t.value})`,
-        dataType: e.dataType
-      };
-    });
-  function q(e) {
-    return e.dataType.type.includes("2") ? _chunk5RYM4COI.Z : e.dataType.type.includes("3") ? _chunk5RYM4COI.ca : _chunk5RYM4COI.ha;
+  function Te(e) {
+    var n = e == null ? void 0 : e.type;
+    return !!(e != null && e[_chunkL7HIBZAX.a]) && (n === "abstractInt" || n === "abstractFloat" || n === "f32" || n === "f16" || n === "i32" || n === "u32");
   }
-  var Ze = exports.allEq = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return me(J(e, t));
-    }, function (e, t) {
-      return {
-        value: `all(${e.value} == ${t.value})`,
-        dataType: _chunk5RYM4COI.Q
-      };
-    }),
-    J = exports.eq = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.eq[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} == ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    He = exports.ne = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return D(J(e, t));
-    }, function (e, t) {
-      return {
-        value: `(${e.value} != ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    ce = exports.lt = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.lt[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} < ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    Qe = exports.le = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return pe(ce(e, t), J(e, t));
-    }, function (e, t) {
-      return {
-        value: `(${e.value} <= ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    Ye = exports.gt = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return Me(D(ce(e, t)), D(J(e, t)));
-    }, function (e, t) {
-      return {
-        value: `(${e.value} > ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    et = exports.ge = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return D(ce(e, t));
-    }, function (e, t) {
-      return {
-        value: `(${e.value} >= ${t.value})`,
-        dataType: q(e)
-      };
-    }),
-    D = exports.not = (0, _chunk5RYM4COI.N)(function (e) {
-      return s.neg[e.kind](e);
-    }, function (e) {
-      return {
-        value: `!(${e.value})`,
-        dataType: e.dataType
-      };
-    }),
-    pe = exports.or = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return s.or[e.kind](e, t);
-    }, function (e, t) {
-      return {
-        value: `(${e.value} | ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    Me = exports.and = (0, _chunk5RYM4COI.N)(function (e, t) {
-      return D(pe(D(e), D(t)));
-    }, function (e, t) {
-      return {
-        value: `(${e.value} & ${t.value})`,
-        dataType: e.dataType
-      };
-    }),
-    me = exports.all = (0, _chunk5RYM4COI.N)(function (e) {
-      return s.all[e.kind](e);
-    }, function (e) {
-      return {
-        value: `all(${e.value})`,
-        dataType: _chunk5RYM4COI.Q
-      };
-    }),
-    tt = exports.any = (0, _chunk5RYM4COI.N)(function (e) {
-      return !me(D(e));
-    }, function (e) {
-      return {
-        value: `any(${e.value})`,
-        dataType: _chunk5RYM4COI.Q
-      };
-    }),
-    nt = exports.isCloseTo = (0, _chunk5RYM4COI.N)(function (e, t) {
-      var n = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : .01;
-      return typeof e == "number" && typeof t == "number" ? Math.abs(e - t) < n : typeof e != "number" && typeof t != "number" ? s.isCloseToZero[e.kind](L(e, t), n) : !1;
-    }, function (e, t) {
-      var n = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
-        value: .01,
-        dataType: _chunk5RYM4COI.T
-      };
-      return E(e) && E(t) ? {
-        value: `(abs(f32(${e.value}) - f32(${t.value})) <= ${n.value})`,
-        dataType: _chunk5RYM4COI.Q
-      } : !E(e) && !E(t) ? {
-        value: `all(abs(${e.value} - ${t.value}) <= (${e.value} - ${e.value}) + ${n.value})`,
-        dataType: _chunk5RYM4COI.Q
-      } : {
-        value: "false",
-        dataType: _chunk5RYM4COI.Q
-      };
-    }),
-    at = exports.select = (0, _chunk5RYM4COI.N)(function (e, t, n) {
-      return typeof n == "boolean" ? n ? t : e : s.select[e.kind](e, t, n);
-    }, function (e, t, n) {
-      return {
-        value: `select(${e.value}, ${t.value}, ${n.value})`,
-        dataType: e.dataType
-      };
-    });
-  var rt = exports.workgroupBarrier = (0, _chunk5RYM4COI.N)(function () {
-      return console.warn("workgroupBarrier is a no-op outside of GPU mode.");
-    }, function () {
-      return {
-        value: "workgroupBarrier()",
-        dataType: _chunk5RYM4COI.t
-      };
-    }),
-    st = exports.storageBarrier = (0, _chunk5RYM4COI.N)(function () {
-      return console.warn("storageBarrier is a no-op outside of GPU mode.");
-    }, function () {
-      return {
-        value: "storageBarrier()",
-        dataType: _chunk5RYM4COI.t
-      };
-    }),
-    ct = exports.textureBarrier = (0, _chunk5RYM4COI.N)(function () {
-      return console.warn("textureBarrier is a no-op outside of GPU mode.");
-    }, function () {
-      return {
-        value: "textureBarrier()",
-        dataType: _chunk5RYM4COI.t
-      };
-    }),
-    ot = exports.atomicLoad = (0, _chunk5RYM4COI.N)(function (e) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicLoad(&${e.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }),
-    ut = exports.atomicStore = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if (!(0, _chunk5RYM4COI.A)(e.dataType) || e.dataType.type !== "atomic") throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-      return {
-        value: `atomicStore(&${e.value}, ${t.value})`,
-        dataType: _chunk5RYM4COI.t
-      };
-    }),
-    N = function N(e, t) {
-      return e.dataType.type === "atomic" && e.dataType.inner.type === "i32" ? [e.dataType, _chunk5RYM4COI.S] : [e.dataType, _chunk5RYM4COI.R];
-    },
-    yt = exports.atomicAdd = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicAdd(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    vt = exports.atomicSub = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicSub(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    lt = exports.atomicMax = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicMax(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    xt = exports.atomicMin = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicMin(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    Tt = exports.atomicAnd = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicAnd(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    it = exports.atomicOr = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicOr(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N),
-    wt = exports.atomicXor = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Atomic operations are not supported outside of GPU mode.");
-    }, function (e, t) {
-      if ((0, _chunk5RYM4COI.A)(e.dataType) && e.dataType.type === "atomic") return {
-        value: `atomicXor(&${e.value}, ${t.value})`,
-        dataType: e.dataType.inner
-      };
-      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
-    }, N);
-  var dt = exports.arrayLength = (0, _chunk5RYM4COI.N)(function (e) {
-    return e.length;
-  }, function (e) {
-    return {
-      value: `arrayLength(${e.value})`,
-      dataType: _chunk5RYM4COI.R
-    };
-  }, function (e) {
-    return [(0, _chunk5RYM4COI.na)(e.dataType)];
+  function oe(e, n) {
+    if (typeof e == "number" && typeof n == "number") return e + n;
+    if (typeof e == "number" && (0, _chunkL7HIBZAX.z)(n)) return r.addMixed[n.kind](n, e);
+    if ((0, _chunkL7HIBZAX.z)(e) && typeof n == "number") return r.addMixed[e.kind](e, n);
+    if ((0, _chunkL7HIBZAX.z)(e) && (0, _chunkL7HIBZAX.z)(n) || (0, _chunkL7HIBZAX.D)(e) && (0, _chunkL7HIBZAX.D)(n)) return r.add[e.kind](e, n);
+    throw new Error("Add/Sub called with invalid arguments.");
+  }
+  var _e = exports.d = (0, _chunkL7HIBZAX.ea)(oe, function (e, n) {
+    return (0, _chunkL7HIBZAX.ba)(`(${e.value} + ${n.value})`, G(e) ? n.dataType : e.dataType);
+  }, "coerce");
+  function be(e, n) {
+    return oe(e, xe(-1, n));
+  }
+  var fe = exports.e = (0, _chunkL7HIBZAX.ea)(be, function (e, n) {
+    return (0, _chunkL7HIBZAX.ba)(`(${e.value} - ${n.value})`, G(e) ? n.dataType : e.dataType);
+  }, "coerce");
+  function ze(e, n) {
+    if (typeof e == "number" && typeof n == "number") return e * n;
+    if (typeof e == "number" && ((0, _chunkL7HIBZAX.z)(n) || (0, _chunkL7HIBZAX.D)(n))) return r.mulSxV[n.kind](e, n);
+    if (((0, _chunkL7HIBZAX.z)(e) || (0, _chunkL7HIBZAX.D)(e)) && typeof n == "number") return r.mulSxV[e.kind](n, e);
+    if ((0, _chunkL7HIBZAX.z)(e) && (0, _chunkL7HIBZAX.z)(n)) return r.mulVxV[e.kind](e, n);
+    if ((0, _chunkL7HIBZAX.H)(e) && (0, _chunkL7HIBZAX.D)(n)) return r.mulVxM[n.kind](e, n);
+    if ((0, _chunkL7HIBZAX.D)(e) && (0, _chunkL7HIBZAX.H)(n)) return r.mulMxV[e.kind](e, n);
+    if ((0, _chunkL7HIBZAX.D)(e) && (0, _chunkL7HIBZAX.D)(n)) return r.mulVxV[e.kind](e, n);
+    throw new Error("Mul called with invalid arguments.");
+  }
+  var xe = exports.f = (0, _chunkL7HIBZAX.ea)(ze, function (e, n) {
+    var s = G(e) ? n.dataType : G(n) || e.dataType.type.startsWith("vec") ? e.dataType : n.dataType.type.startsWith("vec") ? n.dataType : e.dataType;
+    return (0, _chunkL7HIBZAX.ba)(`(${e.value} * ${n.value})`, s);
   });
-  var pt = exports.unpack2x16float = (0, _chunk5RYM4COI.N)(function (e) {
-      var t = new ArrayBuffer(4);
-      new k.BufferWriter(t).writeUint32(e);
-      var a = new k.BufferReader(t);
-      return (0, _chunk5RYM4COI.V)(a.readFloat16(), a.readFloat16());
+  function Me(e, n) {
+    if (typeof e == "number" && typeof n == "number") return e / n;
+    if (typeof e == "number" && (0, _chunkL7HIBZAX.z)(n)) return r.divMixed[n.kind](n, e);
+    if ((0, _chunkL7HIBZAX.z)(e) && typeof n == "number") return r.divMixed[e.kind](e, n);
+    if ((0, _chunkL7HIBZAX.z)(e) && (0, _chunkL7HIBZAX.z)(n)) return r.div[e.kind](e, n);
+    throw new Error("Div called with invalid arguments.");
+  }
+  var Ue = exports.g = (0, _chunkL7HIBZAX.ea)(Me, function (e, n) {
+    return G(e) && G(n) ? (0, _chunkL7HIBZAX.ba)(`(f32(${e.value}) / ${n.value})`, _chunkL7HIBZAX.ka) : (0, _chunkL7HIBZAX.ba)(`(${e.value} / ${n.value})`, e.dataType);
+  });
+  (0, _chunkL7HIBZAX.f)(xe, "mul");
+  var We = exports.h = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.abs(e) : r.abs[e.kind](e);
     }, function (e) {
-      return {
-        value: `unpack2x16float(${e.value})`,
-        dataType: _chunk5RYM4COI.V
-      };
+      return (0, _chunkL7HIBZAX.ba)(`abs(${e.value})`, e.dataType);
     }),
-    mt = exports.pack2x16float = (0, _chunk5RYM4COI.N)(function (e) {
-      var t = new ArrayBuffer(4),
-        n = new k.BufferWriter(t);
-      n.writeFloat16(e.x), n.writeFloat16(e.y);
-      var a = new k.BufferReader(t);
-      return (0, _chunk5RYM4COI.R)(a.readUint32());
-    }, function (e) {
-      return {
-        value: `pack2x16float(${e.value})`,
-        dataType: _chunk5RYM4COI.R
-      };
+    Ce = exports.i = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return typeof e == "number" && typeof n == "number" ? Math.atan2(e, n) : r.atan2[e.kind](e, n);
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`atan2(${e.value}, ${n.value})`, e.dataType);
     }),
-    gt = exports.unpack4x8unorm = (0, _chunk5RYM4COI.N)(function (e) {
-      var t = new ArrayBuffer(4);
-      new k.BufferWriter(t).writeUint32(e);
-      var a = new k.BufferReader(t);
-      return (0, _chunk5RYM4COI.da)(a.readUint8() / 255, a.readUint8() / 255, a.readUint8() / 255, a.readUint8() / 255);
+    qe = exports.j = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.acos(e) : r.acos[e.kind](e);
     }, function (e) {
-      return {
-        value: `unpack4x8unorm(${e.value})`,
-        dataType: _chunk5RYM4COI.da
-      };
+      return (0, _chunkL7HIBZAX.ba)(`acos(${e.value})`, e.dataType);
     }),
-    ft = exports.pack4x8unorm = (0, _chunk5RYM4COI.N)(function (e) {
-      var t = new ArrayBuffer(4),
-        n = new k.BufferWriter(t);
-      n.writeUint8(e.x * 255), n.writeUint8(e.y * 255), n.writeUint8(e.z * 255), n.writeUint8(e.w * 255);
-      var a = new k.BufferReader(t);
-      return (0, _chunk5RYM4COI.R)(a.readUint32());
+    Se = exports.k = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.asin(e) : r.asin[e.kind](e);
     }, function (e) {
-      return {
-        value: `pack4x8unorm(${e.value})`,
-        dataType: _chunk5RYM4COI.R
-      };
+      return (0, _chunkL7HIBZAX.ba)(`asin(${e.value})`, e.dataType);
+    }),
+    De = exports.l = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.ceil(e) : r.ceil[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`ceil(${e.value})`, e.dataType);
+    }),
+    Ee = exports.m = (0, _chunkL7HIBZAX.ea)(function (e, n, s) {
+      return typeof e == "number" ? Math.min(Math.max(n, e), s) : r.clamp[e.kind](e, n, s);
+    }, function (e, n, s) {
+      return (0, _chunkL7HIBZAX.ba)(`clamp(${e.value}, ${n.value}, ${s.value})`, e.dataType);
+    }),
+    je = exports.n = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.cos(e) : r.cos[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`cos(${e.value})`, e.dataType);
+    }),
+    Pe = exports.o = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return r.cross[e.kind](e, n);
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`cross(${e.value}, ${n.value})`, e.dataType);
+    }),
+    pe = exports.p = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return r.dot[e.kind](e, n);
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`dot(${e.value}, ${n.value})`, _chunkL7HIBZAX.ka);
+    }),
+    Ze = exports.q = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return r.normalize[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`normalize(${e.value})`, e.dataType);
+    }),
+    Ge = exports.r = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.floor(e) : r.floor[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`floor(${e.value})`, e.dataType);
+    }),
+    He = exports.s = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? e - Math.floor(e) : r.fract[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`fract(${e.value})`, e.dataType);
+    }),
+    Ve = exports.t = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.abs(e) : r.length[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`length(${e.value})`, _chunkL7HIBZAX.ka);
+    }),
+    Je = exports.u = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return typeof e == "number" ? Math.max(e, n) : r.max[e.kind](e, n);
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`max(${e.value}, ${n.value})`, e.dataType);
+    }, "coerce"),
+    Qe = exports.v = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return typeof e == "number" ? Math.min(e, n) : r.min[e.kind](e, n);
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`min(${e.value}, ${n.value})`, e.dataType);
+    }, "coerce"),
+    Xe = exports.w = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.sign(e) : r.sign[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`sign(${e.value})`, e.dataType);
+    }),
+    Ye = exports.x = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.sin(e) : r.sin[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`sin(${e.value})`, e.dataType);
+    }),
+    en = exports.y = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.exp(e) : r.exp[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`exp(${e.value})`, e.dataType);
+    }),
+    Ie = exports.z = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      if (typeof e == "number" && typeof n == "number") return e ** n;
+      if (typeof e == "object" && typeof n == "object" && "kind" in e && "kind" in n) return r.pow[e.kind](e, n);
+      throw new Error("Invalid arguments to pow()");
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`pow(${e.value}, ${n.value})`, e.dataType);
     });
-  var zt = exports.textureSample = (0, _chunk5RYM4COI.N)(function (e, t, n, a, v) {
-      throw new Error("Texture sampling is not supported outside of GPU mode.");
-    }, function (e, t, n, a, v) {
-      var F = [e, t, n];
-      return a !== void 0 && F.push(a), v !== void 0 && F.push(v), {
-        value: `textureSample(${F.map(function (oe) {
-          return oe.value;
-        }).join(", ")})`,
-        dataType: _chunk5RYM4COI.da
-      };
+  (0, _chunkL7HIBZAX.f)(Ie, "pow");
+  var nn = exports.A = (0, _chunkL7HIBZAX.ea)(function (e, n, s) {
+      if (typeof e == "number") {
+        if (typeof s != "number" || typeof n != "number") throw new Error("When e1 and e2 are numbers, the blend factor must be a number.");
+        return e * (1 - s) + n * s;
+      }
+      if (typeof e == "number" || typeof n == "number") throw new Error("e1 and e2 need to both be vectors of the same kind.");
+      return r.mix[e.kind](e, n, s);
+    }, function (e, n, s) {
+      return (0, _chunkL7HIBZAX.ba)(`mix(${e.value}, ${n.value}, ${s.value})`, e.dataType);
     }),
-    ht = exports.textureSampleLevel = (0, _chunk5RYM4COI.N)(function (e, t, n, a, v) {
-      throw new Error("Texture sampling is not supported outside of GPU mode.");
-    }, function (e, t, n, a, v) {
-      var F = [e, t, n, a];
-      return v !== void 0 && F.push(v), {
-        value: `textureSampleLevel(${F.map(function (oe) {
-          return oe.value;
-        }).join(", ")})`,
-        dataType: _chunk5RYM4COI.da
-      };
+    sn = exports.B = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return fe(e, xe(2 * pe(n, e), n));
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`reflect(${e.value}, ${n.value})`, e.dataType);
     }),
-    bt = {
-      u32: _chunk5RYM4COI.ga,
-      i32: _chunk5RYM4COI.fa,
-      f32: _chunk5RYM4COI.da
-    },
-    Mt = exports.textureLoad = (0, _chunk5RYM4COI.N)(function (e, t, n) {
-      throw new Error("Texture loading is not supported outside of GPU mode.");
-    }, function (e, t, n) {
-      var a = [e, t];
-      n !== void 0 && a.push(n);
-      var v = e.dataType;
-      return {
-        value: `textureLoad(${a.map(function (F) {
-          return F.value;
-        }).join(", ")})`,
-        dataType: "texelDataType" in v ? v.texelDataType : bt[v.channelDataType.type]
-      };
+    tn = exports.C = (0, _chunkL7HIBZAX.ea)(function (e, n) {
+      return typeof e == "number" && typeof n == "number" ? Math.abs(e - n) : Ve(fe(e, n));
+    }, function (e, n) {
+      return (0, _chunkL7HIBZAX.ba)(`distance(${e.value}, ${n.value})`, _chunkL7HIBZAX.ka);
     }),
-    At = exports.textureStore = (0, _chunk5RYM4COI.N)(function (e, t, n, a) {
-      throw new Error("Texture storing is not supported outside of GPU mode.");
-    }, function (e, t, n, a) {
-      return {
-        value: `textureStore(${[e, t, n, a].filter(function (v) {
-          return v !== void 0;
-        }).map(function (v) {
-          return v.value;
-        }).join(", ")})`,
-        dataType: _chunk5RYM4COI.t
-      };
+    cn = exports.D = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? -e : r.neg[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`-(${e.value})`, e.dataType);
     }),
-    Vt = exports.textureDimensions = (0, _chunk5RYM4COI.N)(function (e, t) {
-      throw new Error("Texture dimensions are not supported outside of GPU mode.");
-    }, function (e, t) {
-      var n = e.dataType.dimension;
-      return {
-        value: `textureDimensions(${e.value}${t !== void 0 ? `, ${t.value}` : ""})`,
-        dataType: n === "1d" ? _chunk5RYM4COI.R : n === "3d" ? _chunk5RYM4COI.ba : _chunk5RYM4COI.Y
-      };
+    rn = exports.E = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return typeof e == "number" ? Math.sqrt(e) : r.sqrt[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`sqrt(${e.value})`, e.dataType);
     });
-},33,[30,31],"node_modules/typegpu/std/index.js");
+},32,[30],"node_modules/typegpu/chunk-SLWTVY6K.js");
 global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
+  exports.NodeTypeCatalog = exports.FuncParameterType = exports.FORMAT_VERSION = void 0;
+  var e = exports.NodeTypeCatalog = {
+      block: 0,
+      binaryExpr: 1,
+      assignmentExpr: 2,
+      logicalExpr: 3,
+      unaryExpr: 4,
+      numericLiteral: 5,
+      call: 6,
+      memberAccess: 7,
+      indexAccess: 8,
+      return: 10,
+      if: 11,
+      let: 12,
+      const: 13,
+      for: 14,
+      while: 15,
+      continue: 16,
+      break: 17,
+      arrayExpr: 100,
+      preUpdate: 101,
+      postUpdate: 102,
+      stringLiteral: 103,
+      objectExpr: 104
+    },
+    t = exports.FuncParameterType = {
+      identifier: "i",
+      destructuredObject: "d"
+    };
+  var o = exports.FORMAT_VERSION = 1;
+},33,[],"node_modules/tinyest/index.js");
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "abs", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.h;
+    }
+  });
+  Object.defineProperty(exports, "acos", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.j;
+    }
+  });
+  Object.defineProperty(exports, "add", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.d;
+    }
+  });
+  exports.arrayLength = exports.any = exports.and = exports.allEq = exports.all = void 0;
+  Object.defineProperty(exports, "asin", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.k;
+    }
+  });
+  Object.defineProperty(exports, "atan2", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.i;
+    }
+  });
+  exports.atomicXor = exports.atomicSub = exports.atomicStore = exports.atomicOr = exports.atomicMin = exports.atomicMax = exports.atomicLoad = exports.atomicAnd = exports.atomicAdd = void 0;
+  Object.defineProperty(exports, "ceil", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.l;
+    }
+  });
+  Object.defineProperty(exports, "clamp", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.m;
+    }
+  });
+  Object.defineProperty(exports, "cos", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.n;
+    }
+  });
+  Object.defineProperty(exports, "cross", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.o;
+    }
+  });
+  exports.discard = void 0;
+  Object.defineProperty(exports, "distance", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.C;
+    }
+  });
+  Object.defineProperty(exports, "div", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.g;
+    }
+  });
+  Object.defineProperty(exports, "dot", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.p;
+    }
+  });
+  exports.eq = void 0;
+  Object.defineProperty(exports, "exp", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.y;
+    }
+  });
+  Object.defineProperty(exports, "floor", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.r;
+    }
+  });
+  Object.defineProperty(exports, "fract", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.s;
+    }
+  });
+  exports.le = exports.isCloseTo = exports.gt = exports.ge = void 0;
+  Object.defineProperty(exports, "length", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.t;
+    }
+  });
+  exports.lt = void 0;
+  Object.defineProperty(exports, "max", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.u;
+    }
+  });
+  Object.defineProperty(exports, "min", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.v;
+    }
+  });
+  Object.defineProperty(exports, "mix", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.A;
+    }
+  });
+  Object.defineProperty(exports, "mul", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.f;
+    }
+  });
+  exports.ne = void 0;
+  Object.defineProperty(exports, "neg", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.D;
+    }
+  });
+  Object.defineProperty(exports, "normalize", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.q;
+    }
+  });
+  exports.pack4x8unorm = exports.pack2x16float = exports.or = exports.not = void 0;
+  Object.defineProperty(exports, "pow", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.z;
+    }
+  });
+  Object.defineProperty(exports, "reflect", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.B;
+    }
+  });
+  exports.select = void 0;
+  Object.defineProperty(exports, "sign", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.w;
+    }
+  });
+  Object.defineProperty(exports, "sin", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.x;
+    }
+  });
+  Object.defineProperty(exports, "sqrt", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.E;
+    }
+  });
+  exports.storageBarrier = void 0;
+  Object.defineProperty(exports, "sub", {
+    enumerable: true,
+    get: function get() {
+      return _chunkSLWTVY6K.e;
+    }
+  });
+  exports.workgroupBarrier = exports.unpack4x8unorm = exports.unpack2x16float = exports.textureStore = exports.textureSampleLevel = exports.textureSample = exports.textureLoad = exports.textureDimensions = exports.textureBarrier = void 0;
+  var _chunkSLWTVY6K = require(_dependencyMap[0], "../chunk-SLWTVY6K.js");
+  var _chunkL7HIBZAX = require(_dependencyMap[1], "../chunk-L7HIBZAX.js");
+  var d = _interopRequireWildcard(require(_dependencyMap[2], "typed-binary"));
+  function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
+  function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+  var ce = exports.discard = (0, _chunkL7HIBZAX.ea)(function () {
+    throw new Error("discard() can only be used on the GPU.");
+  }, function () {
+    return (0, _chunkL7HIBZAX.ba)("discard;", _chunkL7HIBZAX.y);
+  });
+  function v(e) {
+    return e.dataType.type.includes("2") ? _chunkL7HIBZAX.qa : e.dataType.type.includes("3") ? _chunkL7HIBZAX.va : _chunkL7HIBZAX.Aa;
+  }
+  var xe = exports.allEq = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return D(g(e, t));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`all(${e.value} == ${t.value})`, _chunkL7HIBZAX.ha);
+    }),
+    g = exports.eq = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return _chunkSLWTVY6K.a.eq[e.kind](e, t);
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} == ${t.value})`, v(e));
+    }),
+    ye = exports.ne = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return m(g(e, t));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} != ${t.value})`, v(e));
+    }),
+    S = exports.lt = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return _chunkSLWTVY6K.a.lt[e.kind](e, t);
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} < ${t.value})`, v(e));
+    }),
+    ve = exports.le = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return $(S(e, t), g(e, t));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} <= ${t.value})`, v(e));
+    }),
+    fe = exports.gt = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return W(m(S(e, t)), m(g(e, t)));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} > ${t.value})`, v(e));
+    }),
+    ge = exports.ge = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return m(S(e, t));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} >= ${t.value})`, v(e));
+    }),
+    m = exports.not = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return _chunkSLWTVY6K.a.neg[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`!(${e.value})`, e.dataType);
+    }),
+    $ = exports.or = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return _chunkSLWTVY6K.a.or[e.kind](e, t);
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} | ${t.value})`, e.dataType);
+    }),
+    W = exports.and = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      return m($(m(e), m(t)));
+    }, function (e, t) {
+      return (0, _chunkL7HIBZAX.ba)(`(${e.value} & ${t.value})`, e.dataType);
+    }),
+    D = exports.all = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return _chunkSLWTVY6K.a.all[e.kind](e);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`all(${e.value})`, _chunkL7HIBZAX.ha);
+    }),
+    Se = exports.any = (0, _chunkL7HIBZAX.ea)(function (e) {
+      return !D(m(e));
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`any(${e.value})`, _chunkL7HIBZAX.ha);
+    }),
+    be = exports.isCloseTo = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      var o = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : .01;
+      return typeof e == "number" && typeof t == "number" ? Math.abs(e - t) < o : (0, _chunkL7HIBZAX.z)(e) && (0, _chunkL7HIBZAX.z)(t) ? _chunkSLWTVY6K.a.isCloseToZero[e.kind]((0, _chunkSLWTVY6K.e)(e, t), o) : !1;
+    }, function (e, t) {
+      var o = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0, _chunkL7HIBZAX.ba)(.01, _chunkL7HIBZAX.ka);
+      return (0, _chunkSLWTVY6K.b)(e) && (0, _chunkSLWTVY6K.b)(t) ? (0, _chunkL7HIBZAX.ba)(`(abs(f32(${e.value}) - f32(${t.value})) <= ${o.value})`, _chunkL7HIBZAX.ha) : !(0, _chunkSLWTVY6K.b)(e) && !(0, _chunkSLWTVY6K.b)(t) ? (0, _chunkL7HIBZAX.ba)(`all(abs(${e.value} - ${t.value}) <= (${e.value} - ${e.value}) + ${o.value})`, _chunkL7HIBZAX.ha) : (0, _chunkL7HIBZAX.ba)("false", _chunkL7HIBZAX.ha);
+    }),
+    we = exports.select = (0, _chunkL7HIBZAX.ea)(function (e, t, o) {
+      return typeof o == "boolean" ? o ? t : e : _chunkSLWTVY6K.a.select[e.kind](e, t, o);
+    }, function (e, t, o) {
+      return (0, _chunkL7HIBZAX.ba)(`select(${e.value}, ${t.value}, ${o.value})`, e.dataType);
+    });
+  var Ae = exports.workgroupBarrier = (0, _chunkL7HIBZAX.ea)(function () {
+      return console.warn("workgroupBarrier is a no-op outside of GPU mode.");
+    }, function () {
+      return (0, _chunkL7HIBZAX.ba)("workgroupBarrier()", _chunkL7HIBZAX.y);
+    }),
+    Ie = exports.storageBarrier = (0, _chunkL7HIBZAX.ea)(function () {
+      return console.warn("storageBarrier is a no-op outside of GPU mode.");
+    }, function () {
+      return (0, _chunkL7HIBZAX.ba)("storageBarrier()", _chunkL7HIBZAX.y);
+    }),
+    $e = exports.textureBarrier = (0, _chunkL7HIBZAX.ea)(function () {
+      return console.warn("textureBarrier is a no-op outside of GPU mode.");
+    }, function () {
+      return (0, _chunkL7HIBZAX.ba)("textureBarrier()", _chunkL7HIBZAX.y);
+    }),
+    De = exports.atomicLoad = (0, _chunkL7HIBZAX.ea)(function (e) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicLoad(&${e.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }),
+    Be = exports.atomicStore = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if (!(0, _chunkL7HIBZAX.I)(e.dataType) || e.dataType.type !== "atomic") throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+      return (0, _chunkL7HIBZAX.ba)(`atomicStore(&${e.value}, ${t.value})`, _chunkL7HIBZAX.y);
+    }),
+    y = function y(e, t) {
+      return e.dataType.type === "atomic" && e.dataType.inner.type === "i32" ? [e.dataType, _chunkL7HIBZAX.ja] : [e.dataType, _chunkL7HIBZAX.ia];
+    },
+    Ve = exports.atomicAdd = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicAdd(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    Ue = exports.atomicSub = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicSub(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    ke = exports.atomicMax = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicMax(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    Ee = exports.atomicMin = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicMin(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    Oe = exports.atomicAnd = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicAnd(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    _e = exports.atomicOr = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicOr(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y),
+    Pe = exports.atomicXor = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Atomic operations are not supported outside of GPU mode.");
+    }, function (e, t) {
+      if ((0, _chunkL7HIBZAX.I)(e.dataType) && e.dataType.type === "atomic") return (0, _chunkL7HIBZAX.ba)(`atomicXor(&${e.value}, ${t.value})`, e.dataType.inner);
+      throw new Error(`Invalid atomic type: ${JSON.stringify(e.dataType, null, 2)}`);
+    }, y);
+  var Ge = exports.arrayLength = (0, _chunkL7HIBZAX.ea)(function (e) {
+    return e.length;
+  }, function (e) {
+    return (0, _chunkL7HIBZAX.L)(e.dataType) && (0, _chunkL7HIBZAX.J)(e.dataType.inner) && e.dataType.inner.elementCount > 0 ? (0, _chunkL7HIBZAX.ba)(String(e.dataType.inner.elementCount), _chunkL7HIBZAX.fa) : (0, _chunkL7HIBZAX.ba)(`arrayLength(${e.value})`, _chunkL7HIBZAX.ia);
+  }, function (e) {
+    return [(0, _chunkL7HIBZAX.Ga)(e.dataType)];
+  });
+  var Le = exports.unpack2x16float = (0, _chunkL7HIBZAX.ea)(function (e) {
+      var t = new ArrayBuffer(4);
+      new d.BufferWriter(t).writeUint32(e);
+      var n = new d.BufferReader(t);
+      return (0, _chunkL7HIBZAX.ma)(n.readFloat16(), n.readFloat16());
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`unpack2x16float(${e.value})`, _chunkL7HIBZAX.ma);
+    }),
+    Ne = exports.pack2x16float = (0, _chunkL7HIBZAX.ea)(function (e) {
+      var t = new ArrayBuffer(4),
+        o = new d.BufferWriter(t);
+      o.writeFloat16(e.x), o.writeFloat16(e.y);
+      var n = new d.BufferReader(t);
+      return (0, _chunkL7HIBZAX.ia)(n.readUint32());
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`pack2x16float(${e.value})`, _chunkL7HIBZAX.ia);
+    }),
+    he = exports.unpack4x8unorm = (0, _chunkL7HIBZAX.ea)(function (e) {
+      var t = new ArrayBuffer(4);
+      new d.BufferWriter(t).writeUint32(e);
+      var n = new d.BufferReader(t);
+      return (0, _chunkL7HIBZAX.wa)(n.readUint8() / 255, n.readUint8() / 255, n.readUint8() / 255, n.readUint8() / 255);
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`unpack4x8unorm(${e.value})`, _chunkL7HIBZAX.wa);
+    }),
+    Fe = exports.pack4x8unorm = (0, _chunkL7HIBZAX.ea)(function (e) {
+      var t = new ArrayBuffer(4),
+        o = new d.BufferWriter(t);
+      o.writeUint8(e.x * 255), o.writeUint8(e.y * 255), o.writeUint8(e.z * 255), o.writeUint8(e.w * 255);
+      var n = new d.BufferReader(t);
+      return (0, _chunkL7HIBZAX.ia)(n.readUint32());
+    }, function (e) {
+      return (0, _chunkL7HIBZAX.ba)(`pack4x8unorm(${e.value})`, _chunkL7HIBZAX.ia);
+    });
+  var We = exports.textureSample = (0, _chunkL7HIBZAX.ea)(function (e, t, o, n, u) {
+      throw new Error("Texture sampling is not supported outside of GPU mode.");
+    }, function (e, t, o, n, u) {
+      var s = [e, t, o];
+      return n !== void 0 && s.push(n), u !== void 0 && s.push(u), (0, _chunkL7HIBZAX.ba)(`textureSample(${s.map(function (b) {
+        return b.value;
+      }).join(", ")})`, _chunkL7HIBZAX.wa);
+    }),
+    Je = exports.textureSampleLevel = (0, _chunkL7HIBZAX.ea)(function (e, t, o, n, u) {
+      throw new Error("Texture sampling is not supported outside of GPU mode.");
+    }, function (e, t, o, n, u) {
+      var s = [e, t, o, n];
+      return u !== void 0 && s.push(u), (0, _chunkL7HIBZAX.ba)(`textureSampleLevel(${s.map(function (b) {
+        return b.value;
+      }).join(", ")})`, _chunkL7HIBZAX.wa);
+    }),
+    Ce = {
+      u32: _chunkL7HIBZAX.za,
+      i32: _chunkL7HIBZAX.ya,
+      f32: _chunkL7HIBZAX.wa
+    },
+    Me = exports.textureLoad = (0, _chunkL7HIBZAX.ea)(function (e, t, o) {
+      throw new Error("Texture loading is not supported outside of GPU mode.");
+    }, function (e, t, o) {
+      var n = [e, t];
+      o !== void 0 && n.push(o);
+      var u = e.dataType;
+      return (0, _chunkL7HIBZAX.ba)(`textureLoad(${n.map(function (s) {
+        return s.value;
+      }).join(", ")})`, "texelDataType" in u ? u.texelDataType : Ce[u.channelDataType.type]);
+    }),
+    qe = exports.textureStore = (0, _chunkL7HIBZAX.ea)(function (e, t, o, n) {
+      throw new Error("Texture storing is not supported outside of GPU mode.");
+    }, function (e, t, o, n) {
+      return (0, _chunkL7HIBZAX.ba)(`textureStore(${[e, t, o, n].filter(function (u) {
+        return u !== void 0;
+      }).map(function (u) {
+        return u.value;
+      }).join(", ")})`, _chunkL7HIBZAX.y);
+    }),
+    je = exports.textureDimensions = (0, _chunkL7HIBZAX.ea)(function (e, t) {
+      throw new Error("Texture dimensions are not supported outside of GPU mode.");
+    }, function (e, t) {
+      var o = e.dataType.dimension;
+      return (0, _chunkL7HIBZAX.ba)(`textureDimensions(${e.value}${t !== void 0 ? `, ${t.value}` : ""})`, o === "1d" ? _chunkL7HIBZAX.ia : o === "3d" ? _chunkL7HIBZAX.ua : _chunkL7HIBZAX.pa);
+    });
+},34,[32,30,31],"node_modules/typegpu/std/index.js");
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "Void", {
+    enumerable: true,
+    get: function get() {
+      return _chunkL7HIBZAX.y;
+    }
+  });
   Object.defineProperty(exports, "align", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ea;
+      return _chunkSFECI7OX.Y;
     }
   });
   Object.defineProperty(exports, "alignmentOf", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.aa;
+      return _chunkSFECI7OX.U;
     }
   });
   Object.defineProperty(exports, "arrayOf", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.da;
+      return _chunkSFECI7OX.X;
     }
   });
   Object.defineProperty(exports, "atomic", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.na;
+      return _chunkSFECI7OX.fa;
     }
   });
   Object.defineProperty(exports, "bool", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.Q;
+      return _chunkL7HIBZAX.ha;
     }
   });
   Object.defineProperty(exports, "builtin", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.oa;
+      return _chunkSFECI7OX.ga;
     }
   });
   Object.defineProperty(exports, "disarrayOf", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.la;
+      return _chunkSFECI7OX.da;
     }
   });
   Object.defineProperty(exports, "f16", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.U;
+      return _chunkL7HIBZAX.la;
     }
   });
   Object.defineProperty(exports, "f32", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.T;
+      return _chunkL7HIBZAX.ka;
     }
   });
   Object.defineProperty(exports, "float16", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.J;
+      return _chunkSFECI7OX.B;
     }
   });
   Object.defineProperty(exports, "float16x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.K;
+      return _chunkSFECI7OX.C;
     }
   });
   Object.defineProperty(exports, "float16x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.L;
+      return _chunkSFECI7OX.D;
     }
   });
   Object.defineProperty(exports, "float32", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.M;
+      return _chunkSFECI7OX.E;
     }
   });
   Object.defineProperty(exports, "float32x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.N;
+      return _chunkSFECI7OX.F;
     }
   });
   Object.defineProperty(exports, "float32x3", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.O;
+      return _chunkSFECI7OX.G;
     }
   });
   Object.defineProperty(exports, "float32x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.P;
+      return _chunkSFECI7OX.H;
     }
   });
   Object.defineProperty(exports, "formatToWGSLType", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.j;
+      return _chunkSFECI7OX.b;
     }
   });
   Object.defineProperty(exports, "i32", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.S;
+      return _chunkL7HIBZAX.ja;
     }
   });
   Object.defineProperty(exports, "interpolate", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ha;
+      return _chunkSFECI7OX.$;
     }
   });
   Object.defineProperty(exports, "isAlignAttrib", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.F;
+      return _chunkL7HIBZAX.N;
     }
   });
   Object.defineProperty(exports, "isAtomic", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.E;
+      return _chunkL7HIBZAX.M;
     }
   });
   Object.defineProperty(exports, "isBuiltin", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ia;
+      return _chunkSFECI7OX.aa;
     }
   });
   Object.defineProperty(exports, "isBuiltinAttrib", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.J;
+      return _chunkL7HIBZAX.R;
     }
   });
   Object.defineProperty(exports, "isData", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.i;
+      return _chunkL7HIBZAX.$;
     }
   });
   Object.defineProperty(exports, "isDecorated", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.K;
+      return _chunkL7HIBZAX.S;
     }
   });
   Object.defineProperty(exports, "isDisarray", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.e;
+      return _chunkL7HIBZAX.V;
     }
   });
   Object.defineProperty(exports, "isInterpolateAttrib", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.I;
+      return _chunkL7HIBZAX.Q;
     }
   });
   Object.defineProperty(exports, "isLocationAttrib", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.H;
+      return _chunkL7HIBZAX.P;
     }
   });
   Object.defineProperty(exports, "isLooseData", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.d;
+      return _chunkL7HIBZAX.U;
     }
   });
   Object.defineProperty(exports, "isLooseDecorated", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.g;
+      return _chunkL7HIBZAX.X;
     }
   });
   Object.defineProperty(exports, "isPtr", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.D;
+      return _chunkL7HIBZAX.L;
     }
   });
   Object.defineProperty(exports, "isSizeAttrib", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.G;
+      return _chunkL7HIBZAX.O;
     }
   });
   Object.defineProperty(exports, "isUnstruct", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.f;
+      return _chunkL7HIBZAX.W;
     }
   });
   Object.defineProperty(exports, "isWgslArray", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.B;
+      return _chunkL7HIBZAX.J;
     }
   });
   Object.defineProperty(exports, "isWgslData", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.A;
+      return _chunkL7HIBZAX.I;
     }
   });
   Object.defineProperty(exports, "isWgslStruct", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.C;
+      return _chunkL7HIBZAX.K;
     }
   });
   Object.defineProperty(exports, "location", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ga;
+      return _chunkSFECI7OX._;
     }
   });
   Object.defineProperty(exports, "mat2x2f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ja;
+      return _chunkL7HIBZAX.Ca;
     }
   });
   Object.defineProperty(exports, "mat3x3f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ka;
+      return _chunkL7HIBZAX.Da;
     }
   });
   Object.defineProperty(exports, "mat4x4f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.la;
+      return _chunkL7HIBZAX.Ea;
     }
   });
   Object.defineProperty(exports, "matToArray", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ma;
+      return _chunkL7HIBZAX.Fa;
     }
   });
   Object.defineProperty(exports, "packedFormats", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.k;
+      return _chunkSFECI7OX.c;
     }
   });
   Object.defineProperty(exports, "ptrFn", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.na;
+      return _chunkL7HIBZAX.Ga;
     }
   });
   Object.defineProperty(exports, "ptrHandle", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.sa;
+      return _chunkL7HIBZAX.La;
     }
   });
   Object.defineProperty(exports, "ptrPrivate", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.oa;
+      return _chunkL7HIBZAX.Ha;
     }
   });
   Object.defineProperty(exports, "ptrStorage", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.qa;
+      return _chunkL7HIBZAX.Ja;
     }
   });
   Object.defineProperty(exports, "ptrUniform", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ra;
+      return _chunkL7HIBZAX.Ka;
     }
   });
   Object.defineProperty(exports, "ptrWorkgroup", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.pa;
+      return _chunkL7HIBZAX.Ia;
     }
   });
   Object.defineProperty(exports, "sint16", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.A;
+      return _chunkSFECI7OX.s;
     }
   });
   Object.defineProperty(exports, "sint16x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.B;
+      return _chunkSFECI7OX.t;
     }
   });
   Object.defineProperty(exports, "sint16x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.C;
+      return _chunkSFECI7OX.u;
     }
   });
   Object.defineProperty(exports, "sint32", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.U;
+      return _chunkSFECI7OX.M;
     }
   });
   Object.defineProperty(exports, "sint32x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.V;
+      return _chunkSFECI7OX.N;
     }
   });
   Object.defineProperty(exports, "sint32x3", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.W;
+      return _chunkSFECI7OX.O;
     }
   });
   Object.defineProperty(exports, "sint32x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.X;
+      return _chunkSFECI7OX.P;
     }
   });
   Object.defineProperty(exports, "sint8", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.o;
+      return _chunkSFECI7OX.g;
     }
   });
   Object.defineProperty(exports, "sint8x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.p;
+      return _chunkSFECI7OX.h;
     }
   });
   Object.defineProperty(exports, "sint8x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.q;
+      return _chunkSFECI7OX.i;
     }
   });
   Object.defineProperty(exports, "size", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.fa;
+      return _chunkSFECI7OX.Z;
     }
   });
   Object.defineProperty(exports, "sizeOf", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ca;
+      return _chunkSFECI7OX.W;
     }
   });
   Object.defineProperty(exports, "snorm16", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.G;
+      return _chunkSFECI7OX.y;
     }
   });
   Object.defineProperty(exports, "snorm16x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.H;
+      return _chunkSFECI7OX.z;
     }
   });
   Object.defineProperty(exports, "snorm16x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.I;
+      return _chunkSFECI7OX.A;
     }
   });
   Object.defineProperty(exports, "snorm8", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.u;
+      return _chunkSFECI7OX.m;
     }
   });
   Object.defineProperty(exports, "snorm8x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.v;
+      return _chunkSFECI7OX.n;
     }
   });
   Object.defineProperty(exports, "snorm8x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.w;
+      return _chunkSFECI7OX.o;
     }
   });
   Object.defineProperty(exports, "struct", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ka;
+      return _chunkSFECI7OX.ca;
     }
   });
   Object.defineProperty(exports, "u32", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.R;
+      return _chunkL7HIBZAX.ia;
     }
   });
   Object.defineProperty(exports, "uint16", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.x;
+      return _chunkSFECI7OX.p;
     }
   });
   Object.defineProperty(exports, "uint16x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.y;
+      return _chunkSFECI7OX.q;
     }
   });
   Object.defineProperty(exports, "uint16x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.z;
+      return _chunkSFECI7OX.r;
     }
   });
   Object.defineProperty(exports, "uint32", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.Q;
+      return _chunkSFECI7OX.I;
     }
   });
   Object.defineProperty(exports, "uint32x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.R;
+      return _chunkSFECI7OX.J;
     }
   });
   Object.defineProperty(exports, "uint32x3", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.S;
+      return _chunkSFECI7OX.K;
     }
   });
   Object.defineProperty(exports, "uint32x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.T;
+      return _chunkSFECI7OX.L;
     }
   });
   Object.defineProperty(exports, "uint8", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.l;
+      return _chunkSFECI7OX.d;
     }
   });
   Object.defineProperty(exports, "uint8x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.m;
+      return _chunkSFECI7OX.e;
     }
   });
   Object.defineProperty(exports, "uint8x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.n;
+      return _chunkSFECI7OX.f;
     }
   });
   Object.defineProperty(exports, "unorm10_10_10_2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.Y;
+      return _chunkSFECI7OX.Q;
     }
   });
   Object.defineProperty(exports, "unorm16", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.D;
+      return _chunkSFECI7OX.v;
     }
   });
   Object.defineProperty(exports, "unorm16x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.E;
+      return _chunkSFECI7OX.w;
     }
   });
   Object.defineProperty(exports, "unorm16x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.F;
+      return _chunkSFECI7OX.x;
     }
   });
   Object.defineProperty(exports, "unorm8", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.r;
+      return _chunkSFECI7OX.j;
     }
   });
   Object.defineProperty(exports, "unorm8x2", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.s;
+      return _chunkSFECI7OX.k;
     }
   });
   Object.defineProperty(exports, "unorm8x4", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.t;
+      return _chunkSFECI7OX.l;
     }
   });
   Object.defineProperty(exports, "unorm8x4_bgra", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.Z;
+      return _chunkSFECI7OX.R;
     }
   });
   Object.defineProperty(exports, "unstruct", {
     enumerable: true,
     get: function get() {
-      return _chunkSMTSXYNG.ma;
+      return _chunkSFECI7OX.ea;
     }
   });
   Object.defineProperty(exports, "vec2b", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.Z;
+      return _chunkL7HIBZAX.qa;
     }
   });
   Object.defineProperty(exports, "vec2f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.V;
+      return _chunkL7HIBZAX.ma;
     }
   });
   Object.defineProperty(exports, "vec2h", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.W;
+      return _chunkL7HIBZAX.na;
     }
   });
   Object.defineProperty(exports, "vec2i", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.X;
+      return _chunkL7HIBZAX.oa;
     }
   });
   Object.defineProperty(exports, "vec2u", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.Y;
+      return _chunkL7HIBZAX.pa;
     }
   });
   Object.defineProperty(exports, "vec3b", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ca;
+      return _chunkL7HIBZAX.va;
     }
   });
   Object.defineProperty(exports, "vec3f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI._;
+      return _chunkL7HIBZAX.ra;
     }
   });
   Object.defineProperty(exports, "vec3h", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.$;
+      return _chunkL7HIBZAX.sa;
     }
   });
   Object.defineProperty(exports, "vec3i", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.aa;
+      return _chunkL7HIBZAX.ta;
     }
   });
   Object.defineProperty(exports, "vec3u", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ba;
+      return _chunkL7HIBZAX.ua;
     }
   });
   Object.defineProperty(exports, "vec4b", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ha;
+      return _chunkL7HIBZAX.Aa;
     }
   });
   Object.defineProperty(exports, "vec4f", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.da;
+      return _chunkL7HIBZAX.wa;
     }
   });
   Object.defineProperty(exports, "vec4h", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ea;
+      return _chunkL7HIBZAX.xa;
     }
   });
   Object.defineProperty(exports, "vec4i", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.fa;
+      return _chunkL7HIBZAX.ya;
     }
   });
   Object.defineProperty(exports, "vec4u", {
     enumerable: true,
     get: function get() {
-      return _chunk5RYM4COI.ga;
+      return _chunkL7HIBZAX.za;
     }
   });
-  var _chunkSMTSXYNG = require(_dependencyMap[0], "../chunk-SMTSXYNG.js");
-  var _chunk5RYM4COI = require(_dependencyMap[1], "../chunk-5RYM4COI.js");
-},34,[29,30],"node_modules/typegpu/data/index.js");
+  var _chunkSFECI7OX = require(_dependencyMap[0], "../chunk-SFECI7OX.js");
+  var _chunkL7HIBZAX = require(_dependencyMap[1], "../chunk-L7HIBZAX.js");
+},35,[29,30],"node_modules/typegpu/data/index.js");
+global.__d(function (global, require, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = require(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.randomGeneratorSlot = exports.randomGeneratorShell = exports.randf = exports.perlin3d = exports.perlin2d = exports.DefaultGenerator = exports.BPETER = void 0;
+  var _defineProperty2 = _interopRequireDefault(require(_dependencyMap[1], "@babel/runtime/helpers/defineProperty"));
+  var _typegpu = _interopRequireDefault(require(_dependencyMap[2], "typegpu"));
+  var d = _interopRequireWildcard(require(_dependencyMap[3], "typegpu/data"));
+  var _std = require(_dependencyMap[4], "typegpu/std");
+  function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
+  function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+  var randomGeneratorShell = exports.randomGeneratorShell = _typegpu.default["~unstable"].fn([], d.f32);
+  var BPETER = exports.BPETER = function () {
+    var seed = _typegpu.default["~unstable"].privateVar(d.vec2f);
+    return {
+      seed: _typegpu.default["~unstable"].fn([d.f32])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+        "params": [{
+          "type": "i",
+          "name": "value"
+        }],
+        "body": [0, [[2, [7, "seed", "value"], "=", [6, [7, "d", "vec2f"], ["value", [5, "0"]]]]]],
+        "externalNames": ["seed", "d"]
+      }, {
+        seed: seed,
+        d: d
+      })),
+      seed2: _typegpu.default["~unstable"].fn([d.vec2f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+        "params": [{
+          "type": "i",
+          "name": "value"
+        }],
+        "body": [0, [[2, [7, "seed", "value"], "=", "value"]]],
+        "externalNames": ["seed"]
+      }, {
+        seed: seed
+      })),
+      seed3: _typegpu.default["~unstable"].fn([d.vec3f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+        "params": [{
+          "type": "i",
+          "name": "value"
+        }],
+        "body": [0, [[2, [7, "seed", "value"], "=", [6, "add", [[7, "value", "xy"], [6, [7, "d", "vec2f"], [[7, "value", "z"]]]]]]]],
+        "externalNames": ["seed", "add", "d"]
+      }, {
+        seed: seed,
+        add: _std.add,
+        d: d
+      })),
+      seed4: _typegpu.default["~unstable"].fn([d.vec4f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+        "params": [{
+          "type": "i",
+          "name": "value"
+        }],
+        "body": [0, [[2, [7, "seed", "value"], "=", [6, "add", [[7, "value", "xy"], [7, "value", "zw"]]]]]],
+        "externalNames": ["seed", "add"]
+      }, {
+        seed: seed,
+        add: _std.add
+      })),
+      sample: randomGeneratorShell(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+        "params": [],
+        "body": [0, [[13, "a", [6, "dot", [[7, "seed", "value"], [6, [7, "d", "vec2f"], [[5, "23.14077926"], [5, "232.61690225"]]]]]], [13, "b", [6, "dot", [[7, "seed", "value"], [6, [7, "d", "vec2f"], [[5, "54.47856553"], [5, "345.84153136"]]]]]], [2, [7, [7, "seed", "value"], "x"], "=", [6, "fract", [[1, [6, "cos", ["a"]], "*", [5, "136.8168"]]]]], [2, [7, [7, "seed", "value"], "y"], "=", [6, "fract", [[1, [6, "cos", ["b"]], "*", [5, "534.7645"]]]]], [10, [7, [7, "seed", "value"], "y"]]]],
+        "externalNames": ["dot", "seed", "d", "fract", "cos"]
+      }, {
+        dot: _std.dot,
+        seed: seed,
+        d: d,
+        fract: _std.fract,
+        cos: _std.cos
+      }))
+    };
+  }();
+  var DefaultGenerator = exports.DefaultGenerator = BPETER;
+  var randomGeneratorSlot = exports.randomGeneratorSlot = _typegpu.default["~unstable"].slot(DefaultGenerator);
+  var TWO_PI = Math.PI * 2;
+  var randSeed = _typegpu.default["~unstable"].fn([d.f32])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "seed"
+    }],
+    "body": [0, [[6, [7, [7, "randomGeneratorSlot", "value"], "seed"], ["seed"]]]],
+    "externalNames": ["randomGeneratorSlot"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randSeed2 = _typegpu.default["~unstable"].fn([d.vec2f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "seed"
+    }],
+    "body": [0, [[6, [7, [7, "randomGeneratorSlot", "value"], "seed2"], ["seed"]]]],
+    "externalNames": ["randomGeneratorSlot"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randSeed3 = _typegpu.default["~unstable"].fn([d.vec3f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "seed"
+    }],
+    "body": [0, [[6, [7, [7, "randomGeneratorSlot", "value"], "seed3"], ["seed"]]]],
+    "externalNames": ["randomGeneratorSlot"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randSeed4 = _typegpu.default["~unstable"].fn([d.vec4f])(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "seed"
+    }],
+    "body": [0, [[6, [7, [7, "randomGeneratorSlot", "value"], "seed4"], ["seed"]]]],
+    "externalNames": ["randomGeneratorSlot"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randFloat01 = _typegpu.default["~unstable"].fn([], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [],
+    "body": [0, [[10, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []]]]],
+    "externalNames": ["randomGeneratorSlot"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randInUnitCube = _typegpu.default["~unstable"].fn([], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [],
+    "body": [0, [[10, [6, [7, "d", "vec3f"], [[1, [1, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []], "*", [5, "2"]], "-", [5, "1"]], [1, [1, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []], "*", [5, "2"]], "-", [5, "1"]], [1, [1, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []], "*", [5, "2"]], "-", [5, "1"]]]]]]],
+    "externalNames": ["d", "randomGeneratorSlot"]
+  }, {
+    d: d,
+    randomGeneratorSlot: randomGeneratorSlot
+  }));
+  var randInUnitCircle = _typegpu.default["~unstable"].fn([], d.vec2f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [],
+    "body": [0, [[13, "radius", [6, "sqrt", [[6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []]]]], [13, "angle", [1, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []], "*", "TWO_PI"]], [10, [6, [7, "d", "vec2f"], [[1, [6, "cos", ["angle"]], "*", "radius"], [1, [6, "sin", ["angle"]], "*", "radius"]]]]]],
+    "externalNames": ["sqrt", "randomGeneratorSlot", "TWO_PI", "d", "cos", "sin"]
+  }, {
+    sqrt: _std.sqrt,
+    randomGeneratorSlot: randomGeneratorSlot,
+    TWO_PI: TWO_PI,
+    d: d,
+    cos: _std.cos,
+    sin: _std.sin
+  }));
+  var randOnUnitCircle = _typegpu.default["~unstable"].fn([], d.vec2f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [],
+    "body": [0, [[13, "angle", [1, [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []], "*", "TWO_PI"]], [10, [6, [7, "d", "vec2f"], [[6, "cos", ["angle"]], [6, "sin", ["angle"]]]]]]],
+    "externalNames": ["randomGeneratorSlot", "TWO_PI", "d", "cos", "sin"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot,
+    TWO_PI: TWO_PI,
+    d: d,
+    cos: _std.cos,
+    sin: _std.sin
+  }));
+  var randOnUnitSphere = _typegpu.default["~unstable"].fn([], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [],
+    "body": [0, [[13, "z", [1, [1, [5, "2"], "*", [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []]], "-", [5, "1"]]], [13, "oneMinusZSq", [6, "sqrt", [[1, [5, "1"], "-", [1, "z", "*", "z"]]]]], [13, "theta", [1, [1, "TWO_PI", "*", [6, [7, [7, "randomGeneratorSlot", "value"], "sample"], []]], "-", [7, "Math", "PI"]]], [13, "x", [1, [6, "sin", ["theta"]], "*", "oneMinusZSq"]], [13, "y", [1, [6, "cos", ["theta"]], "*", "oneMinusZSq"]], [10, [6, [7, "d", "vec3f"], ["x", "y", "z"]]]]],
+    "externalNames": ["randomGeneratorSlot", "sqrt", "TWO_PI", "Math", "sin", "cos", "d"]
+  }, {
+    randomGeneratorSlot: randomGeneratorSlot,
+    sqrt: _std.sqrt,
+    TWO_PI: TWO_PI,
+    Math: Math,
+    sin: _std.sin,
+    cos: _std.cos,
+    d: d
+  }));
+  var randOnUnitHemisphere = _typegpu.default["~unstable"].fn([d.vec3f], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "normal"
+    }],
+    "body": [0, [[13, "value", [6, "randOnUnitSphere", []]], [13, "alignment", [6, "dot", ["normal", "value"]]], [10, [6, "mul", [[6, "sign", ["alignment"]], "value"]]]]],
+    "externalNames": ["randOnUnitSphere", "dot", "mul", "sign"]
+  }, {
+    randOnUnitSphere: randOnUnitSphere,
+    dot: _std.dot,
+    mul: _std.mul,
+    sign: _std.sign
+  }));
+  var smootherStep = _typegpu.default["~unstable"].fn([d.f32], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "x"
+    }],
+    "body": [0, [[10, [1, [1, [1, [5, "6"], "*", [6, "pow", ["x", [5, "5"]]]], "-", [1, [5, "15"], "*", [6, "pow", ["x", [5, "4"]]]]], "+", [1, [5, "10"], "*", [6, "pow", ["x", [5, "3"]]]]]]]],
+    "externalNames": ["pow"]
+  }, {
+    pow: _std.pow
+  }));
+  var computeJunctionGradient$1 = _typegpu.default["~unstable"].fn([d.vec2i], d.vec2f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }],
+    "body": [0, [[6, "randSeed2", [[6, "mul", [[5, "1e-3"], [6, [7, "d", "vec2f"], ["pos"]]]]]], [10, [6, "randOnUnitCircle", []]]]],
+    "externalNames": ["randSeed2", "mul", "d", "randOnUnitCircle"]
+  }, {
+    randSeed2: randSeed2,
+    mul: _std.mul,
+    d: d,
+    randOnUnitCircle: randOnUnitCircle
+  }));
+  var getJunctionGradientSlot$1 = _typegpu.default["~unstable"].slot(computeJunctionGradient$1);
+  var dotProdGrid$1 = _typegpu.default["~unstable"].fn([d.vec2f, d.vec2i], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }, {
+      "type": "i",
+      "name": "junction"
+    }],
+    "body": [0, [[13, "relative", [6, "sub", ["pos", [6, [7, "d", "vec2f"], ["junction"]]]]], [13, "gridVector", [6, [7, "getJunctionGradientSlot", "value"], ["junction"]]], [10, [6, "dot", ["relative", "gridVector"]]]]],
+    "externalNames": ["sub", "d", "getJunctionGradientSlot", "dot"]
+  }, {
+    sub: _std.sub,
+    d: d,
+    getJunctionGradientSlot: getJunctionGradientSlot$1,
+    dot: _std.dot
+  }));
+  var sample$1 = _typegpu.default["~unstable"].fn([d.vec2f], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }],
+    "body": [0, [[13, "topLeftJunction", [6, [7, "d", "vec2i"], [[6, "floor", ["pos"]]]]], [13, "topLeft", [6, "dotProdGrid", ["pos", "topLeftJunction"]]], [13, "topRight", [6, "dotProdGrid", ["pos", [6, "add", ["topLeftJunction", [6, [7, "d", "vec2i"], [[5, "1"], [5, "0"]]]]]]]], [13, "bottomLeft", [6, "dotProdGrid", ["pos", [6, "add", ["topLeftJunction", [6, [7, "d", "vec2i"], [[5, "0"], [5, "1"]]]]]]]], [13, "bottomRight", [6, "dotProdGrid", ["pos", [6, "add", ["topLeftJunction", [6, [7, "d", "vec2i"], [[5, "1"], [5, "1"]]]]]]]], [13, "partial", [6, "sub", ["pos", [6, "floor", ["pos"]]]]], [13, "top", [6, "mix", ["topLeft", "topRight", [6, "smootherStep", [[7, "partial", "x"]]]]]], [13, "bottom", [6, "mix", ["bottomLeft", "bottomRight", [6, "smootherStep", [[7, "partial", "x"]]]]]], [10, [6, "mix", ["top", "bottom", [6, "smootherStep", [[7, "partial", "y"]]]]]]]],
+    "externalNames": ["d", "floor", "dotProdGrid", "add", "sub", "mix", "smootherStep"]
+  }, {
+    d: d,
+    floor: _std.floor,
+    dotProdGrid: dotProdGrid$1,
+    add: _std.add,
+    sub: _std.sub,
+    mix: _std.mix,
+    smootherStep: smootherStep
+  }));
+  var perlin2d = exports.perlin2d = {
+    __proto__: null,
+    computeJunctionGradient: computeJunctionGradient$1,
+    getJunctionGradientSlot: getJunctionGradientSlot$1,
+    sample: sample$1
+  };
+  var computeJunctionGradient = _typegpu.default["~unstable"].fn([d.vec3i], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }],
+    "body": [0, [[6, "randSeed3", [[6, "mul", [[5, "1e-3"], [6, [7, "d", "vec3f"], ["pos"]]]]]], [10, [6, "randOnUnitSphere", []]]]],
+    "externalNames": ["randSeed3", "mul", "d", "randOnUnitSphere"]
+  }, {
+    randSeed3: randSeed3,
+    mul: _std.mul,
+    d: d,
+    randOnUnitSphere: randOnUnitSphere
+  }));
+  var getJunctionGradientSlot = _typegpu.default["~unstable"].slot(computeJunctionGradient);
+  var dotProdGrid = _typegpu.default["~unstable"].fn([d.vec3f, d.vec3f], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }, {
+      "type": "i",
+      "name": "junction"
+    }],
+    "body": [0, [[13, "relative", [6, "sub", ["pos", "junction"]]], [13, "gridVector", [6, [7, "getJunctionGradientSlot", "value"], [[6, [7, "d", "vec3i"], ["junction"]]]]], [10, [6, "dot", ["relative", "gridVector"]]]]],
+    "externalNames": ["sub", "getJunctionGradientSlot", "d", "dot"]
+  }, {
+    sub: _std.sub,
+    getJunctionGradientSlot: getJunctionGradientSlot,
+    d: d,
+    dot: _std.dot
+  }));
+  var sample = _typegpu.default["~unstable"].fn([d.vec3f], d.f32)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+    "params": [{
+      "type": "i",
+      "name": "pos"
+    }],
+    "body": [0, [[13, "minJunction", [6, "floor", ["pos"]]], [13, "xyz", [6, "dotProdGrid", ["pos", "minJunction"]]], [13, "xyZ", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "0"], [5, "0"], [5, "1"]]]]]]]], [13, "xYz", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "0"], [5, "1"], [5, "0"]]]]]]]], [13, "xYZ", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "0"], [5, "1"], [5, "1"]]]]]]]], [13, "Xyz", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "1"], [5, "0"], [5, "0"]]]]]]]], [13, "XyZ", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "1"], [5, "0"], [5, "1"]]]]]]]], [13, "XYz", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "1"], [5, "1"], [5, "0"]]]]]]]], [13, "XYZ", [6, "dotProdGrid", ["pos", [6, "add", ["minJunction", [6, [7, "d", "vec3f"], [[5, "1"], [5, "1"], [5, "1"]]]]]]]], [13, "partial", [6, "sub", ["pos", "minJunction"]]], [13, "xy", [6, "mix", ["xyz", "xyZ", [6, "smootherStep", [[7, "partial", "z"]]]]]], [13, "xY", [6, "mix", ["xYz", "xYZ", [6, "smootherStep", [[7, "partial", "z"]]]]]], [13, "Xy", [6, "mix", ["Xyz", "XyZ", [6, "smootherStep", [[7, "partial", "z"]]]]]], [13, "XY", [6, "mix", ["XYz", "XYZ", [6, "smootherStep", [[7, "partial", "z"]]]]]], [13, "x", [6, "mix", ["xy", "xY", [6, "smootherStep", [[7, "partial", "y"]]]]]], [13, "X", [6, "mix", ["Xy", "XY", [6, "smootherStep", [[7, "partial", "y"]]]]]], [10, [6, "mix", ["x", "X", [6, "smootherStep", [[7, "partial", "x"]]]]]]]],
+    "externalNames": ["floor", "dotProdGrid", "add", "d", "sub", "mix", "smootherStep"]
+  }, {
+    floor: _std.floor,
+    dotProdGrid: dotProdGrid,
+    add: _std.add,
+    d: d,
+    sub: _std.sub,
+    mix: _std.mix,
+    smootherStep: smootherStep
+  }));
+  var MemorySchema$1 = function MemorySchema$1(n) {
+    return d.arrayOf(d.vec3f, n);
+  };
+  var DefaultPerlin3DLayoutPrefix = "perlin3dCache__";
+  function dynamicCacheConfig(options) {
+    var _ref = options != null ? options : {},
+      _ref$prefix = _ref.prefix,
+      prefix = _ref$prefix === void 0 ? DefaultPerlin3DLayoutPrefix : _ref$prefix;
+    var valuesSlot = _typegpu.default["~unstable"].slot();
+    var cleanValuesSlot = _typegpu.default["~unstable"].derived(function () {
+      return {
+        get size() {
+          return valuesSlot.value[`${prefix}size`];
+        },
+        get memory() {
+          return valuesSlot.value[`${prefix}memory`];
+        }
+      };
+    });
+    var getJunctionGradient = _typegpu.default["~unstable"].fn([d.vec3i], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+      "params": [{
+        "type": "i",
+        "name": "pos"
+      }],
+      "body": [0, [[13, "size", [6, [7, "d", "vec3i"], [[7, [7, "cleanValuesSlot", "value"], "size"]]]], [13, "x", [1, [1, [1, [7, "pos", "x"], "%", [7, "size", "x"]], "+", [7, "size", "x"]], "%", [7, "size", "x"]]], [13, "y", [1, [1, [1, [7, "pos", "y"], "%", [7, "size", "y"]], "+", [7, "size", "y"]], "%", [7, "size", "y"]]], [13, "z", [1, [1, [1, [7, "pos", "z"], "%", [7, "size", "z"]], "+", [7, "size", "z"]], "%", [7, "size", "z"]]], [10, [8, [7, [7, "cleanValuesSlot", "value"], "memory"], [1, [1, "x", "+", [1, "y", "*", [7, "size", "x"]]], "+", [1, [1, "z", "*", [7, "size", "x"]], "*", [7, "size", "y"]]]]]]],
+      "externalNames": ["d", "cleanValuesSlot"]
+    }, {
+      d: d,
+      cleanValuesSlot: cleanValuesSlot
+    }));
+    var computeLayout = _typegpu.default.bindGroupLayout({
+      size: {
+        uniform: d.vec3u
+      },
+      memory: {
+        storage: MemorySchema$1,
+        access: "mutable"
+      }
+    });
+    var mainCompute = _typegpu.default["~unstable"].computeFn({
+      workgroupSize: [1, 1, 1],
+      in: {
+        gid: d.builtin.globalInvocationId
+      }
+    })(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+      "params": [{
+        "type": "i",
+        "name": "input"
+      }],
+      "body": [0, [[13, "size", [7, [7, "computeLayout", "$"], "size"]], [13, "idx", [1, [1, [7, [7, "input", "gid"], "x"], "+", [1, [7, [7, "input", "gid"], "y"], "*", [7, "size", "x"]]], "+", [1, [1, [7, [7, "input", "gid"], "z"], "*", [7, "size", "x"]], "*", [7, "size", "y"]]]], [2, [8, [7, [7, "computeLayout", "$"], "memory"], "idx"], "=", [6, "computeJunctionGradient", [[6, [7, "d", "vec3i"], [[7, [7, "input", "gid"], "xyz"]]]]]]]],
+      "externalNames": ["computeLayout", "computeJunctionGradient", "d"]
+    }, {
+      computeLayout: computeLayout,
+      computeJunctionGradient: computeJunctionGradient,
+      d: d
+    }));
+    var instance = function instance(root, initialSize) {
+      var dirty = false;
+      var size = initialSize;
+      var sizeBuffer = root.createBuffer(d.vec3u, size).$usage("uniform");
+      var computePipeline = root["~unstable"].withCompute(mainCompute).createPipeline();
+      var createMemory = function createMemory() {
+        var memory = root.createBuffer(d.arrayOf(d.vec3f, size.x * size.y * size.z)).$usage("storage");
+        var computeBindGroup = root.createBindGroup(computeLayout, {
+          size: sizeBuffer,
+          memory: memory
+        });
+        computePipeline.with(computeLayout, computeBindGroup).dispatchWorkgroups(size.x, size.y, size.z);
+        return memory;
+      };
+      var memoryBuffer = createMemory();
+      return {
+        get size() {
+          return size;
+        },
+        get bindings() {
+          if (dirty) {
+            memoryBuffer.destroy();
+            memoryBuffer = createMemory();
+          }
+          return (0, _defineProperty2.default)((0, _defineProperty2.default)({}, `${prefix}size`, sizeBuffer), `${prefix}memory`, memoryBuffer);
+        },
+        set size(value) {
+          if ((0, _std.allEq)(size, value)) {
+            return;
+          }
+          size = value;
+          sizeBuffer.write(size);
+          dirty = true;
+        },
+        destroy: function destroy() {
+          sizeBuffer.destroy();
+          memoryBuffer.destroy();
+        }
+      };
+    };
+    return {
+      layout: (0, _defineProperty2.default)((0, _defineProperty2.default)({}, `${prefix}size`, {
+        uniform: d.vec3u
+      }), `${prefix}memory`, {
+        storage: MemorySchema$1,
+        access: "readonly"
+      }),
+      valuesSlot: valuesSlot,
+      getJunctionGradient: getJunctionGradient,
+      instance: instance
+    };
+  }
+  var MemorySchema = function MemorySchema(n) {
+    return d.arrayOf(d.vec3f, n);
+  };
+  function staticCache(options) {
+    var root = options.root,
+      size = options.size;
+    var memoryBuffer = root.createBuffer(MemorySchema(size.x * size.y * size.z)).$usage("storage");
+    var memoryReadonly = memoryBuffer.as("readonly");
+    var memoryMutable = memoryBuffer.as("mutable");
+    var mainCompute = _typegpu.default["~unstable"].computeFn({
+      workgroupSize: [1, 1, 1],
+      in: {
+        gid: d.builtin.globalInvocationId
+      }
+    })(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+      "params": [{
+        "type": "i",
+        "name": "input"
+      }],
+      "body": [0, [[13, "idx", [1, [1, [7, [7, "input", "gid"], "x"], "+", [1, [7, [7, "input", "gid"], "y"], "*", [7, "size", "x"]]], "+", [1, [1, [7, [7, "input", "gid"], "z"], "*", [7, "size", "x"]], "*", [7, "size", "y"]]]], [2, [8, [7, "memoryMutable", "value"], "idx"], "=", [6, "computeJunctionGradient", [[6, [7, "d", "vec3i"], [[7, [7, "input", "gid"], "xyz"]]]]]]]],
+      "externalNames": ["size", "memoryMutable", "computeJunctionGradient", "d"]
+    }, {
+      size: size,
+      memoryMutable: memoryMutable,
+      computeJunctionGradient: computeJunctionGradient,
+      d: d
+    }));
+    var computePipeline = root["~unstable"].withCompute(mainCompute).createPipeline();
+    computePipeline.dispatchWorkgroups(size.x, size.y, size.z);
+    var getJunctionGradient = _typegpu.default["~unstable"].fn([d.vec3i], d.vec3f)(_typegpu.default.__assignAst(_typegpu.default.__removedJsImpl(), {
+      "params": [{
+        "type": "i",
+        "name": "pos"
+      }],
+      "body": [0, [[13, "size_i", [6, [7, "d", "vec3i"], ["size"]]], [13, "x", [1, [1, [1, [7, "pos", "x"], "%", [7, "size_i", "x"]], "+", [7, "size_i", "x"]], "%", [7, "size_i", "x"]]], [13, "y", [1, [1, [1, [7, "pos", "y"], "%", [7, "size_i", "y"]], "+", [7, "size_i", "y"]], "%", [7, "size_i", "y"]]], [13, "z", [1, [1, [1, [7, "pos", "z"], "%", [7, "size_i", "z"]], "+", [7, "size_i", "z"]], "%", [7, "size_i", "z"]]], [10, [8, [7, "memoryReadonly", "value"], [1, [1, "x", "+", [1, "y", "*", [7, "size_i", "x"]]], "+", [1, [1, "z", "*", [7, "size_i", "x"]], "*", [7, "size_i", "y"]]]]]]],
+      "externalNames": ["d", "size", "memoryReadonly"]
+    }, {
+      d: d,
+      size: size,
+      memoryReadonly: memoryReadonly
+    }));
+    return {
+      getJunctionGradient: getJunctionGradient,
+      get size() {
+        return size;
+      },
+      destroy: function destroy() {
+        memoryBuffer.destroy();
+      }
+    };
+  }
+  var index = exports.perlin3d = {
+    __proto__: null,
+    computeJunctionGradient: computeJunctionGradient,
+    dynamicCacheConfig: dynamicCacheConfig,
+    getJunctionGradientSlot: getJunctionGradientSlot,
+    sample: sample,
+    staticCache: staticCache
+  };
+  var randf = exports.randf = {
+    seed: randSeed,
+    seed2: randSeed2,
+    seed3: randSeed3,
+    seed4: randSeed4,
+    sample: randFloat01,
+    inUnitCircle: randInUnitCircle,
+    inUnitCube: randInUnitCube,
+    onHemisphere: randOnUnitHemisphere,
+    onUnitSphere: randOnUnitSphere
+  };
+},36,[2,24,1,35,34],"node_modules/@typegpu/noise/index.mjs");
 
 // ---------------------------------------------------------------------------
 
 global.__UIModules.typegpu = {
   core: global.__r(1),
-  std: global.__r(33),
-  data: global.__r(34),
+  std: global.__r(34),
+  data: global.__r(35),
+  noise: global.__r(36),
 };
 
 }
