@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "react": "19.1.0",
-    "react-native": "0.80.0-rc.2",
+    "react-native": "patch:react-native@npm%3A0.80.0-rc.4#./.yarn/patches/react-native-npm-0.80.0-rc.4-ad01aea617.patch",
     "react-native-reanimated": "nightly",
     "react-native-wgpu": "^0.1.23",
-    "react-native-worklets": "file:../react-native-worklets-0.4.0-20250526140703.tgz",
+    "react-native-worklets": "file:./react-native-worklets-0.4.0-20250612135237.tgz",
     "three": "^0.176.0",
     "typegpu": "^0.5.7",
     "wgpu-matrix": "^3.4.0"
@@ -26,10 +26,10 @@
     "@react-native-community/cli": "19.0.0",
     "@react-native-community/cli-platform-android": "19.0.0",
     "@react-native-community/cli-platform-ios": "19.0.0",
-    "@react-native/babel-preset": "0.80.0-rc.2",
-    "@react-native/eslint-config": "0.80.0-rc.2",
-    "@react-native/metro-config": "0.80.0-rc.2",
-    "@react-native/typescript-config": "0.80.0-rc.2",
+    "@react-native/babel-preset": "0.80.0-rc.4",
+    "@react-native/eslint-config": "0.80.0-rc.4",
+    "@react-native/metro-config": "0.80.0-rc.4",
+    "@react-native/typescript-config": "0.80.0-rc.4",
     "@tsconfig/react-native": "^3.0.0",
     "@types/jest": "^29.5.13",
     "@types/react": "^19.1.0",
@@ -60,8 +60,7 @@
     "selfReferences": false
   },
   "resolutions": {
-    "react-native@0.80.0-rc.2": "patch:react-native@npm%3A0.80.0-rc.2#./.yarn/patches/react-native-npm-0.80.0-rc.2-0ac6fe4f9f.patch",
     "react-native-wgpu@^0.1.23": "patch:react-native-wgpu@npm%3A0.1.23#./.yarn/patches/react-native-wgpu-npm-0.1.23-dd229ecbb4.patch",
-    "@react-native/community-cli-plugin@0.80.0-rc.2": "patch:@react-native/community-cli-plugin@npm%3A0.80.0-rc.2#./.yarn/patches/@react-native-community-cli-plugin-npm-0.80.0-rc.2-323d7bb4d9.patch"
+    "@react-native/community-cli-plugin@0.80.0-rc.4": "patch:@react-native/community-cli-plugin@npm%3A0.80.0-rc.4#./.yarn/patches/@react-native-community-cli-plugin-npm-0.80.0-rc.4-af2762c07e.patch"
   }
 }

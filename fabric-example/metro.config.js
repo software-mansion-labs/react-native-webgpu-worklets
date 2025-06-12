@@ -14,9 +14,6 @@ const config = {
   // --------------------------------------------------------
   serializer: {
     getModulesRunBeforeMainModule() {
-      console.log(
-        require.resolve('react-native-worklets/src/workletRuntimeEntry.ts')
-      );
       return [
         require.resolve('react-native-worklets/src/workletRuntimeEntry.ts'),
       ];
@@ -24,21 +21,22 @@ const config = {
     createModuleIdFactory() {
       let nextId = 0;
       const idFileMap = new Map();
-      return (ppath) => {
-        if (idFileMap.has(ppath)) {
-          return idFileMap.get(ppath);
+      return (/** @type {string} */ moduleName) => {
+        if (idFileMap.has(moduleName)) {
+          return idFileMap.get(moduleName);
         }
-        if (ppath.includes('react-native-worklets/__generatedWorklets/')) {
-          const base = path.basename(ppath, '.js');
+        if (moduleName.includes('react-native-worklets/__generatedWorklets/')) {
+          const base = path.basename(moduleName, '.js');
           const id = Number(base);
-          idFileMap.set(ppath, id);
+          idFileMap.set(moduleName, id);
           return id;
         }
-        idFileMap.set(ppath, nextId++);
-        return idFileMap.get(ppath);
+        idFileMap.set(moduleName, nextId++);
+        return idFileMap.get(moduleName);
       };
     },
   },
+  // --------------------------------------------------------
 };
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);
