@@ -94,7 +94,6 @@ export default function App() {
         }
 
         renderer.render(scene, camera);
-        requestAnimationFrame(animate);
       }
       animate();
     })();
