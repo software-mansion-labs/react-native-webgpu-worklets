@@ -2293,27 +2293,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/community-cli-plugin@patch:@react-native/community-cli-plugin@npm%3A0.80.0-rc.4#./.yarn/patches/@react-native-community-cli-plugin-npm-0.80.0-rc.4-af2762c07e.patch::locator=fabric-example%40workspace%3A.":
-  version: 0.80.0-rc.4
-  resolution: "@react-native/community-cli-plugin@patch:@react-native/community-cli-plugin@npm%3A0.80.0-rc.4#./.yarn/patches/@react-native-community-cli-plugin-npm-0.80.0-rc.4-af2762c07e.patch::version=0.80.0-rc.4&hash=4968e4&locator=fabric-example%40workspace%3A."
-  dependencies:
-    "@react-native/dev-middleware": 0.80.0-rc.4
-    chalk: ^4.0.0
-    debug: ^4.4.0
-    invariant: ^2.2.4
-    metro: ^0.82.2
-    metro-config: ^0.82.2
-    metro-core: ^0.82.2
-    semver: ^7.1.3
-  peerDependencies:
-    "@react-native-community/cli": "*"
-  peerDependenciesMeta:
-    "@react-native-community/cli":
-      optional: true
-  checksum: f9f136c7801416cf55b324b70df560c1c69ce3ef810eb7985ec2d81bdb39ea1624bd740abaf268a7be6582446addbb23d490fb3e183f825a9066aec8f997a6c5
-  languageName: node
-  linkType: hard
-
 "@react-native/debugger-frontend@npm:0.80.0-rc.4":
   version: 0.80.0-rc.4
   resolution: "@react-native/debugger-frontend@npm:0.80.0-rc.4"
@@ -5401,7 +5380,7 @@ __metadata:
     patch-package: ^8.0.0
     prettier: ^3.3.3
     react: 19.1.0
-    react-native: "patch:react-native@npm%3A0.80.0-rc.4#./.yarn/patches/react-native-npm-0.80.0-rc.4-ad01aea617.patch"
+    react-native: 0.80.0-rc.4
     react-native-reanimated: nightly
     react-native-wgpu: ^0.1.23
     react-native-worklets: "file:./react-native-worklets-0.4.0-20250612135237.tgz"
@@ -9016,57 +8995,6 @@ __metadata:
   bin:
     react-native: cli.js
   checksum: 94d38d0dd03b79c918852edc90a20f06c5d89dcbc6aa47f265486177c5217f15a4bc20b9f5ebf5548908a2e4a4edaecd128db804580266c44516c29c3b5e2696
-  languageName: node
-  linkType: hard
-
-"react-native@patch:react-native@npm%3A0.80.0-rc.4#./.yarn/patches/react-native-npm-0.80.0-rc.4-ad01aea617.patch::locator=fabric-example%40workspace%3A.":
-  version: 0.80.0-rc.4
-  resolution: "react-native@patch:react-native@npm%3A0.80.0-rc.4#./.yarn/patches/react-native-npm-0.80.0-rc.4-ad01aea617.patch::version=0.80.0-rc.4&hash=0d2155&locator=fabric-example%40workspace%3A."
-  dependencies:
-    "@jest/create-cache-key-function": ^29.7.0
-    "@react-native/assets-registry": 0.80.0-rc.4
-    "@react-native/codegen": 0.80.0-rc.4
-    "@react-native/community-cli-plugin": 0.80.0-rc.4
-    "@react-native/gradle-plugin": 0.80.0-rc.4
-    "@react-native/js-polyfills": 0.80.0-rc.4
-    "@react-native/normalize-colors": 0.80.0-rc.4
-    "@react-native/virtualized-lists": 0.80.0-rc.4
-    abort-controller: ^3.0.0
-    anser: ^1.4.9
-    ansi-regex: ^5.0.0
-    babel-jest: ^29.7.0
-    babel-plugin-syntax-hermes-parser: 0.28.1
-    base64-js: ^1.5.1
-    chalk: ^4.0.0
-    commander: ^12.0.0
-    flow-enums-runtime: ^0.0.6
-    glob: ^7.1.1
-    invariant: ^2.2.4
-    jest-environment-node: ^29.7.0
-    memoize-one: ^5.0.0
-    metro-runtime: ^0.82.2
-    metro-source-map: ^0.82.2
-    nullthrows: ^1.1.1
-    pretty-format: ^29.7.0
-    promise: ^8.3.0
-    react-devtools-core: ^6.1.1
-    react-refresh: ^0.14.0
-    regenerator-runtime: ^0.13.2
-    scheduler: 0.26.0
-    semver: ^7.1.3
-    stacktrace-parser: ^0.1.10
-    whatwg-fetch: ^3.0.0
-    ws: ^6.2.3
-    yargs: ^17.6.2
-  peerDependencies:
-    "@types/react": ^19.1.0
-    react: ^19.1.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-  bin:
-    react-native: cli.js
-  checksum: 0c9d6489566af67f4cc05809cccacc385f40beaa5f105e8bda8a9487a1649c962d7950537fccca04cf98a796909c360bf29b23d1fde94f221ebd8df8a64428dd
   languageName: node
   linkType: hard
 
