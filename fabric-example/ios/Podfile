@@ -6,7 +6,7 @@ require Pod::Executable.execute_command('node', ['-p',
   )', __dir__]).strip
 
 # Uncomment the next line to enable experimental bundling.
-ENV['WORKLETS_EXPERIMENTAL_BUNDLING'] = '1'
+# ENV['WORKLETS_EXPERIMENTAL_BUNDLING'] = '1'
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!

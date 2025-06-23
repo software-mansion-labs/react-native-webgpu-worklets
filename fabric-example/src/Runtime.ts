@@ -1,4 +1,4 @@
-import { createWorkletRuntime, runOnRuntime } from 'react-native-worklets';
+import { createWorkletRuntime, runOnRuntime } from 'react-native-reanimated';
 
 export const BackgroundRuntime = createWorkletRuntime('background');
 

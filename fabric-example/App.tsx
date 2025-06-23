@@ -1,16 +1,10 @@
-import { enableGPUForWorklets, makeWebGPURenderer } from './src';
+import { enableGPUForWorklets, makeWebGPURenderer, requireUI } from './src';
 import { Canvas, useCanvasEffect } from 'react-native-wgpu';
 import { runOnUI } from 'react-native-worklets';
-import {
-  BoxGeometry,
-  Mesh,
-  MeshNormalMaterial,
-  PerspectiveCamera,
-  Scene,
-} from 'three';
 
 export default function CubeExample() {
   const ref = useCanvasEffect(async () => {
+    console.log('enableGPUForWorklets');
     enableGPUForWorklets();
     const context = ref.current!.getContext('webgpu')!;
     const adapter = await navigator.gpu.requestAdapter();
@@ -18,17 +12,17 @@ export default function CubeExample() {
 
     runOnUI(async () => {
       'worklet';
-      globalThis.self = globalThis;
+      const THREE = requireUI('threejs');
       const { width, height } = context.canvas as any;
 
-      const camera = new PerspectiveCamera(70, width / height, 0.01, 10);
+      const camera = new THREE.PerspectiveCamera(70, width / height, 0.01, 10);
 
       camera.position.z = 1;
 
-      const scene = new Scene();
-      const geometry = new BoxGeometry(0.2, 0.2, 0.2);
-      const material = new MeshNormalMaterial();
-      const mesh = new Mesh(geometry, material);
+      const scene = new THREE.Scene();
+      const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
+      const material = new THREE.MeshNormalMaterial();
+      const mesh = new THREE.Mesh(geometry, material);
       scene.add(mesh);
       const renderer = makeWebGPURenderer(context, device);
       await renderer.init();

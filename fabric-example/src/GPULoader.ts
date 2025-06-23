@@ -1,5 +1,5 @@
-import { runOnUI } from 'react-native-worklets';
-import { runOnBackground } from './Runtime';
+import { runOnUI } from "react-native-reanimated";
+import { runOnBackground } from "./Runtime";
 
 declare global {
   var navigator: NavigatorGPU;
@@ -8,12 +8,11 @@ declare global {
 declare global {
   var lastFrame: number;
   var isRequestAnimationFrameMocks: boolean;
-  var self: typeof globalThis;
 }
 
 export function initGPU() {
   const { gpu } = globalThis.navigator;
-  const {
+  const { 
     RNWebGPU,
     GPUBufferUsage,
     GPUColorWrite,
@@ -24,9 +23,6 @@ export function initGPU() {
 
   function init() {
     'worklet';
-    if (!globalThis.self) {
-      globalThis.self = globalThis;
-    }
     if (!globalThis.navigator) {
       globalThis.navigator = { gpu } as typeof navigator;
     } else if (!globalThis.navigator.gpu) {
@@ -43,23 +39,24 @@ export function initGPU() {
       globalThis.isRequestAnimationFrameMocks = true;
     }
     globalThis.lastFrame = Date.now();
-    globalThis.requestAnimationFrame = globalThis.requestAnimationFrame
-      ? globalThis.requestAnimationFrame
+    globalThis.requestAnimationFrame = 
+      globalThis.requestAnimationFrame 
+      ? globalThis.requestAnimationFrame 
       : (callback: (time: number) => void): number => {
-          globalThis.requestAnimationFrame = (_: any) => {
-            return 0;
-          };
-          while (true) {
-            if (globalThis.lastFrame + 16 > Date.now()) {
-              continue;
-            }
-            globalThis.lastFrame = Date.now();
-            callback(globalThis.lastFrame);
+        globalThis.requestAnimationFrame = (_: any) => { return 0; };
+        while (true) {
+          if (globalThis.lastFrame + 16 > Date.now()) {
+            continue;
           }
-        };
+          globalThis.lastFrame = Date.now();
+          callback(globalThis.lastFrame); 
+        }
+      };
 
     globalThis.setImmediate = globalThis.requestAnimationFrame as any;
-  }
+    globalThis.__UIModules = {};
+    
+  };
 
   runOnUI(init)();
   runOnBackground(init)();
