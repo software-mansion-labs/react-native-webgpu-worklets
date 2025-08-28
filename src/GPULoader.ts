@@ -35,25 +35,6 @@ export function initGPU() {
     globalThis.GPUShaderStage = GPUShaderStage;
     globalThis.GPUTextureUsage = GPUTextureUsage;
 
-    if (!globalThis.requestAnimationFrame) {
-      globalThis.isRequestAnimationFrameMocks = true;
-    }
-    globalThis.lastFrame = Date.now();
-    globalThis.requestAnimationFrame = 
-      globalThis.requestAnimationFrame 
-      ? globalThis.requestAnimationFrame 
-      : (callback: (time: number) => void): number => {
-        globalThis.requestAnimationFrame = (_: any) => { return 0; };
-        while (true) {
-          if (globalThis.lastFrame + 16 > Date.now()) {
-            continue;
-          }
-          globalThis.lastFrame = Date.now();
-          callback(globalThis.lastFrame); 
-        }
-      };
-
-    globalThis.setImmediate = globalThis.requestAnimationFrame as any;
     globalThis.__UIModules = {};
     
   };

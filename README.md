@@ -11,8 +11,10 @@ yarn add react-native-webgpu-worklets
 Add peer dependencies
 
 ```sh
-yarn add react-native-reanimated react-native-wgpu three typegpu wgpu-matrix
+yarn add react-native-reanimated react-native-worklets react-native-wgpu three typegpu wgpu-matrix
 ```
+
+It required Reanimated 4.1.0 or newer and Worklets 0.5.0 or newer.
 
 ## Usage
 

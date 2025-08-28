@@ -1,6 +1,6 @@
-import { createWorkletRuntime, runOnRuntime } from 'react-native-reanimated';
+import { createWorkletRuntime, runOnRuntime } from "react-native-worklets";
 
-export const BackgroundRuntime = createWorkletRuntime('background');
+export const BackgroundRuntime = createWorkletRuntime({ name: 'background' });
 
 export function runOnBackground(
   callback: (...args: any[]) => void,
