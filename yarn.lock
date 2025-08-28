@@ -1958,16 +1958,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@evilmartians/lefthook@npm:^1.5.0":
-  version: 1.11.11
-  resolution: "@evilmartians/lefthook@npm:1.11.11"
-  bin:
-    lefthook: bin/index.js
-  checksum: 86f8380cd0be1792ccd930648ac88aea9d7d4340da56ac6fb56a3303d6ab6330534b8eb8bd3619a01792f0e46a837a939bad4c2e18fbb95374f3163c0298fab1
-  conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=ia32)
-  languageName: node
-  linkType: hard
-
 "@expo/bunyan@npm:^4.0.0":
   version: 4.0.1
   resolution: "@expo/bunyan@npm:4.0.1"
@@ -3607,6 +3597,15 @@ __metadata:
   peerDependencies:
     typegpu: ^0.5.8
   checksum: 0947d1795e2eed5dfea6fb2a80f0f68746729edaba995fe462af03025dc29ce83e07198bc72d2b2ffffb593d1eb868e11de2110a752a427f2da29ef7b43e3da1
+  languageName: node
+  linkType: hard
+
+"@typegpu/noise@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@typegpu/noise@npm:0.7.0"
+  peerDependencies:
+    typegpu: ^0.7.0
+  checksum: 0e4513ad958a8ffa651e7dac243b5e41ad1381ce4495e92406a9902e04957553d02a7bb411a5a3177758befe9e43da79fe2b03ebe931b1ac2258428e62f8520f
   languageName: node
   linkType: hard
 
@@ -12707,9 +12706,9 @@ __metadata:
     "@eslint/compat": ^1.2.7
     "@eslint/eslintrc": ^3.3.0
     "@eslint/js": ^9.22.0
-    "@evilmartians/lefthook": ^1.5.0
     "@react-native/eslint-config": ^0.78.0
     "@release-it/conventional-changelog": ^9.0.2
+    "@typegpu/noise": ^0.7.0
     "@types/jest": ^29.5.5
     "@types/react": ^19.0.12
     "@types/three": ^0.176.0
