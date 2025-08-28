@@ -1,0 +1,1 @@
+yarn react-native bundle --entry-file ./example/libEntry.js --bundle-output libOut.js --dev true --platform android --minify false
