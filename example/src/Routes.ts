@@ -4,5 +4,5 @@ export type Routes = {
   CubeExample: undefined;
   CubeWithGestureExample: undefined;
   TriangleExample: undefined;
-  // PaintExample: undefined;
+  PaintExample: undefined;
 };
