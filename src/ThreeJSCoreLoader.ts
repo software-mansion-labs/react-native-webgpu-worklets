@@ -57059,7 +57059,7 @@ var<${access}> ${name} : ${structName};`;
       key: "init",
       value: (function () {
         var _init4 = (0, _asyncToGenerator2.default)(function* (renderer) {
-          yield _superPropGet(WebGPUBackend, "init", this, 3)([renderer]);
+          _superPropGet(WebGPUBackend, "init", this, 3)([renderer]);
 
           //
 
