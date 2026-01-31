@@ -87894,7 +87894,7 @@ global.__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, mo
 
 // ---------------------------------------------------------------------------
 
-global.__UIModules.threeJSTLS = global.__r(1);
+global.__UIModules.threeJSTSL = global.__r(1);
 
 }
 
